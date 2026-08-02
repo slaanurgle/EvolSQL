@@ -1,0 +1,602 @@
+{
+  "db_id": "software_company",
+  "schema": null,
+  "tables": {
+    "main.Customers": {
+      "fields": {
+        "ID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique number identifying the customer",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "SEX": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the sex of the customer",
+          "examples": [
+            "Male",
+            "Female"
+          ]
+        },
+        "MARITAL_STATUS": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Never-married",
+            "Married-civ-spouse",
+            "Divorced",
+            "Widowed",
+            "Other"
+          ]
+        },
+        "GEOID": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "geographic identifier",
+          "examples": [
+            "61",
+            "70",
+            "53",
+            "79",
+            "46"
+          ]
+        },
+        "EDUCATIONNUM": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the level of education",
+          "examples": [
+            "7",
+            "3",
+            "4",
+            "11",
+            "5"
+          ]
+        },
+        "OCCUPATION": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "occupation of customers",
+          "examples": [
+            "Machine-op-inspct",
+            "Handlers-cleaners",
+            "Exec-managerial",
+            "Farming-fishing",
+            "Other-service"
+          ]
+        },
+        "age": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "age of customers",
+          "examples": [
+            "62",
+            "78",
+            "69",
+            "53",
+            "85"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Demog": {
+      "fields": {
+        "GEOID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique geographic identifier",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "INHABITANTS_K": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "number of inhabitants",
+          "examples": [
+            "30.046",
+            "36.25",
+            "47.645",
+            "15.417",
+            "18.104"
+          ]
+        },
+        "INCOME_K": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "average income per inhabitant per month",
+          "examples": [
+            "2631.47",
+            "3012.75",
+            "2192.41",
+            "2343.51",
+            "2694.33"
+          ]
+        },
+        "A_VAR1": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "6.084",
+            "4.604",
+            "4.911",
+            "6.2",
+            "2.867"
+          ]
+        },
+        "A_VAR2": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "5.79",
+            "8.309",
+            "8.557",
+            "5.623",
+            "4.155"
+          ]
+        },
+        "A_VAR3": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "8.595",
+            "6.007",
+            "5.934",
+            "8.55",
+            "5.951"
+          ]
+        },
+        "A_VAR4": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "3.935",
+            "5.938",
+            "6.494",
+            "3.959",
+            "6.765"
+          ]
+        },
+        "A_VAR5": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "6.362",
+            "8.773",
+            "9.172",
+            "6.52",
+            "7.846"
+          ]
+        },
+        "A_VAR6": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "8.626",
+            "3.579",
+            "3.202",
+            "8.089",
+            "5.578"
+          ]
+        },
+        "A_VAR7": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "4.624",
+            "6.349",
+            "6.157",
+            "4.32",
+            "2.41"
+          ]
+        },
+        "A_VAR8": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "8.324",
+            "4.694",
+            "4.822",
+            "8.694",
+            "8.007"
+          ]
+        },
+        "A_VAR9": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "5.233",
+            "6.884",
+            "7.942",
+            "5.217",
+            "6.703"
+          ]
+        },
+        "A_VAR10": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "6.232",
+            "7.062",
+            "7.901",
+            "6.627",
+            "7.467"
+          ]
+        },
+        "A_VAR11": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "5.205",
+            "7.319",
+            "7.928",
+            "5.493",
+            "3.827"
+          ]
+        },
+        "A_VAR12": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "8.231",
+            "3.72",
+            "2.33",
+            "8.73",
+            "7.153"
+          ]
+        },
+        "A_VAR13": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "6.746",
+            "6.405",
+            "6.029",
+            "6.713",
+            "7.105"
+          ]
+        },
+        "A_VAR14": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "8.679",
+            "7.202",
+            "6.455",
+            "8.851",
+            "8.161"
+          ]
+        },
+        "A_VAR15": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "5.292",
+            "4.932",
+            "4.72",
+            "5.198",
+            "6.535"
+          ]
+        },
+        "A_VAR16": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "3.5",
+            "7.969",
+            "8.564",
+            "3.313",
+            "6.093"
+          ]
+        },
+        "A_VAR17": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "5.512",
+            "8.15",
+            "8.342",
+            "5.076",
+            "7.246"
+          ]
+        },
+        "A_VAR18": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "5.783",
+            "5.633",
+            "4.938",
+            "5.796",
+            "8.433"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Mailings1_2": {
+      "fields": {
+        "REFID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "REF_DATE": {
+          "type": "DATETIME",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": []
+        },
+        "RESPONSE": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "false",
+            "true"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Sales": {
+      "fields": {
+        "EVENTID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id of event (sales)",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "REFID": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Reference to customer ID",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "EVENT_DATE": {
+          "type": "DATETIME",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "date of sales",
+          "examples": []
+        },
+        "AMOUNT": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "amount of sales",
+          "examples": [
+            "17.907",
+            "17.401",
+            "13.277",
+            "13.197",
+            "15.001"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.mailings3": {
+      "fields": {
+        "REFID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "60000",
+            "60001",
+            "60002",
+            "60003",
+            "60004"
+          ]
+        },
+        "REF_DATE": {
+          "type": "DATETIME",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": []
+        },
+        "RESPONSE": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "false",
+            "true"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.Customers",
+      "GEOID",
+      "main",
+      "Demog",
+      "GEOID"
+    ],
+    [
+      "main.Mailings1_2",
+      "REFID",
+      "main",
+      "Customers",
+      "ID"
+    ],
+    [
+      "main.Sales",
+      "REFID",
+      "main",
+      "Customers",
+      "ID"
+    ]
+  ]
+}

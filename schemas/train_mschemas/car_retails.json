@@ -1,0 +1,956 @@
+{
+  "db_id": "car_retails",
+  "schema": null,
+  "tables": {
+    "main.customers": {
+      "fields": {
+        "customerNumber": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number of customer",
+          "examples": [
+            "103",
+            "112",
+            "114",
+            "119",
+            "121"
+          ]
+        },
+        "customerName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name when the customer registered",
+          "examples": [
+            "Atelier graphique",
+            "Signal Gift Stores",
+            "Australian Collectors, Co.",
+            "La Rochelle Gifts",
+            "Baane Mini Imports"
+          ]
+        },
+        "contactLastName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "contact last name",
+          "examples": [
+            "Schmitt",
+            "King",
+            "Ferguson",
+            "Labrune",
+            "Bergulfsen"
+          ]
+        },
+        "contactFirstName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "contact first name",
+          "examples": [
+            "Carine ",
+            "Jean",
+            "Peter",
+            "Janine ",
+            "Jonas "
+          ]
+        },
+        "phone": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "phone",
+          "examples": [
+            "40.32.2555",
+            "7025551838",
+            "03 9520 4555",
+            "40.67.8555",
+            "07-98 9555"
+          ]
+        },
+        "addressLine1": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "addressLine1",
+          "examples": [
+            "54, rue Royale",
+            "8489 Strong St.",
+            "636 St Kilda Road",
+            "67, rue des Cinquante Otages",
+            "Erling Skakkes gate 78"
+          ]
+        },
+        "addressLine2": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "addressLine2",
+          "examples": [
+            "Level 3",
+            "Bronz Apt. 3/6 Tesvikiye",
+            "Suite 400",
+            "2nd Floor"
+          ]
+        },
+        "city": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "city",
+          "examples": [
+            "Nantes",
+            "Las Vegas",
+            "Melbourne",
+            "Stavern",
+            "San Rafael"
+          ]
+        },
+        "state": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "state",
+          "examples": [
+            "NV",
+            "Victoria",
+            "CA",
+            "NY"
+          ]
+        },
+        "postalCode": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "postalCode",
+          "examples": [
+            "44000",
+            "83030",
+            "3004",
+            "4110",
+            "97562"
+          ]
+        },
+        "country": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "country",
+          "examples": [
+            "France",
+            "USA",
+            "Australia",
+            "Norway",
+            "Poland"
+          ]
+        },
+        "salesRepEmployeeNumber": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "sales representative employee number",
+          "examples": [
+            "1370",
+            "1166",
+            "1611",
+            "1504",
+            "1165"
+          ]
+        },
+        "creditLimit": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "credit limit",
+          "examples": [
+            "21000.0",
+            "71800.0",
+            "117300.0",
+            "118200.0",
+            "81700.0"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.employees": {
+      "fields": {
+        "employeeNumber": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique string ID of the employees",
+          "examples": [
+            "1002",
+            "1056",
+            "1076",
+            "1088",
+            "1102"
+          ]
+        },
+        "lastName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "last name of employees",
+          "examples": [
+            "Murphy",
+            "Patterson",
+            "Firrelli",
+            "Bondur",
+            "Bow"
+          ]
+        },
+        "firstName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "first name of employees",
+          "examples": [
+            "Diane",
+            "Mary",
+            "Jeff",
+            "William",
+            "Gerard"
+          ]
+        },
+        "extension": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "extension number",
+          "examples": [
+            "x5800",
+            "x4611",
+            "x9273",
+            "x4871",
+            "x5408"
+          ]
+        },
+        "email": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "email",
+          "examples": []
+        },
+        "officeCode": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "office code of the employees",
+          "examples": [
+            "1",
+            "6",
+            "4",
+            "2",
+            "3"
+          ]
+        },
+        "reportsTo": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "represents for organization structure such as who reports to whom",
+          "examples": [
+            "1002",
+            "1056",
+            "1143",
+            "1102"
+          ]
+        },
+        "jobTitle": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "job title",
+          "examples": [
+            "President",
+            "VP Sales",
+            "VP Marketing",
+            "Sales Manager (APAC)",
+            "Sale Manager (EMEA)"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.offices": {
+      "fields": {
+        "officeCode": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique ID of the office",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "city": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "San Francisco",
+            "Boston",
+            "NYC",
+            "Paris",
+            "Tokyo"
+          ]
+        },
+        "phone": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "phone number",
+          "examples": [
+            "+1 650 219 4782",
+            "+1 215 837 0825",
+            "+1 212 555 3000",
+            "+33 14 723 4404",
+            "+81 33 224 5000"
+          ]
+        },
+        "addressLine1": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "addressLine1",
+          "examples": [
+            "100 Market Street",
+            "1550 Court Place",
+            "523 East 53rd Street",
+            "43 Rue Jouffroy D'abbans",
+            "4-1 Kioicho"
+          ]
+        },
+        "addressLine2": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "addressLine2",
+          "examples": [
+            "Suite 300",
+            "Suite 102",
+            "apt. 5A",
+            "Floor #2"
+          ]
+        },
+        "state": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "CA",
+            "MA",
+            "NY",
+            "Chiyoda-Ku"
+          ]
+        },
+        "country": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "country",
+          "examples": [
+            "USA",
+            "France",
+            "Japan",
+            "Australia",
+            "UK"
+          ]
+        },
+        "postalCode": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "postalCode",
+          "examples": [
+            "94080",
+            "02107",
+            "10022",
+            "75017",
+            "102-8578"
+          ]
+        },
+        "territory": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "territory",
+          "examples": [
+            "NA",
+            "EMEA",
+            "Japan",
+            "APAC"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.orderdetails": {
+      "fields": {
+        "orderNumber": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "order number",
+          "examples": [
+            "10100",
+            "10101",
+            "10102",
+            "10103",
+            "10104"
+          ]
+        },
+        "productCode": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "product code",
+          "examples": [
+            "S18_1749",
+            "S18_2248",
+            "S18_4409",
+            "S24_3969",
+            "S18_2325"
+          ]
+        },
+        "quantityOrdered": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "quantity ordered",
+          "examples": [
+            "30",
+            "50",
+            "22",
+            "49",
+            "25"
+          ]
+        },
+        "priceEach": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "price for each",
+          "examples": [
+            "136.0",
+            "55.09",
+            "75.46",
+            "35.29",
+            "108.06"
+          ]
+        },
+        "orderLineNumber": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "order Line Number",
+          "examples": [
+            "3",
+            "2",
+            "4",
+            "1",
+            "11"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.orders": {
+      "fields": {
+        "orderNumber": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique order number",
+          "examples": [
+            "10100",
+            "10101",
+            "10102",
+            "10103",
+            "10104"
+          ]
+        },
+        "orderDate": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "order date",
+          "examples": [
+            "2003-01-06"
+          ]
+        },
+        "requiredDate": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "required Date",
+          "examples": [
+            "2003-01-13"
+          ]
+        },
+        "shippedDate": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "shipped Date",
+          "examples": [
+            "2003-01-10"
+          ]
+        },
+        "status": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "status",
+          "examples": [
+            "Shipped",
+            "Resolved",
+            "Cancelled",
+            "On Hold",
+            "Disputed"
+          ]
+        },
+        "comments": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "comments",
+          "examples": [
+            "Check on availability.",
+            "Difficult to negotiate with customer. We need more marketing materials",
+            "Customer requested that FedEx Ground is used for this shipping",
+            "Customer requested that ad materials (such as posters, pamphlets) be included in the shippment"
+          ]
+        },
+        "customerNumber": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "customer number",
+          "examples": [
+            "363",
+            "128",
+            "181",
+            "121",
+            "141"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.payments": {
+      "fields": {
+        "customerNumber": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "customer number",
+          "examples": [
+            "103",
+            "112",
+            "114",
+            "119",
+            "121"
+          ]
+        },
+        "checkNumber": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "check Number",
+          "examples": [
+            "HQ336336",
+            "JM555205",
+            "OM314933",
+            "BO864823",
+            "HQ55022"
+          ]
+        },
+        "paymentDate": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "payment Date",
+          "examples": [
+            "2004-10-19"
+          ]
+        },
+        "amount": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "amount",
+          "examples": [
+            "6066.78",
+            "14571.44",
+            "1676.14",
+            "14191.12",
+            "32641.98"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.productlines": {
+      "fields": {
+        "productLine": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique product line name",
+          "examples": [
+            "Classic Cars",
+            "Motorcycles",
+            "Planes",
+            "Ships",
+            "Trains"
+          ]
+        },
+        "textDescription": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "text description",
+          "examples": [
+            "Attention car enthusiasts: Make your wildest car ownership dreams come true. Whether you are looking for classic muscle cars, dream sports cars or movie-inspired miniatures, you will find great choices in this category. These replicas feature superb atten",
+            "Our motorcycles are state of the art replicas of classic as well as contemporary motorcycle legends such as Harley Davidson, Ducati and Vespa. Models contain stunning details such as official logos, rotating wheels, working kickstand, front suspension, ge",
+            "Unique, diecast airplane and helicopter replicas suitable for collections, as well as home, office or classroom decorations. Models contain stunning details such as official logos and insignias, rotating jet engines and propellers, retractable wheels, and",
+            "The perfect holiday or anniversary gift for executives, clients, friends, and family. These handcrafted model ships are unique, stunning works of art that will be treasured for generations! They come fully assembled and ready for display in the home or of",
+            "Model trains are a rewarding hobby for enthusiasts of all ages. Whether you're looking for collectible wooden trains, electric streetcars or locomotives, you'll find a number of great choices for any budget within this category. The interactive aspect of "
+          ]
+        },
+        "htmlDescription": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "html description",
+          "examples": []
+        },
+        "image": {
+          "type": "BLOB",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "image",
+          "examples": []
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.products": {
+      "fields": {
+        "productCode": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique product code",
+          "examples": [
+            "S10_1678",
+            "S10_1949",
+            "S10_2016",
+            "S10_4698",
+            "S10_4757"
+          ]
+        },
+        "productName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "product name",
+          "examples": [
+            "1969 Harley Davidson Ultimate Chopper",
+            "1952 Alpine Renault 1300",
+            "1996 Moto Guzzi 1100i",
+            "2003 Harley-Davidson Eagle Drag Bike",
+            "1972 Alfa Romeo GTA"
+          ]
+        },
+        "productLine": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "product line name",
+          "examples": [
+            "Motorcycles",
+            "Classic Cars",
+            "Trucks and Buses",
+            "Vintage Cars",
+            "Planes"
+          ]
+        },
+        "productScale": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "product scale",
+          "examples": [
+            "1:10",
+            "1:12",
+            "1:18",
+            "1:72",
+            "1:24"
+          ]
+        },
+        "productVendor": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "product vendor",
+          "examples": [
+            "Min Lin Diecast",
+            "Classic Metal Creations",
+            "Highway 66 Mini Classics",
+            "Red Start Diecast",
+            "Motor City Art Classics"
+          ]
+        },
+        "productDescription": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "product description",
+          "examples": [
+            "This replica features working kickstand, front suspension, gear-shift lever, footbrake lever, drive chain, wheels and steering. All parts are particularly delicate due to their precise scale and require special care and attention.",
+            "Turnable front wheels; steering function; detailed interior; detailed engine; opening hood; opening trunk; opening doors; and detailed chassis.",
+            "Official Moto Guzzi logos and insignias, saddle bags located on side of motorcycle, detailed engine, working steering, working suspension, two leather seats, luggage rack, dual exhaust pipes, small saddle bag located on handle bars, two-tone paint with chrome accents, superior die-cast detail , rotating wheels , working kick stand, diecast metal with plastic parts and baked enamel finish.",
+            "Model features, official Harley Davidson logos and insignias, detachable rear wheelie bar, heavy diecast metal with resin parts, authentic multi-color tampo-printed graphics, separate engine drive belts, free-turning front fork, rotating tires and rear racing slick, certificate of authenticity, detailed engine, display stand\n, precision diecast replica, baked enamel finish, 1:10 scale model, removable fender, seat and tank cover piece for displaying the superior detail of the v-twin engine",
+            "Features include: Turnable front wheels; steering function; detailed interior; detailed engine; opening hood; opening trunk; opening doors; and detailed chassis."
+          ]
+        },
+        "quantityInStock": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "quantity in stock",
+          "examples": [
+            "7933",
+            "7305",
+            "6625",
+            "5582",
+            "3252"
+          ]
+        },
+        "buyPrice": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "buy price from vendors",
+          "examples": [
+            "48.81",
+            "98.58",
+            "68.99",
+            "91.02",
+            "85.68"
+          ]
+        },
+        "MSRP": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Manufacturer Suggested Retail Price",
+          "examples": [
+            "95.7",
+            "214.3",
+            "118.94",
+            "193.66",
+            "136.0"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.customers",
+      "salesRepEmployeeNumber",
+      "main",
+      "employees",
+      "employeeNumber"
+    ],
+    [
+      "main.employees",
+      "officeCode",
+      "main",
+      "offices",
+      "officeCode"
+    ],
+    [
+      "main.employees",
+      "reportsTo",
+      "main",
+      "employees",
+      "employeeNumber"
+    ],
+    [
+      "main.orderdetails",
+      "productCode",
+      "main",
+      "products",
+      "productCode"
+    ],
+    [
+      "main.orderdetails",
+      "orderNumber",
+      "main",
+      "orders",
+      "orderNumber"
+    ],
+    [
+      "main.orders",
+      "customerNumber",
+      "main",
+      "customers",
+      "customerNumber"
+    ],
+    [
+      "main.payments",
+      "customerNumber",
+      "main",
+      "customers",
+      "customerNumber"
+    ],
+    [
+      "main.products",
+      "productLine",
+      "main",
+      "productlines",
+      "productLine"
+    ]
+  ]
+}

@@ -1,0 +1,1560 @@
+{
+  "db_id": "college_completion",
+  "schema": null,
+  "tables": {
+    "main.institution_details": {
+      "fields": {
+        "unitid": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique Education Unit ID number",
+          "examples": [
+            "100654",
+            "100663",
+            "100690",
+            "100706",
+            "100724"
+          ]
+        },
+        "chronname": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Institution name",
+          "examples": [
+            "Alabama A&M University",
+            "University of Alabama at Birmingham",
+            "Amridge University",
+            "University of Alabama at Huntsville",
+            "Alabama State University"
+          ]
+        },
+        "city": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Institution city",
+          "examples": [
+            "Normal",
+            "Birmingham",
+            "Montgomery",
+            "Huntsville",
+            "Tuscaloosa"
+          ]
+        },
+        "state": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Institution state",
+          "examples": [
+            "Alabama",
+            "Alaska",
+            "Arizona",
+            "New Mexico",
+            "Arkansas"
+          ]
+        },
+        "level": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Level of institution",
+          "examples": [
+            "4-year",
+            "2-year"
+          ]
+        },
+        "control": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Control of institution",
+          "examples": [
+            "Public",
+            "Private not-for-profit",
+            "Private for-profit"
+          ]
+        },
+        "basic": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Carnegie Foundation for the Advancement of Teaching Basic Classification (2010 version)",
+          "examples": [
+            "Masters Colleges and Universities--larger programs",
+            "Research Universities--very high research activity",
+            "Baccalaureate Colleges--Arts & Sciences",
+            "Research Universities--high research activity",
+            "Associates--Public Rural-serving Medium"
+          ]
+        },
+        "hbcu": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Denotes Historically Black College and Universities",
+          "examples": [
+            "X",
+            "NULL"
+          ]
+        },
+        "flagship": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Denotes Public flagship institutions",
+          "examples": [
+            "NULL",
+            "X"
+          ]
+        },
+        "long_x": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Institution longitude",
+          "examples": [
+            "-86.568502",
+            "-86.80917",
+            "-86.17401",
+            "-86.63842",
+            "-86.295677"
+          ]
+        },
+        "lat_y": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Institution latitude",
+          "examples": [
+            "34.783368",
+            "33.50223",
+            "32.362609",
+            "34.722818",
+            "32.364317"
+          ]
+        },
+        "site": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Institution Web site address",
+          "examples": [
+            "www.aamu.edu/",
+            "www.uab.edu",
+            "www.amridgeuniversity.edu",
+            "www.uah.edu",
+            "www.alasu.edu/email/index.aspx"
+          ]
+        },
+        "student_count": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Total number of undergraduates in 2010",
+          "examples": [
+            "4051",
+            "11502",
+            "322",
+            "5696",
+            "5356"
+          ]
+        },
+        "awards_per_value": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Completions per 100 FTE (full-time equivalency) undergraduate students (average 2011, 2012, and 2013)",
+          "examples": [
+            "14.2",
+            "20.9",
+            "29.9",
+            "11.6",
+            "18.3"
+          ]
+        },
+        "awards_per_state_value": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Completions per 100 FTE (full-time equivalency) undergraduate students, state and sector average",
+          "examples": [
+            "18.8",
+            "17.8",
+            "15.9",
+            "29.1",
+            "3.2"
+          ]
+        },
+        "awards_per_natl_value": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Completions per 100 FTE (full-time equivalency) undergraduate students, national sector average",
+          "examples": [
+            "21.5",
+            "22.5",
+            "16.5",
+            "24.6",
+            "32.8"
+          ]
+        },
+        "exp_award_value": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Estimated educational spending per academic award in 2013. Includes all certificates and degrees",
+          "examples": [
+            "105331",
+            "136546",
+            "58414",
+            "64418",
+            "132407"
+          ]
+        },
+        "exp_award_state_value": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Spending per completion, state and sector average",
+          "examples": [
+            "75743",
+            "92268",
+            "42194",
+            "17406",
+            "24274"
+          ]
+        },
+        "exp_award_natl_value": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Spending per completion, national sector average",
+          "examples": [
+            "66436",
+            "101725",
+            "37780",
+            "38763",
+            "24795"
+          ]
+        },
+        "exp_award_percentile": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "90",
+            "97",
+            "30",
+            "61",
+            "96"
+          ]
+        },
+        "ft_pct": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Percentage of undergraduates who attend full-time",
+          "examples": [
+            "93.8",
+            "72.7",
+            "62.7",
+            "74.4",
+            "91.0"
+          ]
+        },
+        "fte_value": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "total number of full-time equivalent undergraduates",
+          "examples": [
+            "3906",
+            "10032",
+            "294",
+            "5000",
+            "5035"
+          ]
+        },
+        "fte_percentile": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "33",
+            "67",
+            "12",
+            "40",
+            "41"
+          ]
+        },
+        "med_sat_value": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Median estimated SAT value for incoming students",
+          "examples": [
+            "823",
+            "1146",
+            "NULL",
+            "1180",
+            "830"
+          ]
+        },
+        "med_sat_percentile": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Institution's percent rank for median SAT value within sector",
+          "examples": [
+            "0",
+            "84",
+            "NULL",
+            "89",
+            "1"
+          ]
+        },
+        "aid_value": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The average amount of student aid going to undergraduate recipients",
+          "examples": [
+            "7142",
+            "6088",
+            "2540",
+            "6647",
+            "7256"
+          ]
+        },
+        "aid_percentile": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Institution's percent rank for average amount of student aid going to undergraduate recipients within sector",
+          "examples": [
+            "72",
+            "50",
+            "1",
+            "63",
+            "74"
+          ]
+        },
+        "endow_value": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "End-of-year endowment value per full-time equivalent student",
+          "examples": [
+            "NULL",
+            "24136",
+            "302",
+            "11502",
+            "13202"
+          ]
+        },
+        "endow_percentile": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Institution's percent rank for endowment value per full-time equivalent student within sector",
+          "examples": [
+            "NULL",
+            "93",
+            "1",
+            "81",
+            "84"
+          ]
+        },
+        "grad_100_value": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "percentage of first-time, full-time, degree-seeking undergraduates who complete a degree or certificate program within 100 percent of expected time (bachelor's-seeking group at 4-year institutions)",
+          "examples": [
+            "10.0",
+            "29.4",
+            "0.0",
+            "16.5",
+            "8.8"
+          ]
+        },
+        "grad_100_percentile": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Institution's percent rank for completers within 100 percent of normal time within sector",
+          "examples": [
+            "15",
+            "67",
+            "0",
+            "34",
+            "11"
+          ]
+        },
+        "grad_150_value": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "percentage of first-time, full-time, degree-seeking undergraduates who complete a degree or certificate program within 150 percent of expected time (bachelor's-seeking group at 4-year institutions)",
+          "examples": [
+            "29.1",
+            "53.5",
+            "66.7",
+            "48.4",
+            "25.2"
+          ]
+        },
+        "grad_150_percentile": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Institution's percent rank for completers within 150 percent of normal time within sector",
+          "examples": [
+            "14",
+            "66",
+            "72",
+            "54",
+            "9"
+          ]
+        },
+        "pell_value": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "percentage of undergraduates receiving a Pell Grant",
+          "examples": [
+            "71.2",
+            "35.1",
+            "68.4",
+            "32.8",
+            "82.7"
+          ]
+        },
+        "pell_percentile": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Institution's percent rank for undergraduate Pell recipients within sector",
+          "examples": [
+            "98",
+            "39",
+            "91",
+            "32",
+            "100"
+          ]
+        },
+        "retain_value": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "share of freshman students retained for a second year",
+          "examples": [
+            "63.1",
+            "80.2",
+            "37.5",
+            "81.0",
+            "62.2"
+          ]
+        },
+        "retain_percentile": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Institution's percent rank for freshman retention percentage within sector",
+          "examples": [
+            "17",
+            "70",
+            "2",
+            "72",
+            "15"
+          ]
+        },
+        "ft_fac_value": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Percentage of employees devoted to instruction, research or public service who are full-time and do not work for an associated medical school",
+          "examples": [
+            "82.8",
+            "92.4",
+            "67.2",
+            "65.5",
+            "67.0"
+          ]
+        },
+        "ft_fac_percentile": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Institution's percent rank for full-time faculty share within sector",
+          "examples": [
+            "89",
+            "98",
+            "71",
+            "56",
+            "58"
+          ]
+        },
+        "vsa_year": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Most recent year of Student Success and Progress Rate data available from the Voluntary System of Accountability",
+          "examples": [
+            "2010",
+            "2011",
+            "NULL",
+            "2008"
+          ]
+        },
+        "vsa_grad_after4_first": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "First-time, full-time students who graduated from this institution within four years",
+          "examples": [
+            "14.7",
+            "22.3",
+            "NULL",
+            "12.8",
+            "4.1"
+          ]
+        },
+        "vsa_grad_elsewhere_after4_first": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "First-time, full-time students who graduated from another institution within four years",
+          "examples": [
+            "2",
+            "2.9",
+            "NULL",
+            "4.7",
+            "1.3"
+          ]
+        },
+        "vsa_enroll_after4_first": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "First-time, full-time students who are still enrolled at this institution after four years",
+          "examples": [
+            "36.5",
+            "34.2",
+            "NULL",
+            "42.8",
+            "67.8"
+          ]
+        },
+        "vsa_enroll_elsewhere_after4_first": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "First-time, full-time students who are enrolled at another institution after four years",
+          "examples": [
+            "16.1",
+            "19.2",
+            "NULL",
+            "18.3",
+            "13.2"
+          ]
+        },
+        "vsa_grad_after6_first": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "First-time, full-time students who graduated from this institution within six years",
+          "examples": [
+            "33",
+            "42.6",
+            "NULL",
+            "43",
+            "60.6"
+          ]
+        },
+        "vsa_grad_elsewhere_after6_first": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "First-time, full-time students who graduated from another institution within six years",
+          "examples": [
+            "5.3",
+            "10.5",
+            "NULL",
+            "14.5",
+            "8"
+          ]
+        },
+        "vsa_enroll_after6_first": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "First-time, full-time students who are still enrolled at this institution after six years",
+          "examples": [
+            "12.5",
+            "7.9",
+            "NULL",
+            "10.2",
+            "9.9"
+          ]
+        },
+        "vsa_enroll_elsewhere_after6_first": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "First-time, full-time students who are enrolled at another institution after six years",
+          "examples": [
+            "14.6",
+            "13.1",
+            "NULL",
+            "11.7",
+            "8"
+          ]
+        },
+        "vsa_grad_after4_transfer": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Full-time transfer students who graduated from this institution within four years",
+          "examples": [
+            "15.7",
+            "NULL",
+            "0",
+            "45.8",
+            "64.2"
+          ]
+        },
+        "vsa_grad_elsewhere_after4_transfer": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Full-time transfer students who graduated from this institution within four years",
+          "examples": [
+            "1.5",
+            "NULL",
+            "0",
+            "5.2",
+            "6.3"
+          ]
+        },
+        "vsa_enroll_after4_transfer": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Full-time transfer students who are still enrolled at this institution after four years",
+          "examples": [
+            "40.9",
+            "NULL",
+            "0",
+            "23",
+            "11.6"
+          ]
+        },
+        "vsa_enroll_elsewhere_after4_transfer": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Full-time transfer students who are enrolled at another institution after four years",
+          "examples": [
+            "17.2",
+            "NULL",
+            "0",
+            "7.9",
+            "7.6"
+          ]
+        },
+        "vsa_grad_after6_transfer": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Full-time transfer students who graduated from this institution within six years",
+          "examples": [
+            "36.4",
+            "NULL",
+            "0",
+            "61.5",
+            "72.2"
+          ]
+        },
+        "vsa_grad_elsewhere_after6_transfer": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Full-time transfer students who graduated from another institution within six years",
+          "examples": [
+            "5.6",
+            "NULL",
+            "0",
+            "8.5",
+            "9.7"
+          ]
+        },
+        "vsa_enroll_after6_transfer": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Full-time transfer students who are still enrolled at this institution after six years",
+          "examples": [
+            "17.2",
+            "NULL",
+            "0",
+            "6.3",
+            "2"
+          ]
+        },
+        "vsa_enroll_elsewhere_after6_transfer": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Full-time transfer students who are enrolled at another institution after six years",
+          "examples": [
+            "11.1",
+            "NULL",
+            "0",
+            "5.5",
+            "4.6"
+          ]
+        },
+        "similar": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "232937|100724|405997|113607|139533|144005|228501|101480|131876|144759|419509|176479|243197|228529|372222|228431|206695|139366|159993|224147",
+            "196060|180461|201885|145600|209542|236939|126818|230764|104151|104179|157085|171100|153603|141574|155317|110714|137351|126562|243780|196088",
+            "217925|441511|205124|247825|197647|221856|135364|117575|164207|193070|199315|166054|367893|183804|439701|193052|197744|193247|137777|176789",
+            "232186|133881|196103|196413|207388|171128|190044|178402|185828|202480|183044|132903|163268|223232|157289|100858|216339|230728|165334|204024",
+            "100654|232937|242617|243197|144005|241739|235422|243601|113607|405997|139533|190114|228501|131876|101480|144759|419509|176479|228529|372222"
+          ]
+        },
+        "state_sector_ct": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "13",
+            "16",
+            "25",
+            "9",
+            "5"
+          ]
+        },
+        "carnegie_ct": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "386",
+            "106",
+            "252",
+            "96",
+            "289"
+          ]
+        },
+        "counted_pct": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "99.7|07",
+            "56.0|07",
+            "100.0|07",
+            "43.1|07",
+            "88.0|07"
+          ]
+        },
+        "nicknames": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "NULL",
+            "UAB",
+            "UAH",
+            "ASU",
+            "AUM"
+          ]
+        },
+        "cohort_size": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "882",
+            "1376",
+            "3",
+            "759",
+            "1351"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.institution_grads": {
+      "fields": {
+        "unitid": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Education Unit ID number",
+          "examples": [
+            "100760",
+            "101028",
+            "101143",
+            "101161",
+            "101240"
+          ]
+        },
+        "year": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "year of data release",
+          "examples": [
+            "2011",
+            "2012",
+            "2013",
+            "2010",
+            "2009"
+          ]
+        },
+        "gender": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "gender of students",
+          "examples": [
+            "B",
+            "M",
+            "F"
+          ]
+        },
+        "race": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "race/ethnicity of students",
+          "examples": [
+            "X",
+            "W",
+            "B",
+            "H",
+            "Ai"
+          ]
+        },
+        "cohort": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "degree-seeking cohort type",
+          "examples": [
+            "2y all",
+            "4y other",
+            "4y bach"
+          ]
+        },
+        "grad_cohort": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Number of first-time, full-time, degree-seeking students in the cohort being tracked, minus any exclusions",
+          "examples": [
+            "446",
+            "185",
+            "261",
+            "348",
+            "162"
+          ]
+        },
+        "grad_100": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Number of students who graduated within 100 percent of normal/expected time",
+          "examples": [
+            "73",
+            "NULL",
+            "40",
+            "46",
+            "25"
+          ]
+        },
+        "grad_150": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Number of students who graduated within 150 percent of normal/expected time",
+          "examples": [
+            "105",
+            "40",
+            "65",
+            "86",
+            "35"
+          ]
+        },
+        "grad_100_rate": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Percentage of students who graduated within 100 percent of normal/expected time",
+          "examples": [
+            "16.4",
+            "NULL",
+            "6.7",
+            "7.7",
+            "9.6"
+          ]
+        },
+        "grad_150_rate": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Percentage of students who graduated within 150 percent of normal/expected time",
+          "examples": [
+            "23.5",
+            "21.6",
+            "24.9",
+            "24.7",
+            "27.4"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.state_sector_details": {
+      "fields": {
+        "stateid": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "state FIPS (Federal Information Processing System) code",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "4",
+            "5"
+          ]
+        },
+        "state": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "state name",
+          "examples": [
+            "United States",
+            "Alabama",
+            "Alaska",
+            "Arizona",
+            "Arkansas"
+          ]
+        },
+        "state_post": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "U.S.",
+            "Ala.",
+            "Alaska",
+            "Ariz.",
+            "Ark."
+          ]
+        },
+        "level": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Level of institution",
+          "examples": [
+            "2-year",
+            "4-year"
+          ]
+        },
+        "control": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Private for-profit",
+            "Private not-for-profit",
+            "Public"
+          ]
+        },
+        "schools_count": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "632",
+            "1180",
+            "527",
+            "926",
+            "68"
+          ]
+        },
+        "counted_pct": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Percentage of students in the entering class (Fall 2007 at 4-year institutions, Fall 2010 at 2-year institutions) who are first-time, full-time, degree-seeking students and generally part of the official graduation rate",
+          "examples": [
+            "NULL",
+            "61",
+            "62",
+            "37.8",
+            "49"
+          ]
+        },
+        "awards_per_state_value": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Completions per 100 FTE (full-time equivalent) undergraduate students, state and sector average",
+          "examples": [
+            "NULL",
+            "18.8",
+            "17.8",
+            "29.1",
+            "15.9"
+          ]
+        },
+        "awards_per_natl_value": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Completions per 100 FTE (full-time equivalent) undergraduate students, national sector average",
+          "examples": [
+            "21.5",
+            "22.5",
+            "24.6",
+            "16.5",
+            "25.9"
+          ]
+        },
+        "exp_award_state_value": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Spending per completion, state and sector average",
+          "examples": [
+            "NULL",
+            "75743",
+            "92268",
+            "17406",
+            "42194"
+          ]
+        },
+        "exp_award_natl_value": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Spending per completion, national sector average",
+          "examples": [
+            "66436",
+            "101725",
+            "38763",
+            "37780",
+            "34510"
+          ]
+        },
+        "state_appr_value": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "State appropriations to higher education in fiscal year 2011 per resident",
+          "examples": [
+            "NULL",
+            "290.68",
+            "496.78",
+            "126.81",
+            "306.32"
+          ]
+        },
+        "state_appr_rank": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "NULL",
+            "11",
+            "2",
+            "47",
+            "9"
+          ]
+        },
+        "grad_rate_rank": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "23",
+            "18",
+            "8",
+            "25",
+            "12"
+          ]
+        },
+        "awards_per_rank": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "NULL",
+            "42",
+            "49",
+            "9",
+            "39"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.state_sector_grads": {
+      "fields": {
+        "stateid": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "state FIPS (Federal Information Processing System) code",
+          "examples": [
+            "1",
+            "2",
+            "4",
+            "5",
+            "6"
+          ]
+        },
+        "state": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "state name",
+          "examples": [
+            "Alabama",
+            "Alaska",
+            "Arizona",
+            "Arkansas",
+            "California"
+          ]
+        },
+        "state_abbr": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "AL",
+            "AK",
+            "AZ",
+            "AR",
+            "CA"
+          ]
+        },
+        "control": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Private for-profit",
+            "Private not-for-profit",
+            "Public"
+          ]
+        },
+        "level": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Level of institution",
+          "examples": [
+            "4-year",
+            "2-year"
+          ]
+        },
+        "year": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "year of data release",
+          "examples": [
+            "2011",
+            "2012",
+            "2013",
+            "2002",
+            "2003"
+          ]
+        },
+        "gender": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "gender of students",
+          "examples": [
+            "B",
+            "F",
+            "M"
+          ]
+        },
+        "race": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "race/ethnicity of students",
+          "examples": [
+            "A",
+            "Ai",
+            "B",
+            "H",
+            "W"
+          ]
+        },
+        "cohort": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "degree-seeking cohort type",
+          "examples": [
+            "4y bach",
+            "4y other",
+            "2y all"
+          ]
+        },
+        "grad_cohort": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Number of first-time, full-time, degree-seeking students in the cohort being tracked, minus any exclusions",
+          "examples": [
+            "0",
+            "1",
+            "51",
+            "66",
+            "209"
+          ]
+        },
+        "grad_100": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Number of students who graduated within 100 percent of normal/expected time",
+          "examples": [
+            "0",
+            "2",
+            "15",
+            "39",
+            "6"
+          ]
+        },
+        "grad_150": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Number of students who graduated within 150 percent of normal/expected time",
+          "examples": [
+            "0",
+            "3",
+            "18",
+            "49",
+            "6"
+          ]
+        },
+        "grad_100_rate": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Percentage of students who graduated within 100 percent of normal/expected time",
+          "examples": [
+            "NULL",
+            "0",
+            "3.9",
+            "22.7",
+            "18.7"
+          ]
+        },
+        "grad_150_rate": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Percentage of students who graduated within 150 percent of normal/expected time",
+          "examples": [
+            "NULL",
+            "0",
+            "5.9",
+            "27.3",
+            "23.4"
+          ]
+        },
+        "grad_cohort_ct": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Number of institutions with data included in the cohort",
+          "examples": [
+            "9",
+            "16",
+            "13",
+            "1",
+            "3"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.institution_grads",
+      "unitid",
+      "main",
+      "institution_details",
+      "unitid"
+    ],
+    [
+      "main.state_sector_details",
+      "state",
+      "main",
+      "institution_details",
+      "state"
+    ],
+    [
+      "main.state_sector_grads",
+      "state",
+      "main",
+      "institution_details",
+      "state"
+    ],
+    [
+      "main.state_sector_grads",
+      "stateid",
+      "main",
+      "state_sector_details",
+      "stateid"
+    ]
+  ]
+}

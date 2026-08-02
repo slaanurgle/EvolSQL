@@ -1,0 +1,1037 @@
+{
+  "db_id": "donor",
+  "schema": null,
+  "tables": {
+    "main.donations": {
+      "fields": {
+        "donationid": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "000000a91a14ed37bef82e125c102e77",
+            "000013be53ed7382ed5d5975eb86eb85",
+            "00001ccc0e81598c4bd86bacb94d7acb",
+            "00001cf5f4fe22f381dcc59a6707d9c4",
+            "00002b62a6a2a662daf3d683894ca02d"
+          ]
+        },
+        "projectid": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "ffffac55ee02a49d1abc87ba6fc61135",
+            "ffff97ed93720407d70a2787475932b0",
+            "ffff418bb42fad24347527ad96100f81",
+            "ffff2d9c769c8fb5335e949c615425eb",
+            "fffeebf4827d745aa36b17c2d38d1966"
+          ]
+        },
+        "donor_acctid": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "22cbc920c9b5fa08dfb331422f5926b5",
+            "521f1830a77c9dbbf8119d99c6206a16",
+            "1e0a63fc8141c7ba26b8b44ca0871b90",
+            "1d4acb508df29d5f1cc6d382969576cb",
+            "59c3c3cfcccc53ae855f7eee911c478b"
+          ]
+        },
+        "donor_city": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Peachtree City",
+            "Rockville",
+            "Salem",
+            "anonymous"
+          ]
+        },
+        "donor_state": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "GA",
+            "MD",
+            "IN",
+            "NY"
+          ]
+        },
+        "donor_zip": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "30269",
+            "20853",
+            "47167",
+            "0"
+          ]
+        },
+        "is_teacher_acct": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "f",
+            "t"
+          ]
+        },
+        "donation_timestamp": {
+          "type": "DATETIME",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "2011-08-25 14:27:34.807000"
+          ]
+        },
+        "donation_to_project": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "42.5",
+            "26.83",
+            "55.35",
+            "8.5",
+            "20.0"
+          ]
+        },
+        "donation_optional_support": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "7.5",
+            "4.73",
+            "0.0",
+            "1.5",
+            "0.75"
+          ]
+        },
+        "donation_total": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "50.0",
+            "31.56",
+            "55.35",
+            "10.0",
+            "20.0"
+          ]
+        },
+        "dollar_amount": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "10_to_100",
+            "under_10",
+            "100_and_up"
+          ]
+        },
+        "donation_included_optional_support": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "t",
+            "f"
+          ]
+        },
+        "payment_method": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "no_cash_received",
+            "creditcard",
+            "paypal",
+            "amazon",
+            "promo_code_match"
+          ]
+        },
+        "payment_included_acct_credit": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "f",
+            "t"
+          ]
+        },
+        "payment_included_campaign_gift_card": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "t",
+            "f"
+          ]
+        },
+        "payment_included_web_purchased_gift_card": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "f",
+            "t"
+          ]
+        },
+        "payment_was_promo_matched": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "f",
+            "t"
+          ]
+        },
+        "via_giving_page": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "f",
+            "t"
+          ]
+        },
+        "for_honoree": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "f",
+            "t"
+          ]
+        },
+        "donation_message": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "I gave to this project because I support the efforts of this teacher with each of her students, and her school, Suder Elementary School.",
+            "I donated because I want to support kids in Georgia.",
+            "The Spark's 'pet' projects include those which support deaf students.  With just a few days left, the Spark's donors fund half of what remains, and challenge others to pull this project through to fruition.",
+            "I gave to this project because Education is important and any method that makes it more fun and effective is worthwhile.",
+            "I lent a paw to help the children in this classroom in Georgia Together we can all work together to help change the life of a child forever. Please help the children, it will mean the world to them to know you care. Thank you."
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.essays": {
+      "fields": {
+        "projectid": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique project identifier",
+          "examples": [
+            "ffffc4f85b60efc5b52347df489d0238",
+            "ffffac55ee02a49d1abc87ba6fc61135",
+            "ffff97ed93720407d70a2787475932b0",
+            "ffff7266778f71242675416e600b94e1",
+            "ffff418bb42fad24347527ad96100f81"
+          ]
+        },
+        "teacher_acctid": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "teacher id that created a project",
+          "examples": [
+            "c24011b20fc161ed02248e85beb59a90",
+            "947066d0af47e0566f334566553dd6a6",
+            "462270f5d5c212162fcab11afa2623cb",
+            "b9a8f14199e0d8109200ece179281f4f",
+            "e885fb002a1d0d39aaed9d21a7683549"
+          ]
+        },
+        "title": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "title of the project",
+          "examples": [
+            "iMath",
+            "Recording Rockin' Readers",
+            "Kindergarten In Need of Important Materials!",
+            "Let's Find Out!",
+            "Whistle While We Work!"
+          ]
+        },
+        "short_description": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "short description of a project",
+          "examples": [
+            "It is imperative that teachers bring technology into the classroom, if students are going to be able to survive in the 21st Century. The classroom needs to be ever changing along with the outside world. The iMath project will help students by obtaining cl",
+            "Can you imagine having to translate everything you read into sign language and relate it to what you already know? Help us do just that by giving us the camera that will record our stories and...",
+            "It takes a special person to donate to a group of children they don't know, especially in these hard economic times, but my students are worth it.  They deserve to have the proper supplies to ensure that their long education gets off to the right start, s",
+            "My Kindergarten students come from a variety of backgrounds. As their teacher, it is my duty to provide a wide variety of texts as we begin to learn how to read. Kindergarten students are excited...",
+            "By using the cross curricular games requested, students will be able to participate in this type of learning environment. Your help will make learning fun for my students, thus making it possible for my students to reach their goal of becoming life long l"
+          ]
+        },
+        "need_statement": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "need statement of a project",
+          "examples": [
+            "My students need four iPods.",
+            "My students need a camcorder. ",
+            "My students need 17 assorted classroom materials to ensure that they can learn as much as possible this year.",
+            "My students need 25 copies of Scholastic's \"Let's Find Out!\" weekly magazine!",
+            "My students need grade level appropriate games so that they may work in small groups to review skills they have not successfully mastered."
+          ]
+        },
+        "essay": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "complete project essay",
+          "examples": [
+            "I am a fourth year fifth grade math teacher. The school I teach in is a fifth and sixth grade public school and is a Title One school which means that 95% of our students get free lunch. Presently, I am in the process of completing a Masters degree in Tec",
+            "Can you imagine having to translate everything you read into sign language and relate it to what you already know? Help us do just that by giving us the camera that will record our stories and interpretations! \n\\n\n\\nMy students are all deaf or hard of hea",
+            "Hi. I teach a wonderful group of 4-5 year old Kindergarten students.  They come in wanting and willing to learn new and exciting things each and every day. I work hard to ensure that my students get the most out of the entire school year. \n\\n\n\\nFor the mo",
+            "My Kindergarten students come from a variety of backgrounds. As their teacher, it is my duty to provide a wide variety of texts as we begin to learn how to read. \n\\n\n\\nKindergarten students are excited about school - especially about learning to read. I h",
+            "All work and no play makes school a dull place to learn. Our class is a 4th grade general education classroom. \n\\n\n\\nIn an effort to go green our district has cut WAY down on the number of copies that can be made.  This makes it very difficult to accurate"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.projects": {
+      "fields": {
+        "projectid": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "00001ccc0e81598c4bd86bacb94d7acb",
+            "00002bff514104264a6b798356fdd893",
+            "00002d691c05c51a5fdfbb2baef0ba25",
+            "0000b38bbc7252972f7984848cf58098",
+            "0000ee613c92ddc5298bf63142996a5c"
+          ]
+        },
+        "teacher_acctid": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "42d43fa6f37314365d08692e08680973",
+            "864eb466462bf704bf7a16a585ef296a",
+            "37f85135259ece793213aca9d8765542",
+            "2133fc46f951f1e7d60645b0f9e48a6c",
+            "867ff478a63f5457eaf41049536c47cd"
+          ]
+        },
+        "schoolid": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "c0e6ce89b244764085691a1b8e28cb81",
+            "d711e47810900c96f26a5d0be30c446d",
+            "665c3613013ba0a66e3a2a26b89f1b68",
+            "4f12c3fa0c1cce823c7ba1df57e90ccb",
+            "10179fd362d7b8cf0e89baa1ca3025bb"
+          ]
+        },
+        "school_ncesid": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "063627006187",
+            "483702008193",
+            "410327000109",
+            "360015302507",
+            "062271003157"
+          ]
+        },
+        "school_latitude": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "36.57634",
+            "32.911179",
+            "45.166039",
+            "40.641727",
+            "34.043939"
+          ]
+        },
+        "school_longitude": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "-119.608713",
+            "-96.72364",
+            "-122.414576",
+            "-73.965655",
+            "-118.288371"
+          ]
+        },
+        "school_city": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Selma",
+            "Dallas",
+            "Colton",
+            "Brooklyn",
+            "Los Angeles"
+          ]
+        },
+        "school_state": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "CA",
+            "TX",
+            "OR",
+            "NY",
+            "AZ"
+          ]
+        },
+        "school_zip": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "93662",
+            "75243",
+            "97017",
+            "11226",
+            "90006"
+          ]
+        },
+        "school_metro": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "urban",
+            "rural",
+            "suburban"
+          ]
+        },
+        "school_district": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Selma Unified Sch District",
+            "Richardson Ind School District",
+            "Colton School District 53",
+            "New York City Dept Of Ed",
+            "Los Angeles Unif Sch Dist"
+          ]
+        },
+        "school_county": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Fresno",
+            "Dallas",
+            "Clackamas",
+            "Kings (Brooklyn)",
+            "Los Angeles"
+          ]
+        },
+        "school_charter": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "f",
+            "t"
+          ]
+        },
+        "school_magnet": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "f",
+            "t"
+          ]
+        },
+        "school_year_round": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "f",
+            "t"
+          ]
+        },
+        "school_nlns": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "f",
+            "t"
+          ]
+        },
+        "school_kipp": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "f",
+            "t"
+          ]
+        },
+        "school_charter_ready_promise": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "f",
+            "t"
+          ]
+        },
+        "teacher_prefix": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Mrs.",
+            "Mr.",
+            "Ms.",
+            "Dr."
+          ]
+        },
+        "teacher_teach_for_america": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "f",
+            "t"
+          ]
+        },
+        "teacher_ny_teaching_fellow": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "f",
+            "t"
+          ]
+        },
+        "primary_focus_subject": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Literature & Writing",
+            "Literacy",
+            "Social Sciences",
+            "Mathematics",
+            "Gym & Fitness"
+          ]
+        },
+        "primary_focus_area": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Literacy & Language",
+            "History & Civics",
+            "Math & Science",
+            "Health & Sports",
+            "Applied Learning"
+          ]
+        },
+        "secondary_focus_subject": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "College & Career Prep",
+            "ESL",
+            "Mathematics",
+            "Special Needs",
+            "Literacy"
+          ]
+        },
+        "secondary_focus_area": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Applied Learning",
+            "Literacy & Language",
+            "Math & Science",
+            "Special Needs"
+          ]
+        },
+        "resource_type": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Books",
+            "Technology",
+            "Other",
+            "Supplies",
+            "Visitors"
+          ]
+        },
+        "poverty_level": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "highest poverty",
+            "high poverty",
+            "moderate poverty",
+            "low poverty"
+          ]
+        },
+        "grade_level": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Grades 6-8",
+            "Grades PreK-2",
+            "Grades 3-5",
+            "Grades 9-12"
+          ]
+        },
+        "fulfillment_labor_materials": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "30.0",
+            "35.0",
+            "9.0",
+            "17.0"
+          ]
+        },
+        "total_price_excluding_optional_support": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "555.81",
+            "296.47",
+            "430.89",
+            "576.07",
+            "408.4"
+          ]
+        },
+        "total_price_including_optional_support": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "653.89",
+            "348.79",
+            "506.93",
+            "677.73",
+            "480.47"
+          ]
+        },
+        "students_reached": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "32",
+            "22",
+            "17",
+            "12",
+            "24"
+          ]
+        },
+        "eligible_double_your_impact_match": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "f",
+            "t"
+          ]
+        },
+        "eligible_almost_home_match": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "f",
+            "t"
+          ]
+        },
+        "date_posted": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "2014-05-12"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.resources": {
+      "fields": {
+        "resourceid": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique resource id",
+          "examples": [
+            "0000037fecc4461faf0e49328ae66661",
+            "0000046b69c683354ca46b30db5c558e",
+            "0000138bc6304aa89f948532d4c075f3",
+            "00001517d8218857d4a1391f3585eb38",
+            "000015a8f7d75566c19dfd7eb17c9071"
+          ]
+        },
+        "projectid": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "project id that requested resources for a classroom",
+          "examples": [
+            "ffffc4f85b60efc5b52347df489d0238",
+            "ffffac55ee02a49d1abc87ba6fc61135",
+            "ffff97ed93720407d70a2787475932b0",
+            "ffff7266778f71242675416e600b94e1",
+            "ffff418bb42fad24347527ad96100f81"
+          ]
+        },
+        "vendorid": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "vendor id that supplies resources to a project",
+          "examples": [
+            "430",
+            "82",
+            "767",
+            "47",
+            "773"
+          ]
+        },
+        "vendor_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "vendor name",
+          "examples": [
+            "Woodwind and Brasswind",
+            "Best Buy for Business",
+            "Lakeshore Learning Materials",
+            "Scholastic Classroom Magazines",
+            "School Specialty"
+          ]
+        },
+        "project_resource_type": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "type of resource",
+          "examples": [
+            "Technology",
+            "Supplies",
+            "Other",
+            "Books",
+            "Trips"
+          ]
+        },
+        "item_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "resource name",
+          "examples": [
+            "iPod nano 4th Gen 8GB (Black)",
+            "Sony bloggie MHS-FS1 - camcorder - internal flash memory",
+            "VX748 - Best-Buy Jumbo Crayons - 12-Color Box",
+            "LA138 - Best-Buy Write & Wipe Broad-Tip Markers - Class Pack",
+            "BJ7471 - 1 1/2&#34; Ruled Chart Tablet"
+          ]
+        },
+        "item_number": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "resource item identifier",
+          "examples": [
+            "249995.001",
+            "BB11216668",
+            "VX748",
+            "LA138",
+            "BJ7471"
+          ]
+        },
+        "item_unit_price": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unit price of the resource",
+          "examples": [
+            "149.0",
+            "148.0",
+            "69.95",
+            "34.95",
+            "10.95"
+          ]
+        },
+        "item_quantity": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "number of a specific item requested by a teacher",
+          "examples": [
+            "4",
+            "1",
+            "2",
+            "3",
+            "25"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.donations",
+      "projectid",
+      "main",
+      "projects",
+      "projectid"
+    ],
+    [
+      "main.resources",
+      "projectid",
+      "main",
+      "projects",
+      "projectid"
+    ]
+  ]
+}

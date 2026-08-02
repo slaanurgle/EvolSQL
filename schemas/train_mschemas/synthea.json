@@ -1,0 +1,1380 @@
+{
+  "db_id": "synthea",
+  "schema": null,
+  "tables": {
+    "main.all_prevalences": {
+      "fields": {
+        "ITEM": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the prevalent disease",
+          "examples": [
+            "0.3 Ml Epinephrine 0.5 Mg/Ml Auto Injector",
+            "0.65 Ml Depo Subq Provera 160 Mg/Ml Prefilled Syringe",
+            "1 Ml Depo Provera 150 Mg/Ml Injection",
+            "12 Hr Cefaclor 500 Mg Extended Release Oral Tablet",
+            "120 Actuat Fluticasone Propionate 0.044 Mg/Actuat Metered Dose Inhaler"
+          ]
+        },
+        "POPULATION TYPE": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the population type - LIVING",
+          "examples": [
+            "LIVING"
+          ]
+        },
+        "OCCURRENCES": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the number of occurrences",
+          "examples": [
+            "868",
+            "487",
+            "117",
+            "772",
+            "749"
+          ]
+        },
+        "POPULATION COUNT": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the number of the counted populations",
+          "examples": [
+            "1000"
+          ]
+        },
+        "PREVALENCE RATE": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the prevalence rate",
+          "examples": [
+            "0.868",
+            "0.487",
+            "0.117",
+            "0.772",
+            "0.749"
+          ]
+        },
+        "PREVALENCE PERCENTAGE": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the prevalence percentage",
+          "examples": [
+            "86.8",
+            "48.7",
+            "11.7",
+            "77.2",
+            "74.9"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.allergies": {
+      "fields": {
+        "START": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the start date of the allergy",
+          "examples": [
+            "3/11/95",
+            "6/15/58",
+            "11/14/12",
+            "2/5/31",
+            "11/4/11"
+          ]
+        },
+        "STOP": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the stop date of the allergy",
+          "examples": [
+            "12/22/14",
+            "4/21/10",
+            "10/15/11",
+            "3/17/10"
+          ]
+        },
+        "PATIENT": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the patient id",
+          "examples": [
+            "00341a88-1cc1-4b39-b0f9-05b0531991a0",
+            "01347a8e-3a92-4f1e-99c9-5d6df0db2331",
+            "0207a4c4-4d49-47bf-93c6-4133376784a2",
+            "02c0668a-b8bb-45be-a573-dfb139977b5f",
+            "0318fe27-553c-468b-99fd-3272b0407f33"
+          ]
+        },
+        "ENCOUNTER": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the medical encounter id",
+          "examples": [
+            "ddc8a625-07e6-4a02-a616-e0ce07b5f305",
+            "84714823-ee2b-42ba-b79b-6043270cfdc7",
+            "b70b95bd-5d4d-47fe-87a1-775172fb5564",
+            "06543def-3a75-47af-9d3c-e4a03fc8f72e",
+            "11a4e019-76f6-4d3c-b51f-c81d81f8786b"
+          ]
+        },
+        "CODE": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the code of the allergy",
+          "examples": [
+            "232347008",
+            "300916003",
+            "419474003",
+            "424213003",
+            "300913006"
+          ]
+        },
+        "DESCRIPTION": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the description of the allergy",
+          "examples": [
+            "Allergy to dairy product",
+            "Allergy to tree pollen",
+            "Allergy to grass pollen",
+            "Dander (animal) allergy",
+            "House dust mite allergy"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.careplans": {
+      "fields": {
+        "ID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id of the care plan",
+          "examples": [
+            "e031962d-d13d-4ede-a449-040417d5e4fb",
+            "26b879b7-0066-4bd6-b59c-099909720155",
+            "1f581c09-aab1-46dc-94cc-4b4295514d2b",
+            "1cac346e-109c-4b69-af3e-d1730bbb496b",
+            "56ee4bb5-bb70-4b95-b2be-2751cf4d5924"
+          ]
+        },
+        "START": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the start date of the care plan",
+          "examples": [
+            "2009-01-11"
+          ]
+        },
+        "STOP": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the stop date of the care plan",
+          "examples": [
+            "2009-04-07"
+          ]
+        },
+        "PATIENT": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the patient id",
+          "examples": [
+            "71949668-1c2e-43ae-ab0a-64654608defb",
+            "c2caaace-9119-4b2d-a2c3-4040f5a9cf32",
+            "96b24072-e1fe-49cd-a22a-6dfb92c3994c",
+            "de43eb48-496c-46d4-8c5b-be6125a38c15",
+            "79266ca2-b4e3-45e5-af65-7914bd4511a0"
+          ]
+        },
+        "ENCOUNTER": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the medical encounter id",
+          "examples": [
+            "4d451e22-a354-40c9-8b33-b6126158666d",
+            "bed7ecff-b41c-422b-beac-ea00c8b02837",
+            "6f2e3935-b203-493e-a9c0-f23e847b9798",
+            "da4fd626-e74e-4930-91be-7fb3da7ea098",
+            "1c93058f-eeb2-4659-a712-74e183877e9a"
+          ]
+        },
+        "CODE": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the code of the care plan",
+          "examples": [
+            "53950000.0",
+            "304510005.0",
+            "371605008.0",
+            "869761000000107.0",
+            "223472008.0"
+          ]
+        },
+        "DESCRIPTION": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the description of the care plan",
+          "examples": [
+            "Respiratory therapy",
+            "Recommendation to avoid exercise",
+            "Deep breathing and coughing exercises",
+            "Urinary tract infection care",
+            "Discussion about hygiene"
+          ]
+        },
+        "REASONCODE": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the reason code",
+          "examples": [
+            "10509002",
+            "38822007",
+            "72892002",
+            "301011002",
+            "423121009"
+          ]
+        },
+        "REASONDESCRIPTION": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the description of the reason why the patient needs the care plan",
+          "examples": [
+            "Acute bronchitis (disorder)",
+            "Cystitis",
+            "Normal pregnancy",
+            "Escherichia coli urinary tract infection",
+            "Non-small cell carcinoma of lung  TNM stage 4 (disorder)"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.claims": {
+      "fields": {
+        "ID": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id of the claim",
+          "examples": [
+            "0004caaf-fd7a-4f64-bda6-dce5ebd1196c",
+            "000acf3a-fcac-4cab-ac41-0153802bfd8c",
+            "000be1d5-e5ab-442a-86ef-0b9eed00cb6a",
+            "0013b610-05ef-45b1-9aaf-2e3f71118fe4",
+            "001428ff-073f-4b1e-ae57-c59a179aadfd"
+          ]
+        },
+        "PATIENT": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the patient id",
+          "examples": [
+            "71949668-1c2e-43ae-ab0a-64654608defb",
+            "c2caaace-9119-4b2d-a2c3-4040f5a9cf32",
+            "96b24072-e1fe-49cd-a22a-6dfb92c3994c",
+            "de43eb48-496c-46d4-8c5b-be6125a38c15",
+            "79266ca2-b4e3-45e5-af65-7914bd4511a0"
+          ]
+        },
+        "BILLABLEPERIOD": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the start date of the billable",
+          "examples": [
+            "2008-03-11"
+          ]
+        },
+        "ORGANIZATION": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the claim organization",
+          "examples": [
+            "temp organization"
+          ]
+        },
+        "ENCOUNTER": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the medical encounter id",
+          "examples": [
+            "71949668-1c2e-43ae-ab0a-64654608defb",
+            "c2caaace-9119-4b2d-a2c3-4040f5a9cf32",
+            "96b24072-e1fe-49cd-a22a-6dfb92c3994c",
+            "de43eb48-496c-46d4-8c5b-be6125a38c15",
+            "79266ca2-b4e3-45e5-af65-7914bd4511a0"
+          ]
+        },
+        "DIAGNOSIS": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the diagnosis",
+          "examples": []
+        },
+        "TOTAL": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the length of the billable period",
+          "examples": [
+            "100"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.conditions": {
+      "fields": {
+        "START": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the start date of the allergy",
+          "examples": [
+            "2009-01-08"
+          ]
+        },
+        "STOP": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the stop date of the allergy",
+          "examples": [
+            "2009-01-21"
+          ]
+        },
+        "PATIENT": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the patient id",
+          "examples": [
+            "71949668-1c2e-43ae-ab0a-64654608defb",
+            "c2caaace-9119-4b2d-a2c3-4040f5a9cf32",
+            "96b24072-e1fe-49cd-a22a-6dfb92c3994c",
+            "de43eb48-496c-46d4-8c5b-be6125a38c15",
+            "79266ca2-b4e3-45e5-af65-7914bd4511a0"
+          ]
+        },
+        "ENCOUNTER": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the medical encounter id",
+          "examples": [
+            "4d451e22-a354-40c9-8b33-b6126158666d",
+            "bed7ecff-b41c-422b-beac-ea00c8b02837",
+            "6f2e3935-b203-493e-a9c0-f23e847b9798",
+            "da4fd626-e74e-4930-91be-7fb3da7ea098",
+            "b2e12445-b771-4738-944b-95cf6bbe76eb"
+          ]
+        },
+        "CODE": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the code of the condition",
+          "examples": [
+            "10509002",
+            "38822007",
+            "72892002",
+            "195662009",
+            "301011002"
+          ]
+        },
+        "DESCRIPTION": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the description of the patient condition",
+          "examples": [
+            "Acute bronchitis (disorder)",
+            "Cystitis",
+            "Normal pregnancy",
+            "Acute viral pharyngitis (disorder)",
+            "Escherichia coli urinary tract infection"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.encounters": {
+      "fields": {
+        "ID": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id of the encounter",
+          "examples": [
+            "000c20ea-5c3d-43a3-9608-bd37c22f13c8",
+            "0013c51f-c315-4112-ad5e-466b604a05ed",
+            "001bd1c7-96fe-4410-af52-5afe5f869087",
+            "0026aae8-4ab9-459d-87eb-6514a90c795f",
+            "0026e99a-ca36-4303-8328-ae8a2c0b6302"
+          ]
+        },
+        "DATE": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the date of the encounter",
+          "examples": [
+            "2008-03-11"
+          ]
+        },
+        "PATIENT": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the patient id",
+          "examples": [
+            "71949668-1c2e-43ae-ab0a-64654608defb",
+            "c2caaace-9119-4b2d-a2c3-4040f5a9cf32",
+            "96b24072-e1fe-49cd-a22a-6dfb92c3994c",
+            "de43eb48-496c-46d4-8c5b-be6125a38c15",
+            "79266ca2-b4e3-45e5-af65-7914bd4511a0"
+          ]
+        },
+        "CODE": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the code of the care plan",
+          "examples": [
+            "185349003",
+            "185345009",
+            "698314001",
+            "424441002",
+            "424619006"
+          ]
+        },
+        "DESCRIPTION": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the description of the care plan",
+          "examples": [
+            "Outpatient Encounter",
+            "Encounter for symptom",
+            "Consultation for treatment",
+            "Prenatal initial visit",
+            "Prenatal visit"
+          ]
+        },
+        "REASONCODE": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the reason code",
+          "examples": [
+            "10509002",
+            "38822007",
+            "72892002",
+            "195662009"
+          ]
+        },
+        "REASONDESCRIPTION": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the description of the reason why the patient needs the care plan",
+          "examples": [
+            "Acute bronchitis (disorder)",
+            "Cystitis",
+            "Normal pregnancy",
+            "Acute viral pharyngitis (disorder)"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.immunizations": {
+      "fields": {
+        "DATE": {
+          "type": "DATE",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the date of the immunization",
+          "examples": [
+            "2007-11-02"
+          ]
+        },
+        "PATIENT": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the patient id",
+          "examples": [
+            "70cbc79e-dd9d-4e3b-8158-a92d85951f94",
+            "87828e93-e09b-435b-be8e-657361f1c68a",
+            "0b763e21-2a8f-4f04-86d2-f7e8f9cebb21",
+            "34fac7c1-3a47-4ca3-9d80-3c933b736260",
+            "a6ac0903-d6c9-4edf-a39b-d59564a6f6ba"
+          ]
+        },
+        "ENCOUNTER": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the medical encounter id",
+          "examples": [
+            "898ab2de-8a71-4fb3-b239-b768b915284a",
+            "fc8e3271-cc7c-4169-8c99-d46635a86478",
+            "e59b50ba-3721-4ad0-bb64-173fcdc4fc91",
+            "4362fb7c-3a1d-47a1-95ac-a9f6f3d95ca9",
+            "cc5c7252-9786-469f-9ab3-10a1bdaf47b9"
+          ]
+        },
+        "CODE": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the code of the immunization",
+          "examples": [
+            "8",
+            "62",
+            "140",
+            "113",
+            "83"
+          ]
+        },
+        "DESCRIPTION": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the description of the immunization",
+          "examples": [
+            "Influenza  seasonal  injectable  preservative free",
+            "Td (adult) preservative free",
+            "meningococcal MCV4P",
+            "Tdap",
+            "HPV  quadrivalent"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.medications": {
+      "fields": {
+        "START": {
+          "type": "DATE",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the start date of the care plan",
+          "examples": [
+            "1918-04-17"
+          ]
+        },
+        "STOP": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the stop date of the care plan",
+          "examples": [
+            "2008-06-04"
+          ]
+        },
+        "PATIENT": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the patient id",
+          "examples": [
+            "ce11bcba-c83c-43ae-802d-b20ee8715afe",
+            "a9c61b1f-3ad5-47e0-9aae-1613640a8187",
+            "ab31bac7-6165-4bb3-9d11-935d56ee331b",
+            "6bad295e-0c5a-41c4-a458-fa0a216bb8c3",
+            "14d1eeda-429d-46ee-b104-72adfaca22a5"
+          ]
+        },
+        "ENCOUNTER": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the medical encounter id",
+          "examples": [
+            "6334071d-e6b0-42c1-a082-2a08e123de4e",
+            "23ab74d3-044b-465b-ad85-394acfda0ef7",
+            "75a37827-15c9-4931-bcae-1d4f2b734edb",
+            "e097524a-965f-4d4b-af1d-e4d3638a3c0c",
+            "9d6219cb-8953-45f5-b1b9-75fc3e63217c"
+          ]
+        },
+        "CODE": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the code of the medication",
+          "examples": [
+            "834060",
+            "745679",
+            "895994",
+            "824184",
+            "564666"
+          ]
+        },
+        "DESCRIPTION": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the description of the medication",
+          "examples": [
+            "Penicillin V Potassium 250 MG",
+            "NuvaRing 0.12/0.015 MG per 24HR 21 Day Vaginal Ring",
+            "Acetaminophen 160 MG",
+            "Levora 0.15/30 28 Day Pack",
+            "Nitrofurantoin 5 MG/ML [Furadantin]"
+          ]
+        },
+        "REASONCODE": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the reason code",
+          "examples": [
+            "43878008",
+            "10509002",
+            "38822007",
+            "301011002"
+          ]
+        },
+        "REASONDESCRIPTION": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the description of the reason why the patient take the medication",
+          "examples": [
+            "Streptococcal sore throat (disorder)",
+            "Acute bronchitis (disorder)",
+            "Cystitis",
+            "Escherichia coli urinary tract infection"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.observations": {
+      "fields": {
+        "DATE": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the date of the observation",
+          "examples": [
+            "2008-03-11"
+          ]
+        },
+        "PATIENT": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the patient id",
+          "examples": [
+            "71949668-1c2e-43ae-ab0a-64654608defb",
+            "c2caaace-9119-4b2d-a2c3-4040f5a9cf32",
+            "96b24072-e1fe-49cd-a22a-6dfb92c3994c",
+            "de43eb48-496c-46d4-8c5b-be6125a38c15",
+            "79266ca2-b4e3-45e5-af65-7914bd4511a0"
+          ]
+        },
+        "ENCOUNTER": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the medical encounter id",
+          "examples": [
+            "5114a5b4-64b8-47b2-82a6-0ce24aae0943",
+            "bdb926b8-5b6d-4366-bbe9-76fe3f3fbc4f",
+            "36796523-2672-4680-84c5-2d9a2b080ddb",
+            "b2e12445-b771-4738-944b-95cf6bbe76eb",
+            "323e1478-fdbf-4904-80a6-2b7e4526fc22"
+          ]
+        },
+        "CODE": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the code of the observation type",
+          "examples": [
+            "8302-2",
+            "29463-7",
+            "39156-5",
+            "8480-6",
+            "8462-4"
+          ]
+        },
+        "DESCRIPTION": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the description of the observation",
+          "examples": [
+            "Body Height",
+            "Body Weight",
+            "Body Mass Index",
+            "Systolic Blood Pressure",
+            "Diastolic Blood Pressure"
+          ]
+        },
+        "VALUE": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the observation value",
+          "examples": [
+            "166.03",
+            "54.42",
+            "19.74",
+            "139.0",
+            "89.0"
+          ]
+        },
+        "UNITS": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the units of the observation value",
+          "examples": [
+            "cm",
+            "kg",
+            "kg/m2",
+            "mmHg",
+            "Cel"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.patients": {
+      "fields": {
+        "patient": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for the patient",
+          "examples": [
+            "00269bb7-e3ab-43a9-9cdf-cdf9b6e3b2b3",
+            "00341a88-1cc1-4b39-b0f9-05b0531991a0",
+            "004a5922-7c4d-40cc-a0f8-68f607044c99",
+            "00630ce3-e8eb-4ed4-889b-2c0ac257cbf4",
+            "007cbcc1-7333-4c79-b5e9-ffa93822fa11"
+          ]
+        },
+        "birthdate": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the birth date of the patient",
+          "examples": [
+            "1929-04-08"
+          ]
+        },
+        "deathdate": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the death date of the patient",
+          "examples": [
+            "2029-11-11"
+          ]
+        },
+        "ssn": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the social security number of the patient",
+          "examples": [
+            "999-78-5976",
+            "999-59-9186",
+            "999-43-3780",
+            "999-53-5542",
+            "999-34-8549"
+          ]
+        },
+        "drivers": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the driver number of the patient",
+          "examples": [
+            "S99992928",
+            "S99975961",
+            "S99997003",
+            "S99969847"
+          ]
+        },
+        "passport": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the passport number",
+          "examples": [
+            "FALSE",
+            "X98167138X",
+            "X65866752X",
+            "X69163281X"
+          ]
+        },
+        "prefix": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the prefix",
+          "examples": [
+            "Mr.",
+            "Mrs.",
+            "Ms."
+          ]
+        },
+        "first": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the first name",
+          "examples": [
+            "Rosamaria",
+            "Loan",
+            "Angelo",
+            "Cami",
+            "Giovanni"
+          ]
+        },
+        "last": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the last name",
+          "examples": [
+            "Pfannerstill",
+            "Bashirian",
+            "Buckridge",
+            "Terry",
+            "Russel"
+          ]
+        },
+        "suffix": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the suffix of the patient",
+          "examples": [
+            "PhD",
+            "JD",
+            "MD"
+          ]
+        },
+        "maiden": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the maiden name of the patient",
+          "examples": [
+            "Schuster",
+            "Schaden",
+            "Brekke",
+            "Murazik"
+          ]
+        },
+        "marital": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the marital status of the patient",
+          "examples": [
+            "S",
+            "M"
+          ]
+        },
+        "race": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the race of the patient",
+          "examples": [
+            "black",
+            "white",
+            "hispanic",
+            "asian"
+          ]
+        },
+        "ethnicity": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the ethnicity of the patient",
+          "examples": [
+            "dominican",
+            "american",
+            "african",
+            "english",
+            "puerto_rican"
+          ]
+        },
+        "gender": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the gender of the patient",
+          "examples": [
+            "F",
+            "M"
+          ]
+        },
+        "birthplace": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the birth place",
+          "examples": [
+            "Pittsfield MA US",
+            "Medford MA US",
+            "Framingham MA US",
+            "Hudson MA US",
+            "Westfield MA US"
+          ]
+        },
+        "address": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the specific address",
+          "examples": [
+            "18797 Karson Burgs Suite 444 Palmer Town MA 01069 US",
+            "301 Eula Radial Suite 298 Brockton MA 02305 US",
+            "8693 Fred Crossroad New Bedford MA 02746 US",
+            "344 Olson Road Apt. 936 Attleboro MA 02703 US",
+            "5780 Corwin Trafficway Dartmouth MA 02714 US"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.procedures": {
+      "fields": {
+        "DATE": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the date of the procedure",
+          "examples": [
+            "2013-02-09"
+          ]
+        },
+        "PATIENT": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the patient id",
+          "examples": [
+            "71949668-1c2e-43ae-ab0a-64654608defb",
+            "96b24072-e1fe-49cd-a22a-6dfb92c3994c",
+            "79266ca2-b4e3-45e5-af65-7914bd4511a0",
+            "31410948-38be-4990-be5e-a47ab44f33a1",
+            "b1943aad-500b-4b22-8da8-b4d9c667c763"
+          ]
+        },
+        "ENCOUNTER": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the medical encounter id",
+          "examples": [
+            "6f2e3935-b203-493e-a9c0-f23e847b9798",
+            "da4fd626-e74e-4930-91be-7fb3da7ea098",
+            "988f02a3-bf7e-485a-8d26-3378ddc9524c",
+            "8ae1f76d-fdf1-40b7-9c9d-66b530701d9d",
+            "cac10621-ec28-427c-bb64-366874c07579"
+          ]
+        },
+        "CODE": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the code of the procedure",
+          "examples": [
+            "23426006",
+            "252160004",
+            "237001001",
+            "11466000",
+            "169553002"
+          ]
+        },
+        "DESCRIPTION": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the description of the procedure",
+          "examples": [
+            "Measurement of respiratory function (procedure)",
+            "Standard pregnancy test",
+            "Augmentation of labor",
+            "Cesarean section",
+            "Insertion of subcutaneous contraceptive"
+          ]
+        },
+        "REASONCODE": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the code of the reason",
+          "examples": [
+            "10509002",
+            "72892002",
+            "33737001",
+            "284549007"
+          ]
+        },
+        "REASONDESCRIPTION": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the description of the reason why the patient take the procedure",
+          "examples": [
+            "Acute bronchitis (disorder)",
+            "Normal pregnancy",
+            "Fracture of rib",
+            "Laceration of hand"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.allergies",
+      "ENCOUNTER",
+      "main",
+      "encounters",
+      "ID"
+    ],
+    [
+      "main.allergies",
+      "PATIENT",
+      "main",
+      "patients",
+      "patient"
+    ],
+    [
+      "main.careplans",
+      "ENCOUNTER",
+      "main",
+      "encounters",
+      "ID"
+    ],
+    [
+      "main.careplans",
+      "PATIENT",
+      "main",
+      "patients",
+      "patient"
+    ],
+    [
+      "main.claims",
+      "ENCOUNTER",
+      "main",
+      "encounters",
+      "ID"
+    ],
+    [
+      "main.claims",
+      "PATIENT",
+      "main",
+      "patients",
+      "patient"
+    ],
+    [
+      "main.conditions",
+      "ENCOUNTER",
+      "main",
+      "encounters",
+      "ID"
+    ],
+    [
+      "main.conditions",
+      "PATIENT",
+      "main",
+      "patients",
+      "patient"
+    ],
+    [
+      "main.conditions",
+      "DESCRIPTION",
+      "main",
+      "all_prevalences",
+      "ITEM"
+    ],
+    [
+      "main.encounters",
+      "PATIENT",
+      "main",
+      "patients",
+      "patient"
+    ],
+    [
+      "main.immunizations",
+      "ENCOUNTER",
+      "main",
+      "encounters",
+      "ID"
+    ],
+    [
+      "main.immunizations",
+      "PATIENT",
+      "main",
+      "patients",
+      "patient"
+    ],
+    [
+      "main.medications",
+      "ENCOUNTER",
+      "main",
+      "encounters",
+      "ID"
+    ],
+    [
+      "main.medications",
+      "PATIENT",
+      "main",
+      "patients",
+      "patient"
+    ],
+    [
+      "main.observations",
+      "ENCOUNTER",
+      "main",
+      "encounters",
+      "ID"
+    ],
+    [
+      "main.observations",
+      "PATIENT",
+      "main",
+      "patients",
+      "patient"
+    ],
+    [
+      "main.procedures",
+      "ENCOUNTER",
+      "main",
+      "encounters",
+      "ID"
+    ],
+    [
+      "main.procedures",
+      "PATIENT",
+      "main",
+      "patients",
+      "patient"
+    ]
+  ]
+}

@@ -1,0 +1,13 @@
+# Core dependencies for EvolSQL
+openai>=1.0.0
+tqdm
+numpy
+pandas
+
+# Schema parsing / SQL AST
+sqlglot
+
+# Semantic deduplication
+sentence-transformers
+faiss-cpu
+

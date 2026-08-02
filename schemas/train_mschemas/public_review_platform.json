@@ -1,0 +1,1314 @@
+{
+  "db_id": "public_review_platform",
+  "schema": null,
+  "tables": {
+    "main.Attributes": {
+      "fields": {
+        "attribute_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique number identifying the attribute",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "attribute_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name of the attribute",
+          "examples": [
+            "Alcohol",
+            "Waiter Service",
+            "Delivery",
+            "Attire",
+            "Good for Kids"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Business": {
+      "fields": {
+        "business_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique number identifying the business",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "active": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "whether the business is still actively running until now",
+          "examples": [
+            "true",
+            "false"
+          ]
+        },
+        "city": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The city where the business is located",
+          "examples": [
+            "Phoenix",
+            "Scottsdale",
+            "Glendale",
+            "Casa Grande",
+            "Peoria"
+          ]
+        },
+        "state": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The state where the business is located",
+          "examples": [
+            "AZ",
+            "SC",
+            "CA"
+          ]
+        },
+        "stars": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ratings of the business",
+          "examples": [
+            "3.0",
+            "4.5",
+            "4.0",
+            "5.0",
+            "3.5"
+          ]
+        },
+        "review_count": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the total number of reviews the users have written for a business",
+          "examples": [
+            "Low",
+            "Medium",
+            "High",
+            "Uber"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Business_Attributes": {
+      "fields": {
+        "attribute_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "business_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "2",
+            "3",
+            "13",
+            "17",
+            "22"
+          ]
+        },
+        "attribute_value": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "none",
+            "full_bar",
+            "beer_and_wine",
+            "false",
+            "true"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Business_Categories": {
+      "fields": {
+        "business_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id number identifying the business",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "category_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id number identifying the categories",
+          "examples": [
+            "8",
+            "143",
+            "18",
+            "170",
+            "93"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Business_Hours": {
+      "fields": {
+        "business_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id number identifying the business",
+          "examples": [
+            "2",
+            "3",
+            "4",
+            "7",
+            "11"
+          ]
+        },
+        "day_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id number identifying each day of the week",
+          "examples": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        },
+        "opening_time": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "opening time of the business",
+          "examples": [
+            "11AM",
+            "12PM",
+            "10AM",
+            "8AM",
+            "9AM"
+          ]
+        },
+        "closing_time": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "closing time of the business",
+          "examples": [
+            "8PM",
+            "9PM",
+            "6PM",
+            "5PM",
+            "7PM"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Categories": {
+      "fields": {
+        "category_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "category_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Active Life",
+            "Arts & Entertainment",
+            "Stadiums & Arenas",
+            "Horse Racing",
+            "Tires"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Checkins": {
+      "fields": {
+        "business_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id number identifying the business",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "5",
+            "6"
+          ]
+        },
+        "day_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id number identifying each day of the week",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "label_time_0": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "indicates times of checkins on a business",
+          "examples": [
+            "None",
+            "Low",
+            "Medium",
+            "High"
+          ]
+        },
+        "label_time_1": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "None",
+            "Low",
+            "Medium",
+            "High"
+          ]
+        },
+        "label_time_2": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "None",
+            "Low",
+            "Medium"
+          ]
+        },
+        "label_time_3": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "None",
+            "Low",
+            "Medium"
+          ]
+        },
+        "label_time_4": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "None",
+            "Low",
+            "Medium",
+            "High"
+          ]
+        },
+        "label_time_5": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "None",
+            "Low",
+            "Medium",
+            "Uber",
+            "High"
+          ]
+        },
+        "label_time_6": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "None",
+            "Low",
+            "Medium",
+            "High",
+            "Uber"
+          ]
+        },
+        "label_time_7": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "None",
+            "Low",
+            "Medium",
+            "High",
+            "Uber"
+          ]
+        },
+        "label_time_8": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "None",
+            "Low",
+            "Medium",
+            "High",
+            "Uber"
+          ]
+        },
+        "label_time_9": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Low",
+            "None",
+            "Medium",
+            "High",
+            "Uber"
+          ]
+        },
+        "label_time_10": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "None",
+            "Low",
+            "Medium",
+            "High",
+            "Uber"
+          ]
+        },
+        "label_time_11": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Low",
+            "None",
+            "Medium",
+            "High",
+            "Uber"
+          ]
+        },
+        "label_time_12": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "None",
+            "Low",
+            "Medium",
+            "High",
+            "Uber"
+          ]
+        },
+        "label_time_13": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "None",
+            "Low",
+            "Medium",
+            "High",
+            "Uber"
+          ]
+        },
+        "label_time_14": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "None",
+            "Low",
+            "Medium",
+            "High",
+            "Uber"
+          ]
+        },
+        "label_time_15": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "None",
+            "Low",
+            "Medium",
+            "High",
+            "Uber"
+          ]
+        },
+        "label_time_16": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "None",
+            "Low",
+            "Medium",
+            "High",
+            "Uber"
+          ]
+        },
+        "label_time_17": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Low",
+            "None",
+            "Medium",
+            "High",
+            "Uber"
+          ]
+        },
+        "label_time_18": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "None",
+            "Low",
+            "Medium",
+            "High",
+            "Uber"
+          ]
+        },
+        "label_time_19": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "None",
+            "Low",
+            "Medium",
+            "High",
+            "Uber"
+          ]
+        },
+        "label_time_20": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "None",
+            "Low",
+            "Medium",
+            "High",
+            "Uber"
+          ]
+        },
+        "label_time_21": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "None",
+            "Low",
+            "Medium",
+            "High",
+            "Uber"
+          ]
+        },
+        "label_time_22": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "None",
+            "Low",
+            "Medium",
+            "High",
+            "Uber"
+          ]
+        },
+        "label_time_23": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "None",
+            "Low",
+            "Medium",
+            "High"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Compliments": {
+      "fields": {
+        "compliment_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "compliment_type": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "photos",
+            "cool",
+            "hot",
+            "note",
+            "more"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Days": {
+      "fields": {
+        "day_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id identifying the day of the week",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "day_of_week": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "indicate the day of the week",
+          "examples": [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Elite": {
+      "fields": {
+        "user_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id number identifying the users",
+          "examples": [
+            "3",
+            "19",
+            "33",
+            "45",
+            "65"
+          ]
+        },
+        "year_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id number identifying the year",
+          "examples": [
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Reviews": {
+      "fields": {
+        "business_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "user_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "36129",
+            "40299",
+            "59125",
+            "60776",
+            "62013"
+          ]
+        },
+        "review_stars": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "2",
+            "1",
+            "5",
+            "4",
+            "3"
+          ]
+        },
+        "review_votes_funny": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "None",
+            "Low",
+            "Medium",
+            "High",
+            "Uber"
+          ]
+        },
+        "review_votes_useful": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "None",
+            "Low",
+            "Medium",
+            "Uber",
+            "High"
+          ]
+        },
+        "review_votes_cool": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "None",
+            "Low",
+            "Medium",
+            "Uber",
+            "High"
+          ]
+        },
+        "review_length": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Medium",
+            "Short",
+            "Long"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Tips": {
+      "fields": {
+        "business_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the number identifying the business",
+          "examples": [
+            "2",
+            "3",
+            "6",
+            "8",
+            "9"
+          ]
+        },
+        "user_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the number identifying the user who comments on this business",
+          "examples": [
+            "12490",
+            "16328",
+            "19191",
+            "25891",
+            "34759"
+          ]
+        },
+        "likes": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "how many likes of this tips",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        "tip_length": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "length of the tip",
+          "examples": [
+            "Medium",
+            "Short",
+            "Long"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Users": {
+      "fields": {
+        "user_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "user_yelping_since_year": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "2012",
+            "2010",
+            "2009",
+            "2008",
+            "2013"
+          ]
+        },
+        "user_average_stars": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "4.0",
+            "2.5",
+            "4.5",
+            "5.0",
+            "2.0"
+          ]
+        },
+        "user_votes_funny": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Low",
+            "None",
+            "Uber",
+            "Medium",
+            "High"
+          ]
+        },
+        "user_votes_useful": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Low",
+            "Medium",
+            "Uber",
+            "None",
+            "High"
+          ]
+        },
+        "user_votes_cool": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Low",
+            "Uber",
+            "None",
+            "High",
+            "Medium"
+          ]
+        },
+        "user_review_count": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Medium",
+            "High",
+            "Low",
+            "Uber"
+          ]
+        },
+        "user_fans": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Low",
+            "None",
+            "Medium",
+            "High",
+            "Uber"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Users_Compliments": {
+      "fields": {
+        "compliment_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id number indicating the compliment",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "user_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id number indicating the user",
+          "examples": [
+            "3",
+            "19",
+            "45",
+            "53",
+            "102"
+          ]
+        },
+        "number_of_compliments": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "how many compliments a user has received from other users",
+          "examples": [
+            "Medium",
+            "Low",
+            "High",
+            "Uber"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Years": {
+      "fields": {
+        "year_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique number identifying the year",
+          "examples": [
+            "2005",
+            "2006",
+            "2007",
+            "2008",
+            "2009"
+          ]
+        },
+        "actual_year": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "actual year",
+          "examples": [
+            "2005",
+            "2006",
+            "2007",
+            "2008",
+            "2009"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.Business_Attributes",
+      "business_id",
+      "main",
+      "Business",
+      "business_id"
+    ],
+    [
+      "main.Business_Attributes",
+      "attribute_id",
+      "main",
+      "Attributes",
+      "attribute_id"
+    ],
+    [
+      "main.Business_Categories",
+      "category_id",
+      "main",
+      "Categories",
+      "category_id"
+    ],
+    [
+      "main.Business_Categories",
+      "business_id",
+      "main",
+      "Business",
+      "business_id"
+    ],
+    [
+      "main.Business_Hours",
+      "day_id",
+      "main",
+      "Days",
+      "day_id"
+    ],
+    [
+      "main.Business_Hours",
+      "business_id",
+      "main",
+      "Business",
+      "business_id"
+    ],
+    [
+      "main.Checkins",
+      "day_id",
+      "main",
+      "Days",
+      "day_id"
+    ],
+    [
+      "main.Checkins",
+      "business_id",
+      "main",
+      "Business",
+      "business_id"
+    ],
+    [
+      "main.Elite",
+      "year_id",
+      "main",
+      "Years",
+      "year_id"
+    ],
+    [
+      "main.Elite",
+      "user_id",
+      "main",
+      "Users",
+      "user_id"
+    ],
+    [
+      "main.Reviews",
+      "user_id",
+      "main",
+      "Users",
+      "user_id"
+    ],
+    [
+      "main.Reviews",
+      "business_id",
+      "main",
+      "Business",
+      "business_id"
+    ],
+    [
+      "main.Tips",
+      "user_id",
+      "main",
+      "Users",
+      "user_id"
+    ],
+    [
+      "main.Tips",
+      "business_id",
+      "main",
+      "Business",
+      "business_id"
+    ],
+    [
+      "main.Users_Compliments",
+      "user_id",
+      "main",
+      "Users",
+      "user_id"
+    ],
+    [
+      "main.Users_Compliments",
+      "compliment_id",
+      "main",
+      "Compliments",
+      "compliment_id"
+    ]
+  ]
+}

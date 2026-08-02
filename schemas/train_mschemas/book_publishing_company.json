@@ -1,0 +1,1052 @@
+{
+  "db_id": "book_publishing_company",
+  "schema": null,
+  "tables": {
+    "main.authors": {
+      "fields": {
+        "au_id": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique number identifying authors",
+          "examples": [
+            "172-32-1176",
+            "213-46-8915",
+            "238-95-7766",
+            "267-41-2394",
+            "274-80-9391"
+          ]
+        },
+        "au_lname": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "author last name",
+          "examples": [
+            "White",
+            "Green",
+            "Carson",
+            "O'Leary",
+            "Straight"
+          ]
+        },
+        "au_fname": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "author first name",
+          "examples": [
+            "Johnson",
+            "Marjorie",
+            "Cheryl",
+            "Michael",
+            "Dean"
+          ]
+        },
+        "phone": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "phone number",
+          "examples": [
+            "408 496-7223",
+            "415 986-7020",
+            "415 548-7723",
+            "408 286-2428",
+            "415 834-2919"
+          ]
+        },
+        "address": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "address",
+          "examples": [
+            "10932 Bigge Rd.",
+            "309 63rd St. #411",
+            "589 Darwin Ln.",
+            "22 Cleveland Av. #14",
+            "5420 College Av."
+          ]
+        },
+        "city": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "city",
+          "examples": [
+            "Menlo Park",
+            "Oakland",
+            "Berkeley",
+            "San Jose",
+            "Lawrence"
+          ]
+        },
+        "state": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "state",
+          "examples": [
+            "CA",
+            "KS",
+            "TN",
+            "OR",
+            "MI"
+          ]
+        },
+        "zip": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "zip code",
+          "examples": [
+            "94025",
+            "94618",
+            "94705",
+            "95128",
+            "94609"
+          ]
+        },
+        "contract": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "contract status",
+          "examples": [
+            "0"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.discounts": {
+      "fields": {
+        "discounttype": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "discount type",
+          "examples": [
+            "Initial Customer",
+            "Volume Discount",
+            "Customer Discount"
+          ]
+        },
+        "stor_id": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "store id",
+          "examples": [
+            "8042"
+          ]
+        },
+        "lowqty": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "low quantity (quantity floor)",
+          "examples": [
+            "100"
+          ]
+        },
+        "highqty": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "high quantity (max quantity)",
+          "examples": [
+            "1000"
+          ]
+        },
+        "discount": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "discount",
+          "examples": [
+            "10.5",
+            "6.7",
+            "5.0"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.employee": {
+      "fields": {
+        "emp_id": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique number identifying employees",
+          "examples": [
+            "A-C71970F",
+            "A-R89858F",
+            "AMD15433F",
+            "ARD36773F",
+            "CFH28514M"
+          ]
+        },
+        "fname": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "first name of employees",
+          "examples": [
+            "Aria",
+            "Annette",
+            "Ann",
+            "Anabela",
+            "Carlos"
+          ]
+        },
+        "minit": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "middle name",
+          "examples": [
+            "M",
+            "R",
+            "F",
+            "G"
+          ]
+        },
+        "lname": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "last name",
+          "examples": [
+            "Cruz",
+            "Roulet",
+            "Devon",
+            "Domingues",
+            "Hernadez"
+          ]
+        },
+        "job_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "number identifying jobs",
+          "examples": [
+            "10",
+            "6",
+            "3",
+            "8",
+            "5"
+          ]
+        },
+        "job_lvl": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "job level",
+          "examples": [
+            "87",
+            "152",
+            "200",
+            "100",
+            "211"
+          ]
+        },
+        "pub_id": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id number identifying publishers",
+          "examples": [
+            "1389",
+            "9999",
+            "9952",
+            "0877",
+            "0736"
+          ]
+        },
+        "hire_date": {
+          "type": "DATETIME",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "hire date",
+          "examples": []
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.jobs": {
+      "fields": {
+        "job_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number identifying the jobs",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "job_desc": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "job description",
+          "examples": [
+            "New Hire - Job not specified",
+            "Chief Executive Officer",
+            "Business Operations Manager",
+            "Chief Financial Officier",
+            "Publisher"
+          ]
+        },
+        "min_lvl": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "min job level",
+          "examples": [
+            "10",
+            "200",
+            "175",
+            "150",
+            "140"
+          ]
+        },
+        "max_lvl": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "max job level",
+          "examples": [
+            "10",
+            "250",
+            "225",
+            "200",
+            "175"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.pub_info": {
+      "fields": {
+        "pub_id": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number identifying publications",
+          "examples": [
+            "0877",
+            "1389",
+            "1622",
+            "1756",
+            "9901"
+          ]
+        },
+        "logo": {
+          "type": "BLOB",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "logo of publications",
+          "examples": [
+            "0x4749463839618B002F00B30F00000000800000008000808000000080800080008080808080C0C0C0FF000000FF00FFFF000000FFFF00FF00FFFFFFFFFF21F9040100000F002C000000008B002F004004FFF0C949ABBD38EBCDBBFFA0048464089CE384A62BD596309CC6F4F58A287EBA79ED73B3D26A482C1A8FC8A47249FCCD76BC1F3058D94135579C9345053D835768560CFE6A555D343A1B6D3FC6DC2A377E66DBA5F8DBEBF6EEE1FF2A805B463A47828269871F7A3D7C7C8A3E899093947F666A756567996E6C519E167692646E7D9C98A42295ABAC24A092AD364C737EB15EB61B8E8DB58FB81DB0BE8C6470A0BE58C618BAC365C5C836CEA1BCBBC4C0D0AAD6D14C85CDD86FDDDFAB5F43A580DCB519A25B9BAE989BC3EEA9A7EBD9BF54619A7DF8BBA87475EDA770D6C58B968C59A27402FB99E2378FC7187010D5558948B15CC58B4E20CE9A762E62B558CAB86839FC088D24AB90854662BCD60D653E832BBD7924F49226469327FDEC91C6AD2538972E6FFEE429720D4E63472901251A33A9D28DB47A5A731A7325D56D50B36ADDAA2463D5AF1EAE82F5F84FAA946656AA21AC31D0C4BF85CBA87912D6D194D4B535C5DDDBA93221CB226D022E9437D89C594305FD321C0CB7DFA5C58223036E088F3139B9032563DD0BE66D2ACD8B2BCB9283CEDEE3C6A53EE39BA7579A62C1294917DC473035E0B9E3183F9A3BB6F7ABDE608B018800003B",
+            "0x474946383961C2001D00B30F00000000800000008000808000000080800080008080808080C0C0C0FF000000FF00FFFF000000FFFF00FF00FFFFFFFFFF21F9040100000F002C00000000C2001D004004FFF0C949ABBD38EBCDBBFF60288E1C609E2840AE2C969E6D2CCFB339D90F2CE1F8AEE6BC9FEF26EC01413AA3F2D76BAA96C7A154EA7CC29C449AC7A8ED7A2FDC2FED25149B29E4D479FD55A7CBD931DC35CFA4916171BEFDAABC51546541684C8285847151537F898A588D89806045947491757B6C9A9B9C9D9E9FA0A1A2A3A4A5A6A7A8A95A6A3E64169923B0901A775B7566B25D7F8C888A5150BE7B8F93847D8DC3C07983BEBDC1878BCFAF6F44BBD0AD71C9CBD653BFD5CEC7D1C3DFDB8197D8959CB9AAB8B7EBEEEFF0BA92F1B6B5F4A0F6F776D3FA9EBCFD748C01DCB4AB5DBF7C03CF1454070F61423D491C326BA18E211081250C7AB12867619825F37F2ECE1168AC242B6A274556D121D28FA46C11E78564C5B295308F21BBF5CAD6CCE52C7018813932C4ED5C517346B7C1C2683368349D49A19D0439D31538A452A916135A0B19A59AAB9E6A835A0EABD00E5CD11D1D478C1C59714053AA4C4955AB4B9956879AB497F62E1CBA2373DA25B752239F8787119390AB5806C74E1100003B",
+            "0x474946383961F5003400B30F00000000800000008000808000000080800080008080808080C0C0C0FF000000FF00FFFF000000FFFF00FF00FFFFFFFFFF21F9040100000F002C00000000F50034004004FFF0C949ABBD38EBCDBBFF60288E64D90166AA016CEBBEB02ACF746D67E82DC2ACEEFFC0A02997B31027C521EF25698D8E42230E049D3E8AD8537385BC4179DB6B574C26637BE58BF38A1EB393DF2CE55CA52731F77918BE9FAFCD6180817F697F5F6E6C7A836D62876A817A79898A7E31524D708E7299159C9456929F9044777C6575A563A68E827D9D4C8D334BB3B051B6B7B83A8490B91EB4B3BDC1C251A1C24BC3C8C9C8C5C4BFCCCAD0D135ACC36B2E3BBCB655AD1CDB8F6921DEB8D48AA9ADA46046D7E0DC829B9D98E9988878D9AAE5AEF875BC6DEFF7E7A35C9943F18CCA3175C0A4295C48625F3B8610234A0C17D159C289189515CC7531A3C7891BFF9B59FA4812634820F24AAA94882EA50D8BBB3E8813598B8A3D7C0D6F12CB8710E5BA7536D9ED3C458F8B509CF17CE94CEA658F254D944889528306E83C245089629DDA4F8BD65885049ACBB7ADAB2A5364AFDAF344902752409A6085FA39105EBB3C2DAB2E52FA8611B7ACFA060956CB1370598176DB3E74FB956CCCA77207BB6B8CAAAADEA3FFBE01A48CD871D65569C37E25A458C5C9572E57AADE59F7F40A98B456CB36560F730967B3737B74ADBBB7EFDABF830BE70B11F6C8E1C82F31345E33B9F3A5C698FB7D4E9D779083D4B313D7985ABB77E0C9B07F1F0F3EFA71F2E8ED56EB98BEBD7559306FC72C6995EA7499F3B5DDA403FF17538AB6FD20C9FF7D463D531681971888E0104E45069D7C742D58DB7B29B45454811B381420635135B5D838D6E487612F876D98D984B73D2820877DFD871523F5E161D97DD7FCB4C82E31BEC8176856D9D8487D95E1E5D711401AE2448EF11074E47E9D69359382E8A8871391880C28E5861636399950FEFCA55E315D8279255C2C6AA89899B68588961C5B82C366693359F1CA89ACACB959971D76F6E6607B6E410E9D57B1A9196A52BDD56636CC08BA519C5E1EDA8743688906DA9D53F2E367999656A96292E2781397A6264E62A04E25FE49A59354696958409B11F527639DEAC84E7795553A9AACA85C68E8977D2A7919A5A7F83329A46F0D79698BF60D98688CCC118A6C3F8F38E6D89C8C12F635E49145F6132D69DCCE684725FC0546C3B40875D79E70A5867A8274E69E8BAEAC1FEEC02E92EE3AA7ADA015365BEFBE83F2EB6F351100003B",
+            "0x474946383961E3002500B30F00000000800000008000808000000080800080008080808080C0C0C0FF000000FF00FFFF000000FFFF00FF00FFFFFFFFFF21F9040100000F002C00000000E30025004004FFF0C949ABBD38EBCDBBFF60288E240858E705A4D2EA4E6E0CC7324DD1EB9CDBBAFCE1AC878DE7ABBD84476452C963369F2F288E933A595B404DB27834E67A5FEC37ACEC517D4EB24E5C8D069966361A5E8ED3C3DCA5AA54B9B2AE2D423082817F848286898386858754887B8A8D939094947E918B7D8780959E9D817C18986FA2A6A75A7B22A59B378E1DACAEB18F1940B6A8B8A853727AB5BD4E76676A37BFB9AF2A564D6BC0776E635BCE6DCFD2C3C873716879D4746C6053DA76E0DAB3A133D6D5B290929F9CEAEDEB6FA0C435EF9E97F59896EC28EEFA9DFF69A21C1BB4CA1E3E63084DB42B970FD6407D05C9E59298B0A2C58B18337AA0E88DA3468DC3FFD0692187A7982F5F2271B152162DE54795CEB0F0DAF8EBDA2A932F1FF203B38C484B6ED07674194ACD639679424B4EDB36279B4D3852FE1095266743955138C5209ADA6D5CB26DCDFC644DD351EACF804BCD32421A562DB6965F25AADD11B056BD7BA436C903E82A1D4A3D024769BAE777B0BB7887F51A0E022E9589BCFCE0DD6527597223C4917502ACBCF8D5E6C49F0B6FA60751A7C2748A3EE7DD6B70B5628F9A5873C6DB5936E57EB843C726043B95EBDE394F3584EC7096ED8DA60D86001EBCB9F3E72F99439F0E7DEC7297BA84D9924EFDB11A65566B8EFB510C7CC258DBB7779F7834A9756E6C97D114F95E5429F13CE5F7F9AAF51C996928604710FF544AFDC79717C10CD85157C6EDD75F7EB49C81D45C5EA9674E5BBBA065941BFB45F3D62D5E99E11488516568A15D1292255F635E8045E0520F3E15A0798DB5C5A08105EE52E3884C05255778E6F5C4A287CCB4D84D1D41CE08CD913C56656482EAEDE8E38D71B974553C199EC324573C3669237C585588E52D1ACE049F85521648659556CD83445D27C9F4D68501CE580E31748ED4948C0E3E88959B257C87E39D0A8EC5D812559234996A9EE5B6E864FE31BA5262971DE40FA5B75D9A487A9A79975C6AB5DD06EA6CCA9DB94FA6A1568AD8A4C33DBA6A5995EE5450AC0AA24A9C6DBAE9F6883CB48976D0ABA8D90AA9A88D6246C2ABA3FE8A1B43CA229B9C58AFC11E071AB1D1BE366DB5C9AE85DCA48595466B83AC95C61DA60D1146EEB3BB817ADA40A08CFBDBB2EB9972EB6EDB66D26D71768D5B2B1FEFC65B11AFA5FA96C93AF50AA6AFBEFE263C1DC0FCA2AB8AC210472C310A1100003B",
+            "0x4749463839615D002200B30F00000000800000008000808000000080800080008080808080C0C0C0FF000000FF00FFFF000000FFFF00FF00FFFFFFFFFF21F9040100000F002C000000005D0022004004FFF0C949ABBD38EBCDFB03DF078C249895A386AA68BB9E6E0ACE623ABD1BC9E9985DFFB89E8E366BED782C5332563ABA4245A6744AAD5AAF4D2276CBED5EA1D026C528B230CD38B2C92721D78CC4772526748F9F611EB28DE7AFE25E818283604A1E8788898A7385838E8F55856F6C2C1D86392F6B9730708D6C5477673758A3865E92627E94754E173697A6A975809368949BB2AE7B9A6865AA734F80A2A17DA576AA5BB667C290CDCE4379CFD2CE9ED3D6A7CCD7DAA4D9C79341C8B9DF5FC052A8DEBA9BB696767B9C7FD5B8BBF23EABB9706BCAE5F05AB7E6C4C7488DDAF7251BC062530EFE93638C5B3580ECD4951312C217C425E73E89D38709D79D810D393BD20A528CE0AA704AA2D4D3082E583C89BD2C2D720753E1C8922697D44CF6AE53BF6D4041750B4AD467C54548932A1D7374A9D3A789004400003B"
+          ]
+        },
+        "pr_info": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "publisher's information",
+          "examples": [
+            "This is sample text data for Binnet & Hardley, publisher 0877 in the pubs database. Binnet & Hardley is located in Washington, D.C.\n\nThis is sample text data for Binnet & Hardley, publisher 0877 in the pubs database. Binnet & Hardley is located in Washington, D.C.\n\nThis is sample text data for Binnet & Hardley, publisher 0877 in the pubs database. Binnet & Hardley is located in Washington, D.C.\n\nThis is sample text data for Binnet & Hardley, publisher 0877 in the pubs database. Binnet & Hardley is located in Washington, D.C.\n\nThis is sample text data for Binnet & Hardley, publisher 0877 in the pubs database. Binnet & Hardley is located in Washington, D.C.",
+            "This is sample text data for Algodata Infosystems, publisher 1389 in the pubs database. Algodata Infosystems is located in Berkeley, California.\n\nThis is sample text data for Algodata Infosystems, publisher 1389 in the pubs database. Algodata Infosystems is located in Berkeley, California.\n\nThis is sample text data for Algodata Infosystems, publisher 1389 in the pubs database. Algodata Infosystems is located in Berkeley, California.\n\nThis is sample text data for Algodata Infosystems, publisher 1389 in the pubs database. Algodata Infosystems is located in Berkeley, California.\n\nThis is sample text data for Algodata Infosystems, publisher 1389 in the pubs database. Algodata Infosystems is located in Berkeley, California.\n\nThis is sample text data for Algodata Infosystems, publisher 1389 in the pubs database. Algodata Infosystems is located in Berkeley, California.\n\nThis is sample text data for Algodata Infosystems, publisher 1389 in the pubs database. Algodata Infosystems is located in Berkeley, California.\n\nThis is sample text data for Algodata Infosystems, publisher 1389 in the pubs database. Algodata Infosystems is located in Berkeley, California.\n\nThis is sample text data for Algodata Infosystems, publisher 1389 in the pubs database. Algodata Infosystems is located in Berkeley, California.\n\nThis is sample text data for Algodata Infosystems, publisher 1389 in the pubs database. Algodata Infosystems is located in Berkeley, California.",
+            "This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.\n\nThis is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.",
+            "This is sample text data for Ramona Publishers, publisher 1756 in the pubs database. Ramona Publishers is located in Dallas, Texas.",
+            "This is sample text data for GGG&G, publisher 9901 in the pubs database. GGG&G is located in München, Germany."
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.publishers": {
+      "fields": {
+        "pub_id": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number identifying publisher",
+          "examples": [
+            "0736",
+            "0877",
+            "1389",
+            "1622",
+            "1756"
+          ]
+        },
+        "pub_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "publisher name",
+          "examples": [
+            "New Moon Books",
+            "Binnet & Hardley",
+            "Algodata Infosystems",
+            "Five Lakes Publishing",
+            "Ramona Publishers"
+          ]
+        },
+        "city": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "city",
+          "examples": [
+            "Boston",
+            "Washington",
+            "Berkeley",
+            "Chicago",
+            "Dallas"
+          ]
+        },
+        "state": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "state",
+          "examples": [
+            "MA",
+            "DC",
+            "CA",
+            "IL",
+            "TX"
+          ]
+        },
+        "country": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "country",
+          "examples": [
+            "USA",
+            "Germany",
+            "France"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.roysched": {
+      "fields": {
+        "title_id": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number identifying title",
+          "examples": [
+            "BU1032",
+            "PC1035",
+            "BU2075",
+            "PS2091",
+            "PS2106"
+          ]
+        },
+        "lorange": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "low range",
+          "examples": [
+            "0",
+            "5001",
+            "2001",
+            "3001",
+            "4001"
+          ]
+        },
+        "hirange": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "high range",
+          "examples": [
+            "5000",
+            "50000",
+            "2000",
+            "3000",
+            "4000"
+          ]
+        },
+        "royalty": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "royalty",
+          "examples": [
+            "10",
+            "12",
+            "14",
+            "16",
+            "18"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.sales": {
+      "fields": {
+        "stor_id": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id number identifying stores",
+          "examples": [
+            "6380",
+            "7066",
+            "7067",
+            "7131",
+            "7896"
+          ]
+        },
+        "ord_num": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id number identifying the orders",
+          "examples": [
+            "6871",
+            "722a",
+            "A2976",
+            "QA7442.3",
+            "D4482"
+          ]
+        },
+        "ord_date": {
+          "type": "DATETIME",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the date of the order",
+          "examples": []
+        },
+        "qty": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "quantity of sales",
+          "examples": [
+            "5",
+            "3",
+            "50",
+            "75",
+            "10"
+          ]
+        },
+        "payterms": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "payments",
+          "examples": [
+            "Net 60",
+            "Net 30",
+            "ON invoice"
+          ]
+        },
+        "title_id": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id number identifying titles",
+          "examples": [
+            "BU1032",
+            "PS2091",
+            "PC8888",
+            "TC3218",
+            "TC4203"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.stores": {
+      "fields": {
+        "stor_id": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number of stores",
+          "examples": [
+            "6380",
+            "7066",
+            "7067",
+            "7131",
+            "7896"
+          ]
+        },
+        "stor_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Eric the Read Books",
+            "Barnum's",
+            "News & Brews",
+            "Doc-U-Mat: Quality Laundry and Books",
+            "Fricative Bookshop"
+          ]
+        },
+        "stor_address": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "788 Catamaugus Ave.",
+            "567 Pasadena Ave.",
+            "577 First St.",
+            "24-A Avogadro Way",
+            "89 Madison St."
+          ]
+        },
+        "city": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "city name",
+          "examples": [
+            "Seattle",
+            "Tustin",
+            "Los Gatos",
+            "Remulade",
+            "Fremont"
+          ]
+        },
+        "state": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "state code",
+          "examples": [
+            "WA",
+            "CA",
+            "OR"
+          ]
+        },
+        "zip": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "zip code",
+          "examples": [
+            "98056",
+            "92789",
+            "96745",
+            "98014",
+            "90019"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.titleauthor": {
+      "fields": {
+        "au_id": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "author id",
+          "examples": [
+            "172-32-1176",
+            "213-46-8915",
+            "238-95-7766",
+            "267-41-2394",
+            "274-80-9391"
+          ]
+        },
+        "title_id": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "title id",
+          "examples": [
+            "PS3333",
+            "BU1032",
+            "BU2075",
+            "PC1035",
+            "BU1111"
+          ]
+        },
+        "au_ord": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "author ordering",
+          "examples": [
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        "royaltyper": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "royaltyper",
+          "examples": [
+            "100",
+            "40",
+            "30",
+            "60",
+            "50"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.titles": {
+      "fields": {
+        "title_id": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "title id",
+          "examples": [
+            "BU1032",
+            "BU1111",
+            "BU2075",
+            "BU7832",
+            "MC2222"
+          ]
+        },
+        "title": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "title",
+          "examples": [
+            "The Busy Executive's Database Guide",
+            "Cooking with Computers: Surreptitious Balance Sheets",
+            "You Can Combat Computer Stress!",
+            "Straight Talk About Computers",
+            "Silicon Valley Gastronomic Treats"
+          ]
+        },
+        "type": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "type of titles",
+          "examples": [
+            "business",
+            "mod_cook",
+            "UNDECIDED",
+            "popular_comp",
+            "psychology"
+          ]
+        },
+        "pub_id": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "publisher id",
+          "examples": [
+            "1389",
+            "0736",
+            "0877"
+          ]
+        },
+        "price": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "price",
+          "examples": [
+            "19.99",
+            "11.95",
+            "2.99",
+            "22.95"
+          ]
+        },
+        "advance": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "pre-paid amount",
+          "examples": [
+            "5000.0",
+            "10125.0",
+            "0.0",
+            "15000.0"
+          ]
+        },
+        "royalty": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "royalty",
+          "examples": [
+            "10",
+            "24",
+            "12",
+            "16"
+          ]
+        },
+        "ytd_sales": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "year to date sales",
+          "examples": [
+            "4095",
+            "3876",
+            "18722",
+            "2032",
+            "22246"
+          ]
+        },
+        "notes": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "notes if any",
+          "examples": [
+            "An overview of available database systems with emphasis on common business applications. Illustrated.",
+            "Helpful hints on how to use your electronic resources to the best advantage.",
+            "The latest medical and psychological techniques for living with the electronic office. Easy-to-understand explanations.",
+            "Annotated analysis of what computers can do for you: a no-hype guide for the critical user.",
+            "Favorite recipes for quick, easy, and elegant meals."
+          ]
+        },
+        "pubdate": {
+          "type": "DATETIME",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "publication date",
+          "examples": []
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.discounts",
+      "stor_id",
+      "main",
+      "stores",
+      "stor_id"
+    ],
+    [
+      "main.employee",
+      "job_id",
+      "main",
+      "jobs",
+      "job_id"
+    ],
+    [
+      "main.employee",
+      "pub_id",
+      "main",
+      "publishers",
+      "pub_id"
+    ],
+    [
+      "main.pub_info",
+      "pub_id",
+      "main",
+      "publishers",
+      "pub_id"
+    ],
+    [
+      "main.roysched",
+      "title_id",
+      "main",
+      "titles",
+      "title_id"
+    ],
+    [
+      "main.sales",
+      "stor_id",
+      "main",
+      "stores",
+      "stor_id"
+    ],
+    [
+      "main.sales",
+      "title_id",
+      "main",
+      "titles",
+      "title_id"
+    ],
+    [
+      "main.titleauthor",
+      "au_id",
+      "main",
+      "authors",
+      "au_id"
+    ],
+    [
+      "main.titleauthor",
+      "title_id",
+      "main",
+      "titles",
+      "title_id"
+    ],
+    [
+      "main.titles",
+      "pub_id",
+      "main",
+      "publishers",
+      "pub_id"
+    ]
+  ]
+}

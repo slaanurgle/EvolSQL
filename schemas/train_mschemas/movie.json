@@ -1,0 +1,431 @@
+{
+  "db_id": "movie",
+  "schema": null,
+  "tables": {
+    "main.actor": {
+      "fields": {
+        "ActorID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for the actor",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "Name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "actor's name",
+          "examples": [
+            "John Travolta",
+            "Kirstie Alley",
+            "Olympia Dukakis",
+            "George Segal",
+            "Abe Vigoda"
+          ]
+        },
+        "Date of Birth": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "actor's birth date",
+          "examples": [
+            "1954-02-18"
+          ]
+        },
+        "Birth City": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "actor's birth city",
+          "examples": [
+            "Englewood",
+            "Wichita",
+            "Lowell",
+            "Great Neck",
+            "Brooklyn"
+          ]
+        },
+        "Birth Country": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "actor's birth country",
+          "examples": [
+            "USA",
+            "West Germany",
+            "UK",
+            "Canada"
+          ]
+        },
+        "Height (Inches)": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "actor's height",
+          "examples": [
+            "74",
+            "67",
+            "63",
+            "71",
+            "73"
+          ]
+        },
+        "Biography": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "actor's biography",
+          "examples": [
+            "John Joseph Travolta was born in Englewood, New Jersey, one of six children of Helen Travolta (n�e Helen Cecilia Burke) and Salvatore/Samuel J. Travolta. His father was of Italian descent and his mother was of Irish ancestry. His father owned a tire repair shop called Travolta Tires in Hillsdale, NJ. Travolta started acting appearing in a local ...",
+            "Long a vital, respected lady of the classic and contemporary stage this grand lady did not become a household name and sought-after film actress until age 56 when she turned in a glorious, Oscar-winning perf as Cher's sardonic mother in the romantic comedy Moonstruck (1987). Since then movie (and TV) fans have discovered what the East coast ...",
+            "Actor and musician Bruce Willis is well known for playing wisecracking or hard-edged characters, often in spectacular action films. Collectively, he has appeared in films that have grossed in excess of $2.5 billion USD, placing him in the top ten stars in terms of box office receipts. Walter Bruce Willis was born on March 19, 1955, in ...",
+            "With an authoritative voice and calm demeanor, this ever popular American actor has grown into one of the most respected figures in modern US cinema. Morgan was born on June 1, 1937 in Memphis, Tennessee, to Mayme Edna (Revere), a teacher, and Morgan Porterfield Freeman, a barber. The young Freeman attended Los Angeles City College before serving ..."
+          ]
+        },
+        "Gender": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "actor's gender",
+          "examples": [
+            "Male",
+            "Female"
+          ]
+        },
+        "Ethnicity": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "actor's ethnicity",
+          "examples": [
+            "White",
+            "African American",
+            "Lebanese",
+            "Armenian"
+          ]
+        },
+        "NetWorth": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "actor's networth",
+          "examples": [
+            "$250,000,000.00",
+            "$40,000,000.00",
+            "$6,000,000.00",
+            "$10,000,000.00"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.characters": {
+      "fields": {
+        "MovieID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for the movie",
+          "examples": [
+            "1",
+            "2",
+            "4",
+            "5",
+            "6"
+          ]
+        },
+        "ActorID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for the actor",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "Character Name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name of the character",
+          "examples": [
+            "James",
+            "Mollie",
+            "Rosie",
+            "Albert",
+            "Grandpa"
+          ]
+        },
+        "creditOrder": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "order of the character in the credit list",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "pay": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the salary of the character",
+          "examples": [
+            "$5,000,000.00",
+            "$60,000,000.00",
+            "$29,000,000.00",
+            "$65,000,000.00"
+          ]
+        },
+        "screentime": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the screentime of the character",
+          "examples": [
+            "0:32:30",
+            "0:32:15",
+            "0:29:00",
+            "0:08:45"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.movie": {
+      "fields": {
+        "MovieID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for the movie",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "Title": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the title of the movie",
+          "examples": [
+            "Look Who's Talking",
+            "Driving Miss Daisy",
+            "Turner & Hooch",
+            "Born on the Fourth of July",
+            "Field of Dreams"
+          ]
+        },
+        "MPAA Rating": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "MPAA rating of the movie",
+          "examples": [
+            "PG-13",
+            "PG",
+            "R",
+            "G"
+          ]
+        },
+        "Budget": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the budget of the movie",
+          "examples": [
+            "7500000",
+            "13000000",
+            "14000000",
+            "15000000",
+            "16000000"
+          ]
+        },
+        "Gross": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the gross of the movie",
+          "examples": [
+            "296000000",
+            "145793296",
+            "71079915",
+            "161001698",
+            "84431625"
+          ]
+        },
+        "Release Date": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "release date",
+          "examples": [
+            "1989-10-12",
+            "1989-12-13",
+            "1989-07-28",
+            "1989-12-20",
+            "1989-04-21"
+          ]
+        },
+        "Genre": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the genre of the movie",
+          "examples": [
+            "Romance",
+            "Comedy",
+            "Crime",
+            "War",
+            "Drama"
+          ]
+        },
+        "Runtime": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the runtime of the movie",
+          "examples": [
+            "93",
+            "99",
+            "100",
+            "145",
+            "107"
+          ]
+        },
+        "Rating": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the rating of the movie",
+          "examples": [
+            "5.9",
+            "7.4",
+            "7.2",
+            "7.5",
+            "7.0"
+          ]
+        },
+        "Rating Count": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the number of the ratings",
+          "examples": [
+            "73638",
+            "91075",
+            "91415",
+            "101702",
+            "77659"
+          ]
+        },
+        "Summary": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the summary of the movie",
+          "examples": [
+            "After a single, career-minded woman is left on her own to give birth to the child of a married man, she finds a new romantic chance in a cab driver. Meanwhile, the point-of-view of the newborn boy is narrated through voice-over.",
+            "An old Jewish woman and her African-American chauffeur in the American South have a relationship that grows and improves over the years.",
+            "Det. Scott Turner (Tom Hanks) is an uptight, by-the-book police officer. When his friend Amos Reed (John McIntire), the proprietor of a junkyard, is killed, Turner reluctantly inherits the man's dog. Turner adjusts to life with the dog to help solve a murder case.",
+            "The biography of Ron Kovic. Paralyzed in the Vietnam war, he becomes an anti-war and pro-human rights political activist after feeling betrayed by the country he fought for.",
+            "An Iowa corn farmer, hearing voices, interprets them as a command to build a baseball diamond in his fields; he does, and the 1919 Chicago White Sox come."
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.characters",
+      "ActorID",
+      "main",
+      "actor",
+      "ActorID"
+    ],
+    [
+      "main.characters",
+      "MovieID",
+      "main",
+      "movie",
+      "MovieID"
+    ]
+  ]
+}

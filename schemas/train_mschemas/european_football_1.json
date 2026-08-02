@@ -1,0 +1,186 @@
+{
+  "db_id": "european_football_1",
+  "schema": null,
+  "tables": {
+    "main.divisions": {
+      "fields": {
+        "division": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "division id",
+          "examples": [
+            "B1",
+            "D1",
+            "D2",
+            "E0",
+            "E1"
+          ]
+        },
+        "name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "name of the division",
+          "examples": [
+            "Division 1A",
+            "Bundesliga",
+            "2. Bundesliga",
+            "Premier League",
+            "EFL Championship"
+          ]
+        },
+        "country": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "country of the division",
+          "examples": [
+            "Belgium",
+            "Deutschland",
+            "England",
+            "France",
+            "Greece"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.matchs": {
+      "fields": {
+        "Div": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Division Id",
+          "examples": [
+            "B1",
+            "D1",
+            "D2",
+            "E0",
+            "E1"
+          ]
+        },
+        "Date": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Match Date",
+          "examples": [
+            "2020-08-08"
+          ]
+        },
+        "HomeTeam": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Name of Home Team",
+          "examples": [
+            "Club Brugge",
+            "Antwerp",
+            "Standard",
+            "St Truiden",
+            "Waregem"
+          ]
+        },
+        "AwayTeam": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Name of Away Team",
+          "examples": [
+            "Charleroi",
+            "Mouscron",
+            "Cercle Brugge",
+            "Gent",
+            "Genk"
+          ]
+        },
+        "FTHG": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Final-time Home-team Goals",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "FTAG": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Final-time Away-team Goals",
+          "examples": [
+            "1",
+            "0",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "FTR": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Final-time Results",
+          "examples": [
+            "A",
+            "D",
+            "H"
+          ]
+        },
+        "season": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "season of the match",
+          "examples": [
+            "2021",
+            "2020",
+            "2019",
+            "2018",
+            "2017"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.matchs",
+      "Div",
+      "main",
+      "divisions",
+      "division"
+    ]
+  ]
+}

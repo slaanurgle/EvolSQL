@@ -1,0 +1,4741 @@
+{
+  "db_id": "hockey",
+  "schema": null,
+  "tables": {
+    "main.AwardsCoaches": {
+      "fields": {
+        "coachID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "string ID of the coach",
+          "examples": [
+            "patrile01c",
+            "irvindi01c",
+            "gormato01c",
+            "adamsja01c",
+            "hartce01c"
+          ]
+        },
+        "award": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "awards that the coach achieve",
+          "examples": [
+            "First Team All-Star",
+            "Second Team All-Star",
+            "Jack Adams",
+            "Baldwin",
+            "Schmertz"
+          ]
+        },
+        "year": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "year of award",
+          "examples": [
+            "1930",
+            "1931",
+            "1932",
+            "1933",
+            "1934"
+          ]
+        },
+        "lgID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "league abbreviated name",
+          "examples": [
+            "NHL",
+            "WHA"
+          ]
+        },
+        "note": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": []
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.AwardsMisc": {
+      "fields": {
+        "name": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique name of awards",
+          "examples": [
+            "1960 U.S. Olympic Hockey Team",
+            "1998 U.S. Olympic Women's Hockey Team",
+            "Al Arbour",
+            "Alex Delvecchio",
+            "Art Berglund"
+          ]
+        },
+        "ID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id number of players or coaches, etc",
+          "examples": [
+            "arboual01",
+            "delveal01",
+            "rossar01",
+            "wirtzar01h"
+          ]
+        },
+        "award": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "awarder",
+          "examples": [
+            "Patrick"
+          ]
+        },
+        "year": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "year of the award",
+          "examples": [
+            "2001",
+            "1998",
+            "1991",
+            "1973",
+            "1983"
+          ]
+        },
+        "lgID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "league abbreviated name",
+          "examples": [
+            "NHL"
+          ]
+        },
+        "note": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "note if needed",
+          "examples": [
+            "posthumous"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.AwardsPlayers": {
+      "fields": {
+        "playerID": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "string ID of players",
+          "examples": [
+            "abelsi01",
+            "alfreda01",
+            "amontto01",
+            "anderto01",
+            "antonmi01"
+          ]
+        },
+        "award": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "award name",
+          "examples": [
+            "First Team All-Star",
+            "Hart",
+            "Second Team All-Star",
+            "All-Rookie",
+            "Calder"
+          ]
+        },
+        "year": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "year of award",
+          "examples": [
+            "1948",
+            "1949",
+            "1941",
+            "1950",
+            "1995"
+          ]
+        },
+        "lgID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "league abbreviated name",
+          "examples": [
+            "NHL",
+            "WHA"
+          ]
+        },
+        "note": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "note if needed",
+          "examples": [
+            "tie",
+            "shared",
+            "Most Gentlemanly",
+            "Rookie"
+          ]
+        },
+        "pos": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "position of players",
+          "examples": [
+            "C",
+            "LW",
+            "F",
+            "RW"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Coaches": {
+      "fields": {
+        "coachID": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "number identifying coaches",
+          "examples": [
+            "abelsi01c",
+            "adamsja01c",
+            "agnewga01c",
+            "allenke01c",
+            "allisda01c"
+          ]
+        },
+        "year": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "In which year did the coach teach this team",
+          "examples": [
+            "1952",
+            "1953",
+            "1957",
+            "1958",
+            "1959"
+          ]
+        },
+        "tmID": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "team abbreviated name",
+          "examples": [
+            "CHI",
+            "DET",
+            "STL",
+            "KCS",
+            "DTC"
+          ]
+        },
+        "lgID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "league abbreviated name",
+          "examples": [
+            "NHL",
+            "WHA",
+            "NHA",
+            "WCHL",
+            "PCHA"
+          ]
+        },
+        "stint": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "stint",
+          "examples": [
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        "notes": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "note if needed",
+          "examples": [
+            "interim",
+            "co-coach with Barry Smith",
+            "co-coach with Dave Lewis"
+          ]
+        },
+        "g": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "number of games",
+          "examples": [
+            "70",
+            "33",
+            "74",
+            "10",
+            "3"
+          ]
+        },
+        "w": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "number of wins",
+          "examples": [
+            "27",
+            "12",
+            "16",
+            "25",
+            "26"
+          ]
+        },
+        "l": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "number of loses",
+          "examples": [
+            "28",
+            "51",
+            "12",
+            "37",
+            "29"
+          ]
+        },
+        "t": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "number of ties",
+          "examples": [
+            "15",
+            "7",
+            "5",
+            "8",
+            "16"
+          ]
+        },
+        "postg": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "number of post-season games",
+          "examples": [
+            "7",
+            "4",
+            "6",
+            "11"
+          ]
+        },
+        "postw": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "number of post-season wins",
+          "examples": [
+            "3",
+            "0",
+            "2",
+            "6"
+          ]
+        },
+        "postl": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "number of post-season loses",
+          "examples": [
+            "4",
+            "5",
+            "6",
+            "7"
+          ]
+        },
+        "postt": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "number of post-season ties",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.CombinedShutouts": {
+      "fields": {
+        "year": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "year",
+          "examples": [
+            "1929",
+            "1941",
+            "1955",
+            "1968",
+            "1970"
+          ]
+        },
+        "month": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "month",
+          "examples": [
+            "3",
+            "2",
+            "11",
+            "1",
+            "12"
+          ]
+        },
+        "date": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "day",
+          "examples": [
+            "14",
+            "15",
+            "22",
+            "5",
+            "2"
+          ]
+        },
+        "tmID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "team abbreviated name",
+          "examples": [
+            "TOR",
+            "MTL",
+            "OAK",
+            "STL",
+            "QUN"
+          ]
+        },
+        "oppID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Team ID of opponent",
+          "examples": [
+            "NYA",
+            "BOS",
+            "PHI",
+            "DET",
+            "CLF"
+          ]
+        },
+        "R/P": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "regular / postseason",
+          "examples": [
+            "R",
+            "P"
+          ]
+        },
+        "IDgoalie1": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ID of first goalie",
+          "examples": [
+            "chabolo01",
+            "bibeapa01",
+            "plantja01",
+            "smithga01",
+            "hallgl01"
+          ]
+        },
+        "IDgoalie2": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ID of second goalie",
+          "examples": [
+            "grantbe01",
+            "gardibe01",
+            "hodgech01",
+            "wakeler01",
+            "gamblbr01"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Goalies": {
+      "fields": {
+        "playerID": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "abbotge01",
+            "abrahch01",
+            "adamsjo02",
+            "aebisda01",
+            "aikendo01"
+          ]
+        },
+        "year": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "1943",
+            "1974",
+            "1975",
+            "1976",
+            "1972"
+          ]
+        },
+        "stint": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        "tmID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "BOS",
+            "NEW",
+            "WAS",
+            "COL",
+            "MTL"
+          ]
+        },
+        "lgID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "NHL",
+            "WHA",
+            "NHA",
+            "WCHL",
+            "PCHA"
+          ]
+        },
+        "GP": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "1",
+            "16",
+            "41",
+            "45",
+            "14"
+          ]
+        },
+        "Min": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "60",
+            "870",
+            "2385",
+            "2484",
+            "780"
+          ]
+        },
+        "W": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "0",
+            "8",
+            "18",
+            "15",
+            "9"
+          ]
+        },
+        "L": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "1",
+            "6",
+            "18",
+            "22",
+            "3"
+          ]
+        },
+        "T/OL": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "4",
+            "3"
+          ]
+        },
+        "ENG": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "0",
+            "1",
+            "3",
+            "4"
+          ]
+        },
+        "SHO": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "GA": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "7",
+            "47",
+            "136",
+            "159",
+            "39"
+          ]
+        },
+        "SA": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "504",
+            "1221",
+            "1438",
+            "538"
+          ]
+        },
+        "PostGP": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "1",
+            "2",
+            "11",
+            "8"
+          ]
+        },
+        "PostMin": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "1",
+            "90",
+            "34",
+            "662"
+          ]
+        },
+        "PostW": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "0",
+            "6",
+            "1",
+            "2"
+          ]
+        },
+        "PostL": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "0",
+            "1",
+            "5",
+            "3"
+          ]
+        },
+        "PostT": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "1",
+            "0",
+            "2",
+            "3"
+          ]
+        },
+        "PostENG": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        "PostSHO": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        "PostGA": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "0",
+            "5",
+            "1",
+            "23"
+          ]
+        },
+        "PostSA": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "51",
+            "0",
+            "14",
+            "295"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.GoaliesSC": {
+      "fields": {
+        "playerID": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "benedcl01",
+            "clancki01",
+            "holmeha01",
+            "lehmahu01",
+            "lindsbe01"
+          ]
+        },
+        "year": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "1914",
+            "1919",
+            "1920",
+            "1922",
+            "1925"
+          ]
+        },
+        "tmID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "OT1",
+            "OTS",
+            "MTM",
+            "TBS",
+            "SEA"
+          ]
+        },
+        "lgID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "NHA",
+            "NHL",
+            "PCHA",
+            "WCHL"
+          ]
+        },
+        "GP": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "3",
+            "5",
+            "6",
+            "4",
+            "1"
+          ]
+        },
+        "Min": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "180",
+            "300",
+            "361",
+            "240",
+            "2"
+          ]
+        },
+        "W": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "0",
+            "3",
+            "5",
+            "2",
+            "1"
+          ]
+        },
+        "L": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "3",
+            "2",
+            "1",
+            "0"
+          ]
+        },
+        "T": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "0",
+            "1"
+          ]
+        },
+        "SHO": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "0",
+            "1",
+            "3",
+            "2"
+          ]
+        },
+        "GA": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "26",
+            "11",
+            "12",
+            "8",
+            "3"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.GoaliesShootout": {
+      "fields": {
+        "playerID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "aebisda01",
+            "andercr01",
+            "aubinje01",
+            "auldal01",
+            "bacasja01"
+          ]
+        },
+        "year": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "2005",
+            "2006",
+            "2008",
+            "2009",
+            "2010"
+          ]
+        },
+        "stint": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "1",
+            "2"
+          ]
+        },
+        "tmID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "COL",
+            "MTL",
+            "CHI",
+            "FLO",
+            "OTT"
+          ]
+        },
+        "W": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "2",
+            "0",
+            "1",
+            "7",
+            "6"
+          ]
+        },
+        "L": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "0",
+            "4"
+          ]
+        },
+        "SA": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "10",
+            "18",
+            "7",
+            "2",
+            "11"
+          ]
+        },
+        "GA": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "2",
+            "6",
+            "5",
+            "0",
+            "7"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.HOF": {
+      "fields": {
+        "year": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "year of hall of fame",
+          "examples": [
+            "1969",
+            "1960",
+            "1959",
+            "1972",
+            "1977"
+          ]
+        },
+        "hofID": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "hall of fame id",
+          "examples": [
+            "abelsi01h",
+            "adamsch01h",
+            "adamsja01h",
+            "adamswe01h",
+            "ahearbu01h"
+          ]
+        },
+        "name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "name",
+          "examples": [
+            "Sid Abel",
+            "Charles Adams",
+            "Jack Adams",
+            "Weston Adams",
+            "Bunny Ahearne"
+          ]
+        },
+        "category": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "category",
+          "examples": [
+            "Player",
+            "Builder",
+            "Referee/Linesman"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Master": {
+      "fields": {
+        "playerID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id number identifying the player",
+          "examples": [
+            "aaltoan01",
+            "abbeybr01",
+            "abbotge01",
+            "abbotre01",
+            "abdelju01"
+          ]
+        },
+        "coachID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "coach id number",
+          "examples": [
+            "abelsi01c",
+            "adamsja01c",
+            "agnewga01c",
+            "allenke01c"
+          ]
+        },
+        "hofID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "hall of fame id",
+          "examples": [
+            "abelsi01h",
+            "adamsch01h",
+            "adamsja01h",
+            "adamswe01h"
+          ]
+        },
+        "firstName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "first name",
+          "examples": [
+            "Antti",
+            "Bruce",
+            "George",
+            "Reg",
+            "Justin"
+          ]
+        },
+        "lastName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "last name",
+          "examples": [
+            "Aalto",
+            "Abbey",
+            "Abbott",
+            "Abdelkader",
+            "Abel"
+          ]
+        },
+        "nameNote": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "note about name",
+          "examples": [
+            "also known as Bellehumeur",
+            "also listed as Bourdginon",
+            "born Bodnarchuk",
+            "also known as Bowcher"
+          ]
+        },
+        "nameGiven": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Given name",
+          "examples": [
+            "Antti",
+            "Bruce",
+            "George Henry",
+            "Reginald Stewart"
+          ]
+        },
+        "nameNick": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Nickname",
+          "examples": [
+            "Preacher",
+            "Taffy",
+            "Boot Nose",
+            "Acky"
+          ]
+        },
+        "height": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "height",
+          "examples": [
+            "73",
+            "67",
+            "71",
+            "74",
+            "72"
+          ]
+        },
+        "weight": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "weight",
+          "examples": [
+            "210",
+            "185",
+            "153",
+            "164",
+            "195"
+          ]
+        },
+        "shootCatch": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Shooting hand (or catching hand for goalies)",
+          "examples": [
+            "L",
+            "R",
+            "B"
+          ]
+        },
+        "legendsID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ID at Legends Of Hockey",
+          "examples": [
+            "14862",
+            "18411",
+            "11801",
+            "21661"
+          ]
+        },
+        "ihdbID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ID at the Internet Hockey Database",
+          "examples": [
+            "5928",
+            "11918",
+            "14591",
+            "11431",
+            "81002"
+          ]
+        },
+        "hrefID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ID at Hockey-Reference.com",
+          "examples": [
+            "aaltoan01",
+            "abbeybr01",
+            "abbotge01",
+            "abbotre01",
+            "abdelju01"
+          ]
+        },
+        "firstNHL": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "First NHL season",
+          "examples": [
+            "1997",
+            "1943",
+            "1952",
+            "2007"
+          ]
+        },
+        "lastNHL": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Last NHL season",
+          "examples": [
+            "2000",
+            "1943",
+            "1952",
+            "2011"
+          ]
+        },
+        "firstWHA": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "First WHA season",
+          "examples": [
+            "1975",
+            "1976",
+            "1974",
+            "1973"
+          ]
+        },
+        "lastWHA": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Last WHA season",
+          "examples": [
+            "1975",
+            "1977",
+            "1976",
+            "1973"
+          ]
+        },
+        "pos": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "C",
+            "D",
+            "G",
+            "L",
+            "R"
+          ]
+        },
+        "birthYear": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "birth Year",
+          "examples": [
+            "1975",
+            "1951",
+            "1911",
+            "1930",
+            "1987"
+          ]
+        },
+        "birthMon": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "birth Month",
+          "examples": [
+            "3",
+            "8",
+            "2",
+            "5",
+            "12"
+          ]
+        },
+        "birthDay": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "birth Day",
+          "examples": [
+            "4",
+            "18",
+            "3",
+            "25",
+            "28"
+          ]
+        },
+        "birthCountry": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "birth Country",
+          "examples": [
+            "Finland",
+            "Canada",
+            "USA",
+            "Sweden"
+          ]
+        },
+        "birthState": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "birth State",
+          "examples": [
+            "ON",
+            "MB",
+            "MI",
+            "SK"
+          ]
+        },
+        "birthCity": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "birth city",
+          "examples": [
+            "Lappeenranta",
+            "Toronto",
+            "Synenham",
+            "Winnipeg",
+            "Muskegon"
+          ]
+        },
+        "deathYear": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "death year",
+          "examples": [
+            "1964",
+            "2000",
+            "2001",
+            "1947"
+          ]
+        },
+        "deathMon": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "death month",
+          "examples": [
+            "8",
+            "2",
+            "12",
+            "5"
+          ]
+        },
+        "deathDay": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "death day",
+          "examples": [
+            "1",
+            "7",
+            "24",
+            "18"
+          ]
+        },
+        "deathCountry": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "death country",
+          "examples": [
+            "USA",
+            "Canada",
+            "France",
+            "Belgium"
+          ]
+        },
+        "deathState": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "death state",
+          "examples": [
+            "MI",
+            "AB",
+            "SK",
+            "MB"
+          ]
+        },
+        "deathCity": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "death city",
+          "examples": [
+            "Sault Ste. Marie",
+            "Farmington",
+            "Calgary",
+            "Swift Current"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Scoring": {
+      "fields": {
+        "playerID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "player ID",
+          "examples": [
+            "aaltoan01",
+            "abbeybr01",
+            "abbotge01",
+            "abbotre01",
+            "abdelju01"
+          ]
+        },
+        "year": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "play year",
+          "examples": [
+            "1997",
+            "1998",
+            "1999",
+            "2000",
+            "1975"
+          ]
+        },
+        "stint": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Stint (order of appearance in a season)",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "tmID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "team id",
+          "examples": [
+            "ANA",
+            "CIN",
+            "BOS",
+            "MTL",
+            "DET"
+          ]
+        },
+        "lgID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "league id",
+          "examples": [
+            "NHL",
+            "WHA",
+            "PCHA",
+            "WCHL",
+            "NHA"
+          ]
+        },
+        "pos": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "position",
+          "examples": [
+            "C",
+            "D",
+            "G",
+            "L",
+            "R"
+          ]
+        },
+        "GP": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "game played",
+          "examples": [
+            "3",
+            "73",
+            "63",
+            "12",
+            "17"
+          ]
+        },
+        "G": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "goals",
+          "examples": [
+            "0",
+            "3",
+            "7",
+            "1",
+            "8"
+          ]
+        },
+        "A": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "assists",
+          "examples": [
+            "0",
+            "5",
+            "11",
+            "1",
+            "3"
+          ]
+        },
+        "Pts": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "points",
+          "examples": [
+            "0",
+            "8",
+            "18",
+            "2",
+            "1"
+          ]
+        },
+        "PIM": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Penalty minutes",
+          "examples": [
+            "0",
+            "24",
+            "26",
+            "2",
+            "12"
+          ]
+        },
+        "+/-": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Plus / minus",
+          "examples": [
+            "-1",
+            "-12",
+            "-13",
+            "1",
+            "-3"
+          ]
+        },
+        "PPG": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Power play goals",
+          "examples": [
+            "0",
+            "2",
+            "1",
+            "4"
+          ]
+        },
+        "PPA": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Power play assists",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "5"
+          ]
+        },
+        "SHG": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Shorthanded goals",
+          "examples": [
+            "0",
+            "2",
+            "1",
+            "5"
+          ]
+        },
+        "SHA": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Shorthanded assists",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        "GWG": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Game-winning goals",
+          "examples": [
+            "0",
+            "1",
+            "3",
+            "2"
+          ]
+        },
+        "GTG": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Game-tying goals",
+          "examples": [
+            "0",
+            "1",
+            "3",
+            "2"
+          ]
+        },
+        "SOG": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Shots on goal",
+          "examples": [
+            "1",
+            "61",
+            "102",
+            "18",
+            "2"
+          ]
+        },
+        "PostGP": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Postseason games played",
+          "examples": [
+            "4",
+            "10",
+            "11",
+            "5"
+          ]
+        },
+        "PostG": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Postseason goals",
+          "examples": [
+            "0",
+            "2",
+            "1",
+            "4"
+          ]
+        },
+        "PostA": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Postseason assists",
+          "examples": [
+            "0",
+            "1",
+            "3",
+            "2"
+          ]
+        },
+        "PostPts": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Postseason points",
+          "examples": [
+            "0",
+            "3",
+            "2",
+            "1"
+          ]
+        },
+        "PostPIM": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Postseason penalty minutes",
+          "examples": [
+            "2",
+            "0",
+            "36",
+            "22"
+          ]
+        },
+        "Post+/-": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Postseason Plus / minus",
+          "examples": [
+            "0",
+            "2",
+            "1",
+            "-4"
+          ]
+        },
+        "PostPPG": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Postseason power play goals",
+          "examples": [
+            "0",
+            "1",
+            "5",
+            "2"
+          ]
+        },
+        "PostPPA": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Postseason power play assists",
+          "examples": [
+            "0",
+            "1",
+            "3",
+            "2"
+          ]
+        },
+        "PostSHG": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Postseason Shorthanded goals",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        "PostSHA": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Postseason Shorthanded assists",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        "PostGWG": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Postseason game-winning goals",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        "PostSOG": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Postseason shots on goal",
+          "examples": [
+            "0",
+            "11",
+            "12",
+            "17"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.ScoringSC": {
+      "fields": {
+        "playerID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id number identifying the player",
+          "examples": [
+            "adamsbi01",
+            "adamsja01",
+            "anderer02",
+            "anderjo03",
+            "andrell01"
+          ]
+        },
+        "year": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "year",
+          "examples": [
+            "1920",
+            "1921",
+            "1923",
+            "1924",
+            "1925"
+          ]
+        },
+        "tmID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "team abbreviated name",
+          "examples": [
+            "VML",
+            "CAT",
+            "VIC",
+            "TRS",
+            "MOC"
+          ]
+        },
+        "lgID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "league abbreviated name",
+          "examples": [
+            "PCHA",
+            "WCHL",
+            "NHL",
+            "NHA"
+          ]
+        },
+        "pos": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "position",
+          "examples": [
+            "R",
+            "C",
+            "L",
+            "F",
+            "G"
+          ]
+        },
+        "GP": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Games played",
+          "examples": [
+            "4",
+            "5",
+            "2",
+            "1",
+            "3"
+          ]
+        },
+        "G": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "goals",
+          "examples": [
+            "0",
+            "2",
+            "6",
+            "1",
+            "3"
+          ]
+        },
+        "A": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "assists",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "5"
+          ]
+        },
+        "Pts": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "points",
+          "examples": [
+            "0",
+            "3",
+            "7",
+            "1",
+            "2"
+          ]
+        },
+        "PIM": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Penalty minutes",
+          "examples": [
+            "0",
+            "6",
+            "18",
+            "2",
+            "10"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.ScoringShootout": {
+      "fields": {
+        "playerID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id number identifying the player",
+          "examples": [
+            "adamske01",
+            "afanadm01",
+            "afinoma01",
+            "alexeni01",
+            "alfreda01"
+          ]
+        },
+        "year": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "year",
+          "examples": [
+            "2006",
+            "2005",
+            "2007",
+            "2009",
+            "2008"
+          ]
+        },
+        "stint": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "stint",
+          "examples": [
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        "tmID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "team abbreviated name",
+          "examples": [
+            "PHO",
+            "TBL",
+            "BUF",
+            "ATL",
+            "CHI"
+          ]
+        },
+        "S": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "shots",
+          "examples": [
+            "1",
+            "2",
+            "5",
+            "6",
+            "3"
+          ]
+        },
+        "G": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "goals",
+          "examples": [
+            "0",
+            "1",
+            "3",
+            "2",
+            "5"
+          ]
+        },
+        "GDG": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "game deciding goals",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "6",
+            "3"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.ScoringSup": {
+      "fields": {
+        "playerID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "string ID of players",
+          "examples": [
+            "actonke01",
+            "adamsgr01",
+            "allismi01",
+            "archida01",
+            "bassebo01"
+          ]
+        },
+        "year": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "1988",
+            "1989",
+            "1987",
+            "1990"
+          ]
+        },
+        "PPA": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Power play assists",
+          "examples": [
+            "1",
+            "5",
+            "4",
+            "25"
+          ]
+        },
+        "SHA": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Shorthanded assists",
+          "examples": [
+            "1",
+            "2",
+            "4",
+            "3"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.SeriesPost": {
+      "fields": {
+        "year": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "year",
+          "examples": [
+            "1912",
+            "1913",
+            "1914",
+            "1915",
+            "1916"
+          ]
+        },
+        "round": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "round",
+          "examples": [
+            "SCF",
+            "F",
+            "SF",
+            "SCSF",
+            "WP"
+          ]
+        },
+        "series": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "series",
+          "examples": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "tmIDWinner": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Team ID of winner",
+          "examples": [
+            "VA1",
+            "TBS",
+            "OT1",
+            "VML",
+            "MOC"
+          ]
+        },
+        "lgIDWinner": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "League ID of winner",
+          "examples": [
+            "PCHA",
+            "NHA",
+            "NHL",
+            "WCHL",
+            "WHA"
+          ]
+        },
+        "tmIDLoser": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Team ID of winner",
+          "examples": [
+            "QU1",
+            "MOC",
+            "VA1",
+            "MOW",
+            "OT1"
+          ]
+        },
+        "lgIDLoser": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "league id of loser",
+          "examples": [
+            "NHA",
+            "PCHA",
+            "NHL",
+            "WCHL",
+            "WHA"
+          ]
+        },
+        "W": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "wins",
+          "examples": [
+            "2",
+            "1",
+            "3",
+            "4",
+            "0"
+          ]
+        },
+        "L": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "loses",
+          "examples": [
+            "1",
+            "0",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "T": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ties",
+          "examples": [
+            "0",
+            "1",
+            "2"
+          ]
+        },
+        "GoalsWinner": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "goals for winner",
+          "examples": [
+            "16",
+            "6",
+            "13",
+            "4",
+            "26"
+          ]
+        },
+        "GoalsLoser": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "goals for loser",
+          "examples": [
+            "12",
+            "2",
+            "8",
+            "1",
+            "13"
+          ]
+        },
+        "note": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "note",
+          "examples": [
+            "EX",
+            "TG",
+            "ND",
+            "DEF"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.TeamSplits": {
+      "fields": {
+        "year": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "year",
+          "examples": [
+            "1909",
+            "1910",
+            "1911",
+            "1912",
+            "1913"
+          ]
+        },
+        "lgID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "league ID number",
+          "examples": [
+            "NHA",
+            "PCHA",
+            "NHL",
+            "WCHL",
+            "WHA"
+          ]
+        },
+        "tmID": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "team ID",
+          "examples": [
+            "COB",
+            "HAI",
+            "LES",
+            "MOS",
+            "MOW"
+          ]
+        },
+        "hW": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "home wins",
+          "examples": [
+            "2",
+            "3",
+            "6",
+            "5",
+            "4"
+          ]
+        },
+        "hL": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "home loses",
+          "examples": [
+            "4",
+            "3",
+            "2",
+            "0",
+            "1"
+          ]
+        },
+        "hT": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "home ties",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "4",
+            "3"
+          ]
+        },
+        "hOTL": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Home overtime losses",
+          "examples": [
+            "2",
+            "3",
+            "1",
+            "0"
+          ]
+        },
+        "rW": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Road wins",
+          "examples": [
+            "2",
+            "1",
+            "0",
+            "5",
+            "4"
+          ]
+        },
+        "rL": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Road loses",
+          "examples": [
+            "4",
+            "5",
+            "6",
+            "1",
+            "2"
+          ]
+        },
+        "rT": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Road ties",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "6"
+          ]
+        },
+        "rOTL": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "road overtime loses",
+          "examples": [
+            "1",
+            "5",
+            "3",
+            "4"
+          ]
+        },
+        "SepW": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "September wins",
+          "examples": [
+            "1"
+          ]
+        },
+        "SepL": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "September loses",
+          "examples": [
+            "1"
+          ]
+        },
+        "SepT": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "September ties",
+          "examples": []
+        },
+        "SepOL": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "September overtime loses",
+          "examples": [
+            "0"
+          ]
+        },
+        "OctW": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "October wins",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        "OctL": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "October loses",
+          "examples": [
+            "1",
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        "OctT": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "October ties",
+          "examples": [
+            "0",
+            "1",
+            "4",
+            "2"
+          ]
+        },
+        "OctOL": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "October overtime loses",
+          "examples": [
+            "1",
+            "0",
+            "2",
+            "3"
+          ]
+        },
+        "NovW": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "November wins",
+          "examples": [
+            "5",
+            "1",
+            "2",
+            "0"
+          ]
+        },
+        "NovL": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "November loses",
+          "examples": [
+            "1",
+            "4",
+            "3",
+            "2"
+          ]
+        },
+        "NovT": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "November ties",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        "NovOL": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "November overtime loses",
+          "examples": [
+            "0",
+            "2",
+            "1",
+            "4"
+          ]
+        },
+        "DecW": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "December wins",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        "DecL": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "December loses",
+          "examples": [
+            "1",
+            "0",
+            "2",
+            "3"
+          ]
+        },
+        "DecT": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "December ties",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        "DecOL": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "December overtime loses",
+          "examples": [
+            "0",
+            "2",
+            "1",
+            "3"
+          ]
+        },
+        "JanW": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "January wins",
+          "examples": [
+            "1",
+            "0",
+            "2",
+            "4",
+            "3"
+          ]
+        },
+        "JanL": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "January loses",
+          "examples": [
+            "1",
+            "3",
+            "2",
+            "0",
+            "6"
+          ]
+        },
+        "JanT": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "January ties",
+          "examples": [
+            "0",
+            "1",
+            "3",
+            "2",
+            "4"
+          ]
+        },
+        "JanOL": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "January overtime loses",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        "FebW": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "February wins",
+          "examples": [
+            "2",
+            "1",
+            "6",
+            "5",
+            "4"
+          ]
+        },
+        "FebL": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "February loses",
+          "examples": [
+            "3",
+            "5",
+            "0",
+            "1",
+            "2"
+          ]
+        },
+        "FebT": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "February ties",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        "FebOL": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "February overtime loses",
+          "examples": [
+            "0",
+            "1",
+            "4",
+            "2"
+          ]
+        },
+        "MarW": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "March wins",
+          "examples": [
+            "1",
+            "3",
+            "0",
+            "2"
+          ]
+        },
+        "MarL": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "March loses",
+          "examples": [
+            "4",
+            "0",
+            "2",
+            "1",
+            "3"
+          ]
+        },
+        "MarT": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "March ties",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "4"
+          ]
+        },
+        "MarOL": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "March overtime loses",
+          "examples": [
+            "1",
+            "0",
+            "2",
+            "3"
+          ]
+        },
+        "AprW": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "April wins",
+          "examples": [
+            "1",
+            "0",
+            "2",
+            "3"
+          ]
+        },
+        "AprL": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "April loses",
+          "examples": [
+            "0",
+            "2",
+            "1",
+            "3"
+          ]
+        },
+        "AprT": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "April ties",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "4"
+          ]
+        },
+        "AprOL": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "April overtime loses",
+          "examples": [
+            "1",
+            "0",
+            "2",
+            "3"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.TeamVsTeam": {
+      "fields": {
+        "year": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "year",
+          "examples": [
+            "1909",
+            "1910",
+            "1911",
+            "1912",
+            "1913"
+          ]
+        },
+        "lgID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "league ID number",
+          "examples": [
+            "NHA",
+            "PCHA",
+            "NHL",
+            "WCHL",
+            "WHA"
+          ]
+        },
+        "tmID": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "team ID",
+          "examples": [
+            "COB",
+            "HAI",
+            "LES",
+            "MOS",
+            "MOW"
+          ]
+        },
+        "oppID": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "opponent ID",
+          "examples": [
+            "HAI",
+            "LES",
+            "MOS",
+            "MOW",
+            "OT1"
+          ]
+        },
+        "W": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "wins",
+          "examples": [
+            "1",
+            "2",
+            "0",
+            "3",
+            "4"
+          ]
+        },
+        "L": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "loses",
+          "examples": [
+            "1",
+            "0",
+            "2",
+            "4",
+            "3"
+          ]
+        },
+        "T": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ties",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "OTL": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "overtime loses",
+          "examples": [
+            "0",
+            "1",
+            "3",
+            "2"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Teams": {
+      "fields": {
+        "year": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "year",
+          "examples": [
+            "1909",
+            "1910",
+            "1911",
+            "1912",
+            "1913"
+          ]
+        },
+        "lgID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "league ID number",
+          "examples": [
+            "NHA",
+            "PCHA",
+            "NHL",
+            "WCHL",
+            "WHA"
+          ]
+        },
+        "tmID": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "team ID",
+          "examples": [
+            "COB",
+            "HAI",
+            "LES",
+            "MOS",
+            "MOW"
+          ]
+        },
+        "franchID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Franchise ID",
+          "examples": [
+            "BKN",
+            "MTL",
+            "TBS",
+            "MOS",
+            "MTW"
+          ]
+        },
+        "confID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Conference ID",
+          "examples": [
+            "CC",
+            "WA",
+            "WC",
+            "EC"
+          ]
+        },
+        "divID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Division ID",
+          "examples": [
+            "AM",
+            "CA",
+            "ED",
+            "WD"
+          ]
+        },
+        "rank": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Final standing",
+          "examples": [
+            "4",
+            "5",
+            "7",
+            "6",
+            "1"
+          ]
+        },
+        "playoff": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "playoff results",
+          "examples": [
+            "LCS",
+            "WCS",
+            "NHAF",
+            "SC"
+          ]
+        },
+        "G": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "games",
+          "examples": [
+            "12",
+            "16",
+            "18",
+            "15",
+            "20"
+          ]
+        },
+        "W": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "wins",
+          "examples": [
+            "4",
+            "2",
+            "3",
+            "11",
+            "9"
+          ]
+        },
+        "L": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "loses",
+          "examples": [
+            "8",
+            "10",
+            "1",
+            "3",
+            "9"
+          ]
+        },
+        "T": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ties",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "4",
+            "3"
+          ]
+        },
+        "OTL": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Overtime losses",
+          "examples": [
+            "3",
+            "4",
+            "6",
+            "5"
+          ]
+        },
+        "Pts": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "points",
+          "examples": [
+            "8",
+            "4",
+            "7",
+            "22",
+            "18"
+          ]
+        },
+        "SoW": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Shootout wins",
+          "examples": [
+            "3",
+            "5",
+            "2",
+            "8"
+          ]
+        },
+        "SoL": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Shootout loses",
+          "examples": [
+            "7",
+            "5",
+            "8",
+            "2"
+          ]
+        },
+        "GF": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Goals for",
+          "examples": [
+            "79",
+            "77",
+            "59",
+            "52",
+            "91"
+          ]
+        },
+        "GA": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "goals against",
+          "examples": [
+            "104",
+            "83",
+            "100",
+            "95",
+            "41"
+          ]
+        },
+        "name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Full team name",
+          "examples": [
+            "Cobalt Silver Kings",
+            "Haileybury Hockey Club",
+            "Les Canadiens",
+            "Montreal Shamrocks",
+            "Montreal Wanderers"
+          ]
+        },
+        "PIM": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Penalty minutes",
+          "examples": [
+            "336",
+            "27",
+            "333",
+            "355"
+          ]
+        },
+        "BenchMinor": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Bench minors (minutes)",
+          "examples": [
+            "12",
+            "14",
+            "8",
+            "2"
+          ]
+        },
+        "PPG": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Power play goals",
+          "examples": [
+            "28",
+            "51",
+            "42",
+            "46"
+          ]
+        },
+        "PPC": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Power play chances",
+          "examples": [
+            "220",
+            "279",
+            "240",
+            "294"
+          ]
+        },
+        "SHA": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Shorthanded goals against",
+          "examples": [
+            "4",
+            "2",
+            "5",
+            "7"
+          ]
+        },
+        "PKG": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Power play goals against",
+          "examples": [
+            "45",
+            "43",
+            "36",
+            "42"
+          ]
+        },
+        "PKC": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Penalty kill chances",
+          "examples": [
+            "242",
+            "301",
+            "267",
+            "248"
+          ]
+        },
+        "SHF": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Shorthanded goals for",
+          "examples": [
+            "3",
+            "8",
+            "2",
+            "7"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.TeamsHalf": {
+      "fields": {
+        "year": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "year",
+          "examples": [
+            "1916",
+            "1917",
+            "1918",
+            "1919",
+            "1920"
+          ]
+        },
+        "lgID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "league ID number",
+          "examples": [
+            "NHA",
+            "NHL"
+          ]
+        },
+        "tmID": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "team ID",
+          "examples": [
+            "MOC",
+            "MOW",
+            "OT1",
+            "QU1",
+            "TBS"
+          ]
+        },
+        "half": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "First or second half of season",
+          "examples": [
+            "1",
+            "2"
+          ]
+        },
+        "rank": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Final standing for the half",
+          "examples": [
+            "1",
+            "3",
+            "5",
+            "4",
+            "2"
+          ]
+        },
+        "G": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Games",
+          "examples": [
+            "10",
+            "4",
+            "14",
+            "8",
+            "6"
+          ]
+        },
+        "W": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "wins",
+          "examples": [
+            "7",
+            "3",
+            "2",
+            "8",
+            "5"
+          ]
+        },
+        "L": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "loses",
+          "examples": [
+            "3",
+            "7",
+            "8",
+            "2",
+            "5"
+          ]
+        },
+        "T": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ties",
+          "examples": [
+            "0"
+          ]
+        },
+        "GF": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "goals for",
+          "examples": [
+            "58",
+            "31",
+            "56",
+            "38",
+            "63"
+          ]
+        },
+        "GA": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "goal against",
+          "examples": [
+            "38",
+            "42",
+            "72",
+            "65",
+            "41"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.TeamsPost": {
+      "fields": {
+        "year": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "year",
+          "examples": [
+            "1913",
+            "1914",
+            "1916",
+            "1917",
+            "1918"
+          ]
+        },
+        "lgID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "league ID number",
+          "examples": [
+            "NHA",
+            "NHL",
+            "PCHA",
+            "WCHL",
+            "WHA"
+          ]
+        },
+        "tmID": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "team ID",
+          "examples": [
+            "MOC",
+            "TBS",
+            "MOW",
+            "OT1",
+            "MTL"
+          ]
+        },
+        "G": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Games",
+          "examples": [
+            "2",
+            "5",
+            "6",
+            "4",
+            "8"
+          ]
+        },
+        "W": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "wins",
+          "examples": [
+            "1",
+            "0",
+            "4",
+            "2",
+            "3"
+          ]
+        },
+        "L": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "loses",
+          "examples": [
+            "1",
+            "0",
+            "4",
+            "2",
+            "3"
+          ]
+        },
+        "T": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ties",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "4",
+            "3"
+          ]
+        },
+        "GF": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "goals for",
+          "examples": [
+            "2",
+            "6",
+            "1",
+            "4",
+            "7"
+          ]
+        },
+        "GA": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "goals against",
+          "examples": [
+            "6",
+            "2",
+            "4",
+            "1",
+            "7"
+          ]
+        },
+        "PIM": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "penalty minutes",
+          "examples": [
+            "59",
+            "68",
+            "87",
+            "69"
+          ]
+        },
+        "BenchMinor": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Bench minors (minutes)",
+          "examples": [
+            "0",
+            "6",
+            "2",
+            "4"
+          ]
+        },
+        "PPG": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Power play goals",
+          "examples": [
+            "1",
+            "5",
+            "9",
+            "10"
+          ]
+        },
+        "PPC": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Power play chances",
+          "examples": [
+            "39",
+            "27",
+            "25",
+            "11"
+          ]
+        },
+        "SHA": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Shorthanded goals against",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        "PKG": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Power play goals against",
+          "examples": [
+            "3",
+            "8",
+            "4",
+            "6"
+          ]
+        },
+        "PKC": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Penalty kill chances",
+          "examples": [
+            "55",
+            "45",
+            "20",
+            "13"
+          ]
+        },
+        "SHF": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Shorthanded goals for",
+          "examples": [
+            "0",
+            "1",
+            "3",
+            "5"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.TeamsSC": {
+      "fields": {
+        "year": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "year",
+          "examples": [
+            "1912",
+            "1913",
+            "1914",
+            "1915",
+            "1916"
+          ]
+        },
+        "lgID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "league ID number",
+          "examples": [
+            "NHA",
+            "PCHA",
+            "NHL",
+            "WCHL"
+          ]
+        },
+        "tmID": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "team ID",
+          "examples": [
+            "QU1",
+            "VA1",
+            "TBS",
+            "OT1",
+            "VML"
+          ]
+        },
+        "G": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Games",
+          "examples": [
+            "3",
+            "5",
+            "4",
+            "2",
+            "6"
+          ]
+        },
+        "W": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "wins",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "0",
+            "5"
+          ]
+        },
+        "L": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "loses",
+          "examples": [
+            "2",
+            "1",
+            "0",
+            "3"
+          ]
+        },
+        "T": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ties",
+          "examples": [
+            "0",
+            "1"
+          ]
+        },
+        "GF": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "goals for",
+          "examples": [
+            "12",
+            "16",
+            "13",
+            "8",
+            "26"
+          ]
+        },
+        "GA": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "goals against",
+          "examples": [
+            "16",
+            "12",
+            "8",
+            "13",
+            "26"
+          ]
+        },
+        "PIM": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "penalty minutes",
+          "examples": [
+            "24",
+            "20",
+            "75",
+            "53"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.abbrev": {
+      "fields": {
+        "Type": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "type of hockey games",
+          "examples": [
+            "Conference",
+            "Division",
+            "Playoffs",
+            "Round"
+          ]
+        },
+        "Code": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "abbreviated codes",
+          "examples": [
+            "CC",
+            "EC",
+            "WA",
+            "WC",
+            "AD"
+          ]
+        },
+        "Fullname": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "full names of code",
+          "examples": [
+            "Campbell Conference",
+            "Eastern Conference",
+            "Wales Conference",
+            "Western Conference",
+            "Adams Division"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.AwardsCoaches",
+      "coachID",
+      "main",
+      "Coaches",
+      "coachID"
+    ],
+    [
+      "main.AwardsPlayers",
+      "playerID",
+      "main",
+      "Master",
+      "playerID"
+    ],
+    [
+      "main.Coaches",
+      "year",
+      "main",
+      "Teams",
+      "year"
+    ],
+    [
+      "main.Coaches",
+      "tmID",
+      "main",
+      "Teams",
+      "tmID"
+    ],
+    [
+      "main.CombinedShutouts",
+      "IDgoalie1",
+      "main",
+      "Master",
+      "playerID"
+    ],
+    [
+      "main.CombinedShutouts",
+      "IDgoalie2",
+      "main",
+      "Master",
+      "playerID"
+    ],
+    [
+      "main.Goalies",
+      "year",
+      "main",
+      "Teams",
+      "year"
+    ],
+    [
+      "main.Goalies",
+      "tmID",
+      "main",
+      "Teams",
+      "tmID"
+    ],
+    [
+      "main.Goalies",
+      "playerID",
+      "main",
+      "Master",
+      "playerID"
+    ],
+    [
+      "main.GoaliesSC",
+      "year",
+      "main",
+      "Teams",
+      "year"
+    ],
+    [
+      "main.GoaliesSC",
+      "tmID",
+      "main",
+      "Teams",
+      "tmID"
+    ],
+    [
+      "main.GoaliesSC",
+      "playerID",
+      "main",
+      "Master",
+      "playerID"
+    ],
+    [
+      "main.GoaliesShootout",
+      "year",
+      "main",
+      "Teams",
+      "year"
+    ],
+    [
+      "main.GoaliesShootout",
+      "tmID",
+      "main",
+      "Teams",
+      "tmID"
+    ],
+    [
+      "main.GoaliesShootout",
+      "playerID",
+      "main",
+      "Master",
+      "playerID"
+    ],
+    [
+      "main.Master",
+      "coachID",
+      "main",
+      "Coaches",
+      "coachID"
+    ],
+    [
+      "main.Scoring",
+      "year",
+      "main",
+      "Teams",
+      "year"
+    ],
+    [
+      "main.Scoring",
+      "tmID",
+      "main",
+      "Teams",
+      "tmID"
+    ],
+    [
+      "main.Scoring",
+      "playerID",
+      "main",
+      "Master",
+      "playerID"
+    ],
+    [
+      "main.ScoringSC",
+      "year",
+      "main",
+      "Teams",
+      "year"
+    ],
+    [
+      "main.ScoringSC",
+      "tmID",
+      "main",
+      "Teams",
+      "tmID"
+    ],
+    [
+      "main.ScoringSC",
+      "playerID",
+      "main",
+      "Master",
+      "playerID"
+    ],
+    [
+      "main.ScoringShootout",
+      "year",
+      "main",
+      "Teams",
+      "year"
+    ],
+    [
+      "main.ScoringShootout",
+      "tmID",
+      "main",
+      "Teams",
+      "tmID"
+    ],
+    [
+      "main.ScoringShootout",
+      "playerID",
+      "main",
+      "Master",
+      "playerID"
+    ],
+    [
+      "main.ScoringSup",
+      "playerID",
+      "main",
+      "Master",
+      "playerID"
+    ],
+    [
+      "main.SeriesPost",
+      "year",
+      "main",
+      "Teams",
+      "year"
+    ],
+    [
+      "main.SeriesPost",
+      "tmIDWinner",
+      "main",
+      "Teams",
+      "tmID"
+    ],
+    [
+      "main.SeriesPost",
+      "year",
+      "main",
+      "Teams",
+      "year"
+    ],
+    [
+      "main.SeriesPost",
+      "tmIDLoser",
+      "main",
+      "Teams",
+      "tmID"
+    ],
+    [
+      "main.TeamSplits",
+      "year",
+      "main",
+      "Teams",
+      "year"
+    ],
+    [
+      "main.TeamSplits",
+      "tmID",
+      "main",
+      "Teams",
+      "tmID"
+    ],
+    [
+      "main.TeamVsTeam",
+      "year",
+      "main",
+      "Teams",
+      "year"
+    ],
+    [
+      "main.TeamVsTeam",
+      "tmID",
+      "main",
+      "Teams",
+      "tmID"
+    ],
+    [
+      "main.TeamVsTeam",
+      "oppID",
+      "main",
+      "Teams",
+      "tmID"
+    ],
+    [
+      "main.TeamVsTeam",
+      "year",
+      "main",
+      "Teams",
+      "year"
+    ],
+    [
+      "main.TeamsHalf",
+      "tmID",
+      "main",
+      "Teams",
+      "tmID"
+    ],
+    [
+      "main.TeamsHalf",
+      "year",
+      "main",
+      "Teams",
+      "year"
+    ],
+    [
+      "main.TeamsPost",
+      "year",
+      "main",
+      "Teams",
+      "year"
+    ],
+    [
+      "main.TeamsPost",
+      "tmID",
+      "main",
+      "Teams",
+      "tmID"
+    ],
+    [
+      "main.TeamsSC",
+      "year",
+      "main",
+      "Teams",
+      "year"
+    ],
+    [
+      "main.TeamsSC",
+      "tmID",
+      "main",
+      "Teams",
+      "tmID"
+    ]
+  ]
+}

@@ -1,0 +1,684 @@
+{
+  "db_id": "menu",
+  "schema": null,
+  "tables": {
+    "main.Dish": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number indicating the dishes",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name of the dish",
+          "examples": [
+            "Consomme printaniere royal",
+            "Chicken gumbo",
+            "Tomato aux croutons",
+            "Onion au gratin",
+            "St. Emilion"
+          ]
+        },
+        "description": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "description of the dish",
+          "examples": []
+        },
+        "menus_appeared": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "how many menus have this dish",
+          "examples": [
+            "8",
+            "111",
+            "14",
+            "41",
+            "66"
+          ]
+        },
+        "times_appeared": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "how many times this dish appears in the menu",
+          "examples": [
+            "8",
+            "117",
+            "14",
+            "41",
+            "68"
+          ]
+        },
+        "first_appeared": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the year that this dish appears first",
+          "examples": [
+            "1897",
+            "1895",
+            "1893",
+            "1900",
+            "1881"
+          ]
+        },
+        "last_appeared": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the year that this dish appears the last time",
+          "examples": [
+            "1927",
+            "1960",
+            "1917",
+            "1971",
+            "1981"
+          ]
+        },
+        "lowest_price": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the lowest price of the dish",
+          "examples": [
+            "0.2",
+            "0.1",
+            "0.25",
+            "0.0",
+            "0.15"
+          ]
+        },
+        "highest_price": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the highest price of the dish",
+          "examples": [
+            "0.4",
+            "0.8",
+            "1.0",
+            "18.0",
+            "25.0"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Menu": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique number identifying the menu",
+          "examples": [
+            "12463",
+            "12464",
+            "12465",
+            "12466",
+            "12467"
+          ]
+        },
+        "name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name of the menu",
+          "examples": [
+            "The Modern",
+            "Restaurant",
+            "El Fuerte Del Palmar"
+          ]
+        },
+        "sponsor": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the sponsor of this menu",
+          "examples": [
+            "HOTEL EASTMAN",
+            "REPUBLICAN HOUSE",
+            "NORDDEUTSCHER LLOYD BREMEN",
+            "CANADIAN PACIFIC RAILWAY COMPANY",
+            "HOTEL NETHERLAND"
+          ]
+        },
+        "event": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the event that the menu was created for",
+          "examples": [
+            "BREAKFAST",
+            "[DINNER]",
+            "FRUHSTUCK/BREAKFAST;",
+            "LUNCH;",
+            "DINNER;"
+          ]
+        },
+        "venue": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the venue that the menu was created for",
+          "examples": [
+            "COMMERCIAL",
+            "SOC;",
+            "EDUC;"
+          ]
+        },
+        "place": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the location that the menu was used",
+          "examples": [
+            "HOT SPRINGS, AR",
+            "MILWAUKEE, [WI];",
+            "DAMPFER KAISER WILHELM DER GROSSE;",
+            "R.M.S. EMPRESS OF CHINA",
+            "NEW YORK, [NY];"
+          ]
+        },
+        "physical_description": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "physical description of the menu",
+          "examples": [
+            "CARD; 4.75X7.5;",
+            "CARD; ILLUS; COL; 7.0X9.0;",
+            "CARD; ILLU; COL; 5.5X8.0;",
+            "FOLDER; ILLU; COL; 5.5X7.5;",
+            "CARD; ILLUS; COL; 4.75X7.25;"
+          ]
+        },
+        "occasion": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "occasion of the menu",
+          "examples": [
+            "EASTER;",
+            "ANNIVERSARY;",
+            "DAILY;"
+          ]
+        },
+        "notes": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "notes",
+          "examples": [
+            "WEDGEWOOD BLUE CARD; WHITE EMBOSSED GREEK KEY BORDER; \"EASTER SUNDAY\" EMBOSSED IN WHITE; VIOLET COLORED SPRAY OF FLOWERS IN UPPER LEFT CORNER;",
+            "MENU IN GERMAN AND ENGLISH; ILLUS, STEAMSHIP AND SAILING VESSEL;",
+            "MENU IN GERMAN AND ENGLISH; ILLUS, HARBOR SCENE WITH SAILING VESSEL;",
+            "MENU IN GERMAN AND ENGLISH; ILLUS, HARBOR SCENE WITH ROCKS AND LIGHTHOUSE; STEAMSHIP AND SAILING VESSELS; CONCERT PROGRAM; DATES:  ON GERMAN SIDE OF MENU \"MONTAG, DEN 16 APRIL 1900\"; ON ENGLISH SIDE OF MENU \"MONDAY, APRIL 15TH, 1900\";"
+          ]
+        },
+        "call_number": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "call number",
+          "examples": [
+            "1900-2822",
+            "1900-2825",
+            "1900-2827",
+            "1900-2828",
+            "1900-2829"
+          ]
+        },
+        "keywords": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "keywords",
+          "examples": []
+        },
+        "language": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "language",
+          "examples": []
+        },
+        "date": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the date that this menu was created",
+          "examples": [
+            "1900-04-15"
+          ]
+        },
+        "location": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the location that the menu was used",
+          "examples": [
+            "Hotel Eastman",
+            "Republican House",
+            "Norddeutscher Lloyd Bremen",
+            "Canadian Pacific Railway Company",
+            "Hotel Netherland"
+          ]
+        },
+        "location_type": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": []
+        },
+        "currency": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the currency that the menu was used",
+          "examples": [
+            "Dollars",
+            "Cents",
+            "Francs",
+            "Belgian Francs"
+          ]
+        },
+        "currency_symbol": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the currency symbol",
+          "examples": [
+            "$",
+            "c",
+            "FF",
+            "BEF"
+          ]
+        },
+        "status": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "status of the menu",
+          "examples": [
+            "complete"
+          ]
+        },
+        "page_count": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the number of pages of this menu",
+          "examples": [
+            "2",
+            "4",
+            "12",
+            "6",
+            "10"
+          ]
+        },
+        "dish_count": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the number of dishes of this menu",
+          "examples": [
+            "67",
+            "34",
+            "84",
+            "63",
+            "33"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.MenuItem": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id representing the menu item",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "menu_page_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of menu page",
+          "examples": [
+            "1389",
+            "3079",
+            "1388",
+            "12947",
+            "130"
+          ]
+        },
+        "price": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the price of this dish (menu item)",
+          "examples": [
+            "0.4",
+            "0.6",
+            "0.5",
+            "0.1",
+            "0.25"
+          ]
+        },
+        "high_price": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "high price of this dish",
+          "examples": [
+            "1.0",
+            "3.0",
+            "1.5",
+            "4.0"
+          ]
+        },
+        "dish_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of the dish",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "created_at": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the dates when the item was created",
+          "examples": [
+            "2011-03-28 15:00:44 UTC",
+            "2011-03-28 15:01:13 UTC",
+            "2011-03-28 15:01:40 UTC",
+            "2011-03-28 15:01:51 UTC",
+            "2011-03-28 15:21:26 UTC"
+          ]
+        },
+        "updated_at": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the dates when the item was updated",
+          "examples": [
+            "2011-04-19 04:33:15 UTC",
+            "2011-04-19 15:00:54 UTC",
+            "2011-04-19 19:10:05 UTC",
+            "2011-04-19 19:07:01 UTC",
+            "2011-04-13 15:25:27 UTC"
+          ]
+        },
+        "xpos": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "x-axis position of the dish in this menu page",
+          "examples": [
+            "0.111429",
+            "0.438571",
+            "0.14",
+            "0.377143",
+            "0.105714"
+          ]
+        },
+        "ypos": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "y-axis position of the dish in this menu page",
+          "examples": [
+            "0.254735",
+            "0.261922",
+            "0.26272",
+            "0.313178",
+            "0.30105"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.MenuPage": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id number indentifying the menupage",
+          "examples": [
+            "119",
+            "120",
+            "121",
+            "122",
+            "123"
+          ]
+        },
+        "menu_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of the menu",
+          "examples": [
+            "12460",
+            "12461",
+            "12462",
+            "12463",
+            "12464"
+          ]
+        },
+        "page_number": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the page number",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "image_id": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of the image",
+          "examples": [
+            "1603595.0",
+            "1603596.0",
+            "1603597.0",
+            "1603598.0",
+            "1603591.0"
+          ]
+        },
+        "full_height": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "full height of the menu page",
+          "examples": [
+            "7230",
+            "5428",
+            "3074",
+            "3049"
+          ]
+        },
+        "full_width": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "full width of the menu page",
+          "examples": [
+            "5428",
+            "7230",
+            "2046",
+            "2004"
+          ]
+        },
+        "uuid": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "510d47e4-2955-a3d9-e040-e00a18064a99",
+            "510d47e4-2956-a3d9-e040-e00a18064a99",
+            "510d47e4-2957-a3d9-e040-e00a18064a99",
+            "510d47e4-2958-a3d9-e040-e00a18064a99",
+            "510d47e4-2959-a3d9-e040-e00a18064a99"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.MenuItem",
+      "dish_id",
+      "main",
+      "Dish",
+      "id"
+    ],
+    [
+      "main.MenuItem",
+      "menu_page_id",
+      "main",
+      "MenuPage",
+      "id"
+    ],
+    [
+      "main.MenuPage",
+      "menu_id",
+      "main",
+      "Menu",
+      "id"
+    ]
+  ]
+}

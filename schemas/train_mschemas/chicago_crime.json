@@ -1,0 +1,848 @@
+{
+  "db_id": "chicago_crime",
+  "schema": null,
+  "tables": {
+    "main.Community_Area": {
+      "fields": {
+        "community_area_no": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique community area number",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "community_area_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "community area name",
+          "examples": [
+            "Rogers Park",
+            "West Ridge",
+            "Uptown",
+            "Lincoln Square",
+            "North Center"
+          ]
+        },
+        "side": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "district",
+          "examples": [
+            "Far North ",
+            "North ",
+            "Central",
+            "Northwest ",
+            "West "
+          ]
+        },
+        "population": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "population of the community",
+          "examples": [
+            "54,991",
+            "71,942",
+            "56,362",
+            "39,493",
+            "31,867"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Crime": {
+      "fields": {
+        "report_no": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique Numeric identifier of the crime report",
+          "examples": [
+            "23757",
+            "23758",
+            "23759",
+            "23761",
+            "23762"
+          ]
+        },
+        "case_number": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Case number assigned to the reported crime",
+          "examples": [
+            "JB100159",
+            "JB100522",
+            "JB100839",
+            "JB101043",
+            "JB105277"
+          ]
+        },
+        "date": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Date of the occurrence of the incident being reported",
+          "examples": [
+            "1/1/2018 2:46",
+            "1/1/2018 11:33",
+            "1/1/2018 18:27",
+            "1/1/2018 22:40",
+            "1/6/2018 12:54"
+          ]
+        },
+        "block": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "A redacted address indicating in which city block the incident occurred",
+          "examples": [
+            "039XX W CORNELIA AVE",
+            "026XX N HAMPDEN CT",
+            "047XX S PRINCETON AVE",
+            "081XX S STONY ISLAND AVE",
+            "015XX E 62ND ST"
+          ]
+        },
+        "iucr_no": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Illinois Uniform Crime Reporting code: a four digit code used to classify criminal incidents when taking reports",
+          "examples": [
+            "110",
+            "143B",
+            "1310",
+            "460",
+            "2022"
+          ]
+        },
+        "location_description": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "A description of the kind of area where incident occurred",
+          "examples": [
+            "AUTO",
+            "APARTMENT",
+            "ALLEY",
+            "STREET",
+            "PARKING LOT"
+          ]
+        },
+        "arrest": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "A true/false value indicating if an arrest has been made",
+          "examples": [
+            "FALSE",
+            "TRUE"
+          ]
+        },
+        "domestic": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "A true/false value indicating if the incident is as case of domestic violence",
+          "examples": [
+            "FALSE",
+            "TRUE"
+          ]
+        },
+        "beat": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "1732",
+            "1935",
+            "935",
+            "411",
+            "314"
+          ]
+        },
+        "district_no": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "A number indicating the geographic subdivision of the police district where the incident occurred",
+          "examples": [
+            "17",
+            "19",
+            "9",
+            "4",
+            "3"
+          ]
+        },
+        "ward_no": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "A two digit number identifying the legislative district (ward) where the incident occurred",
+          "examples": [
+            "30",
+            "43",
+            "3",
+            "8",
+            "5"
+          ]
+        },
+        "community_area_no": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "A number identifying one of 77 geographic areas where the incident occurred",
+          "examples": [
+            "21",
+            "7",
+            "37",
+            "45",
+            "42"
+          ]
+        },
+        "fbi_code_no": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "A code identifying the type of crime reported according to the classification scheme used by the FBI",
+          "examples": [
+            "01A",
+            "15",
+            "14",
+            "08B",
+            "18"
+          ]
+        },
+        "latitude": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The latitude where incident is reported to have occurred",
+          "examples": [
+            "41.94456125",
+            "41.92972657",
+            "41.808168",
+            "41.74698404",
+            "41.78289015"
+          ]
+        },
+        "longitude": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The longitude where incident is reported to have occurred",
+          "examples": [
+            "-87.72668181",
+            "-87.64092074",
+            "-87.63333646",
+            "-87.5854287",
+            "-87.58877343"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.District": {
+      "fields": {
+        "district_no": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique number identifying the district",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "district_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "name of the district",
+          "examples": [
+            "Central",
+            "Wentworth",
+            "Grand Crossing",
+            "South Chicago",
+            "Calumet"
+          ]
+        },
+        "address": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Street address of the police district building",
+          "examples": [
+            "1718 South State Street",
+            "5101 South Wentworh Avenue",
+            "7040 South Cottage Grove Ave",
+            "2255 East 103rd St",
+            "727 East 111th St"
+          ]
+        },
+        "zip_code": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ZIP code of the police district building",
+          "examples": [
+            "60616",
+            "60609",
+            "60637",
+            "60617",
+            "60628"
+          ]
+        },
+        "commander": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Name of the district's commanding officer",
+          "examples": [
+            "Jake M. Alderden",
+            "Joshua Wallace",
+            "Eve T. Quarterman",
+            "Robert A. Rubio",
+            "Glenn White"
+          ]
+        },
+        "email": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Email address to contact district administrators",
+          "examples": [
+            " CAPS001District@chicagopolice.org",
+            " CAPS002District@chicagopolice.org",
+            " CAPS003District@chicagopolice.org",
+            " caps.004district@chicagopolice.org",
+            " CAPS005District@chicagopolice.org"
+          ]
+        },
+        "phone": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Main telephone number for the district",
+          "examples": [
+            "312-745-4290",
+            "312-747-8366",
+            "312-747-8201",
+            "312-747-8205",
+            "312-747-8210"
+          ]
+        },
+        "fax": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Fax number for the district",
+          "examples": [
+            "312-745-3694",
+            "312-747-5396",
+            "312-747-5479",
+            "312-747-4559",
+            "312-747-5935"
+          ]
+        },
+        "tty": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Number of the district teletype machine",
+          "examples": [
+            "312-745-3693",
+            "312-747-6656",
+            "312-747-9168",
+            "312-747-9169",
+            "312-747-9170"
+          ]
+        },
+        "twitter": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The district twitter handle",
+          "examples": [
+            " ChicagoCAPS01",
+            " ChicagoCAPS02",
+            " ChicagoCAPS03",
+            " ChicagoCAPS04",
+            " ChicagoCAPS05"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.FBI_Code": {
+      "fields": {
+        "fbi_code_no": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique code made by fbi to classify the crime cases",
+          "examples": [
+            "01A",
+            "01B",
+            "04A",
+            "04B",
+            "08A"
+          ]
+        },
+        "title": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Short description of the kind of crime",
+          "examples": [
+            "Homicide 1st & 2nd Degree",
+            "Involuntary Manslaughter",
+            "Criminal Sexual Assault",
+            "Robbery",
+            "Aggravated Assault"
+          ]
+        },
+        "description": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Detailed description of the kind of crime",
+          "examples": [
+            "The killing of one human being by another.",
+            "The killing of another person through negligence.",
+            "Any sexual act directed against another person, forcibly and/or against that person's will or not forcibly or against the person's will in instances where the victim is incapable of giving consent.",
+            "The taking or attempting to take anything of value under confrontational circumstances from the control, custody, or care of another person by force or threat of force or violence and/or by putting the victim in fear of immediate harm.",
+            "An unlawful attack by one person upon another wherein the offender displays a weapon in a threatening manner. Placing someone in reasonable apprehension of receiving a battery."
+          ]
+        },
+        "crime_against": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "States who the crime is against",
+          "examples": [
+            "Persons",
+            "Property",
+            "Society",
+            "Persons and Society"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.IUCR": {
+      "fields": {
+        "iucr_no": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Unique identifier for the incident classification",
+          "examples": [
+            "031A",
+            "031B",
+            "033A",
+            "033B",
+            "041A"
+          ]
+        },
+        "primary_description": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The general description of the incident classification",
+          "examples": [
+            "HOMICIDE",
+            "CRIM SEXUAL ASSAULT",
+            "BATTERY",
+            "PUBLIC PEACE VIOLATION",
+            "RITUALISM"
+          ]
+        },
+        "secondary_description": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The specific description of the incident classification",
+          "examples": [
+            "FIRST DEGREE MURDER",
+            "SECOND DEGREE MURDER",
+            "INVOLUNTARY MANSLAUGHTER",
+            "RECKLESS HOMICIDE",
+            "AGGRAVATED: HANDGUN"
+          ]
+        },
+        "index_code": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Uses values \"I\" and \"N\" to indicate crimes",
+          "examples": [
+            "I",
+            "N"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Neighborhood": {
+      "fields": {
+        "neighborhood_name": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The neighborhood name as used in everyday communication",
+          "examples": [
+            "Albany Park",
+            "Altgeld Gardens",
+            "Andersonville",
+            "Archer Heights",
+            "Armour Square"
+          ]
+        },
+        "community_area_no": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The community area in which most of the neighborhood is located",
+          "examples": [
+            "14",
+            "54",
+            "77",
+            "57",
+            "34"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Ward": {
+      "fields": {
+        "ward_no": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "alderman_first_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Daniel",
+            "Brian",
+            "Pat",
+            "Sophia",
+            "Leslie"
+          ]
+        },
+        "alderman_last_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "La Spata",
+            "Hopkins",
+            "Dowell",
+            "King",
+            "Hairston"
+          ]
+        },
+        "alderman_name_suffix": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Jr."
+          ]
+        },
+        "ward_office_address": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "1958 N. Milwaukee Ave.",
+            "1400 N. Ashland",
+            "5046 S. State St.",
+            "435 E. 35th Street",
+            "2325 E. 71st Street"
+          ]
+        },
+        "ward_office_zip": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "60647",
+            "60622",
+            "60609",
+            "60616",
+            "60649"
+          ]
+        },
+        "ward_email": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": []
+        },
+        "ward_office_phone": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "872.206.2685",
+            "312.643.2299",
+            "773.373.9273",
+            "773.536.8103",
+            "773.324.5555"
+          ]
+        },
+        "ward_office_fax": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "312.448.8829",
+            "773.536.7296",
+            "773.324.1585",
+            "773.224.2425"
+          ]
+        },
+        "city_hall_office_room": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "200",
+            "305",
+            "300",
+            "302"
+          ]
+        },
+        "city_hall_office_phone": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "312.744.6836",
+            "312.744.8734",
+            "312.744.2690",
+            "312.744.6832"
+          ]
+        },
+        "city_hall_office_fax": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "312.744.6712",
+            "312.744.7738",
+            "312.744.3195",
+            "312.744.0670"
+          ]
+        },
+        "Population": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "56149",
+            "55805",
+            "53039",
+            "54589",
+            "51455"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.Crime",
+      "ward_no",
+      "main",
+      "Ward",
+      "ward_no"
+    ],
+    [
+      "main.Crime",
+      "iucr_no",
+      "main",
+      "IUCR",
+      "iucr_no"
+    ],
+    [
+      "main.Crime",
+      "district_no",
+      "main",
+      "District",
+      "district_no"
+    ],
+    [
+      "main.Crime",
+      "community_area_no",
+      "main",
+      "Community_Area",
+      "community_area_no"
+    ],
+    [
+      "main.Crime",
+      "fbi_code_no",
+      "main",
+      "FBI_Code",
+      "fbi_code_no"
+    ],
+    [
+      "main.Neighborhood",
+      "community_area_no",
+      "main",
+      "Community_Area",
+      "community_area_no"
+    ]
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "db_id": "citeseer",
+  "schema": null,
+  "tables": {
+    "main.cites": {
+      "fields": {
+        "cited_paper_id": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "cited_paper_id is the ID of the paper being cited",
+          "examples": [
+            "100157",
+            "100598",
+            "101570",
+            "10227",
+            "103027"
+          ]
+        },
+        "citing_paper_id": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "citing_paper_id stands for the paper which contains the citation",
+          "examples": [
+            "100157",
+            "364207",
+            "38848",
+            "bradshaw97introduction",
+            "bylund99coordinating"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.content": {
+      "fields": {
+        "paper_id": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique string ID of the paper",
+          "examples": [
+            "100157",
+            "100598",
+            "101570",
+            "10227",
+            "102637"
+          ]
+        },
+        "word_cited_id": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "rtype",
+          "examples": [
+            "word1163",
+            "word1509",
+            "word1614",
+            "word1642",
+            "word1663"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.paper": {
+      "fields": {
+        "paper_id": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique string ID of the paper",
+          "examples": [
+            "100157",
+            "100598",
+            "101570",
+            "10227",
+            "102637"
+          ]
+        },
+        "class_label": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Agents",
+            "IR",
+            "ML",
+            "AI",
+            "DB"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.content",
+      "paper_id",
+      "main",
+      "paper",
+      "paper_id"
+    ]
+  ]
+}

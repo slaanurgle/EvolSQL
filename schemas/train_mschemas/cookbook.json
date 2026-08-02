@@ -1,0 +1,636 @@
+{
+  "db_id": "cookbook",
+  "schema": null,
+  "tables": {
+    "main.Ingredient": {
+      "fields": {
+        "ingredient_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier for the ingredient",
+          "examples": [
+            "1",
+            "6",
+            "10",
+            "11",
+            "12"
+          ]
+        },
+        "category": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the category of the ingredient",
+          "examples": [
+            "dairy",
+            "Mexican products",
+            "cereals",
+            "breads",
+            "fresh vegetables"
+          ]
+        },
+        "name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name of the ingredient",
+          "examples": [
+            "1% lowfat cottage cheese",
+            "1% lowfat milk",
+            "10-inch flour tortilla",
+            "100% bran cereal",
+            "2% lowfat milk"
+          ]
+        },
+        "plural": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the plural suffix of the ingredient",
+          "examples": [
+            "s",
+            "#NAME?",
+            "es"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Nutrition": {
+      "fields": {
+        "recipe_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of the recipe",
+          "examples": [
+            "214",
+            "215",
+            "216",
+            "217",
+            "218"
+          ]
+        },
+        "protein": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the protein content in the recipe",
+          "examples": [
+            "5.47",
+            "5.7",
+            "4.9",
+            "1.77",
+            "1.38"
+          ]
+        },
+        "carbo": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the carbo content in the recipe",
+          "examples": [
+            "41.29",
+            "23.75",
+            "26.88",
+            "18.17",
+            "36.63"
+          ]
+        },
+        "alcohol": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the alcohol content in the recipe",
+          "examples": [
+            "0.0",
+            "1.93",
+            "2.7",
+            "1.95",
+            "5.8"
+          ]
+        },
+        "total_fat": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the total fat content in the recipe",
+          "examples": [
+            "11.53",
+            "1.08",
+            "1.1",
+            "0.21",
+            "5.47"
+          ]
+        },
+        "sat_fat": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the saturated fat content in the recipe",
+          "examples": [
+            "2.21",
+            "0.58",
+            "0.06",
+            "3.46",
+            "0.01"
+          ]
+        },
+        "cholestrl": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the cholesterol content in the recipe",
+          "examples": [
+            "1.39",
+            "3.48",
+            "3.46",
+            "0.0",
+            "10.36"
+          ]
+        },
+        "sodium": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the sodium content in the recipe",
+          "examples": [
+            "260.78",
+            "46.17",
+            "41.79",
+            "14.01",
+            "50.22"
+          ]
+        },
+        "iron": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the iron content in the recipe",
+          "examples": [
+            "0.81",
+            "0.57",
+            "0.37",
+            "0.19",
+            "0.66"
+          ]
+        },
+        "vitamin_c": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the vitamin c content in the recipe",
+          "examples": [
+            "8.89",
+            "13.02",
+            "6.13",
+            "8.79",
+            "0.16"
+          ]
+        },
+        "vitamin_a": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the vitamin a content in the recipe",
+          "examples": [
+            "586.2",
+            "2738.24",
+            "1521.1",
+            "478.09",
+            "229.16"
+          ]
+        },
+        "fiber": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the fiber a content in the recipe",
+          "examples": [
+            "0.87",
+            "0.62",
+            "0.34",
+            "0.69",
+            "1.05"
+          ]
+        },
+        "pcnt_cal_carb": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "percentage of carbo in total nutrient composition",
+          "examples": [
+            "56.8",
+            "67.38",
+            "78.45",
+            "88.98",
+            "72.81"
+          ]
+        },
+        "pcnt_cal_fat": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "percentage of fat in total nutrient composition",
+          "examples": [
+            "35.68",
+            "6.89",
+            "7.24",
+            "2.35",
+            "24.46"
+          ]
+        },
+        "pcnt_cal_prot": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "percentage of protein in total nutrient composition",
+          "examples": [
+            "7.53",
+            "16.17",
+            "14.3",
+            "8.67",
+            "2.73"
+          ]
+        },
+        "calories": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the calories of the recipe",
+          "examples": [
+            "290.79",
+            "141.01",
+            "137.06",
+            "81.7",
+            "201.23"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Quantity": {
+      "fields": {
+        "quantity_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier for the quantity",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "recipe_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of the recipe",
+          "examples": [
+            "214",
+            "215",
+            "216",
+            "217",
+            "218"
+          ]
+        },
+        "ingredient_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of the ingredient",
+          "examples": [
+            "1613",
+            "3334",
+            "2222",
+            "2797",
+            "3567"
+          ]
+        },
+        "max_qty": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the max quantity of the ingredient",
+          "examples": [
+            "2.0",
+            "0.25",
+            "0.5",
+            "3.0",
+            "0.67"
+          ]
+        },
+        "min_qty": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the min quantity of the ingredient",
+          "examples": [
+            "2.0",
+            "0.25",
+            "0.5",
+            "3.0",
+            "0.67"
+          ]
+        },
+        "unit": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unit of the ingredient",
+          "examples": [
+            "cup(s)",
+            "teaspoon(s)",
+            "14 oz. can(s)",
+            "envelope(s)",
+            "tablespoon(s)"
+          ]
+        },
+        "preparation": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "melted",
+            "or water",
+            "divided",
+            "crushed"
+          ]
+        },
+        "optional": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "whether the ingredient is optional",
+          "examples": [
+            "FALSE",
+            "TRUE"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Recipe": {
+      "fields": {
+        "recipe_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier for the recipe",
+          "examples": [
+            "214",
+            "215",
+            "216",
+            "217",
+            "218"
+          ]
+        },
+        "title": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the title of the recipe",
+          "examples": [
+            "Raspberry Chiffon Pie",
+            "Apricot Yogurt Parfaits",
+            "Fresh Apricot Bavarian",
+            "Fresh Peaches",
+            "Canned Cherry Crisp"
+          ]
+        },
+        "subtitle": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the subtitle of the recipe",
+          "examples": [
+            "with Banana Cream Whip",
+            "a La Creme",
+            "with Raspberry Yogurt Mint Sauce",
+            "with Apricot Sauce"
+          ]
+        },
+        "servings": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the number of people the recipe can serve",
+          "examples": [
+            "10",
+            "4",
+            "8",
+            "6",
+            "12"
+          ]
+        },
+        "yield_unit": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unit of the yield for the recipe",
+          "examples": [
+            "1 pie",
+            "8 tarts",
+            "2 quarts",
+            "10 popsicles"
+          ]
+        },
+        "prep_min": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the preparation minute of the recipe",
+          "examples": [
+            "20",
+            "5",
+            "10",
+            "6",
+            "15"
+          ]
+        },
+        "cook_min": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the cooked minute of the recipe",
+          "examples": [
+            "8",
+            "2",
+            "13",
+            "0",
+            "5"
+          ]
+        },
+        "stnd_min": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the stand minute of the price",
+          "examples": [
+            "305",
+            "65",
+            "0",
+            "60",
+            "240"
+          ]
+        },
+        "source": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the source of the recipe",
+          "examples": [
+            "The California Tree Fruit Agreement",
+            "Produce for Better Health Foundation and 5 a Day",
+            "The California Apricot Advisory Board",
+            "The Cherry Marketing Institute",
+            "North American Blueberry Council"
+          ]
+        },
+        "intro": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the introduction of the recipe",
+          "examples": [
+            "Serve in stemmed glasses and top with sliced apricots for elegant endings.",
+            "For a quick, low-cal dessert, serve this on other sliced fruit such as berries, instead of whipped cream.",
+            "Your microwave turns a can of cherry pie filling into a quick hot dessert.",
+            "No one could ever guess that these tasty tarts are low in calories and hardly contain any fat or cholesterol."
+          ]
+        },
+        "directions": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the directions of the recipe",
+          "examples": [
+            "For crust, preheat oven to 375 degrees F.\nIn lightly greased 10-inch pie plate, combine graham cracker crumbs, melted butter and 1/4 cup sugar. Press evenly on bottom and up side of plate. Bake 5 minutes; cool.\n\nFor filling, in medium saucepan, combine juice or water and gelatin; let stand 5 minutes. Add 1/3 cup sugar and heat over medium heat, stirring to dissolve gelatin. In blender or food processor, puree 6 plums. Add puree and raspberries to gelatin mixture. Refrigerate until mixture begins to set about 1 hour. Stir yogurt into fruit mixture. In large bowl, beat egg whites until frothy. Gradually add cream of tartar and remaining 1/3 cup sugar and beat until stiff peaks form. Gently fold egg whites into fruit mixture so as not to reduce volume. Spoon into crust. Refrigerate 4 hours or overnight. Thinly slice remaining 2 plums and garnish top of pie.",
+            "Drain canned apricots, pour 1/4 cup of the juice into saucepan or microwave-safe dish. Sprinkle gelatin over juice and let stand for 5 minutes to soften. Warm over low heat or microwave at medium (50% power) for 30 seconds or until gelatin has dissolved.\n \nIn food processor or blender, puree canned apricots; add lemon juice brandy, yogurt and gelatin mixture and process for 30 seconds or until combined.\n \nPour into parfait or stemmed glasses or champagne flutes. Cover and refrigerate until set, at least 1 hour or overnight.\n \nJust before serving arrange fresh apricots on top. (If apricots are not available substitute kiwi slices or berries). Garnish each with a small spoonful of yogurt and sprinkling of brown sugar or mint.",
+            "Drop apricots into boiling water to cover. Return to boil and simmer for 5 minutes or until skins begin to split. Drain and rinse under cold water. Halve fruit and discard skins and pits. Puree apricots in electric blender. Combine water and gelatin in small saucepan; stir over low heat until dissolved. Mix sugar, apricot puree and yogurt with a wire whip until smooth; mix in dissolved gelatin. Sweeten to taste if desired. Chill mixture until thick. Spoon into stemmed glasses.\n\nNote: One pound fresh apricots is 15 to 20. One and a half envelopes gelatin is 4 teaspoons.",
+            "In a small bowl, beat egg white until foamy. Add banana, sugar and lemon juice; beat until mixture forms stiff peaks. Spoon peaches into 4 individual dishes, top with Banana Cream.\n \nNote: It is best to make this an hour or less before serving because it will darken upon standing.",
+            "Pour cherry pie filling into an 8-inch, round microwave-safe dish. Sprinkle with almond extract. Spread mixture evenly in dish.\n \nIn a small bowl, combine oats, coconut, flour, brown sugar and cinnamon; mix well. \n\nCut in butter with a fork until mixture is crumbly. Sprinkle oat mixture over cherry filling.\n \nMicrowave, uncovered, on HIGH (100% power) 4 to 5 minutes (rotating dish\ntwice), or until filling is hot and bubbly."
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.Nutrition",
+      "recipe_id",
+      "main",
+      "Recipe",
+      "recipe_id"
+    ],
+    [
+      "main.Quantity",
+      "recipe_id",
+      "main",
+      "Recipe",
+      "recipe_id"
+    ],
+    [
+      "main.Quantity",
+      "ingredient_id",
+      "main",
+      "Ingredient",
+      "ingredient_id"
+    ],
+    [
+      "main.Quantity",
+      "recipe_id",
+      "main",
+      "Nutrition",
+      "recipe_id"
+    ]
+  ]
+}

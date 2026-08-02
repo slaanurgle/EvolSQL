@@ -1,0 +1,269 @@
+{
+  "db_id": "genes",
+  "schema": null,
+  "tables": {
+    "main.Classification": {
+      "fields": {
+        "GeneID": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique identifier number of genes",
+          "examples": [
+            "G234064",
+            "G234065",
+            "G234070",
+            "G234073",
+            "G234074"
+          ]
+        },
+        "Localization": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "location",
+          "examples": [
+            "cytoplasm",
+            "cytoskeleton",
+            "nucleus",
+            "plasma membrane",
+            "mitochondria"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Genes": {
+      "fields": {
+        "GeneID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "identifier number of genes",
+          "examples": [
+            "G234064",
+            "G234065",
+            "G234070",
+            "G234073",
+            "G234074"
+          ]
+        },
+        "Essential": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "essential",
+          "examples": [
+            "Essential",
+            "Non-Essential",
+            "?",
+            "Ambiguous-Essential"
+          ]
+        },
+        "Class": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "class",
+          "examples": [
+            "GTP/GDP-exchange factors (GEFs)",
+            "ATPases",
+            "Molecular chaperones",
+            "Motorproteins",
+            "Cyclins"
+          ]
+        },
+        "Complex": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Complex",
+          "examples": [
+            "Translation complexes",
+            "?",
+            "Cytoskeleton",
+            "Cyclin-CDK (Cyclin-dependent kinases) complexes",
+            "Transcription complexes/Transcriptosome"
+          ]
+        },
+        "Phenotype": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Phenotype",
+          "examples": [
+            "?",
+            "Mating and sporulation defects",
+            "Cell cycle defects",
+            "Cell morphology and organelle mutants",
+            "Conditional phenotypes"
+          ]
+        },
+        "Motif": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Motif",
+          "examples": [
+            "PS00824",
+            "PS00825",
+            "?",
+            "PS00017",
+            "PS00013"
+          ]
+        },
+        "Chromosome": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Chromosome",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "Function": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Function",
+          "examples": [
+            "CELLULAR ORGANIZATION (proteins are localized to the corresponding organelle)",
+            "PROTEIN SYNTHESIS",
+            "CELL RESCUE, DEFENSE, CELL DEATH AND AGEING",
+            "CELLULAR TRANSPORT AND TRANSPORTMECHANISMS",
+            "PROTEIN DESTINATION"
+          ]
+        },
+        "Localization": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "cytoplasm",
+            "cytoskeleton",
+            "nucleus",
+            "plasma membrane",
+            "mitochondria"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Interactions": {
+      "fields": {
+        "GeneID1": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "identifier number of genes",
+          "examples": [
+            "G234064",
+            "G234065",
+            "G234073",
+            "G234074",
+            "G234076"
+          ]
+        },
+        "GeneID2": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "identifier number of genes",
+          "examples": [
+            "G234126",
+            "G235065",
+            "G234371",
+            "G234854",
+            "G234065"
+          ]
+        },
+        "Type": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Type",
+          "examples": [
+            "Genetic-Physical",
+            "Genetic",
+            "Physical"
+          ]
+        },
+        "Expression_Corr": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Expression correlation score",
+          "examples": [
+            "0.914095071",
+            "0.751584888",
+            "0.823773738",
+            "0.939001091",
+            "0.749192312"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.Genes",
+      "GeneID",
+      "main",
+      "Classification",
+      "GeneID"
+    ],
+    [
+      "main.Interactions",
+      "GeneID1",
+      "main",
+      "Classification",
+      "GeneID"
+    ],
+    [
+      "main.Interactions",
+      "GeneID2",
+      "main",
+      "Classification",
+      "GeneID"
+    ]
+  ]
+}

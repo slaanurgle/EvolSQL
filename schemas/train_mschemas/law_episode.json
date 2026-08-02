@@ -1,0 +1,655 @@
+{
+  "db_id": "law_episode",
+  "schema": null,
+  "tables": {
+    "main.Award": {
+      "fields": {
+        "award_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier for the award nomination",
+          "examples": [
+            "258",
+            "259",
+            "260",
+            "261",
+            "262"
+          ]
+        },
+        "organization": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name of the organization that grants the award",
+          "examples": [
+            "International Monitor Awards",
+            "Primetime Emmy Awards",
+            "American Bar Association Silver Gavel Awards for Media and the Arts",
+            "Edgar Allan Poe Awards"
+          ]
+        },
+        "year": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the year of the nomination for  the award",
+          "examples": [
+            "1999",
+            "2000"
+          ]
+        },
+        "award_category": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the class of the award",
+          "examples": [
+            "Monitor",
+            "Primetime Emmy",
+            "Silver Gavel Award",
+            "Edgar"
+          ]
+        },
+        "award": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the specific award",
+          "examples": [
+            "Film Originated Television Series - Best Achievement",
+            "Outstanding Costume Design for a Series",
+            "Outstanding Directing for a Drama Series",
+            "Outstanding Guest Actress in a Drama Series",
+            "Outstanding Sound Mixing for a Drama Series"
+          ]
+        },
+        "series": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name of the Law & Order series that has been nominated",
+          "examples": [
+            "Law and Order"
+          ]
+        },
+        "episode_id": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of the episode that has been nominated",
+          "examples": [
+            "tt0629149",
+            "tt0629398",
+            "tt0629248",
+            "tt0629422",
+            "tt0629228"
+          ]
+        },
+        "person_id": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of the person that has been nominated",
+          "examples": [
+            "nm0937725",
+            "nm0792309",
+            "nm0049569",
+            "nm0371065",
+            "nm0288886"
+          ]
+        },
+        "role": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the role that has been nominated",
+          "examples": [
+            "Katrina Ludlow",
+            "production mixer",
+            "re-recording mixer",
+            "writer"
+          ]
+        },
+        "result": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the nomination result",
+          "examples": [
+            "Winner",
+            "Nominee"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Credit": {
+      "fields": {
+        "episode_id": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of the episode to which the credit information pertains",
+          "examples": [
+            "tt0629146",
+            "tt0629149",
+            "tt0629153",
+            "tt0629170",
+            "tt0629204"
+          ]
+        },
+        "person_id": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of the person to which the credit information pertains",
+          "examples": [
+            "nm0000973",
+            "nm0001583",
+            "nm0001832",
+            "nm0003167",
+            "nm0004135"
+          ]
+        },
+        "category": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the kind of credit being recognized",
+          "examples": [
+            "Additional Crew",
+            "Art Department",
+            "Camera and Electrical Department",
+            "Cast",
+            "Casting Department"
+          ]
+        },
+        "role": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the role for which the person is being recognized",
+          "examples": [
+            "technical advisor",
+            "production accountant",
+            "president of NBC West Coast",
+            "executive assistant to executive producer",
+            "production coordinator"
+          ]
+        },
+        "credited": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "whether the credit was displayed in the credits at the end of the episode",
+          "examples": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Episode": {
+      "fields": {
+        "episode_id": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier of the episode",
+          "examples": [
+            "tt0629146",
+            "tt0629149",
+            "tt0629153",
+            "tt0629170",
+            "tt0629204"
+          ]
+        },
+        "series": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name of the series",
+          "examples": [
+            "Law and Order"
+          ]
+        },
+        "season": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "a number indicating the season of the episode",
+          "examples": [
+            "9"
+          ]
+        },
+        "episode": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the sequential number of the episode within a specific season",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "number_in_series": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the overall sequence number of episode in the entire series",
+          "examples": [
+            "182",
+            "183",
+            "184",
+            "185",
+            "186"
+          ]
+        },
+        "title": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the title of the episode",
+          "examples": [
+            "Cherished",
+            "DWB",
+            "Bait",
+            "Flight",
+            "Agony"
+          ]
+        },
+        "summary": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "a brief description of what happens in the episode",
+          "examples": [
+            "New assistant DA Abbie Carmichael aggressively investigates an infant's death and helps uncover a conspiracy involving a Russian adoption agency, gravely ill children, and an unethical doctor.",
+            "White police officers are accused of beating and dragging an African American man to his death. McCoy tries to prosecute while facing pressure from Federal prosecutors, who want to make a deal with one of the guilty parties.",
+            "A teenager who was shot in a drug deal gone bad claims to have been coerced into working as an informant for a corrupt narcotics officer.",
+            "Prosecutors have trouble making a case against a father accused of injecting his son with deadly bacteria, so Jack is forced to play hardball with the bio-supplier that may have supplied him with it.",
+            "After a woman is brutally attacked, the police believe they have stumbled on a serial killer. Prosecutors struggle with how to put him away for life with little evidence."
+          ]
+        },
+        "air_date": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the date the episode was initially broadcast in the United States",
+          "examples": [
+            "1998-09-23"
+          ]
+        },
+        "episode_image": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "a link to an image from the episode",
+          "examples": []
+        },
+        "rating": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the weighted average of the votes received for the episode",
+          "examples": [
+            "7.9",
+            "7.6",
+            "8.2",
+            "7.7",
+            "7.8"
+          ]
+        },
+        "votes": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the total number of rating votes for the episode",
+          "examples": [
+            "203",
+            "177",
+            "159",
+            "165",
+            "187"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Keyword": {
+      "fields": {
+        "episode_id": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of the episode",
+          "examples": [
+            "tt0629239",
+            "tt0629397",
+            "tt0629420"
+          ]
+        },
+        "keyword": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the keyword that is relevant for the episode",
+          "examples": [
+            "nun",
+            "priest",
+            "police officer",
+            "police officer killed",
+            "police officer shot"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Person": {
+      "fields": {
+        "person_id": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier for the person",
+          "examples": [
+            "nm0000210",
+            "nm0000973",
+            "nm0001346",
+            "nm0001583",
+            "nm0001832"
+          ]
+        },
+        "name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name of the person",
+          "examples": [
+            "Julia Roberts",
+            "Rene Balcer",
+            "Billy Fox",
+            "Constantine Makris",
+            "Thomas Meloeny"
+          ]
+        },
+        "birthdate": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the date the person was born",
+          "examples": [
+            "1967-10-28"
+          ]
+        },
+        "birth_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name parents gave to the person shortly after birth",
+          "examples": [
+            "Julia Fiona Roberts",
+            "Rene Chenevert Balcer",
+            "William M. Nicholson",
+            "Richard A. Wolf"
+          ]
+        },
+        "birth_place": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the place where a person was born",
+          "examples": [
+            "Smyrna",
+            "Montreal",
+            "Harrisburg",
+            "New York City"
+          ]
+        },
+        "birth_region": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the geographical area describing where a person was born that is larger than the birth place",
+          "examples": [
+            "Georgia",
+            "Quebec",
+            "Pennsylvania",
+            "New York"
+          ]
+        },
+        "birth_country": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name of the country where the person was born",
+          "examples": [
+            "USA",
+            "Canada",
+            "England",
+            "USSR"
+          ]
+        },
+        "height_meters": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "how tall the person is in meters",
+          "examples": [
+            "1.73",
+            "1.88",
+            "1.93",
+            "1.8"
+          ]
+        },
+        "nickname": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the nickname the person goes by",
+          "examples": [
+            "Jules",
+            "Gus",
+            "Ed",
+            "Dagmar"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Vote": {
+      "fields": {
+        "episode_id": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of the episode",
+          "examples": [
+            "tt0629204",
+            "tt0629228",
+            "tt0629170",
+            "tt0629266",
+            "tt0629149"
+          ]
+        },
+        "stars": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "a number between 1 and 10 indicating how much the viewer enjoyed the episode",
+          "examples": [
+            "10",
+            "9",
+            "8",
+            "7",
+            "6"
+          ]
+        },
+        "votes": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The total number of viewers that gave the specific episode the number of stars indicated in the \"stars\" column",
+          "examples": [
+            "36",
+            "39",
+            "64",
+            "35",
+            "13"
+          ]
+        },
+        "percent": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The percent of viewers that gave the specific episode the number of stars indicated in the \"stars\" column",
+          "examples": [
+            "17.7",
+            "19.2",
+            "31.5",
+            "17.2",
+            "6.4"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.Award",
+      "episode_id",
+      "main",
+      "Episode",
+      "episode_id"
+    ],
+    [
+      "main.Award",
+      "person_id",
+      "main",
+      "Person",
+      "person_id"
+    ],
+    [
+      "main.Credit",
+      "episode_id",
+      "main",
+      "Episode",
+      "episode_id"
+    ],
+    [
+      "main.Credit",
+      "person_id",
+      "main",
+      "Person",
+      "person_id"
+    ],
+    [
+      "main.Keyword",
+      "episode_id",
+      "main",
+      "Episode",
+      "episode_id"
+    ],
+    [
+      "main.Vote",
+      "episode_id",
+      "main",
+      "Episode",
+      "episode_id"
+    ]
+  ]
+}

@@ -1,0 +1,399 @@
+{
+  "db_id": "food_inspection",
+  "schema": null,
+  "tables": {
+    "main.businesses": {
+      "fields": {
+        "business_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id of the business",
+          "examples": [
+            "10",
+            "24",
+            "31",
+            "45",
+            "48"
+          ]
+        },
+        "name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name of the eatery",
+          "examples": [
+            "Tiramisu Kitchen",
+            "OMNI S.F. Hotel - 2nd Floor Pantry",
+            "Norman's Ice Cream and Freezes",
+            "CHARLIE'S DELI CAFE",
+            "ART'S CAFE"
+          ]
+        },
+        "address": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the eatery address",
+          "examples": [
+            "033 Belden Pl",
+            "500 California St, 2nd  Floor",
+            "2801 Leavenworth St",
+            "3202 FOLSOM St",
+            "747 IRVING St"
+          ]
+        },
+        "city": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the city where the eatery is located in",
+          "examples": [
+            "San Francisco",
+            "S.F.",
+            "SAN FRANCISCO",
+            "SF",
+            "Sf"
+          ]
+        },
+        "postal_code": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the postal code of the eatery",
+          "examples": [
+            "94104",
+            "94133",
+            "94110",
+            "94122",
+            "94115"
+          ]
+        },
+        "latitude": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the latitude of the position",
+          "examples": [
+            "37.7911",
+            "37.7929",
+            "37.8072",
+            "37.7471",
+            "37.764"
+          ]
+        },
+        "longitude": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the longitude of the position",
+          "examples": [
+            "-122.404",
+            "-122.403",
+            "-122.419",
+            "-122.414",
+            "-122.466"
+          ]
+        },
+        "phone_number": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the phone number of the eatery",
+          "examples": [
+            "14155345060",
+            "14155823535",
+            "14155344645",
+            "14155812403"
+          ]
+        },
+        "tax_code": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the tax code of the eatery",
+          "examples": [
+            "H24",
+            "H01",
+            "H25",
+            "H88",
+            "H26"
+          ]
+        },
+        "business_certificate": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the business certificate number",
+          "examples": [
+            "779059",
+            "352312",
+            "346882",
+            "340024",
+            "318022"
+          ]
+        },
+        "application_date": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the application date of the eatery",
+          "examples": [
+            "2001-10-10"
+          ]
+        },
+        "owner_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the owner's name",
+          "examples": [
+            "Tiramisu LLC",
+            "OMNI San Francisco Hotel Corp",
+            "Norman Antiforda",
+            "HARB, CHARLES AND KRISTIN",
+            "YOON HAE RYONG"
+          ]
+        },
+        "owner_address": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the owner's address",
+          "examples": [
+            "33 Belden St",
+            "500 California St, 2nd Floor",
+            "2801 Leavenworth St",
+            "1150 SANCHEZ",
+            "1567 FUNSTON AVE"
+          ]
+        },
+        "owner_city": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the city where the owner is located",
+          "examples": [
+            "San Francisco",
+            "S.F.",
+            "SAN FRANCISCO",
+            "SF",
+            "Okland"
+          ]
+        },
+        "owner_state": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the state where the owner is located",
+          "examples": [
+            "CA",
+            "DC",
+            "WA",
+            "TN",
+            "Ca"
+          ]
+        },
+        "owner_zip": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the zip code of the owner",
+          "examples": [
+            "94104",
+            "94133",
+            "94114",
+            "94122",
+            "94115"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.inspections": {
+      "fields": {
+        "business_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id of the business",
+          "examples": [
+            "10",
+            "24",
+            "31",
+            "45",
+            "48"
+          ]
+        },
+        "score": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the inspection score",
+          "examples": [
+            "92",
+            "94",
+            "82",
+            "100"
+          ]
+        },
+        "date": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the inspection date",
+          "examples": [
+            "2014-01-14"
+          ]
+        },
+        "type": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the inspection type",
+          "examples": [
+            "Routine - Unscheduled",
+            "Reinspection/Followup",
+            "Complaint Reinspection/Followup",
+            "Non-inspection site visit",
+            "Complaint"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.violations": {
+      "fields": {
+        "business_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id of the business",
+          "examples": [
+            "10",
+            "24",
+            "31",
+            "45",
+            "48"
+          ]
+        },
+        "date": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the date of the violation",
+          "examples": [
+            "2014-07-29"
+          ]
+        },
+        "violation_type_id": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique type id of the violation",
+          "examples": [
+            "103129",
+            "103144",
+            "103119",
+            "103145",
+            "103154"
+          ]
+        },
+        "risk_category": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "risk category High / Moderate / Low risk",
+          "examples": [
+            "Moderate Risk",
+            "Low Risk",
+            "High Risk"
+          ]
+        },
+        "description": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the description of the violation",
+          "examples": [
+            "Insufficient hot water or running water",
+            "Unapproved or unmaintained equipment or utensils",
+            "Inadequate and inaccessible handwashing facilities",
+            "Improper storage of equipment utensils or linens",
+            "Unclean or degraded floors walls or ceilings"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.inspections",
+      "business_id",
+      "main",
+      "businesses",
+      "business_id"
+    ],
+    [
+      "main.violations",
+      "business_id",
+      "main",
+      "businesses",
+      "business_id"
+    ]
+  ]
+}

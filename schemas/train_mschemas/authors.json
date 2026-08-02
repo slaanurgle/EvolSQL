@@ -1,0 +1,364 @@
+{
+  "db_id": "authors",
+  "schema": null,
+  "tables": {
+    "main.Author": {
+      "fields": {
+        "Id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Id of the author",
+          "examples": [
+            "9",
+            "14",
+            "15",
+            "25",
+            "37"
+          ]
+        },
+        "Name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Author Name",
+          "examples": [
+            "Ernest Jordan",
+            "K. MORIBE",
+            "D. Jakominich",
+            "William H. Nailon",
+            "P. B. Littlewood"
+          ]
+        },
+        "Affiliation": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Organization name with which the author is affiliated",
+          "examples": [
+            "Cavendish Laboratory|Cambridge University",
+            "Department of Molecular Biology|School of Science|Nagoya University",
+            "HASLab / INESC TEC and Universidade do Minho",
+            "Purdue University, West Lafayette, Indiana 47907-2023"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Conference": {
+      "fields": {
+        "Id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Conference Id",
+          "examples": [
+            "1",
+            "2",
+            "4",
+            "5",
+            "6"
+          ]
+        },
+        "ShortName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Short name",
+          "examples": [
+            "IADIS",
+            "IADT",
+            "ICOMP",
+            "ICAC"
+          ]
+        },
+        "FullName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Full name",
+          "examples": [
+            "International Association for Development of the Information Society",
+            "Issues and Applications of Database Technology",
+            "IBM Germany Scientific Symposium Series",
+            "International Conference on Internet Computing",
+            "International Conference on Autonomic Computing"
+          ]
+        },
+        "HomePage": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Homepage URL of conference",
+          "examples": []
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Journal": {
+      "fields": {
+        "Id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Journal Id",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "ShortName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Short name",
+          "examples": [
+            "ICOM",
+            "AEPIA",
+            "IBMRD",
+            "IBMSJ"
+          ]
+        },
+        "FullName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Full name",
+          "examples": [
+            "Zeitschrift Für Interaktive Und Kooperative Medien",
+            "Inteligencia Artificial,revista Iberoamericana De Inteligencia Artificial",
+            "Ibm Journal of Research and Development",
+            "Ibm Systems Journal",
+            "Iet Software/iee Proceedings - Software"
+          ]
+        },
+        "HomePage": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Homepage URL of journal",
+          "examples": []
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Paper": {
+      "fields": {
+        "Id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Id of the paper",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "Title": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Title of the paper",
+          "examples": [
+            "Stitching videos streamed by mobile phones in real-time",
+            "A nonlocal convection–diffusion equation",
+            "Area Effects in Cepaea",
+            "Multiple paternity in a natural population of a salamander with long-term sperm storage",
+            "Complexity of Finding Short Resolution Proofs"
+          ]
+        },
+        "Year": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Year of the paper",
+          "examples": [
+            "2009",
+            "2007",
+            "1963",
+            "2005",
+            "1997"
+          ]
+        },
+        "ConferenceId": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Conference Id in which paper was published",
+          "examples": [
+            "167",
+            "0",
+            "158",
+            "341",
+            "2397"
+          ]
+        },
+        "JournalId": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Journal Id in which paper was published",
+          "examples": [
+            "0",
+            "7234",
+            "16867",
+            "6130",
+            "17639"
+          ]
+        },
+        "Keyword": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Keywords of the paper",
+          "examples": [
+            "mobile video capturing|real-time|video stitching",
+            "Nonlocal diffusion; Convection–diffusion; Asymptotic behaviour",
+            "Keywords: methylation, epigenetic, metastasis, promoter, colon cancer.",
+            "Optical properties, Organic materials, Polarization-sensitive devices"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.PaperAuthor": {
+      "fields": {
+        "PaperId": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Paper Id",
+          "examples": [
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        "AuthorId": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Author Id",
+          "examples": [
+            "1456512",
+            "1102257",
+            "1806301",
+            "2252569",
+            "1491002"
+          ]
+        },
+        "Name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Author Name (as written on paper)",
+          "examples": [
+            "ADAM G. JONES",
+            "Kazuo Iwama",
+            "Asgeir Finnseth",
+            "Guðmundur Jökulsson",
+            "M. H. Friedman"
+          ]
+        },
+        "Affiliation": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Author Affiliation (as written on paper)",
+          "examples": [
+            "Kyushu University 812 Fukuoka Japan 812 Fukuoka Japan",
+            "The french National Institute for Research in Computer science and Control",
+            "Nanjing University",
+            "NOAA|Forecast Systems Laboratory|Colorado State University"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.Paper",
+      "ConferenceId",
+      "main",
+      "Conference",
+      "Id"
+    ],
+    [
+      "main.Paper",
+      "JournalId",
+      "main",
+      "Journal",
+      "Id"
+    ],
+    [
+      "main.PaperAuthor",
+      "PaperId",
+      "main",
+      "Paper",
+      "Id"
+    ],
+    [
+      "main.PaperAuthor",
+      "AuthorId",
+      "main",
+      "Author",
+      "Id"
+    ]
+  ]
+}

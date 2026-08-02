@@ -1,0 +1,343 @@
+{
+  "db_id": "social_media",
+  "schema": null,
+  "tables": {
+    "main.location": {
+      "fields": {
+        "LocationID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id of the location",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "Country": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the country",
+          "examples": [
+            "Albania",
+            "Algeria",
+            "Andorra",
+            "Angola",
+            "Anguilla"
+          ]
+        },
+        "State": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the state",
+          "examples": [
+            "Elbasan",
+            "Tirane",
+            "Souk Ahras",
+            "Alger",
+            "Constantine"
+          ]
+        },
+        "StateCode": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "state code",
+          "examples": [
+            "AL",
+            "DZ",
+            "AD",
+            "AO"
+          ]
+        },
+        "City": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the city",
+          "examples": [
+            "Elbasan",
+            "Tirana",
+            "Souk Ahras",
+            "Algiers",
+            "Constantine"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.twitter": {
+      "fields": {
+        "TweetID": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id of the tweet",
+          "examples": [
+            "tw-682712873332805633",
+            "tw-682713045357998080",
+            "tw-682713219375476736",
+            "tw-682713436967579648"
+          ]
+        },
+        "Weekday": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the weekday that the tweet has been posted",
+          "examples": [
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday",
+            "Monday"
+          ]
+        },
+        "Hour": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the hour that the tweet has been posted",
+          "examples": [
+            "17",
+            "18",
+            "19",
+            "20",
+            "21"
+          ]
+        },
+        "Day": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the day that the tweet has been posted",
+          "examples": [
+            "31",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "Lang": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the language of the tweet",
+          "examples": [
+            "en",
+            "_u",
+            "es",
+            "fr",
+            "ja"
+          ]
+        },
+        "IsReshare": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "whether the tweet is reshared",
+          "examples": [
+            "FALSE",
+            "TRUE"
+          ]
+        },
+        "Reach": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the reach of the tweet",
+          "examples": [
+            "44",
+            "1810",
+            "282",
+            "2087",
+            "953"
+          ]
+        },
+        "RetweetCount": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the retweet count",
+          "examples": [
+            "0",
+            "5",
+            "4",
+            "1",
+            "6"
+          ]
+        },
+        "Likes": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the number of likes",
+          "examples": [
+            "0",
+            "131",
+            "40",
+            "4",
+            "70"
+          ]
+        },
+        "Klout": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the klout of the tweet",
+          "examples": [
+            "35",
+            "53",
+            "47",
+            "31",
+            "49"
+          ]
+        },
+        "Sentiment": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the sentiment of the tweet",
+          "examples": [
+            "0.0",
+            "2.0",
+            "-1.0",
+            "-2.0",
+            "1.0"
+          ]
+        },
+        "text": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the text of the tweet",
+          "examples": []
+        },
+        "LocationID": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the location id of the poster",
+          "examples": [
+            "3751",
+            "3989",
+            "3741",
+            "3753",
+            "3744"
+          ]
+        },
+        "UserID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the user id of the poster",
+          "examples": [
+            "tw-40932430",
+            "tw-3179389829",
+            "tw-4624808414",
+            "tw-356447127",
+            "tw-3172686669"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.user": {
+      "fields": {
+        "UserID": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id of the user",
+          "examples": [
+            "\u001anknow531394",
+            "tw-10000632",
+            "tw-100012605",
+            "tw-1000137907",
+            "tw-1000155049"
+          ]
+        },
+        "Gender": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "user's gender",
+          "examples": [
+            "Unknown",
+            "Male",
+            "Unisex",
+            "Female"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.twitter",
+      "LocationID",
+      "main",
+      "location",
+      "LocationID"
+    ],
+    [
+      "main.twitter",
+      "UserID",
+      "main",
+      "user",
+      "UserID"
+    ]
+  ]
+}

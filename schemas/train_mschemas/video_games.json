@@ -1,0 +1,417 @@
+{
+  "db_id": "video_games",
+  "schema": null,
+  "tables": {
+    "main.game": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier of the game",
+          "examples": [
+            "44",
+            "45",
+            "46",
+            "47",
+            "48"
+          ]
+        },
+        "genre_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the game genre",
+          "examples": [
+            "4",
+            "5",
+            "11",
+            "2",
+            "9"
+          ]
+        },
+        "game_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the name of the game",
+          "examples": [
+            "2 Games in 1: Sonic Advance & ChuChu Rocket!",
+            "2 Games in 1: Sonic Battle & ChuChu Rocket!",
+            "2 Games in 1: Sonic Pinball Party & Columns Crown",
+            "2 Games in 1: SpongeBob SquarePants: SuperSponge & Rugrats Go Wild",
+            "2 in 1 Combo Pack: Sonic Heroes / Super Monkey Ball Deluxe"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.game_platform": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier of the record",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "game_publisher_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the game publisher",
+          "examples": [
+            "8564",
+            "9852",
+            "11063",
+            "9065",
+            "9544"
+          ]
+        },
+        "platform_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the platform",
+          "examples": [
+            "4",
+            "7",
+            "15",
+            "16",
+            "12"
+          ]
+        },
+        "release_year": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the release year of the game",
+          "examples": [
+            "2007",
+            "2006",
+            "2011",
+            "2009",
+            "1981"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.game_publisher": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier of the game publisher",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "game_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the game",
+          "examples": [
+            "10866",
+            "9244",
+            "5464",
+            "10868",
+            "7282"
+          ]
+        },
+        "publisher_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the publisher",
+          "examples": [
+            "369",
+            "328",
+            "498",
+            "464",
+            "17"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.genre": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier of the game genre",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "genre_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the game genre",
+          "examples": [
+            "Action",
+            "Adventure",
+            "Fighting",
+            "Misc",
+            "Platform"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.platform": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier of the game platform",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "platform_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the name of the platform",
+          "examples": [
+            "Wii",
+            "NES",
+            "GB",
+            "DS",
+            "X360"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.publisher": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier of the game publisher",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "publisher_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the name of the publisher",
+          "examples": [
+            "10TACLE Studios",
+            "1C Company",
+            "20th Century Fox Video Games",
+            "2D Boy",
+            "3DO"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.region": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier of the region",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "region_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the region name",
+          "examples": [
+            "North America",
+            "Europe",
+            "Japan",
+            "Other"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.region_sales": {
+      "fields": {
+        "region_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the region",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "game_platform_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the game platform",
+          "examples": [
+            "50",
+            "51",
+            "52",
+            "53",
+            "54"
+          ]
+        },
+        "num_sales": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the number of sales in this region",
+          "examples": [
+            "3.5",
+            "1.43",
+            "0.51",
+            "0.27",
+            "0.48"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.game",
+      "genre_id",
+      "main",
+      "genre",
+      "id"
+    ],
+    [
+      "main.game_platform",
+      "game_publisher_id",
+      "main",
+      "game_publisher",
+      "id"
+    ],
+    [
+      "main.game_platform",
+      "platform_id",
+      "main",
+      "platform",
+      "id"
+    ],
+    [
+      "main.game_publisher",
+      "game_id",
+      "main",
+      "game",
+      "id"
+    ],
+    [
+      "main.game_publisher",
+      "publisher_id",
+      "main",
+      "publisher",
+      "id"
+    ],
+    [
+      "main.region_sales",
+      "game_platform_id",
+      "main",
+      "game_platform",
+      "id"
+    ],
+    [
+      "main.region_sales",
+      "region_id",
+      "main",
+      "region",
+      "id"
+    ]
+  ]
+}

@@ -1,0 +1,38 @@
+You are a database expert. Given a database schema and a SQL query, your task is to generate INSERT statements that add new rows so that the SQL query returns a non-empty result.
+
+Database Engine: SQLite
+
+=== Database Schema ===
+{DATABASE_SCHEMA}
+
+=== Target SQL Query ===
+{TARGET_SQL}
+
+=== Task ===
+Analyze the target SQL query and generate INSERT statements so that executing the query on the updated database will return at least one row.
+
+Think step-by-step:
+1. Identify which tables the SQL reads from (including JOINed tables and subqueries).
+2. Determine what conditions rows must satisfy (WHERE, HAVING, JOIN ON, etc.).
+3. Design concrete row values that satisfy ALL conditions simultaneously.
+4. Identify foreign key dependencies: if a child row references a parent table, INSERT the parent row first.
+5. Write the INSERT statements in dependency order (parent tables before child tables).
+
+=== Rules ===
+1. The inserted data MUST make the target SQL return at least one row. Every WHERE, JOIN ON, GROUP BY, and HAVING condition must be satisfied by your inserted rows.
+2. You MUST use primary key values strictly within the "Allocated PK range" shown in the schema. Do NOT use any PK value outside your assigned range.
+3. For TEXT/VARCHAR primary keys marked with "ADV_" prefix hint, use the "ADV_" prefix to avoid conflicts with existing data.
+4. For composite primary keys, ensure the combination of values is unique.
+5. You MUST obey all schema constraints: NOT NULL, UNIQUE, CHECK, FOREIGN KEY, etc.
+6. When using INSERT INTO table VALUES(...), the values must follow the EXACT column order as shown in the schema. Pay special attention to tables where the first column may not be the primary key.
+7. For foreign key references: if the parent row does not exist, INSERT the parent row first. The parent row's PK must also be within your allocated range. Check the 【Foreign keys】 section for all FK dependencies.
+8. Order your INSERT statements strictly by dependency: parent table INSERTs MUST come before child table INSERTs.
+9. Generate at most 10 INSERT statements total.
+
+=== Output Format ===
+After analyzing the target SQL query, generate the INSERT statements in the following format:
+
+```sql
+INSERT INTO parent_table VALUES(...);
+INSERT INTO child_table VALUES(...);
+```

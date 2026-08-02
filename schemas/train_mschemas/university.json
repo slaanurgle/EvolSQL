@@ -1,0 +1,372 @@
+{
+  "db_id": "university",
+  "schema": null,
+  "tables": {
+    "main.country": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number identifying country",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "country_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the name of the country",
+          "examples": [
+            "Argentina",
+            "Australia",
+            "Austria",
+            "Bangladesh",
+            "Belarus"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.ranking_criteria": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number identifying ranking criteria",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "ranking_system_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "id number identifying ranking system",
+          "examples": [
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        "criteria_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "name of the criteria",
+          "examples": [
+            "Teaching",
+            "International",
+            "Research",
+            "Citations",
+            "Income"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.ranking_system": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number identifying ranking system",
+          "examples": [
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        "system_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "id number identifying ranking system",
+          "examples": [
+            "Times Higher Education World University Ranking",
+            "Shanghai Ranking",
+            "Center for World University Rankings"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.university": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number identifying university",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "country_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the country where the university locates",
+          "examples": [
+            "73",
+            "72",
+            "33",
+            "65",
+            "31"
+          ]
+        },
+        "university_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "name of the university",
+          "examples": [
+            "Harvard University",
+            "Massachusetts Institute of Technology",
+            "Stanford University",
+            "University of Cambridge",
+            "California Institute of Technology"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.university_ranking_year": {
+      "fields": {
+        "university_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the university",
+          "examples": [
+            "1",
+            "5",
+            "2",
+            "3",
+            "6"
+          ]
+        },
+        "ranking_criteria_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the ranking criteria",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "year": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "ranking year",
+          "examples": [
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015"
+          ]
+        },
+        "score": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "ranking score",
+          "examples": [
+            "100",
+            "98",
+            "91",
+            "90",
+            "88"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.university_year": {
+      "fields": {
+        "university_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "id of the university",
+          "examples": [
+            "1",
+            "5",
+            "2",
+            "3",
+            "6"
+          ]
+        },
+        "year": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015"
+          ]
+        },
+        "num_students": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the total number of students for the year",
+          "examples": [
+            "20152",
+            "2243",
+            "11074",
+            "15596",
+            "7929"
+          ]
+        },
+        "student_staff_ratio": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "8.9",
+            "6.9",
+            "9.0",
+            "7.8",
+            "8.4"
+          ]
+        },
+        "pct_international_students": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the percentage of international students among all students",
+          "examples": [
+            "25",
+            "27",
+            "33",
+            "22",
+            "34"
+          ]
+        },
+        "pct_female_students": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the percentage of female students",
+          "examples": [
+            "33",
+            "37",
+            "42",
+            "45"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.ranking_criteria",
+      "ranking_system_id",
+      "main",
+      "ranking_system",
+      "id"
+    ],
+    [
+      "main.university",
+      "country_id",
+      "main",
+      "country",
+      "id"
+    ],
+    [
+      "main.university_ranking_year",
+      "ranking_criteria_id",
+      "main",
+      "ranking_criteria",
+      "id"
+    ],
+    [
+      "main.university_ranking_year",
+      "university_id",
+      "main",
+      "university",
+      "id"
+    ],
+    [
+      "main.university_year",
+      "university_id",
+      "main",
+      "university",
+      "id"
+    ]
+  ]
+}

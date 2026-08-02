@@ -1,0 +1,428 @@
+{
+  "db_id": "language_corpus",
+  "schema": null,
+  "tables": {
+    "main.biwords": {
+      "fields": {
+        "lid": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "language id",
+          "examples": [
+            "1"
+          ]
+        },
+        "w1st": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The word id of the first word of the biwords pair",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "w2nd": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The word id of the second word of the biwords pair",
+          "examples": [
+            "2",
+            "4",
+            "25",
+            "34",
+            "51"
+          ]
+        },
+        "occurrences": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "0",
+          "autoincrement": false,
+          "comment": "times of this pair appears in this language/page",
+          "examples": [
+            "4",
+            "3",
+            "13",
+            "29",
+            "14"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.langs": {
+      "fields": {
+        "lid": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "language id",
+          "examples": [
+            "1"
+          ]
+        },
+        "lang": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "language name",
+          "examples": [
+            "ca"
+          ]
+        },
+        "locale": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The locale of the language",
+          "examples": [
+            "ca_ES"
+          ]
+        },
+        "pages": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "0",
+          "autoincrement": false,
+          "comment": "total pages of Wikipedia in this language",
+          "examples": [
+            "1129144"
+          ]
+        },
+        "words": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "0",
+          "autoincrement": false,
+          "comment": "total number of words in this pages",
+          "examples": [
+            "2764996"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.langs_words": {
+      "fields": {
+        "lid": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "language id",
+          "examples": [
+            "1"
+          ]
+        },
+        "wid": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The word id of the Catalan language",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "occurrences": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "repetitions of this word in this language",
+          "examples": [
+            "242",
+            "16841",
+            "48700",
+            "49897",
+            "60220"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.pages": {
+      "fields": {
+        "pid": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "page id of Wikipedia about Catalan language",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "lid": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "language id",
+          "examples": [
+            "1"
+          ]
+        },
+        "page": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "wikipedia page id",
+          "examples": [
+            "1",
+            "2",
+            "8",
+            "9",
+            "10"
+          ]
+        },
+        "revision": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "wikipedia revision page id",
+          "examples": [
+            "28236978",
+            "24086480",
+            "26230310",
+            "28374033",
+            "28336725"
+          ]
+        },
+        "title": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The title of this Catalan language Wikipedia page",
+          "examples": [
+            "Àbac",
+            "Abadia",
+            "Adagi",
+            "Adam",
+            "Addicció"
+          ]
+        },
+        "words": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "0",
+          "autoincrement": false,
+          "comment": "number of different words in this page",
+          "examples": [
+            "1081",
+            "68",
+            "304",
+            "453",
+            "1468"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.pages_words": {
+      "fields": {
+        "pid": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "page id of Wikipedia about Catalan language",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "wid": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The word id of the Catalan language",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "occurrences": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "0",
+          "autoincrement": false,
+          "comment": "times of this word appears into this page",
+          "examples": [
+            "30",
+            "8",
+            "2",
+            "5",
+            "21"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.words": {
+      "fields": {
+        "wid": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The word id of the Catalan language",
+          "examples": [
+            "2148990",
+            "2506463",
+            "154840",
+            "2301303",
+            "2627702"
+          ]
+        },
+        "word": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The word itself",
+          "examples": [
+            "+,2",
+            "+,33",
+            "+,4",
+            "+,41",
+            "+,434"
+          ]
+        },
+        "occurrences": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "0",
+          "autoincrement": false,
+          "comment": "The occurrences of the specific word",
+          "examples": [
+            "242",
+            "16841",
+            "48700",
+            "49897",
+            "60220"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.biwords",
+      "w2nd",
+      "main",
+      "words",
+      "wid"
+    ],
+    [
+      "main.biwords",
+      "w1st",
+      "main",
+      "words",
+      "wid"
+    ],
+    [
+      "main.biwords",
+      "lid",
+      "main",
+      "langs",
+      "lid"
+    ],
+    [
+      "main.langs_words",
+      "wid",
+      "main",
+      "words",
+      "wid"
+    ],
+    [
+      "main.langs_words",
+      "lid",
+      "main",
+      "langs",
+      "lid"
+    ],
+    [
+      "main.pages",
+      "lid",
+      "main",
+      "langs",
+      "lid"
+    ],
+    [
+      "main.pages_words",
+      "wid",
+      "main",
+      "words",
+      "wid"
+    ],
+    [
+      "main.pages_words",
+      "pid",
+      "main",
+      "pages",
+      "pid"
+    ]
+  ]
+}

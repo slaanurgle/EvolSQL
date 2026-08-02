@@ -1,0 +1,29 @@
+Below, you are provided with a database schema and a NL2SQL question. Your task is to increase the difficulty of the given NL2SQL question a bit based on the given database schema.
+
+Database Engine:
+SQLite
+
+Database Schema:
+{DATABASE_SCHEMA}
+This schema describes the database's structure, including tables, columns, primary keys, foreign keys, and any relevant relationships or constraints. The new question after increasing the difficulty must strictly follow this database schema.
+
+Question:
+{QUESTION}
+
+Gold SQL:
+{GOLD_SQL}
+
+Instructions:
+- You need to ensure that the modified gold SQL still complies with SQLite syntax rules.
+- You must ensure that the new NL2SQL question can be answered using the given database schema, and you are not allowed to update the schema or introduce new tables or columns.
+- To increase the difficulty, you may use the following method, but you are not restricted to it: {METHOD}
+
+Output Format:
+In your answer, please respond with a JSON object structured as follows:
+
+{{
+    "question": "The new question after increasing the difficulty.",
+    "gold_sql": "The correspond gold sql after increasing the difficulty."
+}}
+
+Take a deep breath and think step by step to increase the difficulty of the question.

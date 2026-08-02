@@ -1,0 +1,192 @@
+{
+  "db_id": "craftbeer",
+  "schema": null,
+  "tables": {
+    "main.beers": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number of beers",
+          "examples": [
+            "2687",
+            "2688",
+            "2689",
+            "2690",
+            "2691"
+          ]
+        },
+        "brewery_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id number of the breweries",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "abv": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "alcohol by volume",
+          "examples": [
+            "0.065",
+            "0.087",
+            "0.08",
+            "0.099",
+            "0.053"
+          ]
+        },
+        "ibu": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "International Bitterness Units",
+          "examples": [
+            "65.0",
+            "85.0",
+            "35.0",
+            "100.0",
+            "98.0"
+          ]
+        },
+        "name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "name of beers",
+          "examples": [
+            "Dale's Pale Ale",
+            "Gordon Ale (2009)",
+            "Old Chub",
+            "GUBNA Imperial IPA",
+            "Mama's Little Yella Pils"
+          ]
+        },
+        "style": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "style / sorts of beers",
+          "examples": [
+            "American Pale Ale (APA)",
+            "American Double / Imperial IPA",
+            "Scottish Ale",
+            "Czech Pilsener",
+            "Russian Imperial Stout"
+          ]
+        },
+        "ounces": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ounces",
+          "examples": [
+            "12.0",
+            "16.0",
+            "24.0",
+            "19.2",
+            "8.4"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.breweries": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique ID of the breweries",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "name of the breweries",
+          "examples": [
+            "NorthGate Brewing ",
+            "Against the Grain Brewery",
+            "Jack's Abby Craft Lagers",
+            "Mike Hess Brewing Company",
+            "Fort Point Beer Company"
+          ]
+        },
+        "city": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "city",
+          "examples": [
+            "Minneapolis",
+            "Louisville",
+            "Framingham",
+            "San Diego",
+            "San Francisco"
+          ]
+        },
+        "state": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "state",
+          "examples": [
+            "MN",
+            "KY",
+            "MA",
+            "CA",
+            "SC"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.beers",
+      "brewery_id",
+      "main",
+      "breweries",
+      "id"
+    ]
+  ]
+}

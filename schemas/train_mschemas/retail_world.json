@@ -1,0 +1,719 @@
+{
+  "db_id": "retail_world",
+  "schema": null,
+  "tables": {
+    "main.Categories": {
+      "fields": {
+        "CategoryID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for the category",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "CategoryName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the category name",
+          "examples": [
+            "Beverages",
+            "Condiments",
+            "Confections",
+            "Dairy Products",
+            "Grains/Cereals"
+          ]
+        },
+        "Description": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the detailed description of the category",
+          "examples": [
+            "Soft drinks, coffees, teas, beers, and ales",
+            "Sweet and savory sauces, relishes, spreads, and seasonings",
+            "Desserts, candies, and sweet breads",
+            "Cheeses",
+            "Breads, crackers, pasta, and cereal"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Customers": {
+      "fields": {
+        "CustomerID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for customers",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "CustomerName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the customer name",
+          "examples": [
+            "Alfreds Futterkiste",
+            "Ana Trujillo Emparedados y helados",
+            "Antonio Moreno Taquería",
+            "Around the Horn",
+            "Berglunds snabbköp"
+          ]
+        },
+        "ContactName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the contact person's name representing the company",
+          "examples": [
+            "Maria Anders",
+            "Ana Trujillo",
+            "Antonio Moreno",
+            "Thomas Hardy",
+            "Christina Berglund"
+          ]
+        },
+        "Address": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the address of the customer",
+          "examples": [
+            "Obere Str. 57",
+            "Avda. de la Constitución 2222",
+            "Mataderos 2312",
+            "120 Hanover Sq.",
+            "Berguvsvägen 8"
+          ]
+        },
+        "City": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the city where the customer is located",
+          "examples": [
+            "Berlin",
+            "México D.F.",
+            "London",
+            "Luleå",
+            "Mannheim"
+          ]
+        },
+        "PostalCode": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the postal code",
+          "examples": [
+            "12209",
+            "5021",
+            "5023",
+            "WA1 1DP",
+            "S-958 22"
+          ]
+        },
+        "Country": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the country",
+          "examples": [
+            "Germany",
+            "Mexico",
+            "UK",
+            "Sweden",
+            "France"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Employees": {
+      "fields": {
+        "EmployeeID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for employees",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "LastName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the employee's last name",
+          "examples": [
+            "Davolio",
+            "Fuller",
+            "Leverling",
+            "Peacock",
+            "Buchanan"
+          ]
+        },
+        "FirstName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the employee's first name",
+          "examples": [
+            "Nancy",
+            "Andrew",
+            "Janet",
+            "Margaret",
+            "Steven"
+          ]
+        },
+        "BirthDate": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the birth date of the employee",
+          "examples": [
+            "1968-12-08"
+          ]
+        },
+        "Photo": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the photo of the employee",
+          "examples": [
+            "EmpID1.pic",
+            "EmpID2.pic",
+            "EmpID3.pic",
+            "EmpID4.pic",
+            "EmpID5.pic"
+          ]
+        },
+        "Notes": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "some additional information of the employee",
+          "examples": [
+            "Education includes a BA in psychology from Colorado State University. She also completed (The Art of the Cold Call). Nancy is a member of 'Toastmasters International'.",
+            "Andrew received his BTS commercial and a Ph.D. in international marketing from the University of Dallas. He is fluent in French and Italian and reads German. He joined the company as a sales representative, was promoted to sales manager and was then named vice president of sales. Andrew is a member of the Sales Management Roundtable, the Seattle Chamber of Commerce, and the Pacific Rim Importers Association.",
+            "Janet has a BS degree in chemistry from Boston College). She has also completed a certificate program in food retailing management. Janet was hired as a sales associate and was promoted to sales representative.",
+            "Margaret holds a BA in English literature from Concordia College and an MA from the American Institute of Culinary Arts. She was temporarily assigned to the London office before returning to her permanent post in Seattle.",
+            "Steven Buchanan graduated from St. Andrews University, Scotland, with a BSC degree. Upon joining the company as a sales representative, he spent 6 months in an orientation program at the Seattle office and then returned to his permanent post in London, where he was promoted to sales manager. Mr. Buchanan has completed the courses 'Successful Telemarketing' and 'International Sales Management'. He is fluent in French."
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.OrderDetails": {
+      "fields": {
+        "OrderDetailID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id of the order detail",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "OrderID": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for orders",
+          "examples": [
+            "10248",
+            "10249",
+            "10250",
+            "10251",
+            "10252"
+          ]
+        },
+        "ProductID": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for products",
+          "examples": [
+            "11",
+            "42",
+            "72",
+            "14",
+            "51"
+          ]
+        },
+        "Quantity": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the quantity of the ordered products",
+          "examples": [
+            "12",
+            "10",
+            "5",
+            "9",
+            "40"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Orders": {
+      "fields": {
+        "OrderID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for orders",
+          "examples": [
+            "10248",
+            "10249",
+            "10250",
+            "10251",
+            "10252"
+          ]
+        },
+        "CustomerID": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for customers",
+          "examples": [
+            "90",
+            "81",
+            "34",
+            "84",
+            "76"
+          ]
+        },
+        "EmployeeID": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for employees",
+          "examples": [
+            "5",
+            "6",
+            "4",
+            "3",
+            "9"
+          ]
+        },
+        "OrderDate": {
+          "type": "DATETIME",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the order date",
+          "examples": [
+            "1996-07-04 00:00:00"
+          ]
+        },
+        "ShipperID": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of the shipper",
+          "examples": [
+            "3",
+            "1",
+            "2"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Products": {
+      "fields": {
+        "ProductID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for products",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "ProductName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name of the product",
+          "examples": [
+            "Chais",
+            "Chang",
+            "Aniseed Syrup",
+            "Chef Anton's Cajun Seasoning",
+            "Chef Anton's Gumbo Mix"
+          ]
+        },
+        "SupplierID": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for supplier",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "CategoryID": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for the product category",
+          "examples": [
+            "1",
+            "2",
+            "7",
+            "6",
+            "8"
+          ]
+        },
+        "Unit": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unit of the product",
+          "examples": [
+            "10 boxes x 20 bags",
+            "24 - 12 oz bottles",
+            "12 - 550 ml bottles",
+            "48 - 6 oz jars",
+            "36 boxes"
+          ]
+        },
+        "Price": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": "0",
+          "autoincrement": false,
+          "comment": "the price",
+          "examples": [
+            "18.0",
+            "19.0",
+            "10.0",
+            "22.0",
+            "21.35"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Shippers": {
+      "fields": {
+        "ShipperID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for shippers",
+          "examples": [
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        "ShipperName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the shipped company name",
+          "examples": [
+            "Speedy Express",
+            "United Package",
+            "Federal Shipping"
+          ]
+        },
+        "Phone": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the phone of the company",
+          "examples": [
+            "(503) 555-9831",
+            "(503) 555-3199",
+            "(503) 555-9931"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Suppliers": {
+      "fields": {
+        "SupplierID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for suppliers",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "SupplierName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the supplier name",
+          "examples": [
+            "Exotic Liquid",
+            "New Orleans Cajun Delights",
+            "Grandma Kelly's Homestead",
+            "Tokyo Traders",
+            "Cooperativa de Quesos 'Las Cabras'"
+          ]
+        },
+        "ContactName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the contact person's name representing the company",
+          "examples": [
+            "Charlotte Cooper",
+            "Shelley Burke",
+            "Regina Murphy",
+            "Yoshi Nagase",
+            "Antonio del Valle Saavedra"
+          ]
+        },
+        "Address": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the address of the supplier",
+          "examples": [
+            "49 Gilbert St.",
+            "P.O. Box 78934",
+            "707 Oxford Rd.",
+            "9-8 Sekimai Musashino-shi",
+            "Calle del Rosal 4"
+          ]
+        },
+        "City": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the city where the supplier is located",
+          "examples": [
+            "Londona",
+            "New Orleans",
+            "Ann Arbor",
+            "Tokyo",
+            "Oviedo"
+          ]
+        },
+        "PostalCode": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the postal code",
+          "examples": [
+            "EC1 4SD",
+            "70117",
+            "48104",
+            "100",
+            "33007"
+          ]
+        },
+        "Country": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the country",
+          "examples": [
+            "UK",
+            "USA",
+            "Japan",
+            "Spain",
+            "Australia"
+          ]
+        },
+        "Phone": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the phone number",
+          "examples": [
+            "(171) 555-2222",
+            "(100) 555-4822",
+            "(313) 555-5735",
+            "(03) 3555-5011",
+            "(98) 598 76 54"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.OrderDetails",
+      "OrderID",
+      "main",
+      "Orders",
+      "OrderID"
+    ],
+    [
+      "main.OrderDetails",
+      "ProductID",
+      "main",
+      "Products",
+      "ProductID"
+    ],
+    [
+      "main.Orders",
+      "EmployeeID",
+      "main",
+      "Employees",
+      "EmployeeID"
+    ],
+    [
+      "main.Orders",
+      "CustomerID",
+      "main",
+      "Customers",
+      "CustomerID"
+    ],
+    [
+      "main.Orders",
+      "ShipperID",
+      "main",
+      "Shippers",
+      "ShipperID"
+    ],
+    [
+      "main.Products",
+      "CategoryID",
+      "main",
+      "Categories",
+      "CategoryID"
+    ],
+    [
+      "main.Products",
+      "SupplierID",
+      "main",
+      "Suppliers",
+      "SupplierID"
+    ]
+  ]
+}

@@ -1,0 +1,350 @@
+{
+  "db_id": "student_loan",
+  "schema": null,
+  "tables": {
+    "main.bool": {
+      "fields": {
+        "name": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "neg",
+            "pos"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.disabled": {
+      "fields": {
+        "name": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the name of the disabled students",
+          "examples": [
+            "student114",
+            "student125",
+            "student142",
+            "student155",
+            "student156"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.enlist": {
+      "fields": {
+        "name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name of the enlisted students",
+          "examples": [
+            "student40",
+            "student51",
+            "student109",
+            "student139",
+            "student148"
+          ]
+        },
+        "organ": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the organization that the student enlisted in",
+          "examples": [
+            "fire_department",
+            "air_force",
+            "navy",
+            "marines",
+            "foreign_legion"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.enrolled": {
+      "fields": {
+        "name": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "student1",
+            "student10",
+            "student100",
+            "student1000",
+            "student101"
+          ]
+        },
+        "school": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "occ",
+            "smc",
+            "ucb",
+            "ucla",
+            "ucsd"
+          ]
+        },
+        "month": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": "0",
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.filed_for_bankrupcy": {
+      "fields": {
+        "name": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "student122",
+            "student126",
+            "student136",
+            "student145",
+            "student148"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.longest_absense_from_school": {
+      "fields": {
+        "name": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "student's name",
+          "examples": [
+            "student1",
+            "student10",
+            "student100",
+            "student1000",
+            "student101"
+          ]
+        },
+        "month": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "0",
+          "autoincrement": false,
+          "comment": "the duration of absence",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.male": {
+      "fields": {
+        "name": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "student's name who are male",
+          "examples": [
+            "student1",
+            "student101",
+            "student102",
+            "student103",
+            "student105"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.no_payment_due": {
+      "fields": {
+        "name": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "student's name",
+          "examples": [
+            "student1",
+            "student10",
+            "student100",
+            "student1000",
+            "student101"
+          ]
+        },
+        "bool": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "whether the student has payment dues",
+          "examples": [
+            "neg",
+            "pos"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.person": {
+      "fields": {
+        "name": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "student's name",
+          "examples": [
+            "student1",
+            "student10",
+            "student100",
+            "student1000",
+            "student101"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.unemployed": {
+      "fields": {
+        "name": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "student who is unemployed",
+          "examples": [
+            "student1000",
+            "student102",
+            "student106",
+            "student109",
+            "student118"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.disabled",
+      "name",
+      "main",
+      "person",
+      "name"
+    ],
+    [
+      "main.enlist",
+      "name",
+      "main",
+      "person",
+      "name"
+    ],
+    [
+      "main.enrolled",
+      "name",
+      "main",
+      "person",
+      "name"
+    ],
+    [
+      "main.filed_for_bankrupcy",
+      "name",
+      "main",
+      "person",
+      "name"
+    ],
+    [
+      "main.longest_absense_from_school",
+      "name",
+      "main",
+      "person",
+      "name"
+    ],
+    [
+      "main.male",
+      "name",
+      "main",
+      "person",
+      "name"
+    ],
+    [
+      "main.no_payment_due",
+      "name",
+      "main",
+      "person",
+      "name"
+    ],
+    [
+      "main.no_payment_due",
+      "bool",
+      "main",
+      "bool",
+      "name"
+    ],
+    [
+      "main.unemployed",
+      "name",
+      "main",
+      "person",
+      "name"
+    ]
+  ]
+}

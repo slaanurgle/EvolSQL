@@ -1,0 +1,1009 @@
+{
+  "db_id": "superstore",
+  "schema": null,
+  "tables": {
+    "main.central_superstore": {
+      "fields": {
+        "Row ID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for rows",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "Order ID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier for the order",
+          "examples": [
+            "CA-2011-103800",
+            "CA-2011-112326",
+            "CA-2011-105417",
+            "CA-2011-135405",
+            "CA-2011-167927"
+          ]
+        },
+        "Order Date": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the date of the order",
+          "examples": [
+            "2013-01-03"
+          ]
+        },
+        "Ship Date": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the date of the shipment",
+          "examples": [
+            "2013-01-07"
+          ]
+        },
+        "Ship Mode": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the ship mode of the order",
+          "examples": [
+            "Standard Class",
+            "First Class",
+            "Second Class",
+            "Same Day"
+          ]
+        },
+        "Customer ID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of the customer",
+          "examples": [
+            "DP-13000",
+            "PO-19195",
+            "VS-21820",
+            "MS-17830",
+            "XP-21865"
+          ]
+        },
+        "Region": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "region of the customer's address",
+          "examples": [
+            "Central"
+          ]
+        },
+        "Product ID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of the product",
+          "examples": [
+            "OFF-PA-10000174",
+            "OFF-LA-10003223",
+            "OFF-ST-10002743",
+            "OFF-BI-10004094",
+            "FUR-FU-10004864"
+          ]
+        },
+        "Sales": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the sales of the product",
+          "examples": [
+            "16.448",
+            "11.784",
+            "272.736",
+            "3.54",
+            "76.728"
+          ]
+        },
+        "Quantity": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the quantity of the product",
+          "examples": [
+            "2",
+            "3",
+            "7",
+            "1",
+            "5"
+          ]
+        },
+        "Discount": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the discount of the product",
+          "examples": [
+            "0.2",
+            "0.8",
+            "0.6",
+            "0.0",
+            "0.1"
+          ]
+        },
+        "Profit": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the profit that the company got by selling the product",
+          "examples": [
+            "5.5512",
+            "4.2717",
+            "-64.7748",
+            "-5.487",
+            "-53.7096"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.east_superstore": {
+      "fields": {
+        "Row ID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for rows",
+          "examples": [
+            "4647",
+            "4648",
+            "4649",
+            "4650",
+            "4651"
+          ]
+        },
+        "Order ID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier for the order",
+          "examples": [
+            "CA-2011-141817",
+            "CA-2011-130092",
+            "CA-2011-118192",
+            "CA-2011-149524",
+            "CA-2011-115791"
+          ]
+        },
+        "Order Date": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the date of the order",
+          "examples": [
+            "2013-01-05"
+          ]
+        },
+        "Ship Date": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the date of the shipment",
+          "examples": [
+            "2013-01-12"
+          ]
+        },
+        "Ship Mode": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the ship mode of the order",
+          "examples": [
+            "Standard Class",
+            "First Class",
+            "Second Class",
+            "Same Day"
+          ]
+        },
+        "Customer ID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of the customer",
+          "examples": [
+            "MB-18085",
+            "SV-20365",
+            "MM-17920",
+            "BS-11590",
+            "DL-13315"
+          ]
+        },
+        "Region": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "region of the customer's address",
+          "examples": [
+            "East"
+          ]
+        },
+        "Product ID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of the product",
+          "examples": [
+            "OFF-AR-10003478",
+            "FUR-FU-10000010",
+            "OFF-PA-10002947",
+            "OFF-BI-10003476",
+            "FUR-BO-10003433"
+          ]
+        },
+        "Sales": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the sales of the product",
+          "examples": [
+            "19.536",
+            "9.94",
+            "37.408",
+            "3.438",
+            "61.96"
+          ]
+        },
+        "Quantity": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the quantity of the product",
+          "examples": [
+            "3",
+            "2",
+            "7",
+            "4",
+            "6"
+          ]
+        },
+        "Discount": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the discount of the product",
+          "examples": [
+            "0.2",
+            "0.0",
+            "0.7",
+            "0.5",
+            "0.4"
+          ]
+        },
+        "Profit": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the profit that the company got by selling the product",
+          "examples": [
+            "4.884",
+            "3.0814",
+            "13.0928",
+            "-2.5212",
+            "-53.2856"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.people": {
+      "fields": {
+        "Customer ID": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of the customers",
+          "examples": [
+            "AA-10315",
+            "AA-10375",
+            "AA-10480",
+            "AA-10645",
+            "AB-10015"
+          ]
+        },
+        "Customer Name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name of the customers",
+          "examples": [
+            "Alex Avila",
+            "Allen Armold",
+            "Andrew Allen",
+            "Anna Andreadi",
+            "Aaron Bergman"
+          ]
+        },
+        "Segment": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the segment that the customers belong to",
+          "examples": [
+            "Consumer",
+            "Home Office",
+            "Corporate"
+          ]
+        },
+        "Country": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the country of people",
+          "examples": [
+            "United States"
+          ]
+        },
+        "City": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the city of people",
+          "examples": [
+            "Round Rock",
+            "Omaha",
+            "Springfield",
+            "Oklahoma City",
+            "Arlington"
+          ]
+        },
+        "State": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the state of people",
+          "examples": [
+            "Texas",
+            "Nebraska",
+            "Missouri",
+            "Oklahoma",
+            "Indiana"
+          ]
+        },
+        "Postal Code": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the postal code",
+          "examples": [
+            "78664",
+            "68104",
+            "65807",
+            "73120",
+            "76017"
+          ]
+        },
+        "Region": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the region of people",
+          "examples": [
+            "Central",
+            "East",
+            "West",
+            "South"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.product": {
+      "fields": {
+        "Product ID": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of products",
+          "examples": [
+            "FUR-BO-10000112",
+            "FUR-BO-10000330",
+            "FUR-BO-10000362",
+            "FUR-BO-10000468",
+            "FUR-BO-10000711"
+          ]
+        },
+        "Product Name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name of products",
+          "examples": [
+            "Sauder Camden County Barrister Bookcase, Planked Cherry Finish",
+            "Sauder Inglewood Library Bookcases",
+            "O'Sullivan 2-Shelf Heavy-Duty Bookcases",
+            "O'Sullivan Living Dimensions 2-Shelf Bookcases",
+            "O'Sullivan 3-Shelf Heavy-Duty Bookcases"
+          ]
+        },
+        "Category": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the categories of products",
+          "examples": [
+            "Furniture",
+            "Office Supplies",
+            "Technology"
+          ]
+        },
+        "Sub-Category": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the sub-categories of products",
+          "examples": [
+            "Bookcases",
+            "Chairs",
+            "Furnishings",
+            "Tables",
+            "Appliances"
+          ]
+        },
+        "Region": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the region of products",
+          "examples": [
+            "Central",
+            "South",
+            "West",
+            "East"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.south_superstore": {
+      "fields": {
+        "Row ID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for rows",
+          "examples": [
+            "10343",
+            "10344",
+            "10345",
+            "10346",
+            "10347"
+          ]
+        },
+        "Order ID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier for the order",
+          "examples": [
+            "CA-2011-106054",
+            "CA-2011-167199",
+            "CA-2011-149020",
+            "CA-2011-162775",
+            "CA-2011-109232"
+          ]
+        },
+        "Order Date": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the date of the order",
+          "examples": [
+            "2013-01-06"
+          ]
+        },
+        "Ship Date": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the date of the shipment",
+          "examples": [
+            "2013-01-07"
+          ]
+        },
+        "Ship Mode": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the ship mode of the order",
+          "examples": [
+            "First Class",
+            "Standard Class",
+            "Second Class",
+            "Same Day"
+          ]
+        },
+        "Customer ID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of the customer",
+          "examples": [
+            "JO-15145",
+            "ME-17320",
+            "AJ-10780",
+            "CS-12250",
+            "ND-18370"
+          ]
+        },
+        "Region": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "region of the customer's address",
+          "examples": [
+            "South"
+          ]
+        },
+        "Product ID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of the product",
+          "examples": [
+            "OFF-AR-10002399",
+            "FUR-CH-10004063",
+            "OFF-BI-10004632",
+            "OFF-AR-10001662",
+            "TEC-PH-10004977"
+          ]
+        },
+        "Sales": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the sales of the product",
+          "examples": [
+            "12.78",
+            "2573.82",
+            "609.98",
+            "5.48",
+            "391.98"
+          ]
+        },
+        "Quantity": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the quantity of the product",
+          "examples": [
+            "3",
+            "9",
+            "2",
+            "4",
+            "1"
+          ]
+        },
+        "Discount": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the discount of the product",
+          "examples": [
+            "0.0",
+            "0.7",
+            "0.2",
+            "0.5",
+            "0.45"
+          ]
+        },
+        "Profit": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the profit that the company got by selling the product",
+          "examples": [
+            "5.2398",
+            "746.4078",
+            "274.491",
+            "1.4796",
+            "113.6742"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.west_superstore": {
+      "fields": {
+        "Row ID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for rows",
+          "examples": [
+            "13583",
+            "13584",
+            "13585",
+            "13586",
+            "13587"
+          ]
+        },
+        "Order ID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier for the order",
+          "examples": [
+            "CA-2011-130813",
+            "CA-2011-157147",
+            "CA-2011-123477",
+            "CA-2011-146591",
+            "CA-2011-148614"
+          ]
+        },
+        "Order Date": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the date of the order",
+          "examples": [
+            "2013-01-06"
+          ]
+        },
+        "Ship Date": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the date of the shipment",
+          "examples": [
+            "2013-01-08"
+          ]
+        },
+        "Ship Mode": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the ship mode of the order",
+          "examples": [
+            "Second Class",
+            "Standard Class",
+            "First Class",
+            "Same Day"
+          ]
+        },
+        "Customer ID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of the customer",
+          "examples": [
+            "LS-17230",
+            "BD-11605",
+            "DW-13195",
+            "TS-21340",
+            "MV-17485"
+          ]
+        },
+        "Region": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "region of the customer's address",
+          "examples": [
+            "West"
+          ]
+        },
+        "Product ID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of the product",
+          "examples": [
+            "OFF-PA-10002005",
+            "OFF-ST-10000078",
+            "FUR-BO-10003034",
+            "OFF-AR-10003514",
+            "OFF-AP-10000692"
+          ]
+        },
+        "Sales": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the sales of the product",
+          "examples": [
+            "19.44",
+            "1325.85",
+            "333.999",
+            "19.9",
+            "64.864"
+          ]
+        },
+        "Quantity": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the quantity of the product",
+          "examples": [
+            "3",
+            "5",
+            "4",
+            "10",
+            "2"
+          ]
+        },
+        "Discount": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the discount of the product",
+          "examples": [
+            "0.0",
+            "0.15",
+            "0.2",
+            "0.7",
+            "0.5"
+          ]
+        },
+        "Profit": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the profit that the company got by selling the product",
+          "examples": [
+            "9.3312",
+            "238.653",
+            "3.9294",
+            "6.567",
+            "6.4864"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.central_superstore",
+      "Customer ID",
+      "main",
+      "people",
+      "Customer ID"
+    ],
+    [
+      "main.central_superstore",
+      "Region",
+      "main",
+      "people",
+      "Region"
+    ],
+    [
+      "main.central_superstore",
+      "Product ID",
+      "main",
+      "product",
+      "Product ID"
+    ],
+    [
+      "main.central_superstore",
+      "Region",
+      "main",
+      "product",
+      "Region"
+    ],
+    [
+      "main.east_superstore",
+      "Customer ID",
+      "main",
+      "people",
+      "Customer ID"
+    ],
+    [
+      "main.east_superstore",
+      "Region",
+      "main",
+      "people",
+      "Region"
+    ],
+    [
+      "main.east_superstore",
+      "Product ID",
+      "main",
+      "product",
+      "Product ID"
+    ],
+    [
+      "main.east_superstore",
+      "Region",
+      "main",
+      "product",
+      "Region"
+    ],
+    [
+      "main.south_superstore",
+      "Customer ID",
+      "main",
+      "people",
+      "Customer ID"
+    ],
+    [
+      "main.south_superstore",
+      "Region",
+      "main",
+      "people",
+      "Region"
+    ],
+    [
+      "main.south_superstore",
+      "Product ID",
+      "main",
+      "product",
+      "Product ID"
+    ],
+    [
+      "main.south_superstore",
+      "Region",
+      "main",
+      "product",
+      "Region"
+    ],
+    [
+      "main.west_superstore",
+      "Customer ID",
+      "main",
+      "people",
+      "Customer ID"
+    ],
+    [
+      "main.west_superstore",
+      "Region",
+      "main",
+      "people",
+      "Region"
+    ],
+    [
+      "main.west_superstore",
+      "Product ID",
+      "main",
+      "product",
+      "Product ID"
+    ],
+    [
+      "main.west_superstore",
+      "Region",
+      "main",
+      "product",
+      "Region"
+    ]
+  ]
+}

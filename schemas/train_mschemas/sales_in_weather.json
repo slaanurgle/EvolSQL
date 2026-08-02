@@ -1,0 +1,417 @@
+{
+  "db_id": "sales_in_weather",
+  "schema": null,
+  "tables": {
+    "main.relation": {
+      "fields": {
+        "store_nbr": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of stores",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "station_nbr": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of weather stations",
+          "examples": [
+            "1",
+            "14",
+            "7",
+            "9",
+            "12"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.sales_in_weather": {
+      "fields": {
+        "date": {
+          "type": "DATE",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the date of sales",
+          "examples": [
+            "2012-01-01"
+          ]
+        },
+        "store_nbr": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "store number",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "item_nbr": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "item / product number",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "units": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the quantity sold of an item on a given day",
+          "examples": [
+            "0",
+            "29",
+            "2",
+            "1",
+            "60"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.weather": {
+      "fields": {
+        "station_nbr": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of weather stations",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "date": {
+          "type": "DATE",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "date",
+          "examples": [
+            "2012-01-01"
+          ]
+        },
+        "tmax": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "max temperature",
+          "examples": [
+            "52",
+            "50",
+            "32",
+            "28",
+            "38"
+          ]
+        },
+        "tmin": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "min temperature",
+          "examples": [
+            "31",
+            "11",
+            "9",
+            "25",
+            "28"
+          ]
+        },
+        "tavg": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "average temperature",
+          "examples": [
+            "42",
+            "41",
+            "22",
+            "19",
+            "32"
+          ]
+        },
+        "depart": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "16",
+            "12",
+            "-6",
+            "-11"
+          ]
+        },
+        "dewpoint": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "36",
+            "26",
+            "4",
+            "-1",
+            "13"
+          ]
+        },
+        "wetbulb": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "40",
+            "35",
+            "18",
+            "14",
+            "25"
+          ]
+        },
+        "heat": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "calculated heating degree",
+          "examples": [
+            "23",
+            "24",
+            "43",
+            "46",
+            "33"
+          ]
+        },
+        "cool": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "calculated cooling degree",
+          "examples": [
+            "0",
+            "5",
+            "6",
+            "2"
+          ]
+        },
+        "sunrise": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "calculated sunrise",
+          "examples": [
+            "07:16:00",
+            "07:15:00",
+            "07:14:00",
+            "07:13:00"
+          ]
+        },
+        "sunset": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "calculated sunset",
+          "examples": [
+            "16:26:00",
+            "16:27:00",
+            "16:28:00",
+            "16:29:00"
+          ]
+        },
+        "codesum": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "code summarization for the weather",
+          "examples": [
+            "RA FZFG BR",
+            " ",
+            "SN",
+            "RA SN BR",
+            "RA FZRA FG+ FG BR UP"
+          ]
+        },
+        "snowfall": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "snowfall",
+          "examples": [
+            "0.0",
+            "0.05",
+            "0.2",
+            "3.6"
+          ]
+        },
+        "preciptotal": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "precipitation total",
+          "examples": [
+            "0.05",
+            "0.01",
+            "0.0",
+            "0.69",
+            "0.02"
+          ]
+        },
+        "stnpressure": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "station pressure",
+          "examples": [
+            "29.78",
+            "29.44",
+            "29.67",
+            "29.86",
+            "29.68"
+          ]
+        },
+        "sealevel": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "sea level",
+          "examples": [
+            "29.92",
+            "29.62",
+            "29.87",
+            "30.03",
+            "29.84"
+          ]
+        },
+        "resultspeed": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "resultant wind speed",
+          "examples": [
+            "3.6",
+            "9.8",
+            "10.8",
+            "6.3",
+            "6.9"
+          ]
+        },
+        "resultdir": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "resultant wind direction",
+          "examples": [
+            "20",
+            "24",
+            "31",
+            "27",
+            "25"
+          ]
+        },
+        "avgspeed": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "average wind speed",
+          "examples": [
+            "4.6",
+            "10.3",
+            "11.6",
+            "8.3",
+            "7.8"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.relation",
+      "store_nbr",
+      "main",
+      "sales_in_weather",
+      "store_nbr"
+    ],
+    [
+      "main.relation",
+      "station_nbr",
+      "main",
+      "weather",
+      "station_nbr"
+    ]
+  ]
+}

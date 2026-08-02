@@ -1,0 +1,392 @@
+{
+  "db_id": "codebase_comments",
+  "schema": null,
+  "tables": {
+    "main.Method": {
+      "fields": {
+        "Id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number\r that identifies methods",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "Name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "name of methods",
+          "examples": [
+            "HtmlSharp.HtmlParser.Feed",
+            "HtmlSharp.HtmlParser.ParseDoctypeElement",
+            "IQ.Data.DbQueryProvider.GetQueryText",
+            "IQ.Data.DbQueryProvider.Execute",
+            "IQ.Data.DbQueryProvider.GetExecutionPlan"
+          ]
+        },
+        "FullComment": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "full comment of this method",
+          "examples": [
+            "Feeds data into the parser",
+            " interneral -- scan past <!ELEMENT declarations",
+            " <summary>\n        /// Converts the query expression into text that corresponds to the command that would be executed.\n        /// Useful for debugging.\n        /// </summary>\n        /// <param name=\"expression\"></param>\n        /// <returns></returns>\n",
+            " <summary>\n        /// Execute the query expression (does translation, etc.)\n        /// </summary>\n        /// <param name=\"expression\"></param>\n        /// <returns></returns>\n",
+            " <summary>\n        /// Convert the query expression into an execution plan\n        /// </summary>\n        /// <param name=\"expression\"></param>\n        /// <returns></returns>\n"
+          ]
+        },
+        "Summary": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "summary of the method",
+          "examples": [
+            "Converts the query expression into text that corresponds to the command that would be executed.  Useful for debugging.",
+            "Execute the query expression ",
+            "Convert the query expression into an execution plan",
+            "Do all query translations execpt building the execution plan"
+          ]
+        },
+        "ApiCalls": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "linearized sequenced of API calls",
+          "examples": [
+            "System.String.IsNullOrEmpty HtmlSharp.HtmlParser.GoAhead HtmlSharp.HtmlParser.EndData HtmlSharp.HtmlParser.PopTag",
+            "HtmlSharp.HtmlParser.ScanName System.Collections.Generic.KeyValuePair.Value System.String.Substring System.String.Contains System.StringComparison.Ordinal System.String.IndexOf",
+            "IQ.Data.DbQueryProvider.Translate IQ.Data.QueryLanguage.Format IQ.Data.SelectGatherer.Gather System.Collections.ObjectModel.ReadOnlyCollection.Select System.Collections.Generic.IEnumerable.ToArray System.String.Join",
+            "IQ.Data.DbQueryProvider.GetExecutionPlan System.Linq.Expressions.LambdaExpression.Type System.Linq.Expressions.LambdaExpression.Parameters System.Linq.Expressions.Expression.Lambda System.Linq.Expressions.LambdaExpression.Compile System.Linq.Expressions.E",
+            "System.Linq.Expressions.LambdaExpression.Body IQ.Data.DbQueryProvider.Translate IQ.RootQueryableFinder.Find System.Linq.IQueryable.GetProperty System.Linq.Expressions.Expression.Property System.Linq.Expressions.Expression.Convert IQ.Data.QueryPolicy.Build"
+          ]
+        },
+        "CommentIsXml": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "whether the comment is XML format or not",
+          "examples": [
+            "0",
+            "1"
+          ]
+        },
+        "SampledAt": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the time of sampling",
+          "examples": [
+            "636430963695654788",
+            "636430963695709898",
+            "636430963721734366",
+            "636430963721804459",
+            "636430963721809465"
+          ]
+        },
+        "SolutionId": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id number of solutions",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "5",
+            "7"
+          ]
+        },
+        "Lang": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "language code of method",
+          "examples": [
+            "en",
+            "fr",
+            "fi",
+            "it"
+          ]
+        },
+        "NameTokenized": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "tokenized name",
+          "examples": [
+            "html parser feed",
+            "html parser parse doctype element",
+            "db query provider get query text",
+            "db query provider execute",
+            "db query provider get execution plan"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.MethodParameter": {
+      "fields": {
+        "Id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number identifying method parameters",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "MethodId": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "Type": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "type of the method",
+          "examples": [
+            "System.String",
+            "System.Int32",
+            "System.Linq.Expressions.Expression",
+            "IQ.Data.SelectExpression",
+            "IQ.Data.QueryCommand"
+          ]
+        },
+        "Name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "name of the method",
+          "examples": [
+            "data",
+            "i",
+            "declstartpos",
+            "expression",
+            "s"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Repo": {
+      "fields": {
+        "Id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id to identify repositories",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "Url": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "github address of repository",
+          "examples": []
+        },
+        "Stars": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "stars this repository has received",
+          "examples": [
+            "14",
+            "6",
+            "3",
+            "1",
+            "5"
+          ]
+        },
+        "Forks": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "forks that the repository has received",
+          "examples": [
+            "2",
+            "3",
+            "0",
+            "1",
+            "32"
+          ]
+        },
+        "Watchers": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "how many watchers of this repository",
+          "examples": [
+            "14",
+            "6",
+            "3",
+            "1",
+            "5"
+          ]
+        },
+        "ProcessedTime": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "how much processed time of downloading this repository",
+          "examples": [
+            "636430963247108053",
+            "636472436323838240",
+            "636430963280029575",
+            "636430963299356346",
+            "636472436346806990"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Solution": {
+      "fields": {
+        "Id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id to identify this solution",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "RepoId": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id of repository",
+          "examples": [
+            "1",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        },
+        "Path": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "path of this solution",
+          "examples": [
+            "wallerdev_htmlsharp\\HtmlSharp.sln",
+            "maravillas_linq-to-delicious\\tasty.sln",
+            "mauriciodeamorim_tdd.encontro2\\Tdd.Encontro2.sln",
+            "aroder_heatmap\\CenStatsHeatMap.sln",
+            "managedfusion_managedfusion\\ManagedFusion.sln"
+          ]
+        },
+        "ProcessedTime": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "processed time",
+          "examples": [
+            "636430963695642191",
+            "636430963721734366",
+            "636430963735704849",
+            "636430963750457674",
+            "636430963775379234"
+          ]
+        },
+        "WasCompiled": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "whether this solution needs to be compiled or not",
+          "examples": [
+            "1",
+            "0"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": []
+}

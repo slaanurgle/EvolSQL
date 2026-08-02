@@ -1,0 +1,653 @@
+{
+  "db_id": "food_inspection_2",
+  "schema": null,
+  "tables": {
+    "main.employee": {
+      "fields": {
+        "employee_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for the employee",
+          "examples": [
+            "103705",
+            "104633",
+            "106581",
+            "111559",
+            "112202"
+          ]
+        },
+        "first_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "first name of the employee",
+          "examples": [
+            "Anastasia",
+            "Joshua",
+            "Zach",
+            "Lisa",
+            "Bob"
+          ]
+        },
+        "last_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "last name of the employee",
+          "examples": [
+            "Hansen",
+            "Rosa",
+            "Barber",
+            "Tillman",
+            "Benson"
+          ]
+        },
+        "address": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "physical street address of the employee",
+          "examples": [
+            "6023 S Elizabeth St",
+            "5000 N Wolcott Ave",
+            "7522 N Oleander Ave",
+            "5529 S Dorchester Ave",
+            "7011 S Campbell Ave"
+          ]
+        },
+        "city": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "city of the employee's address",
+          "examples": [
+            "Chicago",
+            "Park Forest",
+            "Hoffman Estates"
+          ]
+        },
+        "state": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "state of the customer's address",
+          "examples": [
+            "IL"
+          ]
+        },
+        "zip": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "postal code of the employee's address",
+          "examples": [
+            "60636",
+            "60640",
+            "60631",
+            "60637",
+            "60629"
+          ]
+        },
+        "phone": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "telephone number to reach the customer",
+          "examples": [
+            "(773) 424-8729",
+            "(773) 293-6409",
+            "(219) 473-0757",
+            "(773) 424-5470",
+            "(773) 891-8653"
+          ]
+        },
+        "title": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "career title of the employee",
+          "examples": [
+            "Sanitarian",
+            "Supervisor",
+            "Division Manager"
+          ]
+        },
+        "salary": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the salary of the employee",
+          "examples": [
+            "79300",
+            "82000",
+            "79900",
+            "84700",
+            "81900"
+          ]
+        },
+        "supervisor": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the employee id of the employee's supervisor",
+          "examples": [
+            "177316",
+            "186742",
+            "179582",
+            "182205",
+            "192462"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.establishment": {
+      "fields": {
+        "license_no": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the license number of the facility",
+          "examples": [
+            "1",
+            "2",
+            "9",
+            "40",
+            "43"
+          ]
+        },
+        "dba_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the dba name of the facility",
+          "examples": [
+            "HARVEST CRUSADES MINISTRIES",
+            "COSI",
+            "XANDO COFFEE & BAR / COSI SANDWICH BAR",
+            "VITO & NICK'S LOUNGE",
+            "JOHN SCHALLER"
+          ]
+        },
+        "aka_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the aka name of the facility",
+          "examples": [
+            "COSI",
+            "KING'S CHINESE/PARK MANOR LOUNGE",
+            "MR BEEF ON HARLEM",
+            "LA UNICA FOOD MART"
+          ]
+        },
+        "facility_type": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the facility type",
+          "examples": [
+            "Special Event",
+            "Restaurant",
+            "TAVERN",
+            "Grocery Store"
+          ]
+        },
+        "risk_level": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the risk level of the facility",
+          "examples": [
+            "2",
+            "1",
+            "3"
+          ]
+        },
+        "address": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "physical street address of the facility",
+          "examples": [
+            "118 N CENTRAL AVE ",
+            "230 W MONROE ST ",
+            "116 S MICHIGAN AVE ",
+            "233 N MICHIGAN AVE ",
+            "28 E JACKSON BLVD "
+          ]
+        },
+        "city": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "city of the facility's address",
+          "examples": [
+            "CHICAGO",
+            "Chicago",
+            "chicago",
+            "CHicago"
+          ]
+        },
+        "state": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "state of the facility's address",
+          "examples": [
+            "IL"
+          ]
+        },
+        "zip": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "postal code of the facility's address",
+          "examples": [
+            "60644",
+            "60606",
+            "60603",
+            "60601",
+            "60604"
+          ]
+        },
+        "latitude": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the latitude of the facility",
+          "examples": [
+            "41.8828450747188",
+            "41.8807571586472",
+            "41.8803958382596",
+            "41.8865673708869",
+            "41.8783416120634"
+          ]
+        },
+        "longitude": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the longitude of the facility",
+          "examples": [
+            "-87.7650954520439",
+            "-87.6347092983425",
+            "-87.6245017215946",
+            "-87.6243846705971",
+            "-87.6266749914868"
+          ]
+        },
+        "ward": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the ward number of the facility",
+          "examples": [
+            "29",
+            "42",
+            "18",
+            "11",
+            "25"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.inspection": {
+      "fields": {
+        "inspection_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for the inspection",
+          "examples": [
+            "44247",
+            "44248",
+            "44249",
+            "44250",
+            "44251"
+          ]
+        },
+        "inspection_date": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the date of the inspection",
+          "examples": [
+            "2010-01-05"
+          ]
+        },
+        "inspection_type": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the type of the inspection",
+          "examples": [
+            "Complaint",
+            "Canvass",
+            "Canvass Re-Inspection",
+            "Suspected Food Poisoning",
+            "License Re-Inspection"
+          ]
+        },
+        "results": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the inspection results",
+          "examples": [
+            "Pass",
+            "Pass w/ Conditions",
+            "Fail",
+            "Out of Business",
+            "Business Not Located"
+          ]
+        },
+        "employee_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of the employee who is responsible for the inspection",
+          "examples": [
+            "141319",
+            "143902",
+            "143487",
+            "104633",
+            "123538"
+          ]
+        },
+        "license_no": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the license number of the facility that is inspected",
+          "examples": [
+            "1222441",
+            "1336561",
+            "1334073",
+            "1144381",
+            "1144380"
+          ]
+        },
+        "followup_to": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of inspections that this inspection is following up",
+          "examples": [
+            "67871",
+            "248210",
+            "233215",
+            "67744"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.inspection_point": {
+      "fields": {
+        "point_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for the inspection point",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "Description": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the specific description of the inspection results",
+          "examples": [
+            "Source sound condition, no spoilage, foods properly labeled, shellfish tags in place",
+            "Facilities to maintain proper temperature",
+            "Potentially hazardous food meets temperature requirement during storage, preparation display and service",
+            "Source of cross contamination controlled i.e. cutting boards, food handlers, utensils, etc",
+            "Personnel with infections restricted: no open sores, wounds, etc"
+          ]
+        },
+        "category": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the inspection category",
+          "examples": [
+            "Food Protection",
+            "Food Equipment and Utensil Sanitation",
+            "Wash and Waste Water Disposal",
+            "Toilet and Hand Washing Facilities for Staff",
+            "Compliance Insect and Rodent Control"
+          ]
+        },
+        "code": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the sanitary operating requirement code",
+          "examples": [
+            "7-38-005 (B) (B-2)",
+            "7-38-005 (A)",
+            "7-38-010 (A) (B)",
+            "7-38-030",
+            "7-38-031"
+          ]
+        },
+        "fine": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the fines for food safety problems",
+          "examples": [
+            "500",
+            "250",
+            "100"
+          ]
+        },
+        "point_level": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "point level",
+          "examples": [
+            "Critical",
+            "Serious ",
+            "Minor   "
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.violation": {
+      "fields": {
+        "inspection_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for the inspection",
+          "examples": [
+            "44247",
+            "44248",
+            "44249",
+            "44250",
+            "44251"
+          ]
+        },
+        "point_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the inspection point id",
+          "examples": [
+            "30",
+            "32",
+            "33",
+            "34",
+            "37"
+          ]
+        },
+        "fine": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the fine of the violation",
+          "examples": [
+            "100",
+            "0",
+            "500",
+            "250"
+          ]
+        },
+        "inspector_comment": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the comment of the inspector",
+          "examples": [
+            "All food not stored in the original container shall be stored in properly labeled containers.  OBSERVED SEVERAL FOODS IN COOLERS WITHOUT A LABEL AND DATE.  MUST LABEL AND DATE ALL PREPARED FOODS.",
+            "OBSERVED TORN DOOR GASKET ON DOOR OF 'CHILL ISLE' REACH-IN COOLER.  MUST REPLACE.  OBSERVED EXPOSED INSULATION INSIDE OF THE 2 DOOR PREP COOLER.  MUST REPAIR.  REPLACE THE CRACKED LIGHT SHIELD IN THE REAR AREA OVER THE PREP TABLE.  OBSERVED CARDBOARD STORED INSIDE OF THE DRESSING COOLER AND ON WIRE RACKS IN THE BASEMENT WALK-IN COOLER.  MUST REMOVE CARDBOARD.",
+            "All food and non-food contact surfaces of equipment and all food storage utensils shall be thoroughly cleaned and sanitized daily.  DETAIL CLEAN GREASE FROM ALL COKING EQUIPMENT.  DETAIL CLEAN THE LIGHT SHIELD IN THE FRONT PREP AREA.DETAIL CLEAN THE WIRE RACKS OF THE BASEMENT WALK-IN COOLER AND INTERIOR OF BASEMENT ICE CREAM FREEZER.",
+            "The floors shall be constructed per code, be smooth and easily cleaned, and be kept clean and in good repair.  DETAIL CLEAN THE FLOOR IN THE FRONT PREP AREA.",
+            "Toilet rooms shall be completely enclosed and shall be vented to the outside air or mechanically ventilated.  VENTILATION FAN IN THE BASEMENT RESTROOM IS NOT OPERATIONAL.  MUST REPAIR."
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.employee",
+      "supervisor",
+      "main",
+      "employee",
+      "employee_id"
+    ],
+    [
+      "main.inspection",
+      "employee_id",
+      "main",
+      "employee",
+      "employee_id"
+    ],
+    [
+      "main.inspection",
+      "license_no",
+      "main",
+      "establishment",
+      "license_no"
+    ],
+    [
+      "main.inspection",
+      "followup_to",
+      "main",
+      "inspection",
+      "inspection_id"
+    ],
+    [
+      "main.violation",
+      "inspection_id",
+      "main",
+      "inspection",
+      "inspection_id"
+    ],
+    [
+      "main.violation",
+      "point_id",
+      "main",
+      "inspection_point",
+      "point_id"
+    ]
+  ]
+}

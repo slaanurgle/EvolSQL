@@ -1,0 +1,1006 @@
+{
+  "db_id": "retails",
+  "schema": null,
+  "tables": {
+    "main.customer": {
+      "fields": {
+        "c_custkey": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number identifying the customer",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "c_mktsegment": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the segment of the customer",
+          "examples": [
+            "BUILDING",
+            "MACHINERY",
+            "FURNITURE",
+            "AUTOMOBILE",
+            "HOUSEHOLD"
+          ]
+        },
+        "c_nationkey": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the nation key number of the customer",
+          "examples": [
+            "8",
+            "16",
+            "11",
+            "24",
+            "4"
+          ]
+        },
+        "c_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "name of the customer",
+          "examples": [
+            "Customer#000000001",
+            "Customer#000000002",
+            "Customer#000000003",
+            "Customer#000000004",
+            "Customer#000000005"
+          ]
+        },
+        "c_address": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "address of the customer",
+          "examples": [
+            "KwX3hMHjZ6",
+            "ioUn,eqTTXOdo",
+            "YddJqmIdouNT9Yj",
+            "iE7PADWuxr4pR5f9ewKqg",
+            "h3yhvBTVbF2IJPzTKLoUe4"
+          ]
+        },
+        "c_phone": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "phone of the customer",
+          "examples": [
+            "937-241-3198",
+            "906-965-7556",
+            "328-750-7603",
+            "127-505-7633",
+            "322-864-6707"
+          ]
+        },
+        "c_acctbal": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "account balance",
+          "examples": [
+            "3560.03",
+            "7550.21",
+            "-926.96",
+            "-78.75",
+            "7741.9"
+          ]
+        },
+        "c_comment": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "comment of the customer",
+          "examples": [
+            "ironic excuses detect slyly silent requests. requests according to the exc",
+            "final express accounts mold slyly. ironic accounts cajole! quickly express a",
+            "carefully express foxes sleep carefully. pending platelets sleep thinly for t",
+            "silent packages sleep. even re",
+            "slyly special frays nag quietly bl"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.lineitem": {
+      "fields": {
+        "l_shipdate": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ship date of line item",
+          "examples": [
+            "1995-08-16"
+          ]
+        },
+        "l_orderkey": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "order key number of line item",
+          "examples": [
+            "1",
+            "2",
+            "4",
+            "5",
+            "6"
+          ]
+        },
+        "l_discount": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "discount of line item",
+          "examples": [
+            "0.1",
+            "0.09",
+            "0.02",
+            "0.08",
+            "0.07"
+          ]
+        },
+        "l_extendedprice": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "extended price of line item",
+          "examples": [
+            "58303.08",
+            "16947.7",
+            "63642.9",
+            "22521.96",
+            "4081.08"
+          ]
+        },
+        "l_suppkey": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "suppkey of line item",
+          "examples": [
+            "6296",
+            "8776",
+            "3859",
+            "7225",
+            "5890"
+          ]
+        },
+        "l_quantity": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "quantity of line item",
+          "examples": [
+            "33",
+            "10",
+            "34",
+            "18",
+            "3"
+          ]
+        },
+        "l_returnflag": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "return flag of line item",
+          "examples": [
+            "N",
+            "A",
+            "R"
+          ]
+        },
+        "l_partkey": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "part key of line item",
+          "examples": [
+            "98768",
+            "23771",
+            "113858",
+            "127224",
+            "98362"
+          ]
+        },
+        "l_linestatus": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "line status of line item",
+          "examples": [
+            "O",
+            "F"
+          ]
+        },
+        "l_tax": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "tax of line item",
+          "examples": [
+            "0.06",
+            "0.08",
+            "0.07",
+            "0.02",
+            "0.01"
+          ]
+        },
+        "l_commitdate": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "commit date of line item",
+          "examples": [
+            "1995-07-12"
+          ]
+        },
+        "l_receiptdate": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "receipt date of line item",
+          "examples": [
+            "1995-09-14"
+          ]
+        },
+        "l_shipmode": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ship mode of line item",
+          "examples": [
+            "RAIL",
+            "TRUCK",
+            "SHIP",
+            "MAIL",
+            "AIR"
+          ]
+        },
+        "l_linenumber": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number identifying the line item",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "l_shipinstruct": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ship instruct of line item",
+          "examples": [
+            "NONE",
+            "TAKE BACK RETURN",
+            "COLLECT COD",
+            "DELIVER IN PERSON"
+          ]
+        },
+        "l_comment": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "comment of line item",
+          "examples": [
+            "carefully bo",
+            "blithely regular pac",
+            "ironic accounts sleep furiously silen",
+            "idly even platelets acr",
+            "unusual speci"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.nation": {
+      "fields": {
+        "n_nationkey": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number identifying the nation",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "n_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "name of the nation",
+          "examples": [
+            "ALGERIA",
+            "ARGENTINA",
+            "BRAZIL",
+            "CANADA",
+            "EGYPT"
+          ]
+        },
+        "n_regionkey": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "region key number of the nation",
+          "examples": [
+            "0",
+            "1",
+            "3",
+            "2",
+            "4"
+          ]
+        },
+        "n_comment": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "comment description of nation",
+          "examples": [
+            "slyly express pinto beans cajole idly. deposits use blithely unusual packages? fluffily final accounts x-r",
+            "instructions detect blithely stealthily pending packages",
+            "blithely unusual deposits are quickly--",
+            "carefully pending packages haggle blithely. blithely final pinto beans sleep quickly even accounts? depths aroun",
+            "slyly express deposits haggle furiously. slyly final platelets nag c"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.orders": {
+      "fields": {
+        "o_orderdate": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "date of the order",
+          "examples": [
+            "1995-04-19"
+          ]
+        },
+        "o_orderkey": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number identifying the order",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "o_custkey": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "customer key of order",
+          "examples": [
+            "73100",
+            "92861",
+            "44875",
+            "72076",
+            "93697"
+          ]
+        },
+        "o_orderpriority": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "priority rate of order",
+          "examples": [
+            "4-NOT SPECIFIED",
+            "1-URGENT",
+            "5-LOW",
+            "3-MEDIUM",
+            "2-HIGH"
+          ]
+        },
+        "o_shippriority": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ship priority of order",
+          "examples": [
+            "0"
+          ]
+        },
+        "o_clerk": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "clerk of order",
+          "examples": [
+            "Clerk#000000916",
+            "Clerk#000000373",
+            "Clerk#000000485",
+            "Clerk#000000426",
+            "Clerk#000000944"
+          ]
+        },
+        "o_orderstatus": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "status of order",
+          "examples": [
+            "P",
+            "O",
+            "F"
+          ]
+        },
+        "o_totalprice": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "total price of the order",
+          "examples": [
+            "203198.56",
+            "317719.99",
+            "146674.98",
+            "317595.77",
+            "191918.92"
+          ]
+        },
+        "o_comment": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "comment description of order",
+          "examples": [
+            "final packages sleep blithely packa",
+            "final excuses about the ironic even deposits detect express request",
+            "final final deposits cajole foxes. blithely pendin",
+            "deposits hang slyly across the en",
+            "slowly even requests detect fluffily alongs"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.part": {
+      "fields": {
+        "p_partkey": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number identifying the part",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "p_type": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "type of part",
+          "examples": [
+            "LARGE PLATED TIN",
+            "LARGE POLISHED STEEL",
+            "STANDARD PLATED COPPER",
+            "STANDARD BURNISHED BRASS",
+            "ECONOMY BRUSHED BRASS"
+          ]
+        },
+        "p_size": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "size number of part",
+          "examples": [
+            "31",
+            "4",
+            "30",
+            "3",
+            "7"
+          ]
+        },
+        "p_brand": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "brand of part",
+          "examples": [
+            "Brand#43",
+            "Brand#55",
+            "Brand#53",
+            "Brand#13",
+            "Brand#14"
+          ]
+        },
+        "p_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "name of part",
+          "examples": [
+            "burlywood plum powder puff mint",
+            "hot spring dodger dim light",
+            "dark slate grey steel misty",
+            "cream turquoise dark thistle light",
+            "drab papaya lemon orange yellow"
+          ]
+        },
+        "p_container": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "container of part",
+          "examples": [
+            "LG BAG",
+            "LG CASE",
+            "WRAP CASE",
+            "LG PKG",
+            "MED PACK"
+          ]
+        },
+        "p_mfgr": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "manufacturer of part",
+          "examples": [
+            "Manufacturer#4",
+            "Manufacturer#5",
+            "Manufacturer#1",
+            "Manufacturer#3",
+            "Manufacturer#2"
+          ]
+        },
+        "p_retailprice": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "retail price of part",
+          "examples": [
+            "901.0",
+            "902.0",
+            "903.0",
+            "904.0",
+            "905.0"
+          ]
+        },
+        "p_comment": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "comment description text of part",
+          "examples": [
+            "blithely busy reque",
+            "even ironic requests s",
+            "slyly ironic fox",
+            "even silent pla",
+            "regular accounts"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.partsupp": {
+      "fields": {
+        "ps_partkey": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number identifying the part key",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "ps_suppkey": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number identifying the supply key",
+          "examples": [
+            "2",
+            "2502",
+            "5002",
+            "7502",
+            "3"
+          ]
+        },
+        "ps_supplycost": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "cost number of the part supply",
+          "examples": [
+            "400.75",
+            "702.61",
+            "383.95",
+            "682.18",
+            "42.67"
+          ]
+        },
+        "ps_availqty": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "available quantity of the part supply",
+          "examples": [
+            "1111",
+            "3999",
+            "7411",
+            "5795",
+            "4360"
+          ]
+        },
+        "ps_comment": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "comment description of the part supply",
+          "examples": [
+            "carefully ironic deposits use against the carefully unusual accounts. slyly silent platelets nag quickly even",
+            "slyly regular accounts serve carefully. asymptotes after the slyly even instructions cajole quickly ironic requests. pending dugouts about the slyly ",
+            "carefully special ideas are slyly. slyly ironic epitaphs use pending pending foxes. furiously express pinto beans lose quiet even requests: special final packages ar",
+            "deposits along the ironic pinto beans boost fluffily even ",
+            "regular pending foxes affix carefully furiously pending no"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.region": {
+      "fields": {
+        "r_regionkey": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number identifying the region",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "r_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "name of the region",
+          "examples": [
+            "AFRICA",
+            "AMERICA",
+            "ASIA",
+            "EUROPE",
+            "MIDDLE EAST"
+          ]
+        },
+        "r_comment": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "comment description of the region",
+          "examples": [
+            "asymptotes sublate after the r",
+            "requests affix quickly final tithes. blithely even packages above the a",
+            "accounts cajole carefully according to the carefully exp",
+            "slyly even theodolites are carefully ironic pinto beans. platelets above the unusual accounts aff",
+            "furiously express accounts wake sly"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.supplier": {
+      "fields": {
+        "s_suppkey": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number identifying the supply",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "s_nationkey": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "nation key of the supply",
+          "examples": [
+            "13",
+            "5",
+            "22",
+            "9",
+            "2"
+          ]
+        },
+        "s_comment": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "comment description of the comment",
+          "examples": [
+            "blithely final pearls are. instructions thra",
+            "requests integrate fluffily. fluffily ironic deposits wake. bold",
+            "carefully express ideas shall have to unwin",
+            "quickly ironic instructions snooze? express deposits are furiously along the slyly",
+            "regular requests haggle. final deposits according to the"
+          ]
+        },
+        "s_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "name of the supplier",
+          "examples": [
+            "Supplier#000000001",
+            "Supplier#000000002",
+            "Supplier#000000003",
+            "Supplier#000000004",
+            "Supplier#000000005"
+          ]
+        },
+        "s_address": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "address of the supplier",
+          "examples": [
+            ",wWs4pnykQOFl8mgVCU8EZMXqZs1w",
+            "WkXT6MSAJrp4qWq3W9N",
+            "KjUqa42JEHaRDVQTHV6Yq2h",
+            " dxp8WejdtFKFPKa Q7Emf0RjnKx3gR3",
+            "W9VO4vl4dfoDYZ RhawP8xLoc"
+          ]
+        },
+        "s_phone": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "phone number of the supplier",
+          "examples": [
+            "800-807-9579",
+            "348-617-6055",
+            "471-986-9888",
+            "893-133-4384",
+            "752-877-4449"
+          ]
+        },
+        "s_acctbal": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "account balance of the supplier",
+          "examples": [
+            "3082.86",
+            "3009.73",
+            "9159.78",
+            "9846.01",
+            "-74.94"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.customer",
+      "c_nationkey",
+      "main",
+      "nation",
+      "n_nationkey"
+    ],
+    [
+      "main.lineitem",
+      "l_orderkey",
+      "main",
+      "orders",
+      "o_orderkey"
+    ],
+    [
+      "main.lineitem",
+      "l_partkey",
+      "main",
+      "partsupp",
+      "ps_partkey"
+    ],
+    [
+      "main.lineitem",
+      "l_suppkey",
+      "main",
+      "partsupp",
+      "ps_suppkey"
+    ],
+    [
+      "main.nation",
+      "n_regionkey",
+      "main",
+      "region",
+      "r_regionkey"
+    ],
+    [
+      "main.orders",
+      "o_custkey",
+      "main",
+      "customer",
+      "c_custkey"
+    ],
+    [
+      "main.partsupp",
+      "ps_partkey",
+      "main",
+      "part",
+      "p_partkey"
+    ],
+    [
+      "main.partsupp",
+      "ps_suppkey",
+      "main",
+      "supplier",
+      "s_suppkey"
+    ],
+    [
+      "main.supplier",
+      "s_nationkey",
+      "main",
+      "nation",
+      "n_nationkey"
+    ]
+  ]
+}

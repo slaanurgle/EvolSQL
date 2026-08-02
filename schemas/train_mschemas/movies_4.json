@@ -1,0 +1,997 @@
+{
+  "db_id": "movies_4",
+  "schema": null,
+  "tables": {
+    "main.country": {
+      "fields": {
+        "country_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier of the country",
+          "examples": [
+            "128",
+            "129",
+            "130",
+            "131",
+            "132"
+          ]
+        },
+        "country_iso_code": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the ISO code",
+          "examples": [
+            "AE",
+            "AF",
+            "AO",
+            "AR",
+            "AT"
+          ]
+        },
+        "country_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the name of the country",
+          "examples": [
+            "United Arab Emirates",
+            "Afghanistan",
+            "Angola",
+            "Argentina",
+            "Austria"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.department": {
+      "fields": {
+        "department_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier of the department",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "department_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the name of the department",
+          "examples": [
+            "Camera",
+            "Directing",
+            "Production",
+            "Writing",
+            "Editing"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.gender": {
+      "fields": {
+        "gender_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier of the gender",
+          "examples": [
+            "0",
+            "1",
+            "2"
+          ]
+        },
+        "gender": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the gender",
+          "examples": [
+            "Unspecified",
+            "Female",
+            "Male"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.genre": {
+      "fields": {
+        "genre_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier of the genre",
+          "examples": [
+            "12",
+            "14",
+            "16",
+            "18",
+            "27"
+          ]
+        },
+        "genre_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the genre",
+          "examples": [
+            "Adventure",
+            "Fantasy",
+            "Animation",
+            "Drama",
+            "Horror"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.keyword": {
+      "fields": {
+        "keyword_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier of the keyword",
+          "examples": [
+            "30",
+            "65",
+            "74",
+            "75",
+            "83"
+          ]
+        },
+        "keyword_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the keyword",
+          "examples": [
+            "individual",
+            "holiday",
+            "germany",
+            "gunslinger",
+            "saving the world"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.language": {
+      "fields": {
+        "language_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier of the language",
+          "examples": [
+            "24574",
+            "24575",
+            "24576",
+            "24577",
+            "24578"
+          ]
+        },
+        "language_code": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the code of the language",
+          "examples": [
+            "en",
+            "sv",
+            "de",
+            "xx",
+            "ja"
+          ]
+        },
+        "language_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the language name",
+          "examples": [
+            "English",
+            "svenska",
+            "Deutsch",
+            "No Language",
+            "u65e5u672cu8a9e"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.language_role": {
+      "fields": {
+        "role_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier of the language id",
+          "examples": [
+            "1",
+            "2"
+          ]
+        },
+        "language_role": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the language role",
+          "examples": [
+            "Original",
+            "Spoken"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.movie": {
+      "fields": {
+        "movie_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier of the movie",
+          "examples": [
+            "5",
+            "11",
+            "12",
+            "13",
+            "14"
+          ]
+        },
+        "title": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the title of the movie",
+          "examples": [
+            "Four Rooms",
+            "Star Wars",
+            "Finding Nemo",
+            "Forrest Gump",
+            "American Beauty"
+          ]
+        },
+        "budget": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the budget for the movie",
+          "examples": [
+            "4000000",
+            "11000000",
+            "94000000",
+            "55000000",
+            "15000000"
+          ]
+        },
+        "homepage": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the homepage of the movie",
+          "examples": []
+        },
+        "overview": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the overview of the movie",
+          "examples": [
+            "It's Ted the Bellhop's first night on the job...and the hotel's very unusual guests are about to place him in some outrageous predicaments. It seems that this evening's room service is serving up one unbelievable happening after another.",
+            "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beauti",
+            "Nemo, an adventurous young clownfish, is unexpectedly taken from his Great Barrier Reef home to a dentist's office aquarium. It's up to his worrisome father Marlin and a friendly but forgetful fish Dory to bring Nemo home -- meeting vegetarian sharks, sur",
+            "A man with a low IQ has accomplished great things in his life and been present during significant historic events - in each case, far exceeding what anyone imagined he could do. Yet, despite all the things he has attained, his one true love eludes him. 'F",
+            "Lester Burnham, a depressed suburban father in a mid-life crisis, decides to turn his hectic life around after developing an infatuation with his daughter's attractive friend."
+          ]
+        },
+        "popularity": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the popularity of the movie",
+          "examples": [
+            "22.87623",
+            "126.393695",
+            "85.688789",
+            "138.133331",
+            "80.878605"
+          ]
+        },
+        "release_date": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the release date of the movie",
+          "examples": [
+            "1995-12-09"
+          ]
+        },
+        "revenue": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the revenue of the movie",
+          "examples": [
+            "4300000",
+            "775398007",
+            "940335536",
+            "677945399",
+            "356296601"
+          ]
+        },
+        "runtime": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the runtime of the movie",
+          "examples": [
+            "98",
+            "121",
+            "100",
+            "142",
+            "122"
+          ]
+        },
+        "movie_status": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the status of the movie The only value of this column is 'Released'",
+          "examples": [
+            "Released",
+            "Rumored",
+            "Post Production"
+          ]
+        },
+        "tagline": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the tagline of the movie",
+          "examples": [
+            "Twelve outrageous guests. Four scandalous requests. And one lone bellhop, in his first day on the job, who's in for the wildest New year's Eve of his life.",
+            "A long time ago in a galaxy far, far away...",
+            "There are 3.7 trillion fish in the ocean, they're looking for one.",
+            "The world will never be the same, once you've seen it through the eyes of Forrest Gump.",
+            "Look closer."
+          ]
+        },
+        "vote_average": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the average vote for the movie",
+          "examples": [
+            "6.5",
+            "8.1",
+            "7.6",
+            "8.2",
+            "7.9"
+          ]
+        },
+        "vote_count": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the vote count for the movie",
+          "examples": [
+            "530",
+            "6624",
+            "6122",
+            "7927",
+            "3313"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.movie_cast": {
+      "fields": {
+        "movie_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the movie Maps to movie(movie_id)",
+          "examples": [
+            "285",
+            "559",
+            "767",
+            "1452",
+            "58"
+          ]
+        },
+        "person_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the person Maps to person(person_id)",
+          "examples": [
+            "85",
+            "114",
+            "116",
+            "1640",
+            "1619"
+          ]
+        },
+        "character_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the character name",
+          "examples": [
+            "Captain Jack Sparrow",
+            "Will Turner",
+            "Elizabeth Swann",
+            "William Bootstrap Bill Turner",
+            "Captain Sao Feng"
+          ]
+        },
+        "gender_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the cast's gender Maps to gender(gender_id)",
+          "examples": [
+            "2",
+            "1",
+            "0"
+          ]
+        },
+        "cast_order": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the cast order of the cast",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.movie_company": {
+      "fields": {
+        "movie_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the movie  Maps to movie(movie_id)",
+          "examples": [
+            "5",
+            "11",
+            "12",
+            "13",
+            "14"
+          ]
+        },
+        "company_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the company that produced the movie Maps to production_company(company_id)",
+          "examples": [
+            "14",
+            "59",
+            "1",
+            "306",
+            "3"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.movie_crew": {
+      "fields": {
+        "movie_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the movie that the crew worked for Maps to movie(movie_id)",
+          "examples": [
+            "285",
+            "559",
+            "767",
+            "1452",
+            "58"
+          ]
+        },
+        "person_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the crew Maps to person(person_id)",
+          "examples": [
+            "120",
+            "1704",
+            "770",
+            "1705",
+            "1706"
+          ]
+        },
+        "department_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the crew's department Maps to department(department_id)",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "job": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the job of the crew",
+          "examples": [
+            "Director of Photography",
+            "Director",
+            "Producer",
+            "Screenplay",
+            "Editor"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.movie_genres": {
+      "fields": {
+        "movie_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the movie  Maps to movie(movie_id)",
+          "examples": [
+            "5",
+            "11",
+            "12",
+            "13",
+            "14"
+          ]
+        },
+        "genre_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the movie genre Maps to genre(genre_id)",
+          "examples": [
+            "35",
+            "80",
+            "12",
+            "28",
+            "878"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.movie_keywords": {
+      "fields": {
+        "movie_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the movie  Maps to movie(movie_id)",
+          "examples": [
+            "5",
+            "11",
+            "12",
+            "13",
+            "14"
+          ]
+        },
+        "keyword_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the movie keyword Maps to keyword(keyword_id)",
+          "examples": [
+            "612",
+            "613",
+            "616",
+            "622",
+            "922"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.movie_languages": {
+      "fields": {
+        "movie_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the movie  Maps to movie(movie_id)",
+          "examples": [
+            "5",
+            "11",
+            "12",
+            "13",
+            "14"
+          ]
+        },
+        "language_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the movie language Maps to language(language_id)",
+          "examples": [
+            "24574",
+            "24575",
+            "24576",
+            "24577",
+            "24578"
+          ]
+        },
+        "language_role_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the role's language",
+          "examples": [
+            "2",
+            "1"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.person": {
+      "fields": {
+        "person_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier of the person",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "person_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the name of the person",
+          "examples": [
+            "George Lucas",
+            "Mark Hamill",
+            "Harrison Ford",
+            "Carrie Fisher",
+            "Peter Cushing"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.production_company": {
+      "fields": {
+        "company_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier of the company",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "company_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the name of the company",
+          "examples": [
+            "Lucasfilm",
+            "Walt Disney Pictures",
+            "Pixar Animation Studios",
+            "Paramount Pictures",
+            "Columbia Pictures"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.production_country": {
+      "fields": {
+        "movie_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the unique identifier of the movie",
+          "examples": [
+            "5",
+            "11",
+            "12",
+            "13",
+            "14"
+          ]
+        },
+        "country_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the country",
+          "examples": [
+            "214",
+            "131",
+            "152",
+            "159",
+            "161"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.movie_cast",
+      "gender_id",
+      "main",
+      "gender",
+      "gender_id"
+    ],
+    [
+      "main.movie_cast",
+      "movie_id",
+      "main",
+      "movie",
+      "movie_id"
+    ],
+    [
+      "main.movie_cast",
+      "person_id",
+      "main",
+      "person",
+      "person_id"
+    ],
+    [
+      "main.movie_company",
+      "company_id",
+      "main",
+      "production_company",
+      "company_id"
+    ],
+    [
+      "main.movie_company",
+      "movie_id",
+      "main",
+      "movie",
+      "movie_id"
+    ],
+    [
+      "main.movie_crew",
+      "department_id",
+      "main",
+      "department",
+      "department_id"
+    ],
+    [
+      "main.movie_crew",
+      "movie_id",
+      "main",
+      "movie",
+      "movie_id"
+    ],
+    [
+      "main.movie_crew",
+      "person_id",
+      "main",
+      "person",
+      "person_id"
+    ],
+    [
+      "main.movie_genres",
+      "genre_id",
+      "main",
+      "genre",
+      "genre_id"
+    ],
+    [
+      "main.movie_genres",
+      "movie_id",
+      "main",
+      "movie",
+      "movie_id"
+    ],
+    [
+      "main.movie_keywords",
+      "keyword_id",
+      "main",
+      "keyword",
+      "keyword_id"
+    ],
+    [
+      "main.movie_keywords",
+      "movie_id",
+      "main",
+      "movie",
+      "movie_id"
+    ],
+    [
+      "main.movie_languages",
+      "language_id",
+      "main",
+      "language",
+      "language_id"
+    ],
+    [
+      "main.movie_languages",
+      "movie_id",
+      "main",
+      "movie",
+      "movie_id"
+    ],
+    [
+      "main.movie_languages",
+      "language_role_id",
+      "main",
+      "language_role",
+      "role_id"
+    ],
+    [
+      "main.production_country",
+      "country_id",
+      "main",
+      "country",
+      "country_id"
+    ],
+    [
+      "main.production_country",
+      "movie_id",
+      "main",
+      "movie",
+      "movie_id"
+    ]
+  ]
+}

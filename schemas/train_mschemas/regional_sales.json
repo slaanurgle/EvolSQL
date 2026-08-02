@@ -1,0 +1,687 @@
+{
+  "db_id": "regional_sales",
+  "schema": null,
+  "tables": {
+    "main.Customers": {
+      "fields": {
+        "CustomerID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number indicating which customer",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "Customer Names": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name of the customer",
+          "examples": [
+            "Avon Corp",
+            "WakeFern ",
+            "Elorac, Corp",
+            "ETUDE Ltd",
+            "Procter Corp"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Products": {
+      "fields": {
+        "ProductID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number representing each product",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "Product Name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "name of the product",
+          "examples": [
+            "Cookware",
+            "Photo Frames",
+            "Table Lamps",
+            "Serveware",
+            "Bathroom Furniture"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Regions": {
+      "fields": {
+        "StateCode": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique code identifying the state",
+          "examples": [
+            "AL",
+            "AR",
+            "AZ",
+            "CA",
+            "CO"
+          ]
+        },
+        "State": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "full state name",
+          "examples": [
+            "Alabama",
+            "Arkansas",
+            "Arizona",
+            "California",
+            "Colorado"
+          ]
+        },
+        "Region": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the region where the state is located in",
+          "examples": [
+            "South",
+            "West",
+            "Northeast",
+            "Midwest"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Sales Orders": {
+      "fields": {
+        "OrderNumber": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique number identifying the order",
+          "examples": [
+            "SO - 0001000",
+            "SO - 0001001",
+            "SO - 0001002",
+            "SO - 0001003",
+            "SO - 0001004"
+          ]
+        },
+        "Sales Channel": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Sales Channel",
+          "examples": [
+            "In-Store",
+            "Online",
+            "Distributor",
+            "Wholesale"
+          ]
+        },
+        "WarehouseCode": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Warehouse Code",
+          "examples": [
+            "WARE-UHY1004",
+            "WARE-NMK1003",
+            "WARE-PUJ1005",
+            "WARE-XYS1001",
+            "WARE-MKL1006"
+          ]
+        },
+        "ProcuredDate": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Procured Date",
+          "examples": [
+            "12/31/17",
+            "4/10/18",
+            "7/19/18",
+            "10/27/18",
+            "2/4/19"
+          ]
+        },
+        "OrderDate": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Order Date",
+          "examples": [
+            "5/31/18",
+            "6/1/18",
+            "6/2/18",
+            "6/3/18",
+            "6/4/18"
+          ]
+        },
+        "ShipDate": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Ship Date",
+          "examples": [
+            "6/14/18",
+            "6/22/18",
+            "6/21/18",
+            "6/2/18",
+            "6/16/18"
+          ]
+        },
+        "DeliveryDate": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Delivery Date",
+          "examples": [
+            "6/19/18",
+            "7/2/18",
+            "7/1/18",
+            "6/7/18",
+            "6/26/18"
+          ]
+        },
+        "CurrencyCode": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Currency Code",
+          "examples": [
+            "USD"
+          ]
+        },
+        "_SalesTeamID": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Sales Team ID",
+          "examples": [
+            "6",
+            "14",
+            "21",
+            "28",
+            "22"
+          ]
+        },
+        "_CustomerID": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "_Customer ID",
+          "examples": [
+            "15",
+            "20",
+            "16",
+            "48",
+            "49"
+          ]
+        },
+        "_StoreID": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "_Store ID",
+          "examples": [
+            "259",
+            "196",
+            "213",
+            "107",
+            "111"
+          ]
+        },
+        "_ProductID": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "_Product ID",
+          "examples": [
+            "12",
+            "27",
+            "16",
+            "23",
+            "26"
+          ]
+        },
+        "Order Quantity": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Order Quantity",
+          "examples": [
+            "5",
+            "3",
+            "1",
+            "8",
+            "4"
+          ]
+        },
+        "Discount Applied": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Discount Applied",
+          "examples": [
+            "0.075",
+            "0.05",
+            "0.1",
+            "0.15",
+            "0.3"
+          ]
+        },
+        "Unit Price": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "1,963.10",
+            "3,939.60",
+            "1,775.50",
+            "2,324.90",
+            "1,822.40"
+          ]
+        },
+        "Unit Cost": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "1,001.18",
+            "3,348.66",
+            "781.22",
+            "1,464.69",
+            "1,476.14"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Sales Team": {
+      "fields": {
+        "SalesTeamID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique sales team id",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "Sales Team": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "sales team names",
+          "examples": [
+            "Adam Hernandez",
+            "Keith Griffin",
+            "Jerry Green",
+            "Chris Armstrong",
+            "Stephen Payne"
+          ]
+        },
+        "Region": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the region where the state is located in",
+          "examples": [
+            "Northeast",
+            "West",
+            "South",
+            "Midwest"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Store Locations": {
+      "fields": {
+        "StoreID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique store id",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "City Name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "City Name",
+          "examples": [
+            "Birmingham",
+            "Huntsville",
+            "Mobile",
+            "Montgomery",
+            "Little Rock"
+          ]
+        },
+        "County": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "full county name",
+          "examples": [
+            "Shelby County/Jefferson County",
+            "Limestone County/Madison County",
+            "Mobile County",
+            "Montgomery County",
+            "Pulaski County"
+          ]
+        },
+        "StateCode": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "state code",
+          "examples": [
+            "AL",
+            "AR",
+            "AZ",
+            "CA",
+            "CO"
+          ]
+        },
+        "State": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "full state name",
+          "examples": [
+            "Alabama",
+            "Arkansas",
+            "Arizona",
+            "California",
+            "Colorado"
+          ]
+        },
+        "Type": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "type of the store",
+          "examples": [
+            "City",
+            "Town",
+            "CDP",
+            "Unified Government",
+            "Consolidated Government"
+          ]
+        },
+        "Latitude": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Latitude",
+          "examples": [
+            "33.52744",
+            "34.69901",
+            "30.69436",
+            "32.36681",
+            "34.74648"
+          ]
+        },
+        "Longitude": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Longitude",
+          "examples": [
+            "-86.79905",
+            "-86.67298",
+            "-88.04305",
+            "-86.29997",
+            "-92.28959"
+          ]
+        },
+        "AreaCode": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "205",
+            "256",
+            "251",
+            "334",
+            "501"
+          ]
+        },
+        "Population": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Population",
+          "examples": [
+            "212461",
+            "190582",
+            "194288",
+            "200602",
+            "197992"
+          ]
+        },
+        "Household Income": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Household Income",
+          "examples": [
+            "89972",
+            "78554",
+            "76170",
+            "79866",
+            "79902"
+          ]
+        },
+        "Median Income": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Median Income",
+          "examples": [
+            "31061",
+            "48775",
+            "38776",
+            "42927",
+            "46085"
+          ]
+        },
+        "Land Area": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Land Area",
+          "examples": [
+            "378353942",
+            "552604579",
+            "361044263",
+            "413985435",
+            "307398785"
+          ]
+        },
+        "Water Area": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Water Area",
+          "examples": [
+            "6591013",
+            "3452021",
+            "105325210",
+            "4411954",
+            "6758644"
+          ]
+        },
+        "Time Zone": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Time Zone",
+          "examples": [
+            "America/Chicago",
+            "America/Phoenix",
+            "America/Los Angeles",
+            "America/Denver",
+            "America/New York"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.Sales Orders",
+      "_ProductID",
+      "main",
+      "Products",
+      "ProductID"
+    ],
+    [
+      "main.Sales Orders",
+      "_StoreID",
+      "main",
+      "Store Locations",
+      "StoreID"
+    ],
+    [
+      "main.Sales Orders",
+      "_CustomerID",
+      "main",
+      "Customers",
+      "CustomerID"
+    ],
+    [
+      "main.Sales Orders",
+      "_SalesTeamID",
+      "main",
+      "Sales Team",
+      "SalesTeamID"
+    ],
+    [
+      "main.Store Locations",
+      "StateCode",
+      "main",
+      "Regions",
+      "StateCode"
+    ]
+  ]
+}

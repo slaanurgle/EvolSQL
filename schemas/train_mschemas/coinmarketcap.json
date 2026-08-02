@@ -1,0 +1,491 @@
+{
+  "db_id": "coinmarketcap",
+  "schema": null,
+  "tables": {
+    "main.coins": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number identifying coins",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "name of coins",
+          "examples": [
+            "Bitcoin",
+            "Litecoin",
+            "Namecoin",
+            "Terracoin",
+            "Peercoin"
+          ]
+        },
+        "slug": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "slug names of coins",
+          "examples": [
+            "bitcoin",
+            "litecoin",
+            "namecoin",
+            "terracoin",
+            "peercoin"
+          ]
+        },
+        "symbol": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "symbol of names of coins",
+          "examples": [
+            "BTC",
+            "LTC",
+            "NMC",
+            "TRC",
+            "PPC"
+          ]
+        },
+        "status": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "status of coins",
+          "examples": [
+            "active",
+            "untracked",
+            "inactive",
+            "extinct"
+          ]
+        },
+        "category": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "category of coins",
+          "examples": [
+            "coin",
+            "token"
+          ]
+        },
+        "description": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "description of coins",
+          "examples": []
+        },
+        "subreddit": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "name of coins on reddit",
+          "examples": [
+            "bitcoin",
+            "litecoin",
+            "namecoin",
+            "terracoin",
+            "peercoin"
+          ]
+        },
+        "notice": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "notice if any",
+          "examples": []
+        },
+        "tags": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "tags of coins",
+          "examples": [
+            "mineable, pow, sha-256, store-of-value, state-channels, coinbase-ventures-portfolio, three-arrows-capital-portfolio, polychain-capital-portfolio, binance-labs-portfolio, arrington-xrp-capital, blockchain-capital-portfolio, boostvc-portfolio, cms-holdings-",
+            "mineable, pow, scrypt, medium-of-exchange, binance-chain",
+            "mineable, pow, sha-256, platform",
+            "mineable, pow, sha-256, masternodes",
+            "mineable, hybrid-pow-pos, sha-256, medium-of-exchange, payments"
+          ]
+        },
+        "tag_names": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "tag names of coins",
+          "examples": [
+            "Mineable, PoW, SHA-256, Store of Value, State channels, Coinbase Ventures Portfolio, Three Arrows Capital Portfolio, Polychain Capital Portfolio, Binance Labs Portfolio, Arrington XRP capital, Blockchain Capital Portfolio, BoostVC Portfolio, CMS Holdings ",
+            "Mineable, PoW, Scrypt, Medium of Exchange, Binance Chain",
+            "Mineable, PoW, SHA-256, Platform",
+            "Mineable, PoW, SHA-256, Masternodes",
+            "Mineable, Hybrid - PoW & PoS, SHA-256, Medium of Exchange, Payments"
+          ]
+        },
+        "website": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "website introduction of coins",
+          "examples": []
+        },
+        "platform_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id number of the platform",
+          "examples": [
+            "1027",
+            "1765",
+            "1376",
+            "1839"
+          ]
+        },
+        "date_added": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the added date",
+          "examples": [
+            "2013-04-28T00:00:00.000Z",
+            "2013-05-03T00:00:00.000Z",
+            "2013-05-08T00:00:00.000Z",
+            "2013-05-09T00:00:00.000Z",
+            "2013-05-10T00:00:00.000Z"
+          ]
+        },
+        "date_launched": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "lanched date",
+          "examples": [
+            "2018-01-16T00:00:00.000Z",
+            "2018-05-01T00:00:00.000Z",
+            "2017-09-18T22:20:00.000Z",
+            "2015-03-06T14:49:00.000Z"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.historical": {
+      "fields": {
+        "date": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "transaction date",
+          "examples": [
+            "2013-04-28"
+          ]
+        },
+        "coin_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id number referring to coins",
+          "examples": [
+            "1",
+            "2",
+            "5",
+            "3",
+            "4"
+          ]
+        },
+        "cmc_rank": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "CMC rank is a metric used by CoinMarketCap to rank the relative popularity of different cryptocurrencies",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "market_cap": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Market capitalization refers to how much a coin is worth as determined by the coin market",
+          "examples": [
+            "1488566971.9558687",
+            "74637021.56790735",
+            "7250186.647688276",
+            "5995997.185385211",
+            "1503099.4011388426"
+          ]
+        },
+        "price": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "how much is a coin",
+          "examples": [
+            "134.210021972656",
+            "4.34840488433838",
+            "0.386524856090546",
+            "1.10723268985748",
+            "0.646892309188843"
+          ]
+        },
+        "open": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the price at which a cryptocurrency (coin) opens at a time period",
+          "examples": [
+            "134.44400024414062",
+            "4.366759777069092",
+            "0.3871999979019165",
+            "1.103790044784546"
+          ]
+        },
+        "high": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "highest price",
+          "examples": [
+            "147.48800659179688",
+            "4.573599815368652",
+            "0.4247649908065796",
+            "1.3357700109481812"
+          ]
+        },
+        "low": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "lowest price",
+          "examples": [
+            "134.0",
+            "4.225639820098877",
+            "0.37790799140930176",
+            "1.1027400493621826"
+          ]
+        },
+        "close": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the price at which a cryptocurrency (coin) closes at a time period, for example at the end of the day",
+          "examples": [
+            "144.5399932861328",
+            "4.383900165557861",
+            "0.4088610112667084",
+            "1.328320026397705"
+          ]
+        },
+        "time_high": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the time to achieve highest price",
+          "examples": [
+            "13:15:01",
+            "13:15:03",
+            "12:45:02",
+            "13:15:02"
+          ]
+        },
+        "time_low": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the time to achieve lowest price",
+          "examples": [
+            "05:20:01",
+            "19:25:02",
+            "04:05:04",
+            "00:05:02"
+          ]
+        },
+        "volume_24h": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the total value of cryptocurrency coined traded in the past 24 hours",
+          "examples": [
+            "0.0",
+            "46862728.0",
+            "31112234.0",
+            "148422.484375",
+            "182580.390625"
+          ]
+        },
+        "percent_change_1h": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "price percentage change in the first hour",
+          "examples": [
+            "0.639231",
+            "0.799273",
+            "-0.934763",
+            "-0.0505028",
+            "0.609159"
+          ]
+        },
+        "percent_change_24h": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "price percentage change in the first 24 hours",
+          "examples": [
+            "7.63553",
+            "0.920718",
+            "18.558",
+            "9.58407"
+          ]
+        },
+        "percent_change_7d": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "price percentage change in the first 7 days",
+          "examples": [
+            "-13.809",
+            "-16.7201",
+            "1.64395",
+            "-22.2015"
+          ]
+        },
+        "circulating_supply": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the best approximation of the number of coins that are circulating in the market and in the general public's hands",
+          "examples": [
+            "11091325.0",
+            "17164230.0",
+            "18757362.0",
+            "5415300.0",
+            "2323569.75"
+          ]
+        },
+        "total_supply": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the total amount of coins in existence right now",
+          "examples": [
+            "11091325.0",
+            "17164230.0",
+            "18757362.0",
+            "5415300.0",
+            "2323569.75"
+          ]
+        },
+        "max_supply": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Max Supply is the best approximation of the maximum amount of coins that will ever exist in the lifetime of the cryptocurrency",
+          "examples": [
+            "21000000.0",
+            "84000000.0",
+            "42000000.0",
+            "336000000.0"
+          ]
+        },
+        "num_market_pairs": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "number of market pairs across all exchanges trading each currency",
+          "examples": [
+            "7050",
+            "5146",
+            "382",
+            "299"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": []
+}

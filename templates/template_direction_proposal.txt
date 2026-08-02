@@ -1,0 +1,67 @@
+Below, you are provided with a database schema and an NL2SQL pair. Your task is to act as an expert data scientist, systematically evaluate all possible strategies to increase the query's difficulty, and provide a scored assessment for each.
+
+Database Engine:
+SQLite
+
+Database Schema:
+{DATABASE_SCHEMA}
+This schema describes the database's structure, including tables, columns, primary keys, foreign keys, and any relevant relationships or constraints. The new question after increasing the difficulty must strictly follow this database schema.
+
+Question:
+{QUESTION}
+
+Gold SQL:
+{GOLD_SQL}
+
+Instructions:
+- Your primary goal is to systematically analyze the provided SQL query and assess the potential of all six evolution axes.
+- You must evaluate each strategy from the Available Evolution Axes defined below.
+
+Available Evolution Axes:
+
+- A: subqueries: Make the query structure more complex by introducing nested queries, correlated subqueries, or Common Table Expressions (CTEs).
+- B: conditions: Increase the logical complexity within existing SQL clauses. For example, combine multiple conditions in the WHERE clause using AND/OR/NOT; if the original SQL has a GROUP BY, add a HAVING clause to filter the aggregated results; or sort by multiple columns or an expression in the ORDER BY clause.
+- C: sql_operators: Use a wider variety of SQL operators. For example, use BETWEEN for a range comparison, IN or NOT IN to filter against a set of values, LIKE for pattern matching, or introduce conditional logic with a CASE WHEN ... THEN ... END expression.
+- D: sql_functions: Integrate SQL functions to process data. You can use aggregate functions, date functions, mathematical functions or window functions.
+- E: tables_involved: Increase the number of tables being joined or change the type of join (e.g., from INNER to LEFT JOIN).
+- F: set_operators: Use set operators (UNION, INTERSECT, EXCEPT) to combine result sets, or use an EXISTS or NOT EXISTS subquery.
+
+- Crucially, you are only proposing how to change the query. Do NOT generate the new question or new SQL in this step.
+
+Output Format:
+In your answer, please respond with a JSON object structured as follows:
+
+[
+  {{
+    "axis": "A",
+    "score": A score between 0.0 and 1.0 for the 'subqueries' axis,
+    "justification": "A concise reason for this score. Explain feasibility and impact."
+  }},
+  {{
+    "axis": "B",
+    "score": A score between 0.0 and 1.0 for the 'conditions' axis,
+    "justification": "A concise reason for this score. Explain feasibility and impact."
+  }},
+  {{
+    "axis": "C",
+    "score": A score between 0.0 and 1.0 for the 'sql_operators' axis,
+    "justification": "A concise reason for this score. Explain feasibility and impact."
+  }},
+  {{
+    "axis": "D",
+    "score": A score between 0.0 and 1.0 for the 'sql_functions' axis,
+    "justification": "A concise reason for this score. Explain feasibility and impact."
+  }},
+  {{
+    "axis": "E",
+    "score": A score between 0.0 and 1.0 for the 'tables_involved' axis,
+    "justification": "A concise reason for this score. Explain feasibility and impact."
+  }},
+  {{
+    "axis": "F",
+    "score": A score between 0.0 and 1.0 for the 'set_operators' axis,
+    "justification": "A concise reason for this score. Explain feasibility and impact."
+  }}
+]
+
+Take a deep breath and think step by step to evaluate all six evolution strategies thoroughly.

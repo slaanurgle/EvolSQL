@@ -1,0 +1,2761 @@
+{
+  "db_id": "mondial_geo",
+  "schema": null,
+  "tables": {
+    "main.borders": {
+      "fields": {
+        "Country1": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "a country code",
+          "examples": [
+            "A",
+            "AFG",
+            "AL",
+            "AND",
+            "ANG"
+          ]
+        },
+        "Country2": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "a country code",
+          "examples": [
+            "CH",
+            "CZ",
+            "D",
+            "FL",
+            "H"
+          ]
+        },
+        "Length": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "length of the border between country1 and country2",
+          "examples": [
+            "164.0",
+            "362.0",
+            "784.0",
+            "37.0",
+            "366.0"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.city": {
+      "fields": {
+        "Name": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "name of city",
+          "examples": [
+            "Aachen",
+            "Aalborg",
+            "Aarau",
+            "Aarhus",
+            "Aarri"
+          ]
+        },
+        "Country": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the code of the country where it belongs to",
+          "examples": [
+            "D",
+            "DK",
+            "CH",
+            "WAN",
+            "BR"
+          ]
+        },
+        "Province": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the name of the province where it belongs to",
+          "examples": [
+            "Nordrhein Westfalen",
+            "Denmark",
+            "AG",
+            "Nigeria",
+            "Para"
+          ]
+        },
+        "Population": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "population of the city",
+          "examples": [
+            "247113",
+            "113865",
+            "194345",
+            "111000"
+          ]
+        },
+        "Longitude": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "geographic longitude",
+          "examples": [
+            "10.0",
+            "10.1",
+            "-4.0",
+            "-99.6833"
+          ]
+        },
+        "Latitude": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "geographic latitude",
+          "examples": [
+            "57.0",
+            "56.1",
+            "5.3",
+            "32.4167"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.continent": {
+      "fields": {
+        "Name": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "name of the continent",
+          "examples": [
+            "Africa",
+            "America",
+            "Asia",
+            "Australia/Oceania",
+            "Europe"
+          ]
+        },
+        "Area": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "total area of the continent",
+          "examples": [
+            "30254700.0",
+            "39872000.0",
+            "45095300.0",
+            "8503470.0",
+            "9562490.0"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.country": {
+      "fields": {
+        "Name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the country name",
+          "examples": [
+            "Afghanistan",
+            "Albania",
+            "Algeria",
+            "American Samoa",
+            "Andorra"
+          ]
+        },
+        "Code": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "country code",
+          "examples": [
+            "A",
+            "AFG",
+            "AG",
+            "AL",
+            "AMSA"
+          ]
+        },
+        "Capital": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name of the capital,",
+          "examples": [
+            "Vienna",
+            "Kabul",
+            "Saint Johns",
+            "Tirane",
+            "Pago Pago"
+          ]
+        },
+        "Province": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the province where the capital belongs to,",
+          "examples": [
+            "Vienna",
+            "Afghanistan",
+            "Antigua and Barbuda",
+            "Albania",
+            "American Samoa"
+          ]
+        },
+        "Area": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the total area,",
+          "examples": [
+            "83850.0",
+            "647500.0",
+            "442.0",
+            "28750.0",
+            "199.0"
+          ]
+        },
+        "Population": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the population number",
+          "examples": [
+            "8023244",
+            "22664136",
+            "65647",
+            "3249136",
+            "65628"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.desert": {
+      "fields": {
+        "Name": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the name of the desert",
+          "examples": [
+            "Arabian Desert",
+            "Atacama",
+            "Azaouad",
+            "Baja California Desert",
+            "Chihuahua"
+          ]
+        },
+        "Area": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the total area of the desert",
+          "examples": [
+            "50000.0",
+            "181300.0",
+            "80000.0",
+            "30000.0",
+            "360000.0"
+          ]
+        },
+        "Longitude": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Longitude",
+          "examples": [
+            "26.0",
+            "-69.25",
+            "0.0",
+            "-116.0",
+            "-105.0"
+          ]
+        },
+        "Latitude": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Latitude",
+          "examples": [
+            "33.0",
+            "-24.5",
+            "20.0",
+            "31.0",
+            "36.0"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.economy": {
+      "fields": {
+        "Country": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the country code",
+          "examples": [
+            "A",
+            "AFG",
+            "AG",
+            "AL",
+            "AMSA"
+          ]
+        },
+        "GDP": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "gross domestic product",
+          "examples": [
+            "152000.0",
+            "12800.0",
+            "425.0",
+            "4100.0",
+            "462.2"
+          ]
+        },
+        "Agriculture": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "percentage of agriculture of the GDP",
+          "examples": [
+            "2.0",
+            "65.0",
+            "3.5",
+            "55.0"
+          ]
+        },
+        "Service": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "percentage of services of the GDP,",
+          "examples": [
+            "34.0",
+            "15.0",
+            "19.3",
+            "56.0"
+          ]
+        },
+        "Industry": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "percentage of industry of the GDP",
+          "examples": [
+            "64.0",
+            "20.0",
+            "77.2",
+            "32.0"
+          ]
+        },
+        "Inflation": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "inflation rate (per annum),",
+          "examples": [
+            "2.3",
+            "3.5",
+            "16.0",
+            "20.0"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.encompasses": {
+      "fields": {
+        "Country": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "a country code",
+          "examples": [
+            "A",
+            "AFG",
+            "AG",
+            "AL",
+            "AMSA"
+          ]
+        },
+        "Continent": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the continent name",
+          "examples": [
+            "Europe",
+            "Asia",
+            "America",
+            "Australia/Oceania",
+            "Africa"
+          ]
+        },
+        "Percentage": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "how much of the area of a country belongs to the continent",
+          "examples": [
+            "100.0",
+            "90.0",
+            "10.0",
+            "80.0",
+            "20.0"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.ethnicGroup": {
+      "fields": {
+        "Country": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the country code",
+          "examples": [
+            "GE",
+            "EAU",
+            "DJI",
+            "ER",
+            "ETH"
+          ]
+        },
+        "Name": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "name of the language",
+          "examples": [
+            "Abkhaz",
+            "Acholi",
+            "Afar",
+            "African",
+            "African descent"
+          ]
+        },
+        "Percentage": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "percentage of the language in this country",
+          "examples": [
+            "1.8",
+            "4.0",
+            "35.0",
+            "80.0",
+            "99.0"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.geo_desert": {
+      "fields": {
+        "Desert": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the name of the desert",
+          "examples": [
+            "Desert",
+            "Rub Al Chali",
+            "Dascht-e-Margoh",
+            "Rigestan",
+            "Karakum"
+          ]
+        },
+        "Country": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the country code where it is located",
+          "examples": [
+            "Coun",
+            "UAE",
+            "AFG",
+            "TM",
+            "IRQ"
+          ]
+        },
+        "Province": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the province of this country",
+          "examples": [
+            "Abu Dhabi",
+            "Afghanistan",
+            "Ahal",
+            "Al Anbar",
+            "Al Fujayrah"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.geo_estuary": {
+      "fields": {
+        "River": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the name of the river",
+          "examples": [
+            "River",
+            "Bahr el-Djebel/Albert-Nil",
+            "Bahr el-Ghasal",
+            "Sobat",
+            "Pjandsh"
+          ]
+        },
+        "Country": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the country code where it is located",
+          "examples": [
+            "Coun",
+            "SUD",
+            "AFG",
+            "CH",
+            "N"
+          ]
+        },
+        "Province": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the province of this country",
+          "examples": [
+            "AG",
+            "Aali an Nil",
+            "Afghanistan",
+            "Akershus",
+            "Al Anbar"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.geo_island": {
+      "fields": {
+        "Island": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the name of the island",
+          "examples": [
+            "Aland",
+            "Alicudi",
+            "Ambon",
+            "Ameland",
+            "Amrum"
+          ]
+        },
+        "Country": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the country code where it is located",
+          "examples": [
+            "Alan",
+            "Lipa",
+            "Molu",
+            "West",
+            "Nord"
+          ]
+        },
+        "Province": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the province of this country",
+          "examples": [
+            "101",
+            "102",
+            "10244",
+            "104",
+            "10429"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.geo_lake": {
+      "fields": {
+        "Lake": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the name of the lake",
+          "examples": [
+            "Lake",
+            "Barrage de Mbakaou",
+            "Lake Nicaragua",
+            "Lake Ohrid",
+            "Lake Prespa"
+          ]
+        },
+        "Country": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the country code where it is located",
+          "examples": [
+            "Coun",
+            "CAM",
+            "CR",
+            "AL",
+            "KAZ"
+          ]
+        },
+        "Province": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the province of this country",
+          "examples": [
+            "Adamaoua",
+            "Alajuela",
+            "Albania",
+            "Almaty (munic.)",
+            "Alvsborg"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.geo_mountain": {
+      "fields": {
+        "Mountain": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the name of the mountain",
+          "examples": [
+            "Mountain",
+            "Gran Sasso",
+            "Tirich Mir",
+            "Ararat",
+            "Mt Blackburn"
+          ]
+        },
+        "Country": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the country code where it is located",
+          "examples": [
+            "Coun",
+            "I",
+            "AFG",
+            "TR",
+            "USA"
+          ]
+        },
+        "Province": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the province of this country",
+          "examples": [
+            "Abruzzo",
+            "Afghanistan",
+            "Agri",
+            "Alaska",
+            "Albania"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.geo_river": {
+      "fields": {
+        "River": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the name of the river",
+          "examples": [
+            "River",
+            "Bahr el-Djebel/Albert-Nil",
+            "Bahr el-Ghasal",
+            "Pibor",
+            "Sobat"
+          ]
+        },
+        "Country": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the country code where it is located",
+          "examples": [
+            "Coun",
+            "SUD",
+            "IRQ",
+            "TR",
+            "AFG"
+          ]
+        },
+        "Province": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the province of this country",
+          "examples": [
+            "AG",
+            "Aali an Nil",
+            "Ad Tamim",
+            "Adiyaman",
+            "Afghanistan"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.geo_sea": {
+      "fields": {
+        "Sea": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the name of the sea",
+          "examples": [
+            "Sea",
+            "Mediterranean Sea",
+            "Persian Gulf",
+            "Pacific Ocean",
+            "Skagerrak"
+          ]
+        },
+        "Country": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the country code where it is located",
+          "examples": [
+            "Coun",
+            "I",
+            "UAE",
+            "TR",
+            "J"
+          ]
+        },
+        "Province": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the province of this country",
+          "examples": [
+            "Abruzzo",
+            "Abu Dhabi",
+            "Adana",
+            "Aichi",
+            "Ajman"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.geo_source": {
+      "fields": {
+        "River": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the name of the river",
+          "examples": [
+            "River",
+            "White Nile",
+            "Amudarja",
+            "Pjandsh",
+            "Murat"
+          ]
+        },
+        "Country": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the country code where it is located",
+          "examples": [
+            "Coun",
+            "SUD",
+            "AFG",
+            "TR",
+            "IRQ"
+          ]
+        },
+        "Province": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the province of this country",
+          "examples": [
+            "Aali an Nil",
+            "Afghanistan",
+            "Agri",
+            "Al Anbar",
+            "Albania"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.isMember": {
+      "fields": {
+        "Country": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "A",
+            "AFG",
+            "AG",
+            "AL",
+            "AMSA"
+          ]
+        },
+        "Organization": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "AG",
+            "ANC",
+            "AfDB",
+            "AsDB",
+            "BIS"
+          ]
+        },
+        "Type": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "'member'",
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Type",
+            "nonregional member",
+            "observer",
+            "member",
+            "National Society"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.island": {
+      "fields": {
+        "Name": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the name of the island",
+          "examples": [
+            "Aland",
+            "Alicudi",
+            "Ambon",
+            "Ameland",
+            "Amrum"
+          ]
+        },
+        "Islands": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the group of islands where it belongs to",
+          "examples": [
+            "Aland Islands",
+            "Lipari Islands",
+            "Moluccan Islands",
+            "Westfriesische Inseln",
+            "Nordfriesische Inseln"
+          ]
+        },
+        "Area": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the area of the island",
+          "examples": [
+            "650.0",
+            "5.2",
+            "775.0",
+            "57.6",
+            "20.5"
+          ]
+        },
+        "Height": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the maximal elevation of the island",
+          "examples": [
+            "675.0",
+            "1225.0",
+            "32.0",
+            "65.0"
+          ]
+        },
+        "Type": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the type of the island",
+          "examples": [
+            "volcanic",
+            "lime",
+            "coral",
+            "atoll"
+          ]
+        },
+        "Longitude": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Longitude",
+          "examples": [
+            "20.0",
+            "14.4",
+            "128.2",
+            "5.75",
+            "8.3"
+          ]
+        },
+        "Latitude": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Latitude",
+          "examples": [
+            "60.1",
+            "38.6",
+            "-3.7",
+            "53.5",
+            "54.65"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.islandIn": {
+      "fields": {
+        "Island": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Island",
+            "Svalbard",
+            "Greenland",
+            "Iceland",
+            "Aust-Vagoey"
+          ]
+        },
+        "Sea": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Sea",
+            "Norwegian Sea",
+            "Barents Sea",
+            "Arctic Ocean",
+            "Atlantic Ocean"
+          ]
+        },
+        "Lake": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Lake",
+            "Ozero Baikal",
+            "Lake Toba",
+            "Lake Manicouagan"
+          ]
+        },
+        "River": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "River"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.lake": {
+      "fields": {
+        "Name": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the name of the lake",
+          "examples": [
+            "Ammersee",
+            "Arresoe",
+            "Atlin Lake",
+            "Balaton",
+            "Barrage de Mbakaou"
+          ]
+        },
+        "Area": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the total area of the lake",
+          "examples": [
+            "46.6",
+            "40.2",
+            "798.0",
+            "594.0"
+          ]
+        },
+        "Depth": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the depth of the lake",
+          "examples": [
+            "81.1",
+            "5.6",
+            "283.0",
+            "12.5"
+          ]
+        },
+        "Altitude": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the altitude (above sea level) of the lake",
+          "examples": [
+            "533.0",
+            "668.0",
+            "104.0",
+            "395.0"
+          ]
+        },
+        "Type": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the type of the lake",
+          "examples": [
+            "artificial",
+            "salt",
+            "caldera",
+            "impact"
+          ]
+        },
+        "River": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the river that flows out of the lake",
+          "examples": [
+            "Ammer",
+            "Yukon River",
+            "Sanaga",
+            "Rhein"
+          ]
+        },
+        "Longitude": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "longitude of lake",
+          "examples": [
+            "11.6",
+            "12.1",
+            "-133.75",
+            "17.6",
+            "12.75"
+          ]
+        },
+        "Latitude": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "latitude of lake",
+          "examples": [
+            "48.0",
+            "56.0",
+            "59.5",
+            "46.8",
+            "6.4"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.language": {
+      "fields": {
+        "Country": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the country code",
+          "examples": [
+            "AFG",
+            "NAM",
+            "MK",
+            "MNE",
+            "IR"
+          ]
+        },
+        "Name": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "name of the language",
+          "examples": [
+            "Afghan Persian",
+            "Afrikaans",
+            "Albanian",
+            "Arabic",
+            "Armenian"
+          ]
+        },
+        "Percentage": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "percentage of the language in this country",
+          "examples": [
+            "50.0",
+            "60.0",
+            "21.0",
+            "5.3",
+            "1.0"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.located": {
+      "fields": {
+        "City": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name of the city",
+          "examples": [
+            "City",
+            "Shkoder",
+            "Durres",
+            "Vlore",
+            "Kavalla"
+          ]
+        },
+        "Province": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the province where the city belongs to",
+          "examples": [
+            "Province",
+            "Albania",
+            "Anatoliki Makedhonia kai Thraki",
+            "Attiki",
+            "Dhytiki Ellas"
+          ]
+        },
+        "Country": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the country code where the city belongs to",
+          "examples": [
+            "Coun",
+            "AL",
+            "GR",
+            "SRB",
+            "F"
+          ]
+        },
+        "River": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the river where it is located at",
+          "examples": [
+            "River",
+            "Donau",
+            "Save",
+            "Rhein"
+          ]
+        },
+        "Lake": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the lake where it is located at",
+          "examples": [
+            "Lake",
+            "Lake Skutari",
+            "Bodensee",
+            "Lac Leman"
+          ]
+        },
+        "Sea": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the sea where it is located at",
+          "examples": [
+            "Sea",
+            "Mediterranean Sea",
+            "Atlantic Ocean",
+            "The Channel"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.locatedOn": {
+      "fields": {
+        "City": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the name of the city",
+          "examples": [
+            "Aberdeen",
+            "Aberystwyth",
+            "Adamstown",
+            "Agana",
+            "Ajaccio"
+          ]
+        },
+        "Province": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the province where the city belongs to",
+          "examples": [
+            "Province",
+            "Grampian",
+            "Ceredigion",
+            "Pitcairn Islands",
+            "Guam"
+          ]
+        },
+        "Country": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the country code where the city belongs to",
+          "examples": [
+            "Coun",
+            "GB",
+            "PITC",
+            "GUAM",
+            "F"
+          ]
+        },
+        "Island": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the island it is (maybe only partially) located on",
+          "examples": [
+            "Island",
+            "Great Britain",
+            "Pitcairn",
+            "Guam",
+            "Corse"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.mergesWith": {
+      "fields": {
+        "Sea1": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the name of the mountain",
+          "examples": [
+            "Andaman Sea",
+            "Arabian Sea",
+            "Arctic Ocean",
+            "Atlantic Ocean",
+            "Baltic Sea"
+          ]
+        },
+        "Sea2": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the country code where it is located",
+          "examples": [
+            "Sea2",
+            "Gulf of Bengal",
+            "Indian Ocean",
+            "Malakka Strait",
+            "Gulf of Aden"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.mountain": {
+      "fields": {
+        "Name": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the name of the mountain",
+          "examples": []
+        },
+        "Mountains": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the mountains where it belongs to",
+          "examples": []
+        },
+        "Height": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the maximal elevation of the summit of the mountain",
+          "examples": []
+        },
+        "Type": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the sea where it finally flows to",
+          "examples": []
+        },
+        "Longitude": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the length of the river",
+          "examples": []
+        },
+        "Latitude": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the longitude of its source",
+          "examples": []
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.mountainOnIsland": {
+      "fields": {
+        "Mountain": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the name of the mountain",
+          "examples": [
+            "Andringitra",
+            "Asahi-Dake",
+            "Barbeau Peak",
+            "Ben Nevis",
+            "Blue Mountain Peak"
+          ]
+        },
+        "Island": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the name of the island",
+          "examples": [
+            "Island",
+            "Madagaskar",
+            "Hokkaido",
+            "Ellesmere Island",
+            "Great Britain"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.organization": {
+      "fields": {
+        "Abbreviation": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "its abbreviation",
+          "examples": [
+            "ABEDA",
+            "ACC",
+            "ACCT",
+            "ACP",
+            "AFESD"
+          ]
+        },
+        "Name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the full name of the organization",
+          "examples": [
+            "ASEAN-Mekong Basin Development Group",
+            "African Development Bank",
+            "African, Caribbean, and Pacific Countries",
+            "Agency for Cultural and Technical Cooperation",
+            "Agency for the Prohibition of Nuclear Weapons in Latin America and the Caribbean"
+          ]
+        },
+        "City": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the city where the headquarters are located",
+          "examples": [
+            "City",
+            "Khartoum",
+            "Paris",
+            "Brussels"
+          ]
+        },
+        "Country": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the code of the country where the headquarters are located",
+          "examples": [
+            "Coun",
+            "SUD",
+            "F",
+            "B"
+          ]
+        },
+        "Province": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name of the province where the headquarters are located,",
+          "examples": [
+            "Province",
+            "al Khartum",
+            "Ile de France",
+            "Brabant"
+          ]
+        },
+        "Established": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "date of establishment",
+          "examples": []
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.politics": {
+      "fields": {
+        "Country": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the country code",
+          "examples": [
+            "A",
+            "AFG",
+            "AG",
+            "AL",
+            "AMSA"
+          ]
+        },
+        "Independence": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "date of independence",
+          "examples": []
+        },
+        "Dependent": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the country code where the area belongs to",
+          "examples": [
+            "Depe",
+            "USA",
+            "NL",
+            "GB"
+          ]
+        },
+        "Government": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "type of government",
+          "examples": [
+            "Government",
+            "federal republic",
+            "transitional government",
+            "parliamentary democracy",
+            "emerging democracy"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.population": {
+      "fields": {
+        "Country": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the country code",
+          "examples": [
+            "A",
+            "AFG",
+            "AG",
+            "AL",
+            "AMSA"
+          ]
+        },
+        "Population_Growth": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "population growth rate",
+          "examples": [
+            "0.41",
+            "4.78",
+            "0.76",
+            "1.34",
+            "1.22"
+          ]
+        },
+        "Infant_Mortality": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "infant mortality",
+          "examples": [
+            "6.2",
+            "149.7",
+            "17.2",
+            "49.2",
+            "10.18"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.province": {
+      "fields": {
+        "Name": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name of the administrative division",
+          "examples": [
+            "AG",
+            "AI",
+            "AR",
+            "Aali an Nil",
+            "Aberconwy and Colwyn"
+          ]
+        },
+        "Country": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the country code where it belongs to",
+          "examples": [
+            "CH",
+            "SUD",
+            "GB",
+            "I",
+            "UAE"
+          ]
+        },
+        "Population": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the population of the province",
+          "examples": [
+            "1599605",
+            "110700",
+            "1263000",
+            "670000",
+            "483483"
+          ]
+        },
+        "Area": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the total area of the province,",
+          "examples": [
+            "238792.0",
+            "1130.0",
+            "10794.0",
+            "67350.0",
+            "153149.0"
+          ]
+        },
+        "Capital": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name of the capital",
+          "examples": [
+            "Malakal",
+            "Colwyn Bay",
+            "LAquila",
+            "Rio Branco"
+          ]
+        },
+        "CapProv": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name of the province where the capital belongs to",
+          "examples": [
+            "Aali an Nil",
+            "Aberconwy and Colwyn",
+            "Abruzzo",
+            "Acre"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.religion": {
+      "fields": {
+        "Country": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the country code",
+          "examples": [
+            "BERM",
+            "AUS",
+            "AXA",
+            "BS",
+            "CAYM"
+          ]
+        },
+        "Name": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "name of the religion",
+          "examples": [
+            "African Methodist Episcopal",
+            "Anglican",
+            "Armenian Apostolic",
+            "Bahai",
+            "Baptist"
+          ]
+        },
+        "Percentage": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "percentage of the language in this country",
+          "examples": [
+            "11.0",
+            "26.1",
+            "29.0",
+            "23.0",
+            "20.0"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.river": {
+      "fields": {
+        "Name": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the name of the river",
+          "examples": [
+            "Aare",
+            "Adda",
+            "Akagera",
+            "Allegheny River",
+            "Aller"
+          ]
+        },
+        "River": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the river where it finally flows to",
+          "examples": [
+            "Rhein",
+            "Po",
+            "Ohio River",
+            "Weser"
+          ]
+        },
+        "Lake": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the lake where it finally flows to",
+          "examples": [
+            "Brienzersee",
+            "Lago di Como",
+            "Lake Victoria",
+            "Chiemsee"
+          ]
+        },
+        "Sea": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the sea where it finally flows to",
+          "examples": [
+            "Atlantic Ocean",
+            "Sea of Okhotsk",
+            "Mediterranean Sea",
+            "Malakka Strait"
+          ]
+        },
+        "Length": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the length of the river",
+          "examples": [
+            "288.0",
+            "313.0",
+            "275.0",
+            "523.0",
+            "211.0"
+          ]
+        },
+        "SourceLongitude": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the longitude of its source",
+          "examples": [
+            "8.2",
+            "10.3",
+            "29.3",
+            "-77.9",
+            "11.23"
+          ]
+        },
+        "SourceLatitude": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the latitude of its source",
+          "examples": [
+            "46.55",
+            "-2.5",
+            "41.9",
+            "52.1",
+            "47.3"
+          ]
+        },
+        "Mountains": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the mountains where its source is located",
+          "examples": [
+            "Alps",
+            "East African Rift",
+            "Appalachian Mountains",
+            "Andes"
+          ]
+        },
+        "SourceAltitude": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the elevation (above sea level) of its source",
+          "examples": [
+            "2310.0",
+            "2235.0",
+            "2700.0",
+            "759.0",
+            "130.0"
+          ]
+        },
+        "EstuaryLongitude": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the coordinates of its estuary",
+          "examples": [
+            "8.22",
+            "9.88",
+            "33.0",
+            "-80.0",
+            "9.18"
+          ]
+        },
+        "EstuaryLatitude": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the latitude of its estuary",
+          "examples": [
+            "47.61",
+            "45.13",
+            "-1.0",
+            "40.42",
+            "52.94"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.sea": {
+      "fields": {
+        "Name": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the name of the sea",
+          "examples": [
+            "Andaman Sea",
+            "Arabian Sea",
+            "Arctic Ocean",
+            "Atlantic Ocean",
+            "Baltic Sea"
+          ]
+        },
+        "Depth": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the maximal depth of the sea",
+          "examples": [
+            "3113.0",
+            "5203.0",
+            "5608.0",
+            "9219.0",
+            "459.0"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.target": {
+      "fields": {
+        "Country": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "A",
+            "AFG",
+            "AL",
+            "AMSA",
+            "AND"
+          ]
+        },
+        "Target": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Target",
+            "Christian",
+            "non-Christian"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.borders",
+      "Country2",
+      "main",
+      "country",
+      "Code"
+    ],
+    [
+      "main.borders",
+      "Country1",
+      "main",
+      "country",
+      "Code"
+    ],
+    [
+      "main.city",
+      "Province",
+      "main",
+      "province",
+      "Name"
+    ],
+    [
+      "main.city",
+      "Country",
+      "main",
+      "province",
+      "Country"
+    ],
+    [
+      "main.city",
+      "Country",
+      "main",
+      "country",
+      "Code"
+    ],
+    [
+      "main.economy",
+      "Country",
+      "main",
+      "country",
+      "Code"
+    ],
+    [
+      "main.encompasses",
+      "Continent",
+      "main",
+      "continent",
+      "Name"
+    ],
+    [
+      "main.encompasses",
+      "Country",
+      "main",
+      "country",
+      "Code"
+    ],
+    [
+      "main.ethnicGroup",
+      "Country",
+      "main",
+      "country",
+      "Code"
+    ],
+    [
+      "main.geo_desert",
+      "Province",
+      "main",
+      "province",
+      "Name"
+    ],
+    [
+      "main.geo_desert",
+      "Country",
+      "main",
+      "province",
+      "Country"
+    ],
+    [
+      "main.geo_desert",
+      "Country",
+      "main",
+      "country",
+      "Code"
+    ],
+    [
+      "main.geo_desert",
+      "Desert",
+      "main",
+      "desert",
+      "Name"
+    ],
+    [
+      "main.geo_estuary",
+      "Province",
+      "main",
+      "province",
+      "Name"
+    ],
+    [
+      "main.geo_estuary",
+      "Country",
+      "main",
+      "province",
+      "Country"
+    ],
+    [
+      "main.geo_estuary",
+      "Country",
+      "main",
+      "country",
+      "Code"
+    ],
+    [
+      "main.geo_estuary",
+      "River",
+      "main",
+      "river",
+      "Name"
+    ],
+    [
+      "main.geo_island",
+      "Province",
+      "main",
+      "province",
+      "Name"
+    ],
+    [
+      "main.geo_island",
+      "Country",
+      "main",
+      "province",
+      "Country"
+    ],
+    [
+      "main.geo_island",
+      "Country",
+      "main",
+      "country",
+      "Code"
+    ],
+    [
+      "main.geo_island",
+      "Island",
+      "main",
+      "island",
+      "Name"
+    ],
+    [
+      "main.geo_lake",
+      "Province",
+      "main",
+      "province",
+      "Name"
+    ],
+    [
+      "main.geo_lake",
+      "Country",
+      "main",
+      "province",
+      "Country"
+    ],
+    [
+      "main.geo_lake",
+      "Country",
+      "main",
+      "country",
+      "Code"
+    ],
+    [
+      "main.geo_lake",
+      "Lake",
+      "main",
+      "lake",
+      "Name"
+    ],
+    [
+      "main.geo_mountain",
+      "Province",
+      "main",
+      "province",
+      "Name"
+    ],
+    [
+      "main.geo_mountain",
+      "Country",
+      "main",
+      "province",
+      "Country"
+    ],
+    [
+      "main.geo_mountain",
+      "Country",
+      "main",
+      "country",
+      "Code"
+    ],
+    [
+      "main.geo_mountain",
+      "Mountain",
+      "main",
+      "mountain",
+      "Name"
+    ],
+    [
+      "main.geo_river",
+      "Province",
+      "main",
+      "province",
+      "Name"
+    ],
+    [
+      "main.geo_river",
+      "Country",
+      "main",
+      "province",
+      "Country"
+    ],
+    [
+      "main.geo_river",
+      "Country",
+      "main",
+      "country",
+      "Code"
+    ],
+    [
+      "main.geo_river",
+      "River",
+      "main",
+      "river",
+      "Name"
+    ],
+    [
+      "main.geo_sea",
+      "Province",
+      "main",
+      "province",
+      "Name"
+    ],
+    [
+      "main.geo_sea",
+      "Country",
+      "main",
+      "province",
+      "Country"
+    ],
+    [
+      "main.geo_sea",
+      "Country",
+      "main",
+      "country",
+      "Code"
+    ],
+    [
+      "main.geo_sea",
+      "Sea",
+      "main",
+      "sea",
+      "Name"
+    ],
+    [
+      "main.geo_source",
+      "Province",
+      "main",
+      "province",
+      "Name"
+    ],
+    [
+      "main.geo_source",
+      "Country",
+      "main",
+      "province",
+      "Country"
+    ],
+    [
+      "main.geo_source",
+      "Country",
+      "main",
+      "country",
+      "Code"
+    ],
+    [
+      "main.geo_source",
+      "River",
+      "main",
+      "river",
+      "Name"
+    ],
+    [
+      "main.isMember",
+      "Organization",
+      "main",
+      "organization",
+      "Abbreviation"
+    ],
+    [
+      "main.isMember",
+      "Country",
+      "main",
+      "country",
+      "Code"
+    ],
+    [
+      "main.islandIn",
+      "River",
+      "main",
+      "river",
+      "Name"
+    ],
+    [
+      "main.islandIn",
+      "Lake",
+      "main",
+      "lake",
+      "Name"
+    ],
+    [
+      "main.islandIn",
+      "Sea",
+      "main",
+      "sea",
+      "Name"
+    ],
+    [
+      "main.islandIn",
+      "Island",
+      "main",
+      "island",
+      "Name"
+    ],
+    [
+      "main.language",
+      "Country",
+      "main",
+      "country",
+      "Code"
+    ],
+    [
+      "main.located",
+      "Province",
+      "main",
+      "province",
+      "Name"
+    ],
+    [
+      "main.located",
+      "Country",
+      "main",
+      "province",
+      "Country"
+    ],
+    [
+      "main.located",
+      "City",
+      "main",
+      "city",
+      "Name"
+    ],
+    [
+      "main.located",
+      "Province",
+      "main",
+      "city",
+      "Province"
+    ],
+    [
+      "main.located",
+      "Sea",
+      "main",
+      "sea",
+      "Name"
+    ],
+    [
+      "main.located",
+      "Lake",
+      "main",
+      "lake",
+      "Name"
+    ],
+    [
+      "main.located",
+      "River",
+      "main",
+      "river",
+      "Name"
+    ],
+    [
+      "main.located",
+      "Country",
+      "main",
+      "country",
+      "Code"
+    ],
+    [
+      "main.locatedOn",
+      "Province",
+      "main",
+      "province",
+      "Name"
+    ],
+    [
+      "main.locatedOn",
+      "Country",
+      "main",
+      "province",
+      "Country"
+    ],
+    [
+      "main.locatedOn",
+      "City",
+      "main",
+      "city",
+      "Name"
+    ],
+    [
+      "main.locatedOn",
+      "Province",
+      "main",
+      "city",
+      "Province"
+    ],
+    [
+      "main.locatedOn",
+      "Island",
+      "main",
+      "island",
+      "Name"
+    ],
+    [
+      "main.locatedOn",
+      "Country",
+      "main",
+      "country",
+      "Code"
+    ],
+    [
+      "main.mergesWith",
+      "Sea2",
+      "main",
+      "sea",
+      "Name"
+    ],
+    [
+      "main.mergesWith",
+      "Sea1",
+      "main",
+      "sea",
+      "Name"
+    ],
+    [
+      "main.mountainOnIsland",
+      "Island",
+      "main",
+      "island",
+      "Name"
+    ],
+    [
+      "main.mountainOnIsland",
+      "Mountain",
+      "main",
+      "mountain",
+      "Name"
+    ],
+    [
+      "main.organization",
+      "Province",
+      "main",
+      "province",
+      "Name"
+    ],
+    [
+      "main.organization",
+      "Country",
+      "main",
+      "province",
+      "Country"
+    ],
+    [
+      "main.organization",
+      "City",
+      "main",
+      "city",
+      "Name"
+    ],
+    [
+      "main.organization",
+      "Province",
+      "main",
+      "city",
+      "Province"
+    ],
+    [
+      "main.organization",
+      "Country",
+      "main",
+      "country",
+      "Code"
+    ],
+    [
+      "main.politics",
+      "Dependent",
+      "main",
+      "country",
+      "Code"
+    ],
+    [
+      "main.politics",
+      "Country",
+      "main",
+      "country",
+      "Code"
+    ],
+    [
+      "main.population",
+      "Country",
+      "main",
+      "country",
+      "Code"
+    ],
+    [
+      "main.province",
+      "Country",
+      "main",
+      "country",
+      "Code"
+    ],
+    [
+      "main.religion",
+      "Country",
+      "main",
+      "country",
+      "Code"
+    ],
+    [
+      "main.river",
+      "Lake",
+      "main",
+      "lake",
+      "Name"
+    ],
+    [
+      "main.target",
+      "Country",
+      "main",
+      "country",
+      "Code"
+    ]
+  ]
+}

@@ -1,0 +1,717 @@
+{
+  "db_id": "bike_share_1",
+  "schema": null,
+  "tables": {
+    "main.station": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique ID for each station",
+          "examples": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        },
+        "name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Station name",
+          "examples": [
+            "San Jose Diridon Caltrain Station",
+            "San Jose Civic Center",
+            "Santa Clara at Almaden",
+            "Adobe on Almaden",
+            "San Pedro Square"
+          ]
+        },
+        "lat": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "latitude",
+          "examples": [
+            "37.329732",
+            "37.330698",
+            "37.333988",
+            "37.331415",
+            "37.336721000000004"
+          ]
+        },
+        "long": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "longitude",
+          "examples": [
+            "-121.90178200000001",
+            "-121.888979",
+            "-121.894902",
+            "-121.8932",
+            "-121.894074"
+          ]
+        },
+        "dock_count": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "number of bikes the station can hold",
+          "examples": [
+            "27",
+            "15",
+            "11",
+            "19",
+            "25"
+          ]
+        },
+        "city": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "San Jose",
+            "Redwood City",
+            "Mountain View",
+            "Palo Alto",
+            "San Francisco"
+          ]
+        },
+        "installation_date": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "installation date",
+          "examples": [
+            "8/6/2013",
+            "8/5/2013",
+            "8/7/2013",
+            "8/12/2013",
+            "8/15/2013"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.status": {
+      "fields": {
+        "station_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "station id",
+          "examples": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        },
+        "bikes_available": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "number of available bikes",
+          "examples": [
+            "2",
+            "3",
+            "4",
+            "1",
+            "5"
+          ]
+        },
+        "docks_available": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "number of available docks",
+          "examples": [
+            "25",
+            "24",
+            "23",
+            "26",
+            "22"
+          ]
+        },
+        "time": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "2013/08/29 12:06:01",
+            "2013/08/29 12:07:01",
+            "2013/08/29 12:08:01",
+            "2013/08/29 12:09:01",
+            "2013/08/29 12:10:01"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.trip": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "4069",
+            "4073",
+            "4074",
+            "4075",
+            "4076"
+          ]
+        },
+        "duration": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The duration of the trip in seconds",
+          "examples": [
+            "174",
+            "1067",
+            "1131",
+            "1117",
+            "1118"
+          ]
+        },
+        "start_date": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "start date",
+          "examples": [
+            "8/29/2013 9:08",
+            "8/29/2013 9:24",
+            "8/29/2013 9:25",
+            "8/29/2013 9:31",
+            "8/29/2013 9:35"
+          ]
+        },
+        "start_station_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The name of the start station",
+          "examples": [
+            "2nd at South Park",
+            "South Van Ness at Market",
+            "Redwood City Caltrain Station",
+            "Mountain View City Hall",
+            "Commercial at Montgomery"
+          ]
+        },
+        "start_station_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The ID of the start station",
+          "examples": [
+            "64",
+            "66",
+            "22",
+            "27",
+            "45"
+          ]
+        },
+        "end_date": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "end date",
+          "examples": [
+            "8/29/2013 9:11",
+            "8/29/2013 9:42",
+            "8/29/2013 9:43",
+            "8/29/2013 10:34",
+            "8/29/2013 9:52"
+          ]
+        },
+        "end_station_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The name of the end station",
+          "examples": [
+            "2nd at South Park",
+            "San Francisco Caltrain 2 (330 Townsend)",
+            "Redwood City Caltrain Station",
+            "South Van Ness at Market",
+            "Mountain View City Hall"
+          ]
+        },
+        "end_station_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The ID of the end station",
+          "examples": [
+            "64",
+            "69",
+            "22",
+            "66",
+            "27"
+          ]
+        },
+        "bike_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The ID of the bike",
+          "examples": [
+            "288",
+            "321",
+            "317",
+            "316",
+            "322"
+          ]
+        },
+        "subscription_type": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "subscription type",
+          "examples": [
+            "Subscriber",
+            "Customer"
+          ]
+        },
+        "zip_code": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "zip code",
+          "examples": [
+            "94114",
+            "94703",
+            "94115",
+            "94122",
+            "94597"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.weather": {
+      "fields": {
+        "date": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "8/29/2013",
+            "8/30/2013",
+            "8/31/2013",
+            "9/1/2013",
+            "9/2/2013"
+          ]
+        },
+        "max_temperature_f": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "max temperature in Fahrenheit degree",
+          "examples": [
+            "74",
+            "78",
+            "71",
+            "75",
+            "73"
+          ]
+        },
+        "mean_temperature_f": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "mean temperature in Fahrenheit degree",
+          "examples": [
+            "68",
+            "69",
+            "64",
+            "66",
+            "67"
+          ]
+        },
+        "min_temperature_f": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "min temperature in Fahrenheit degree",
+          "examples": [
+            "61",
+            "60",
+            "57",
+            "58",
+            "62"
+          ]
+        },
+        "max_dew_point_f": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "max dew point in Fahrenheit degree",
+          "examples": [
+            "61",
+            "57",
+            "60",
+            "59",
+            "64"
+          ]
+        },
+        "mean_dew_point_f": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "mean dew point in Fahrenheit degree",
+          "examples": [
+            "58",
+            "56",
+            "60",
+            "57",
+            "51"
+          ]
+        },
+        "min_dew_point_f": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "min dew point in Fahrenheit degree",
+          "examples": [
+            "56",
+            "54",
+            "53",
+            "58",
+            "51"
+          ]
+        },
+        "max_humidity": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "max humidity",
+          "examples": [
+            "93",
+            "90",
+            "87",
+            "84",
+            "86"
+          ]
+        },
+        "mean_humidity": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "mean humidity",
+          "examples": [
+            "75",
+            "70",
+            "68",
+            "77",
+            "65"
+          ]
+        },
+        "min_humidity": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "min humidity",
+          "examples": [
+            "57",
+            "50",
+            "49",
+            "61",
+            "46"
+          ]
+        },
+        "max_sea_level_pressure_inches": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "max sea level pressure in inches",
+          "examples": [
+            "30.07",
+            "30.05",
+            "30.0",
+            "29.96",
+            "29.97"
+          ]
+        },
+        "mean_sea_level_pressure_inches": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "mean sea level pressure in inches",
+          "examples": [
+            "30.02",
+            "30.0",
+            "29.96",
+            "29.93",
+            "29.94"
+          ]
+        },
+        "min_sea_level_pressure_inches": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "min sea level pressure in inches",
+          "examples": [
+            "29.97",
+            "29.93",
+            "29.92",
+            "29.91",
+            "29.9"
+          ]
+        },
+        "max_visibility_miles": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "max visibility in miles",
+          "examples": [
+            "10",
+            "9",
+            "8",
+            "20",
+            "15"
+          ]
+        },
+        "mean_visibility_miles": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "mean visibility in miles",
+          "examples": [
+            "10",
+            "9",
+            "8",
+            "5",
+            "7"
+          ]
+        },
+        "min_visibility_miles": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "min visibility in miles",
+          "examples": [
+            "10",
+            "7",
+            "6",
+            "9",
+            "2"
+          ]
+        },
+        "max_wind_Speed_mph": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "max wind Speed in mph",
+          "examples": [
+            "23",
+            "29",
+            "26",
+            "25",
+            "24"
+          ]
+        },
+        "mean_wind_speed_mph": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "mean wind Speed in mph",
+          "examples": [
+            "11",
+            "13",
+            "15",
+            "12",
+            "19"
+          ]
+        },
+        "max_gust_speed_mph": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "max gust Speed in mph",
+          "examples": [
+            "28",
+            "35",
+            "31",
+            "29",
+            "30"
+          ]
+        },
+        "precipitation_inches": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "precipitation in inches",
+          "examples": [
+            "0",
+            "0.23",
+            "T",
+            "0.01",
+            "0.28"
+          ]
+        },
+        "cloud_cover": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "cloud cover",
+          "examples": [
+            "4",
+            "2",
+            "6",
+            "3",
+            "0"
+          ]
+        },
+        "events": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Fog",
+            "Rain",
+            "Fog-Rain",
+            "rain"
+          ]
+        },
+        "wind_dir_degrees": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "wind direction degrees",
+          "examples": [
+            "286",
+            "291",
+            "284",
+            "277",
+            "276"
+          ]
+        },
+        "zip_code": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "zip code",
+          "examples": [
+            "94107",
+            "94063",
+            "94301",
+            "94041",
+            "95113"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": []
+}

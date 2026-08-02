@@ -1,0 +1,193 @@
+{
+  "db_id": "trains",
+  "schema": null,
+  "tables": {
+    "main.cars": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id number representing the cars",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "train_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the counterpart id for trains that the cars belong to",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "position": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "postion id of cars in the trains",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "shape": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "shape of the cars",
+          "examples": [
+            "rectangle",
+            "bucket",
+            "u_shaped",
+            "hexagon",
+            "ellipse"
+          ]
+        },
+        "len": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "length of the cars",
+          "examples": [
+            "short",
+            "long"
+          ]
+        },
+        "sides": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "sides of the cars",
+          "examples": [
+            "not_double",
+            "double"
+          ]
+        },
+        "roof": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "roof of the cars",
+          "examples": [
+            "none",
+            "peaked",
+            "flat",
+            "arc",
+            "jagged"
+          ]
+        },
+        "wheels": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "wheels of the cars",
+          "examples": [
+            "2",
+            "3"
+          ]
+        },
+        "load_shape": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "load shape",
+          "examples": [
+            "circle",
+            "hexagon",
+            "triangle",
+            "rectangle",
+            "diamond"
+          ]
+        },
+        "load_num": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "load number",
+          "examples": [
+            "1",
+            "3",
+            "2",
+            "0"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.trains": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id representing the trains",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "direction": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the direction of trains that are running",
+          "examples": [
+            "east",
+            "west"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.cars",
+      "train_id",
+      "main",
+      "trains",
+      "id"
+    ]
+  ]
+}

@@ -1,0 +1,615 @@
+{
+  "db_id": "olympics",
+  "schema": null,
+  "tables": {
+    "main.city": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier of the city",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "city_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the name of the city",
+          "examples": [
+            "Barcelona",
+            "London",
+            "Antwerpen",
+            "Paris",
+            "Calgary"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.competitor_event": {
+      "fields": {
+        "event_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the event Maps to event(id)",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "competitor_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the competitor Maps to games_competitor(id)",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "medal_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the medal Maps to medal(id)",
+          "examples": [
+            "4",
+            "1",
+            "3",
+            "2"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.event": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier of the event",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "sport_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the sport Maps to sport(id)",
+          "examples": [
+            "9",
+            "33",
+            "25",
+            "62",
+            "54"
+          ]
+        },
+        "event_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the name of the event",
+          "examples": [
+            "Basketball Men's Basketball",
+            "Judo Men's Extra-Lightweight",
+            "Football Men's Football",
+            "Tug-Of-War Men's Tug-Of-War",
+            "Speed Skating Women's 500 metres"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.games": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier of the game",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "games_year": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the year of the game",
+          "examples": [
+            "1992",
+            "2012",
+            "1920",
+            "1900",
+            "1988"
+          ]
+        },
+        "games_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the name of the game",
+          "examples": [
+            "1992 Summer",
+            "2012 Summer",
+            "1920 Summer",
+            "1900 Summer",
+            "1988 Winter"
+          ]
+        },
+        "season": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the season of the game",
+          "examples": [
+            "Summer",
+            "Winter"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.games_city": {
+      "fields": {
+        "games_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the game Maps to games(id)",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "city_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the city that held the game Maps to city(id)",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.games_competitor": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier of the record",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "games_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the game Maps to games(id)",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "person_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the person Maps to person(id)",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "age": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the age of the person when he/she participated in the game",
+          "examples": [
+            "24",
+            "23",
+            "34",
+            "21",
+            "25"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.medal": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier of the metal",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "medal_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the name of the medal",
+          "examples": [
+            "Gold",
+            "Silver",
+            "Bronze",
+            "NA"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.noc_region": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier of the noc region",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "noc": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the NOC code of the region",
+          "examples": [
+            "AFG",
+            "AHO",
+            "ALB",
+            "ALG",
+            "AND"
+          ]
+        },
+        "region_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the name of the region",
+          "examples": [
+            "Afghanistan",
+            "Netherlands Antilles",
+            "Albania",
+            "Algeria",
+            "Andorra"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.person": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier of the person",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "full_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the full name of the person",
+          "examples": [
+            "A Dijiang",
+            "A Lamusi",
+            "Gunnar Nielsen Aaby",
+            "Edgar Lindenau Aabye",
+            "Christine Jacoba Aaftink"
+          ]
+        },
+        "gender": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the gender of the person",
+          "examples": [
+            "M",
+            "F"
+          ]
+        },
+        "height": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the height of the person",
+          "examples": [
+            "180",
+            "170",
+            "0",
+            "185",
+            "188"
+          ]
+        },
+        "weight": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the weight of the person",
+          "examples": [
+            "80",
+            "60",
+            "0",
+            "82",
+            "75"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.person_region": {
+      "fields": {
+        "person_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the person Maps to person(id)",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "region_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the id of the noc region Maps to noc_region(id)",
+          "examples": [
+            "42",
+            "56",
+            "146",
+            "217",
+            "69"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.sport": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier of the sport",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "sport_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the name of the sport",
+          "examples": [
+            "Aeronautics",
+            "Alpine Skiing",
+            "Alpinism",
+            "Archery",
+            "Art Competitions"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.competitor_event",
+      "competitor_id",
+      "main",
+      "games_competitor",
+      "id"
+    ],
+    [
+      "main.competitor_event",
+      "event_id",
+      "main",
+      "event",
+      "id"
+    ],
+    [
+      "main.competitor_event",
+      "medal_id",
+      "main",
+      "medal",
+      "id"
+    ],
+    [
+      "main.event",
+      "sport_id",
+      "main",
+      "sport",
+      "id"
+    ],
+    [
+      "main.games_city",
+      "city_id",
+      "main",
+      "city",
+      "id"
+    ],
+    [
+      "main.games_city",
+      "games_id",
+      "main",
+      "games",
+      "id"
+    ],
+    [
+      "main.games_competitor",
+      "games_id",
+      "main",
+      "games",
+      "id"
+    ],
+    [
+      "main.games_competitor",
+      "person_id",
+      "main",
+      "person",
+      "id"
+    ],
+    [
+      "main.person_region",
+      "person_id",
+      "main",
+      "person",
+      "id"
+    ],
+    [
+      "main.person_region",
+      "region_id",
+      "main",
+      "noc_region",
+      "id"
+    ]
+  ]
+}

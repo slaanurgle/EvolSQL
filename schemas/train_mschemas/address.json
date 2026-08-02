@@ -1,0 +1,1317 @@
+{
+  "db_id": "address",
+  "schema": null,
+  "tables": {
+    "main.CBSA": {
+      "fields": {
+        "CBSA": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the code of the cbsa officer",
+          "examples": [
+            "10300",
+            "10380",
+            "10420",
+            "10500",
+            "10580"
+          ]
+        },
+        "CBSA_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name and the position of the cbsa officer",
+          "examples": [
+            "Adrian, MI",
+            "Aguadilla-Isabela, PR",
+            "Akron, OH",
+            "Albany, GA",
+            "Albany-Schenectady-Troy, NY"
+          ]
+        },
+        "CBSA_type": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the office type of the officer",
+          "examples": [
+            "Micro",
+            "Metro"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.alias": {
+      "fields": {
+        "zip_code": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the zip code of the alias",
+          "examples": [
+            "501",
+            "544",
+            "601",
+            "602",
+            "603"
+          ]
+        },
+        "alias": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the alias of the city",
+          "examples": [
+            "Holtsville",
+            "Adjuntas",
+            "Aguada",
+            "Aguadilla",
+            "Maricao"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.area_code": {
+      "fields": {
+        "zip_code": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the zip code of the area",
+          "examples": [
+            "501",
+            "544",
+            "601",
+            "602",
+            "603"
+          ]
+        },
+        "area_code": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the code of the area",
+          "examples": [
+            "631",
+            "787",
+            "939",
+            "340",
+            "413"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.avoid": {
+      "fields": {
+        "zip_code": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the zip code of the bad alias",
+          "examples": [
+            "501",
+            "544",
+            "601",
+            "602",
+            "603"
+          ]
+        },
+        "bad_alias": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the bad alias",
+          "examples": [
+            "Internal Revenue Service",
+            "Colinas Del Gigante",
+            "Jard De Adjuntas",
+            "URB San Joaquin",
+            "Alts De Aguada"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.congress": {
+      "fields": {
+        "cognress_rep_id": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the representative id of congress representatives",
+          "examples": [
+            "AK",
+            "AK-S1",
+            "AK-S2",
+            "AL-1",
+            "AL-2"
+          ]
+        },
+        "first_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the first name of the congress representative",
+          "examples": [
+            "Young",
+            "Begich",
+            "Murkowski",
+            "Byrne",
+            "Roby"
+          ]
+        },
+        "last_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the last name of the congress representative",
+          "examples": [
+            "Don",
+            "Mark",
+            "Lisa",
+            "Bradley",
+            "Martha"
+          ]
+        },
+        "CID": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique identifier for the congress representative",
+          "examples": [
+            "N00008091",
+            "N00009585",
+            "N00033101",
+            "N00031938",
+            "N00031177"
+          ]
+        },
+        "party": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the party of the representative",
+          "examples": [
+            "Republican",
+            "Democrat",
+            "Independent"
+          ]
+        },
+        "state": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the state that the representative is from",
+          "examples": [
+            "Alaska",
+            "Alabama",
+            "Arkansas",
+            "American Samoa",
+            "Arizona"
+          ]
+        },
+        "abbreviation": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the abbreviation of the state",
+          "examples": [
+            "AK",
+            "AL",
+            "AR",
+            "AS",
+            "AZ"
+          ]
+        },
+        "House": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the house that the representative is from",
+          "examples": [
+            "House of Repsentatives",
+            "Senate"
+          ]
+        },
+        "District": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id of the district that the representative represents",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "land_area": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the land area of the district",
+          "examples": [
+            "571951.26",
+            "570641.0",
+            "6066.83",
+            "10141.63",
+            "7543.86"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.country": {
+      "fields": {
+        "zip_code": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the zip code of the state in the country",
+          "examples": [
+            "501",
+            "544",
+            "601",
+            "602",
+            "603"
+          ]
+        },
+        "county": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the country",
+          "examples": [
+            "SUFFOLK",
+            "ADJUNTAS",
+            "AGUADA",
+            "AGUADILLA",
+            "MARICAO"
+          ]
+        },
+        "state": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the state of the country",
+          "examples": [
+            "NY",
+            "PR",
+            "VI",
+            "MA",
+            "RI"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.state": {
+      "fields": {
+        "abbreviation": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the abbreviation of the state name",
+          "examples": [
+            "AA",
+            "AE",
+            "AK",
+            "AL",
+            "AP"
+          ]
+        },
+        "name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the state name",
+          "examples": [
+            "Armed Forces Americas",
+            "Armed Forces Europe",
+            "Alaska",
+            "Alabama",
+            "Armed Forces Pacific"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.zip_congress": {
+      "fields": {
+        "zip_code": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the zip code of the district",
+          "examples": [
+            "501",
+            "601",
+            "602",
+            "603",
+            "604"
+          ]
+        },
+        "district": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the district",
+          "examples": [
+            "NY-1",
+            "PR",
+            "VI",
+            "MA-1",
+            "MA-2"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.zip_data": {
+      "fields": {
+        "zip_code": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the zip code of the postal point",
+          "examples": [
+            "501",
+            "544",
+            "601",
+            "602",
+            "603"
+          ]
+        },
+        "city": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the city where the postal point locates",
+          "examples": [
+            "Holtsville",
+            "Adjuntas",
+            "Aguada",
+            "Aguadilla",
+            "Maricao"
+          ]
+        },
+        "state": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the state of the city",
+          "examples": [
+            "NY",
+            "PR",
+            "VI",
+            "MA",
+            "RI"
+          ]
+        },
+        "multi_county": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "whether the country that the city belongs to is multi_country",
+          "examples": [
+            "No",
+            "Yes"
+          ]
+        },
+        "type": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the type of the postal point",
+          "examples": [
+            "Unique Post Office",
+            "Post Office",
+            "P.O. Box Only",
+            "Branch",
+            "Non Postal Community Name"
+          ]
+        },
+        "organization": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the organization to which the postal point belongs",
+          "examples": [
+            "I R S Service Center",
+            "Irs Service Center",
+            "Centro Medico Metropolitano",
+            "Unique Brm"
+          ]
+        },
+        "time_zone": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the time zone of the postal point location",
+          "examples": [
+            "Eastern",
+            "Atlantic",
+            "Central",
+            "Mountain"
+          ]
+        },
+        "daylight_savings": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "whether the location implements daylight savings",
+          "examples": [
+            "Yes",
+            "No"
+          ]
+        },
+        "latitude": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the latitude of the postal point location",
+          "examples": [
+            "40.817923",
+            "40.788827",
+            "18.196747",
+            "18.352927",
+            "18.458585"
+          ]
+        },
+        "longitude": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the longitude of the postal point location",
+          "examples": [
+            "-73.045317",
+            "-73.039405",
+            "-66.736735",
+            "-67.177532",
+            "-67.129867"
+          ]
+        },
+        "elevation": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the elevation of the postal point location",
+          "examples": [
+            "25",
+            "0",
+            "70",
+            "140",
+            "475"
+          ]
+        },
+        "state_fips": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "state-level FIPS code",
+          "examples": [
+            "36",
+            "72",
+            "78",
+            "25",
+            "44"
+          ]
+        },
+        "county_fips": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "country-level FIPS code",
+          "examples": [
+            "103",
+            "1",
+            "3",
+            "5",
+            "93"
+          ]
+        },
+        "region": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the region where the postal point locates",
+          "examples": [
+            "Northeast",
+            "South",
+            "Midwest",
+            "West"
+          ]
+        },
+        "division": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the division of the organization",
+          "examples": [
+            "Middle Atlantic",
+            "New England",
+            "South Atlantic",
+            "East South Central"
+          ]
+        },
+        "population_2020": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the population of the residential area in 2020",
+          "examples": [
+            "0",
+            "11737",
+            "24263",
+            "40361",
+            "3454"
+          ]
+        },
+        "population_2010": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the population of the residential area in 2010",
+          "examples": [
+            "0",
+            "18570",
+            "41520",
+            "54689",
+            "6615"
+          ]
+        },
+        "households": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the number of the households in the residential area",
+          "examples": [
+            "0",
+            "6525",
+            "15002",
+            "21161",
+            "2404"
+          ]
+        },
+        "avg_house_value": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the average house value in the residential area",
+          "examples": [
+            "0",
+            "86200",
+            "86300",
+            "122400",
+            "91600"
+          ]
+        },
+        "avg_income_per_household": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the average income per household in the residential area",
+          "examples": [
+            "0",
+            "13092",
+            "16358",
+            "16603",
+            "12832"
+          ]
+        },
+        "persons_per_household": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the number of persons per household residential area",
+          "examples": [
+            "0.0",
+            "2.84",
+            "2.76",
+            "2.53",
+            "2.75"
+          ]
+        },
+        "white_population": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the population of white people in the residential area",
+          "examples": [
+            "0",
+            "17479",
+            "36828",
+            "46501",
+            "5979"
+          ]
+        },
+        "black_population": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the population of black people in the residential area",
+          "examples": [
+            "0",
+            "663",
+            "2860",
+            "5042",
+            "371"
+          ]
+        },
+        "hispanic_population": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the population of Hispanic people in the residential area",
+          "examples": [
+            "0",
+            "18486",
+            "41265",
+            "53877",
+            "6575"
+          ]
+        },
+        "asian_population": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the population of Asian people in the residential area",
+          "examples": [
+            "0",
+            "7",
+            "42",
+            "135",
+            "3"
+          ]
+        },
+        "american_indian_population": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the population of American Indian people in the residential area",
+          "examples": [
+            "0",
+            "113",
+            "291",
+            "313",
+            "35"
+          ]
+        },
+        "hawaiian_population": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the population of Hawaiian people in the residential area",
+          "examples": [
+            "0",
+            "10",
+            "32",
+            "35",
+            "9"
+          ]
+        },
+        "other_population": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the population of other races in the residential area",
+          "examples": [
+            "0",
+            "558",
+            "2634",
+            "4177",
+            "323"
+          ]
+        },
+        "male_population": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the population of males in the residential area",
+          "examples": [
+            "0",
+            "9078",
+            "20396",
+            "26597",
+            "3268"
+          ]
+        },
+        "female_population": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the population of females in the residential area",
+          "examples": [
+            "0",
+            "9492",
+            "21124",
+            "28092",
+            "3347"
+          ]
+        },
+        "median_age": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the median age of the residential area",
+          "examples": [
+            "0.0",
+            "35.9",
+            "37.5",
+            "38.2",
+            "36.2"
+          ]
+        },
+        "male_median_age": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the male median age in the residential area",
+          "examples": [
+            "0.0",
+            "34.5",
+            "36.6",
+            "35.7",
+            "36.3"
+          ]
+        },
+        "female_median_age": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the female median age in the residential area",
+          "examples": [
+            "0.0",
+            "37.1",
+            "38.5",
+            "39.8",
+            "36.6"
+          ]
+        },
+        "residential_mailboxes": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the number of residential mailboxes in the residential area",
+          "examples": [
+            "0",
+            "4133",
+            "8791",
+            "15953",
+            "1256"
+          ]
+        },
+        "business_mailboxes": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the number of business mailboxes in the residential area",
+          "examples": [
+            "1",
+            "0",
+            "221",
+            "519",
+            "764"
+          ]
+        },
+        "total_delivery_receptacles": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the total number of delivery receptacles",
+          "examples": [
+            "1",
+            "0",
+            "5173",
+            "11302",
+            "19186"
+          ]
+        },
+        "businesses": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the number of businesses in the residential area",
+          "examples": [
+            "2",
+            "0",
+            "472",
+            "564",
+            "21"
+          ]
+        },
+        "1st_quarter_payroll": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the total wages reported in the 1st quarter payroll report of the residential area",
+          "examples": [
+            "0",
+            "88685000",
+            "109167000",
+            "2371000",
+            "1335000"
+          ]
+        },
+        "annual_payroll": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the total wages reported in the annual payroll report of the residential area",
+          "examples": [
+            "0",
+            "376492000",
+            "472633000",
+            "10461000",
+            "5915000"
+          ]
+        },
+        "employees": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the number of employees in the residential area",
+          "examples": [
+            "0",
+            "9127",
+            "18894",
+            "288",
+            "193"
+          ]
+        },
+        "water_area": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the water area of the residential area",
+          "examples": [
+            "0.0",
+            "0.309",
+            "1.71",
+            "0.07",
+            "0.005"
+          ]
+        },
+        "land_area": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the land area of the residential area",
+          "examples": [
+            "0.0",
+            "64.348",
+            "30.621",
+            "31.617",
+            "42.309"
+          ]
+        },
+        "single_family_delivery_units": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the number of single-family delivery units in the residential area",
+          "examples": [
+            "0",
+            "2419",
+            "5473",
+            "9621",
+            "948"
+          ]
+        },
+        "multi_family_delivery_units": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the number of single-family delivery units in the residential area",
+          "examples": [
+            "0",
+            "1264",
+            "827",
+            "2947",
+            "97"
+          ]
+        },
+        "total_beneficiaries": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the total number of beneficiaries of the postal service",
+          "examples": [
+            "0",
+            "5135",
+            "16805",
+            "6345"
+          ]
+        },
+        "retired_workers": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the number of retired workers in the residential area",
+          "examples": [
+            "0",
+            "2940",
+            "12145",
+            "5365"
+          ]
+        },
+        "disabled_workers": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the number of disabled workers in the residential area",
+          "examples": [
+            "0",
+            "885",
+            "1835",
+            "350"
+          ]
+        },
+        "parents_and_widowed": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the number of parents and widowed in the residential area",
+          "examples": [
+            "0",
+            "155",
+            "1045",
+            "225"
+          ]
+        },
+        "spouses": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the number of spouses in the residential area",
+          "examples": [
+            "0",
+            "145",
+            "1085",
+            "270"
+          ]
+        },
+        "children": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the number of children in the residential area",
+          "examples": [
+            "0",
+            "1010",
+            "695",
+            "135"
+          ]
+        },
+        "over_65": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the number of people whose age is over 65 in the residential area",
+          "examples": [
+            "0",
+            "3245",
+            "13260",
+            "5725"
+          ]
+        },
+        "monthly_benefits_all": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "all benefit payments by month",
+          "examples": [
+            "0",
+            "6137000",
+            "14602000",
+            "10634000"
+          ]
+        },
+        "monthly_benefits_retired_workers": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "monthly benefit payments for retired workers",
+          "examples": [
+            "0",
+            "4007000",
+            "10947000",
+            "9421000"
+          ]
+        },
+        "monthly_benefits_widowed": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "monthly benefit payments for retired workers",
+          "examples": [
+            "0",
+            "185000",
+            "966000",
+            "330000"
+          ]
+        },
+        "CBSA": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the code of the cbsa officer",
+          "examples": [
+            "35620",
+            "38660",
+            "10380",
+            "11640"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.alias",
+      "zip_code",
+      "main",
+      "zip_data",
+      "zip_code"
+    ],
+    [
+      "main.area_code",
+      "zip_code",
+      "main",
+      "zip_data",
+      "zip_code"
+    ],
+    [
+      "main.avoid",
+      "zip_code",
+      "main",
+      "zip_data",
+      "zip_code"
+    ],
+    [
+      "main.congress",
+      "abbreviation",
+      "main",
+      "state",
+      "abbreviation"
+    ],
+    [
+      "main.country",
+      "zip_code",
+      "main",
+      "zip_data",
+      "zip_code"
+    ],
+    [
+      "main.country",
+      "state",
+      "main",
+      "state",
+      "abbreviation"
+    ],
+    [
+      "main.zip_congress",
+      "district",
+      "main",
+      "congress",
+      "cognress_rep_id"
+    ],
+    [
+      "main.zip_congress",
+      "zip_code",
+      "main",
+      "zip_data",
+      "zip_code"
+    ],
+    [
+      "main.zip_data",
+      "state",
+      "main",
+      "state",
+      "abbreviation"
+    ],
+    [
+      "main.zip_data",
+      "CBSA",
+      "main",
+      "CBSA",
+      "CBSA"
+    ]
+  ]
+}

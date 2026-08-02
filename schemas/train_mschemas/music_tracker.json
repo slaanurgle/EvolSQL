@@ -1,0 +1,177 @@
+{
+  "db_id": "music_tracker",
+  "schema": null,
+  "tables": {
+    "main.tags": {
+      "fields": {
+        "index": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "index",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "release identifier which can be matched with id field in the torrents table",
+          "examples": [
+            "0",
+            "2",
+            "3",
+            "4",
+            "6"
+          ]
+        },
+        "tag": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "tag",
+          "examples": [
+            "1970s",
+            "funk",
+            "disco",
+            "new.york",
+            "united.states"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.torrents": {
+      "fields": {
+        "groupName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "release title",
+          "examples": [
+            "superappin&#39;",
+            "spiderap / a corona jam",
+            "rapper&#39;s delight",
+            "rap-o clap-o / el rap-o clap-o",
+            "christmas rappin&#39;"
+          ]
+        },
+        "totalSnatched": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "number of times the release has been downloaded",
+          "examples": [
+            "239",
+            "156",
+            "480",
+            "200",
+            "109"
+          ]
+        },
+        "artist": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "artist / group name",
+          "examples": [
+            "grandmaster flash & the furious five",
+            "ron hunt & ronnie g & the sm crew",
+            "sugarhill gang",
+            "joe bataan",
+            "kurtis blow"
+          ]
+        },
+        "groupYear": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "release year",
+          "examples": [
+            "1979",
+            "1980",
+            "1981",
+            "1982",
+            "1983"
+          ]
+        },
+        "releaseType": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "release type (e.g., album, single, mixtape)",
+          "examples": [
+            "single",
+            "album",
+            "live album",
+            "ep",
+            "unknown"
+          ]
+        },
+        "groupId": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Unique release identifier from What.CD. Used to ensure no releases are duplicates",
+          "examples": [
+            "720949",
+            "728752",
+            "18513",
+            "756236",
+            "71818958"
+          ]
+        },
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique identifier (essentially an index)",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.tags",
+      "id",
+      "main",
+      "torrents",
+      "id"
+    ]
+  ]
+}

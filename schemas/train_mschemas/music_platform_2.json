@@ -1,0 +1,280 @@
+{
+  "db_id": "music_platform_2",
+  "schema": null,
+  "tables": {
+    "main.categories": {
+      "fields": {
+        "podcast_id": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The unique id of the podcast",
+          "examples": [
+            "a00018b54eb342567c94dacfb2a3e504",
+            "a00043d34e734b09246d17dc5d56f63c",
+            "a0004b1ef445af9dc84dad1e7821b1e3",
+            "a00071f9aaae9ac725c3a586701abf4d",
+            "a000aa69852b276565c4f5eb9cdd999b"
+          ]
+        },
+        "category": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "category of the podcast",
+          "examples": [
+            "arts",
+            "arts-performing-arts",
+            "music",
+            "arts-design",
+            "education"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.podcasts": {
+      "fields": {
+        "podcast_id": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The unique id of the podcast",
+          "examples": [
+            "a00018b54eb342567c94dacfb2a3e504",
+            "a00043d34e734b09246d17dc5d56f63c",
+            "a0004b1ef445af9dc84dad1e7821b1e3",
+            "a00071f9aaae9ac725c3a586701abf4d",
+            "a000aa69852b276565c4f5eb9cdd999b"
+          ]
+        },
+        "itunes_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The unique id of the itunes",
+          "examples": [
+            "1313466221",
+            "158973461",
+            "139076942",
+            "1332508972",
+            "1342447811"
+          ]
+        },
+        "slug": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The slug of the podcast",
+          "examples": [
+            "scaling-global",
+            "cornerstone-baptist-church-of-orlando",
+            "mystery-dancing-in-the-dark",
+            "kts-money-matters",
+            "speedway-soccer"
+          ]
+        },
+        "itunes_url": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The iTunes url of the podcast",
+          "examples": []
+        },
+        "title": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The title of the podcast",
+          "examples": [
+            "Scaling Global",
+            "Cornerstone Baptist Church of Orlando",
+            "Mystery: Dancing in the Dark",
+            "KTs Money Matters",
+            "Speedway Soccer"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.reviews": {
+      "fields": {
+        "podcast_id": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The unique id of the podcast",
+          "examples": [
+            "c61aa81c9b929a66f0c1db6cbe5d8548",
+            "ad4f2bf69c72b8db75978423c25f379e",
+            "f2970432aad718a000ebac10e48ae6b0",
+            "f90b974d49b86b2d4d1769519fb478c0",
+            "d9122defb9898145688449f610c8943e"
+          ]
+        },
+        "title": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The title of the podcast review",
+          "examples": [
+            "really interesting!",
+            "Must listen for anyone interested in the arts!!!",
+            "nauseatingly left",
+            "Diverse stories",
+            "👍👍👍👍"
+          ]
+        },
+        "content": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The content of the podcast review",
+          "examples": [
+            "Thanks for providing these insights.  Really enjoy the variety and depth -- please keep them coming!",
+            "Super excited to see this podcast grow. So many fun topics to talk about...Shari is really engaging. Definitely subscribing and would recommend to anyone interested in the arts!!",
+            "I'm a liberal myself, but its pretty obvious and annoying that they're trying to push their beliefs on the listeners. Get a more politically diverse production staff, we like to see issues from multiple point of views not just yours.",
+            "I find Tedx talks very inspirational but I often don’t have time to watch a video. I love that this provides an easy way for me to get in diverse information.",
+            "I love this podcast, it is so good."
+          ]
+        },
+        "rating": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The rating of the podcast review",
+          "examples": [
+            "5",
+            "1",
+            "3",
+            "4",
+            "2"
+          ]
+        },
+        "author_id": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The author id of the podcast review",
+          "examples": [
+            "F7E5A318989779D",
+            "F6BF5472689BD12",
+            "1AB95B8E6E1309E",
+            "11BB760AA5DEBD1",
+            "D86032C8E57D15A"
+          ]
+        },
+        "created_at": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The date and time of the podcast review creation",
+          "examples": [
+            "2018-04-24T12:05:16-07:00",
+            "2018-05-09T18:14:32-07:00",
+            "2019-06-11T14:53:39-07:00",
+            "2018-05-31T13:08:09-07:00",
+            "2019-06-19T13:56:05-07:00"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.runs": {
+      "fields": {
+        "run_at": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The date and time of the podcast review creation",
+          "examples": [
+            "2021-05-10 02:53:00",
+            "2021-06-06 21:34:36",
+            "2021-07-02 18:04:55",
+            "2021-08-01 17:54:42",
+            "2021-09-02 18:00:30"
+          ]
+        },
+        "max_rowid": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The id of max row of this run",
+          "examples": [
+            "3266481",
+            "3300773",
+            "3329699",
+            "3360315",
+            "3390165"
+          ]
+        },
+        "reviews_added": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "The number of reviews added in this run",
+          "examples": [
+            "1215223",
+            "13139",
+            "11561",
+            "11855",
+            "11714"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.categories",
+      "podcast_id",
+      "main",
+      "podcasts",
+      "podcast_id"
+    ],
+    [
+      "main.reviews",
+      "podcast_id",
+      "main",
+      "podcasts",
+      "podcast_id"
+    ]
+  ]
+}

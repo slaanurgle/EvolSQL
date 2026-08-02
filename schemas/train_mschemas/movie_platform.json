@@ -1,0 +1,793 @@
+{
+  "db_id": "movie_platform",
+  "schema": null,
+  "tables": {
+    "main.lists": {
+      "fields": {
+        "user_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ID related to the user who created the list",
+          "examples": [
+            "88260493",
+            "45204418",
+            "48905025",
+            "12074910",
+            "67171533"
+          ]
+        },
+        "list_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ID of the list on Mubi",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "7",
+            "8"
+          ]
+        },
+        "list_title": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Name of the list",
+          "examples": [
+            "Films that made your kid sister cry",
+            "Headscratchers",
+            "Sexy Time Movies",
+            "This is America",
+            "Best Documentaries"
+          ]
+        },
+        "list_movie_number": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Number of movies added to the list",
+          "examples": [
+            "5",
+            "3",
+            "7",
+            "11",
+            "41"
+          ]
+        },
+        "list_update_timestamp_utc": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Last update timestamp for the list",
+          "examples": [
+            "2019-01-24 19:16:18",
+            "2018-12-03 15:12:20",
+            "2019-05-30 03:00:07",
+            "2020-04-25 05:55:07",
+            "2009-11-11 00:41:28"
+          ]
+        },
+        "list_creation_timestamp_utc": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Creation timestamp for the list",
+          "examples": [
+            "2009-11-11 00:02:21",
+            "2009-11-11 00:05:11",
+            "2009-11-11 00:20:00",
+            "2009-11-11 00:32:52",
+            "2009-11-11 00:41:10"
+          ]
+        },
+        "list_followers": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Number of followers on the list",
+          "examples": [
+            "5",
+            "1",
+            "6",
+            "9",
+            "90"
+          ]
+        },
+        "list_url": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "URL to the list page on Mubi",
+          "examples": []
+        },
+        "list_comments": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Number of comments on the list",
+          "examples": [
+            "3",
+            "2",
+            "5",
+            "4",
+            "0"
+          ]
+        },
+        "list_description": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "List description made by the user",
+          "examples": []
+        },
+        "list_cover_image_url": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": []
+        },
+        "list_first_image_url": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": []
+        },
+        "list_second_image_url": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": []
+        },
+        "list_third_image_url": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": []
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.lists_users": {
+      "fields": {
+        "user_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ID related to the user who created the list",
+          "examples": [
+            "2385",
+            "15264",
+            "15344",
+            "18833",
+            "21050"
+          ]
+        },
+        "list_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ID of the list on Mubi",
+          "examples": [
+            "192287",
+            "192313",
+            "192318",
+            "192449",
+            "24044"
+          ]
+        },
+        "list_update_date_utc": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Last update date for the list",
+          "examples": [
+            "2019-11-26",
+            "2020-05-01",
+            "2020-04-12",
+            "2018-12-14",
+            "2016-04-12"
+          ]
+        },
+        "list_creation_date_utc": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Creation date for the list",
+          "examples": [
+            "2009-12-18",
+            "2010-01-30",
+            "2010-03-31",
+            "2010-05-10",
+            "2010-08-25"
+          ]
+        },
+        "user_trialist": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "whether the user was a tralist when he created the list",
+          "examples": [
+            "1",
+            "0"
+          ]
+        },
+        "user_subscriber": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "whether the user was a subscriber when he created the list",
+          "examples": [
+            "1",
+            "0"
+          ]
+        },
+        "user_avatar_image_url": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "User profile image URL on Mubi",
+          "examples": []
+        },
+        "user_cover_image_url": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "User profile cover image URL on Mubi",
+          "examples": []
+        },
+        "user_eligible_for_trial": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "whether the user was eligible for trial when he created the list",
+          "examples": [
+            "0",
+            "1"
+          ]
+        },
+        "user_has_payment_method": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "whether the user was a paying subscriber when he created the list",
+          "examples": [
+            "1",
+            "0"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.movies": {
+      "fields": {
+        "movie_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ID related to the movie on Mubi",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "movie_title": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Name of the movie",
+          "examples": [
+            "La Antena",
+            "Elementary Particles",
+            "It's Winter",
+            "Kirikou and the Wild Beasts",
+            "Padre Nuestro"
+          ]
+        },
+        "movie_release_year": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Release year of the movie",
+          "examples": [
+            "2007",
+            "2006",
+            "2005",
+            "2003",
+            "1957"
+          ]
+        },
+        "movie_url": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "URL to the movie page on Mubi",
+          "examples": []
+        },
+        "movie_title_language": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "By default, the title is in English",
+          "examples": [
+            "en"
+          ]
+        },
+        "movie_popularity": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Number of Mubi users who love this movie",
+          "examples": [
+            "105",
+            "23",
+            "21",
+            "46",
+            "7"
+          ]
+        },
+        "movie_image_url": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Image URL to the movie on Mubi",
+          "examples": []
+        },
+        "director_id": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ID related to the movie director on Mubi",
+          "examples": [
+            "131",
+            "73",
+            "82",
+            "89, 90",
+            "92"
+          ]
+        },
+        "director_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Full Name of the movie director",
+          "examples": [
+            "Esteban Sapir",
+            "Oskar Roehler",
+            "Rafi Pitts",
+            "Michel Ocelot, Bénédicte Galup",
+            "Christopher Zalla"
+          ]
+        },
+        "director_url": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "URL to the movie director page on Mubi",
+          "examples": []
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.ratings": {
+      "fields": {
+        "movie_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Movie ID related to the rating",
+          "examples": [
+            "1066",
+            "1067",
+            "1068",
+            "1069",
+            "1070"
+          ]
+        },
+        "rating_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Rating ID on Mubi",
+          "examples": [
+            "15610495",
+            "10704606",
+            "10177114",
+            "10130280",
+            "8357049"
+          ]
+        },
+        "rating_url": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "URL to the rating on Mubi",
+          "examples": []
+        },
+        "rating_score": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Rating score ranging from 1 (lowest) to 5 (highest)",
+          "examples": [
+            "3",
+            "2",
+            "4",
+            "5"
+          ]
+        },
+        "rating_timestamp_utc": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Timestamp for the movie rating made by the user on Mubi",
+          "examples": [
+            "2017-06-10 12:38:33",
+            "2014-08-15 23:42:31",
+            "2014-01-30 13:21:57",
+            "2014-01-19 01:04:23",
+            "2012-10-02 18:28:47"
+          ]
+        },
+        "critic": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Critic made by the user rating the movie",
+          "examples": [
+            "I am a bit disappointed by this documentary film I've been wanting to watch for years as it is way less informative than I had imagined and rather cheaply made technically speaking. Otherwise it is O.K. and rather interesting.",
+            "Splendid debut. Whatever happened to Amma Asante?",
+            "One of the more harrowing viewing experiences I have been through, a touching, frightening look at poverty in South Wales. How has Amma Asante not carried on from this success? ",
+            "2,5"
+          ]
+        },
+        "critic_likes": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Number of likes related to the critic made by the user rating the movie",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "4",
+            "6"
+          ]
+        },
+        "critic_comments": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Number of comments related to the critic made by the user rating the movie",
+          "examples": [
+            "0",
+            "2",
+            "1",
+            "3",
+            "11"
+          ]
+        },
+        "user_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ID related to the user rating the movie",
+          "examples": [
+            "41579158",
+            "85981819",
+            "4208563",
+            "9820140",
+            "68654088"
+          ]
+        },
+        "user_trialist": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "whether user was a tralist when he rated the movie",
+          "examples": [
+            "0",
+            "1"
+          ]
+        },
+        "user_subscriber": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "0",
+            "1"
+          ]
+        },
+        "user_eligible_for_trial": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "1",
+            "0"
+          ]
+        },
+        "user_has_payment_method": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "0",
+            "1"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.ratings_users": {
+      "fields": {
+        "user_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ID related to the user rating the movie",
+          "examples": [
+            "41579158",
+            "68654088",
+            "84114365",
+            "29755671",
+            "93302487"
+          ]
+        },
+        "rating_date_utc": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Rating date for the movie rating",
+          "examples": [
+            "2017-06-10",
+            "2012-10-02",
+            "2010-12-25",
+            "2010-11-15",
+            "2010-01-05"
+          ]
+        },
+        "user_trialist": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "whether the user was a trialist when he rated the movie",
+          "examples": [
+            "0",
+            "1"
+          ]
+        },
+        "user_subscriber": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "whether the user was a subscriber when he rated the movie",
+          "examples": [
+            "0",
+            "1"
+          ]
+        },
+        "user_avatar_image_url": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "URL to the user profile image on Mubi",
+          "examples": []
+        },
+        "user_cover_image_url": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "URL to the user profile cover image on Mubi",
+          "examples": []
+        },
+        "user_eligible_for_trial": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "whether the user was eligible for trial when he rated the movie",
+          "examples": [
+            "1",
+            "0"
+          ]
+        },
+        "user_has_payment_method": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "whether the user was a paying subscriber when he rated the movie",
+          "examples": [
+            "0",
+            "1"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.lists",
+      "user_id",
+      "main",
+      "lists_users",
+      "user_id"
+    ],
+    [
+      "main.lists_users",
+      "list_id",
+      "main",
+      "lists",
+      "list_id"
+    ],
+    [
+      "main.lists_users",
+      "user_id",
+      "main",
+      "lists",
+      "user_id"
+    ],
+    [
+      "main.ratings",
+      "movie_id",
+      "main",
+      "movies",
+      "movie_id"
+    ],
+    [
+      "main.ratings",
+      "user_id",
+      "main",
+      "lists_users",
+      "user_id"
+    ],
+    [
+      "main.ratings",
+      "rating_id",
+      "main",
+      "ratings",
+      "rating_id"
+    ],
+    [
+      "main.ratings",
+      "user_id",
+      "main",
+      "ratings_users",
+      "user_id"
+    ],
+    [
+      "main.ratings_users",
+      "user_id",
+      "main",
+      "lists_users",
+      "user_id"
+    ]
+  ]
+}

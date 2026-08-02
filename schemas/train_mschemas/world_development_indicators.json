@@ -1,0 +1,1010 @@
+{
+  "db_id": "world_development_indicators",
+  "schema": null,
+  "tables": {
+    "main.Country": {
+      "fields": {
+        "CountryCode": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique code identifying countries",
+          "examples": [
+            "ABW",
+            "ADO",
+            "AFG",
+            "AGO",
+            "ALB"
+          ]
+        },
+        "ShortName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Short names of countries",
+          "examples": [
+            "Afghanistan",
+            "Albania",
+            "Algeria",
+            "American Samoa",
+            "Andorra"
+          ]
+        },
+        "TableName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "table names of countries",
+          "examples": [
+            "Afghanistan",
+            "Albania",
+            "Algeria",
+            "American Samoa",
+            "Andorra"
+          ]
+        },
+        "LongName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "long or full name of countries",
+          "examples": [
+            "Islamic State of Afghanistan",
+            "Republic of Albania",
+            "People's Democratic Republic of Algeria",
+            "American Samoa",
+            "Principality of Andorra"
+          ]
+        },
+        "Alpha2Code": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "2 digit code of countries",
+          "examples": [
+            "AF",
+            "AL",
+            "DZ",
+            "AS",
+            "AD"
+          ]
+        },
+        "CurrencyUnit": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Currency Unit used in this country",
+          "examples": [
+            "Afghan afghani",
+            "Albanian lek",
+            "Algerian dinar",
+            "U.S. dollar",
+            "Euro"
+          ]
+        },
+        "SpecialNotes": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Special Notes",
+          "examples": [
+            "Fiscal year end: March 20; reporting period for national accounts data: FY (from 2013 are CY). National accounts data are sourced from the IMF and differ from the Central Statistics Organization numbers due to exclusion of the opium economy.",
+            "April 2013 database update: Based on IMF data, national accounts data were revised for 2000 onward; the base year changed to 2002.",
+            "April 2012 database update: Based on official government statistics, national accounts data were revised for 2000 onward; the base year changed to 2006.",
+            "Arab World aggregate. Arab World is composed of members of the League of Arab States."
+          ]
+        },
+        "Region": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "region that country belongs to",
+          "examples": [
+            "South Asia",
+            "Europe & Central Asia",
+            "Middle East & North Africa",
+            "East Asia & Pacific",
+            "Sub-Saharan Africa"
+          ]
+        },
+        "IncomeGroup": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "income level of countries",
+          "examples": [
+            "Low income",
+            "Upper middle income",
+            "High income: nonOECD",
+            "Lower middle income"
+          ]
+        },
+        "Wb2Code": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "world bank to code",
+          "examples": [
+            "AF",
+            "AL",
+            "DZ",
+            "AS",
+            "AD"
+          ]
+        },
+        "NationalAccountsBaseYear": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the year used as the base period for constant price calculations in the country's national accounts",
+          "examples": [
+            "2002/03",
+            "Original chained constant price data are rescaled.",
+            "1980",
+            "2000"
+          ]
+        },
+        "NationalAccountsReferenceYear": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "National Accounts Reference Year",
+          "examples": [
+            "1996",
+            "2013/14",
+            "2010",
+            "2000"
+          ]
+        },
+        "SnaPriceValuation": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "SNA Price Valuation",
+          "examples": [
+            "Value added at basic prices (VAB)",
+            "Value added at producer prices (VAP)"
+          ]
+        },
+        "LendingCategory": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Lending category",
+          "examples": [
+            "IDA",
+            "IBRD",
+            "Blend"
+          ]
+        },
+        "OtherGroups": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "other groups",
+          "examples": [
+            "HIPC",
+            "Euro area"
+          ]
+        },
+        "SystemOfNationalAccounts": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "System Of National Accounts",
+          "examples": [
+            "Country uses the 1993 System of National Accounts methodology.",
+            "Country uses the 1968 System of National Accounts methodology.",
+            "Country uses the 2008 System of National Accounts methodology."
+          ]
+        },
+        "AlternativeConversionFactor": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Alternative conversion factor is the underlying annual exchange rate used for the World Bank Atlas method",
+          "examples": [
+            "199196",
+            "197184",
+            "199095",
+            "199295"
+          ]
+        },
+        "PppSurveyYear": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "purchasing power parity survey year",
+          "examples": [
+            "Rolling",
+            "2011",
+            "2011 (household consumption only)."
+          ]
+        },
+        "BalanceOfPaymentsManualInUse": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Balance Of Payments Manual In Use",
+          "examples": [
+            "IMF Balance of Payments Manual, 6th edition."
+          ]
+        },
+        "ExternalDebtReportingStatus": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "External Debt Reporting Status",
+          "examples": [
+            "Actual",
+            "Preliminary",
+            "Estimate"
+          ]
+        },
+        "SystemOfTrade": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "System Of Trade",
+          "examples": [
+            "General trade system",
+            "Special trade system"
+          ]
+        },
+        "GovernmentAccountingConcept": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Government Accounting Concept",
+          "examples": [
+            "Consolidated central government",
+            "Budgetary central government"
+          ]
+        },
+        "ImfDataDisseminationStandard": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "IMF Standards for Data Dissemination",
+          "examples": [
+            "General Data Dissemination System (GDDS)",
+            "Special Data Dissemination Standard (SDDS)"
+          ]
+        },
+        "LatestPopulationCensus": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Latest Population Census",
+          "examples": [
+            "1979",
+            "2011",
+            "2008",
+            "2010",
+            "2011. Population data compiled from administrative registers."
+          ]
+        },
+        "LatestHouseholdSurvey": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Multiple Indicator Cluster Survey (MICS), 2010/11",
+            "Demographic and Health Survey (DHS), 2008/09",
+            "Multiple Indicator Cluster Survey (MICS), 2012",
+            "Malaria Indicator Survey (MIS), 2011"
+          ]
+        },
+        "SourceOfMostRecentIncomeAndExpenditureData": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Source Of Most Recent Income And Expenditure Data",
+          "examples": [
+            "Integrated household survey (IHS), 2008",
+            "Living Standards Measurement Study Survey (LSMS), 2011/12",
+            "Integrated household survey (IHS), 1995",
+            "Integrated household survey (IHS), 2008/09"
+          ]
+        },
+        "VitalRegistrationComplete": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Vital Registration Complete",
+          "examples": [
+            "Yes",
+            "Yes. Vital registration for Guernsey and Jersey."
+          ]
+        },
+        "LatestAgriculturalCensus": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Latest Agricultural Census",
+          "examples": [
+            "2013/14",
+            "2012",
+            "2007",
+            "2015"
+          ]
+        },
+        "LatestIndustrialData": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Latest Industrial Data",
+          "examples": [
+            "2011",
+            "2010",
+            "2002",
+            "2008"
+          ]
+        },
+        "LatestTradeData": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Latest Trade Data",
+          "examples": [
+            "2013",
+            "2006",
+            "2012",
+            "2011"
+          ]
+        },
+        "LatestWaterWithdrawalData": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Latest Water Withdrawal Data",
+          "examples": [
+            "2000",
+            "2006",
+            "2001",
+            "2005"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.CountryNotes": {
+      "fields": {
+        "Countrycode": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "code identifying unique countries",
+          "examples": [
+            "ABW",
+            "ADO",
+            "AFG",
+            "AGO",
+            "ALB"
+          ]
+        },
+        "Seriescode": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Series code of countries",
+          "examples": [
+            "EG.EGY.PRIM.PP.KD",
+            "EG.ELC.RNEW.ZS",
+            "EG.FEC.RNEW.ZS",
+            "SM.POP.NETM",
+            "SM.POP.TOTL"
+          ]
+        },
+        "Description": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "description",
+          "examples": [
+            "Sources: Estimated based on UN Energy Statistics (2014); World Development Indicators, WDI (2014)",
+            "Sources: UN Energy Statistics (2014)",
+            "Data sources : United Nations World Population Prospects",
+            "Estimates are derived from data on foreign-born population.",
+            "Data source : United Nations World Population Prospects"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Footnotes": {
+      "fields": {
+        "Countrycode": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "code identifying unique countries",
+          "examples": [
+            "ABW",
+            "ADO",
+            "AFG",
+            "AGO",
+            "ALB"
+          ]
+        },
+        "Seriescode": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Series code of countries",
+          "examples": [
+            "AG.LND.FRST.K2",
+            "BX.KLT.DINV.CD.WD",
+            "DC.DAC.AUSL.CD",
+            "DC.DAC.AUTL.CD",
+            "DC.DAC.BELL.CD"
+          ]
+        },
+        "Year": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Year",
+          "examples": [
+            "YR1990",
+            "YR2000",
+            "YR2005",
+            "YR1987",
+            "YR1988"
+          ]
+        },
+        "Description": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Description of country footnotes",
+          "examples": [
+            "Not specified",
+            "Source: United Nations Conference on Trade and Development, Foreign Direct Investment Online database.",
+            "Data are classified as official aid.",
+            "Source: Estimate",
+            "Source:Estimate"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Indicators": {
+      "fields": {
+        "CountryName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "code identifying unique countries",
+          "examples": [
+            "Arab World",
+            "Caribbean small states",
+            "Central Europe and the Baltics",
+            "East Asia & Pacific (all income levels)",
+            "East Asia & Pacific (developing only)"
+          ]
+        },
+        "CountryCode": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Series code of countries",
+          "examples": [
+            "ABW",
+            "ADO",
+            "AFG",
+            "AGO",
+            "ALB"
+          ]
+        },
+        "IndicatorName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "indicator name",
+          "examples": [
+            "Adolescent fertility rate (births per 1,000 women ages 15-19)",
+            "Age dependency ratio (% of working-age population)",
+            "Age dependency ratio, old (% of working-age population)",
+            "Age dependency ratio, young (% of working-age population)",
+            "Arms exports (SIPRI trend indicator values)"
+          ]
+        },
+        "IndicatorCode": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "indicator code",
+          "examples": [
+            "AG.LND.AGRI.K2",
+            "AG.LND.AGRI.ZS",
+            "AG.LND.ARBL.HA",
+            "AG.LND.ARBL.HA.PC",
+            "AG.LND.ARBL.ZS"
+          ]
+        },
+        "Year": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "year",
+          "examples": [
+            "1961",
+            "1962",
+            "1963",
+            "1964",
+            "1965"
+          ]
+        },
+        "Value": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "value",
+          "examples": [
+            "133",
+            "87",
+            "6",
+            "81",
+            "3000000"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Series": {
+      "fields": {
+        "SeriesCode": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique code identifying series",
+          "examples": [
+            "AG.AGR.TRAC.NO",
+            "AG.CON.FERT.PT.ZS",
+            "AG.CON.FERT.ZS",
+            "AG.LND.AGRI.K2",
+            "AG.LND.AGRI.ZS"
+          ]
+        },
+        "Topic": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "topic of series",
+          "examples": [
+            "Economic Policy & Debt: Balance of payments: Capital & financial account",
+            "Economic Policy & Debt: Balance of payments: Current account: Balances",
+            "Economic Policy & Debt: Balance of payments: Current account: Goods, services & income",
+            "Economic Policy & Debt: Balance of payments: Current account: Transfers",
+            "Economic Policy & Debt: Balance of payments: Reserves & other items"
+          ]
+        },
+        "IndicatorName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Indicator Name",
+          "examples": [
+            "Foreign direct investment, net (BoP, current US$)",
+            "Foreign direct investment, net inflows (% of GDP)",
+            "Foreign direct investment, net inflows (BoP, current US$)",
+            "Foreign direct investment, net outflows (% of GDP)",
+            "Net capital account (BoP, current US$)"
+          ]
+        },
+        "ShortDefinition": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Short Definition of series",
+          "examples": [
+            "Total external debt is debt owed to nonresidents repayable in foreign currency, goods, or services. It is the sum of public, publicly guaranteed, and private nonguaranteed long-term debt, short-term debt, and use of IMF credit. Data are in current U.S. do",
+            "Debt service is the sum of principle repayments and interest actually paid in foreign currency, goods, or services. This series differs from the standard debt to exports series. It covers only long-term public and publicly guaranteed debt and repayments (",
+            "Total external debt stocks to gross national income.",
+            "Multilateral debt service is the repayment of principal and interest to the World Bank, regional development banks, and other multilateral agencies."
+          ]
+        },
+        "LongDefinition": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Long Definition of series",
+          "examples": [
+            "Foreign direct investment are the net inflows of investment to acquire a lasting management interest (10 percent or more of voting stock) in an enterprise operating in an economy other than that of the investor. It is the sum of equity capital, reinvestme",
+            "Foreign direct investment refers to direct investment equity flows in the reporting economy. It is the sum of equity capital, reinvestment of earnings, and other capital. Direct investment is a category of cross-border investment associated with a residen",
+            "Net capital account records acquisitions and disposals of nonproduced nonfinancial assets, such as land sold to embassies and sales of leases and licenses, as well as capital transfers, including government debt forgiveness. The use of the term capital ac",
+            "Net errors and omissions constitute a residual category needed to ensure that accounts in the balance of payments statement sum to zero. Net errors and omissions are derived as the balance on the financial account minus the balances on the current and cap",
+            "The net financial account shows net acquisition and disposal of financial assets and liabilities. It measures how net lending to or borrowing from nonresidents is financed, and is conceptually equal to the sum of the balances on the current and capital ac"
+          ]
+        },
+        "UnitOfMeasure": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Unit Of Measure",
+          "examples": [
+            "`",
+            "%",
+            "2005 PPP $",
+            "2011 PPP $"
+          ]
+        },
+        "Periodicity": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Periodicity",
+          "examples": [
+            "Annual"
+          ]
+        },
+        "BasePeriod": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "a period of business or economic activity used as a basis or reference point especially for indexing, calculating, estimating, or adjudicating prices, taxes, compensation, income, and production",
+          "examples": [
+            "2005",
+            "varies by country",
+            "2011",
+            "2004-06"
+          ]
+        },
+        "OtherNotes": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Other Notes",
+          "examples": []
+        },
+        "AggregationMethod": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Aggregation Method",
+          "examples": [
+            "Weighted average",
+            "Sum",
+            "Gap-filled total",
+            "Median"
+          ]
+        },
+        "LimitationsAndExceptions": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Limitations And Exceptions",
+          "examples": [
+            "FDI data do not give a complete picture of international investment in an economy. Balance of payments data on FDI do not include capital raised locally, an important source of investment financing in some developing countries. In addition, FDI data omit ",
+            "Portfolio investors typically have less of a role in the decision making of the enterprise with potentially important implications for future flows and for the volatility of the price and volume of positions. Portfolio investment differs from other invest",
+            "Discrepancies may arise in the balance of payments because there is no single source for balance of payments data and therefore no way to ensure that the data are fully consistent. Sources include customs data, monetary accounts of the banking system, ext",
+            "Remittance transactions have grown in importance over the past decade. In a number of developing economies, receipts of remittances have become an important and stable source of funds that exceeds receipts from exports of goods and services or from financ"
+          ]
+        },
+        "NotesFromOriginalSource": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Notes From Original Source",
+          "examples": [
+            "Estimates are presented with uncertainty intervals (see footnote). When ranges are presented, the lower and higher numbers correspond to the 2.5th and 97.5th centiles of the outcome distributions (generally produced by simulations). For more detailed info",
+            "In some cases, the sum of public and private expenditures on health may not add up to 100% because of rounding. All the indicators refer to expenditures by financing agent except external resources which is a financing source. When the number is smaller t",
+            "All the indicators refer to expenditures by financing agent except external resources which is a financing source. When the number is smaller than 0.05%, the percentage may appear as zero. In countries where the fiscal year begins in July, expenditure dat",
+            "PPP series resulting from the 2005 International comparison project (ICP) estimated by the World Bank has been used. In countries where this is not available, PPPs are estimated by the WHO. All the indicators refer to expenditures by financing agent excep"
+          ]
+        },
+        "GeneralComments": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "General Comments",
+          "examples": [
+            "Note: Data are based on the sixth edition of the IMF's Balance of Payments Manual (BPM6) and are only available from 2005 onwards. In BPM6, the headings of the financial account have been changed from credits and debits to net acquisition of financial ass",
+            "Note: Data starting from 2005 are based on the sixth edition of the IMF's Balance of Payments Manual (BPM6).",
+            "Note: Data are based on the sixth edition of the IMF's Balance of Payments Manual (BPM6) and are only available from 2005 onwards.",
+            "Note: Data are based on the sixth edition of the IMF's Balance of Payments Manual (BPM6) and are only available from 2005 onwards. Merchanting is reclassified from services to goods."
+          ]
+        },
+        "Source": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "source of this data",
+          "examples": [
+            "International Monetary Fund, Balance of Payments Statistics Yearbook and data files.",
+            "International Monetary Fund, International Financial Statistics and Balance of Payments databases, World Bank, International Debt Statistics, and World Bank and OECD GDP estimates.",
+            "International Monetary Fund, Balance of Payments database, supplemented by data from the United Nations Conference on Trade and Development and official national sources.",
+            "International Monetary Fund, Balance of Payments database, and World Bank, International Debt Statistics.",
+            "World Bank, International Debt Statistics."
+          ]
+        },
+        "StatisticalConceptAndMethodology": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Statistical Concept And Methodology",
+          "examples": [
+            "Data on equity flows are based on balance of payments data reported by the International Monetary Fund (IMF). Foreign direct investment (FDI) data are supplemented by the World Bank staff estimates using data from the United Nations Conference on Trade an",
+            "Data on equity flows are based on balance of payments data reported by the International Monetary Fund (IMF).\n\nPortfolio equity investment is defined as cross-border transactions and positions involving equity securities, other than those included in dire",
+            "The balance of payments (BoP) is a double-entry accounting system that shows all flows of goods and services into and out of an economy; all transfers that are the counterpart of real resources or financial claims provided to or by the rest of the world w",
+            "The two main components of personal remittances, \"personal transfers\" and \"compensation of employees\", are items in the balance of payments (BPM6) framework. Both of these standard components are recorded in the current account. \n\"Personal transfers,\" a n"
+          ]
+        },
+        "DevelopmentRelevance": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Development Relevance",
+          "examples": [
+            "Private financial flows - equity and debt - account for the bulk of development finance. Equity flows comprise foreign direct investment (FDI) and portfolio equity. Debt flows are financing raised through bond issuance, bank lending, and supplier credits.",
+            "The balance of payments records an economys transactions with the rest of the world. Balance of payments accounts are divided into two groups: the current account, which records transactions in goods, services, primary income, and secondary income, and t",
+            "Movement of people, most often through migration, is a significant part of global integration. Migrants contribute to the economies of both their host country and their country of origin. Yet reliable statistics on migration are difficult to collect and a",
+            "DAC exists to help its members coordinate their development assistance and to encourage the expansion and improve the effectiveness of the aggregate resources flowing to recipient economies. In this capacity DAC monitors the flow of all financial resource"
+          ]
+        },
+        "RelatedSourceLinks": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Related Source Links",
+          "examples": []
+        },
+        "OtherWebLinks": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Other Web Links",
+          "examples": []
+        },
+        "RelatedIndicators": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Related Indicators",
+          "examples": []
+        },
+        "LicenseType": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "License Type",
+          "examples": [
+            "Open",
+            "Restricted"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.SeriesNotes": {
+      "fields": {
+        "Seriescode": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "code identifying the series",
+          "examples": [
+            "DT.DOD.PVLX.CD",
+            "IC.CUS.DURS.EX",
+            "IC.FRM.BNKS.ZS",
+            "IC.FRM.CORR.ZS",
+            "IC.FRM.CRIM.ZS"
+          ]
+        },
+        "Year": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "year",
+          "examples": [
+            "YR2014",
+            "YR2002",
+            "YR2003",
+            "YR2004",
+            "YR2005"
+          ]
+        },
+        "Description": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Description of series",
+          "examples": [
+            "Interpolated using data for 1957 and 1962.",
+            "Interpolated using data for 1957 and 1962, if the data source is United Nations World Population Prospects.",
+            "The data refer to 1960-1965.",
+            "The data refer to 1960-1965, if the data source is United Nations World Population Prospects.",
+            "The data refer to five-year periods running from 1 July, 1960 to 30 June, 1965."
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.CountryNotes",
+      "Seriescode",
+      "main",
+      "Series",
+      "SeriesCode"
+    ],
+    [
+      "main.CountryNotes",
+      "Countrycode",
+      "main",
+      "Country",
+      "CountryCode"
+    ],
+    [
+      "main.Footnotes",
+      "Seriescode",
+      "main",
+      "Series",
+      "SeriesCode"
+    ],
+    [
+      "main.Footnotes",
+      "Countrycode",
+      "main",
+      "Country",
+      "CountryCode"
+    ],
+    [
+      "main.Indicators",
+      "CountryCode",
+      "main",
+      "Country",
+      "CountryCode"
+    ],
+    [
+      "main.SeriesNotes",
+      "Seriescode",
+      "main",
+      "Series",
+      "SeriesCode"
+    ]
+  ]
+}

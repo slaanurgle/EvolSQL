@@ -1,0 +1,337 @@
+{
+  "db_id": "shakespeare",
+  "schema": null,
+  "tables": {
+    "main.chapters": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number identifying the chapter",
+          "examples": [
+            "18704",
+            "18705",
+            "18706",
+            "18707",
+            "18708"
+          ]
+        },
+        "Act": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "An act is a major division of a theatre work, including a play, film, opera, or musical theatre",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "Scene": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "A scene is a dramatic part of a story, at a specific time and place, between specific characters",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "Description": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "textual description of the chapter",
+          "examples": [
+            "DUKE ORSINO’s palace.",
+            "The sea-coast.",
+            "OLIVIA’S house.",
+            "A street.",
+            "OLIVIA’s house."
+          ]
+        },
+        "work_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id number identifying the work",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.characters": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number identifying the characters",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "CharName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "character name",
+          "examples": [
+            "First Apparition",
+            "First Citizen",
+            "First Conspirator",
+            "First Gentleman",
+            "First Goth"
+          ]
+        },
+        "Abbrev": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "abbreviation. An abbreviation is a shortened form of a word or phrase",
+          "examples": [
+            "First Apparition",
+            "First Citizen",
+            "First Conspirator",
+            "First Gentleman",
+            "First Goth"
+          ]
+        },
+        "Description": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "description of the character",
+          "examples": [
+            "A senator of Venice",
+            "a Moor, beloved by Tamora",
+            "an executioner",
+            "Servant to Montague"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.paragraphs": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number identifying the paragraphs",
+          "examples": [
+            "630863",
+            "630864",
+            "630865",
+            "630866",
+            "630867"
+          ]
+        },
+        "ParagraphNum": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number identifying the paragraph number",
+          "examples": [
+            "3",
+            "4",
+            "19",
+            "20",
+            "21"
+          ]
+        },
+        "PlainText": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "main content of the paragraphs",
+          "examples": [
+            "[Enter DUKE ORSINO, CURIO, and other Lords; Musicians attending]",
+            "If music be the food of love, play on;\nGive me excess of it, that, surfeiting,\nThe appetite may sicken, and so die.\nThat strain again! it had a dying fall:\nO, it came o'er my ear like the sweet sound,\nThat breathes upon a bank of violets,\nStealing and giving odour! Enough; no more:\n'Tis not so sweet now as it was before.\nO spirit of love! how quick and fresh art thou,\nThat, notwithstanding thy capacity\nReceiveth as the sea, nought enters there,\nOf what validity and pitch soe'er,\nBut falls into abatement and low price,\nEven in a minute: so full of shapes is fancy\nThat it alone is high fantastical.",
+            "Will you go hunt, my lord?",
+            "What, Curio?",
+            "The hart."
+          ]
+        },
+        "character_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number identifying the mentioned character",
+          "examples": [
+            "1261",
+            "840",
+            "297",
+            "1221",
+            "1238"
+          ]
+        },
+        "chapter_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": "0",
+          "autoincrement": false,
+          "comment": "unique id number identifying the related chapter",
+          "examples": [
+            "18704",
+            "18705",
+            "18706",
+            "18707",
+            "18708"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.works": {
+      "fields": {
+        "id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number identifying the work",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "Title": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "title of the work",
+          "examples": [
+            "Twelfth Night",
+            "All's Well That Ends Well",
+            "Antony and Cleopatra",
+            "As You Like It",
+            "Comedy of Errors"
+          ]
+        },
+        "LongTitle": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "full title of the work",
+          "examples": [
+            "Twelfth Night, Or What You Will",
+            "All's Well That Ends Well",
+            "Antony and Cleopatra",
+            "As You Like It",
+            "The Comedy of Errors"
+          ]
+        },
+        "Date": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "date of the work",
+          "examples": [
+            "1599",
+            "1602",
+            "1606",
+            "1589",
+            "1607"
+          ]
+        },
+        "GenreType": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the type of the genere",
+          "examples": [
+            "Comedy",
+            "Tragedy",
+            "History",
+            "Poem",
+            "Sonnet"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.chapters",
+      "work_id",
+      "main",
+      "works",
+      "id"
+    ],
+    [
+      "main.paragraphs",
+      "chapter_id",
+      "main",
+      "chapters",
+      "id"
+    ],
+    [
+      "main.paragraphs",
+      "character_id",
+      "main",
+      "characters",
+      "id"
+    ]
+  ]
+}

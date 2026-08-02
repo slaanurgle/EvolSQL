@@ -1,0 +1,325 @@
+{
+  "db_id": "shooting",
+  "schema": null,
+  "tables": {
+    "main.incidents": {
+      "fields": {
+        "case_number": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "case number",
+          "examples": [
+            "031347-2015",
+            "072458-2016",
+            "089985-2016",
+            "1004453N",
+            "100577T"
+          ]
+        },
+        "date": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "date",
+          "examples": []
+        },
+        "location": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "location",
+          "examples": [
+            "7400 Bonnie View Road",
+            "8218 Willoughby Boulevard",
+            "4800 Columbia Ave",
+            "2400 Walnut Hill Lane",
+            "3847 Timberglen Road, #3116"
+          ]
+        },
+        "subject_statuses": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "statuses of the victims",
+          "examples": [
+            "Deceased",
+            "Shoot and Miss",
+            "Injured",
+            "Other",
+            "Deceased Injured"
+          ]
+        },
+        "subject_weapon": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "subject weapon",
+          "examples": [
+            "Vehicle",
+            "Shotgun",
+            "Handgun",
+            "Toy Handun",
+            "Knife"
+          ]
+        },
+        "subjects": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "subjects",
+          "examples": [
+            "Luster, Desmond Dwayne B/M",
+            "Gilstrap, Bryan B/M",
+            "Unknown L/M",
+            "Evans, Jerry W/M",
+            "Mims, Carlton B/M"
+          ]
+        },
+        "subject_count": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "subject_count",
+          "examples": [
+            "1",
+            "2",
+            "0",
+            "3"
+          ]
+        },
+        "officers": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "officers",
+          "examples": [
+            "Tollerton, Aaron W/M",
+            "Cardenas, Steven L/M",
+            "Ruben, Fredirick W/M",
+            "Nguyen, Buu A/M",
+            "Ragsdale, Barry W/M"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.officers": {
+      "fields": {
+        "case_number": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "case number",
+          "examples": [
+            "44523A",
+            "121982X",
+            "605484T",
+            "384832T",
+            "244659R"
+          ]
+        },
+        "race": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "race",
+          "examples": [
+            "L",
+            "W",
+            "B",
+            "A"
+          ]
+        },
+        "gender": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "gender",
+          "examples": [
+            "M",
+            "F"
+          ]
+        },
+        "last_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "last name",
+          "examples": [
+            "Patino",
+            "Fillingim",
+            "Padilla",
+            "Poston",
+            "Mondy"
+          ]
+        },
+        "first_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "first name",
+          "examples": [
+            "Michael",
+            "Brian",
+            "Gilbert",
+            "Jerry",
+            "Jesse"
+          ]
+        },
+        "full_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "full name",
+          "examples": [
+            "Patino, Michael",
+            "Fillingim, Brian",
+            "Padilla, Gilbert",
+            "Poston, Jerry",
+            "Mondy, Michael"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.subjects": {
+      "fields": {
+        "case_number": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "case number",
+          "examples": [
+            "44523A",
+            "121982X",
+            "605484T",
+            "384832T",
+            "244659R"
+          ]
+        },
+        "race": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "race",
+          "examples": [
+            "L",
+            "B",
+            "W",
+            "A"
+          ]
+        },
+        "gender": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "gender",
+          "examples": [
+            "M",
+            "F"
+          ]
+        },
+        "last_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "last name",
+          "examples": [
+            "Curry",
+            "Chavez",
+            "Salinas",
+            "Smith",
+            "Dews"
+          ]
+        },
+        "first_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "first name",
+          "examples": [
+            "James",
+            "Gabriel",
+            "Nick",
+            "Antonio",
+            "Damion"
+          ]
+        },
+        "full_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "full name",
+          "examples": [
+            "Curry, James",
+            "Chavez, Gabriel",
+            "Salinas, Nick",
+            "Smith, James",
+            "Dews, Antonio"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.officers",
+      "case_number",
+      "main",
+      "incidents",
+      "case_number"
+    ],
+    [
+      "main.subjects",
+      "case_number",
+      "main",
+      "incidents",
+      "case_number"
+    ]
+  ]
+}

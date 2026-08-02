@@ -1,0 +1,904 @@
+{
+  "db_id": "retail_complains",
+  "schema": null,
+  "tables": {
+    "main.callcenterlogs": {
+      "fields": {
+        "Date received": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "complaint date",
+          "examples": [
+            "2017-03-27"
+          ]
+        },
+        "Complaint ID": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number representing each complaint",
+          "examples": [
+            "CR0000072",
+            "CR0000084",
+            "CR0000175",
+            "CR0000298"
+          ]
+        },
+        "rand client": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "client id",
+          "examples": [
+            "C00004587",
+            "C00003328",
+            "C00001685",
+            "C00001945",
+            "C00004303"
+          ]
+        },
+        "phonefinal": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "final phone number",
+          "examples": [
+            "977-806-9726",
+            "322-598-7152",
+            "508-311-5237",
+            "265-394-2727",
+            "206-008-0460"
+          ]
+        },
+        "vru+line": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "voice response unit line",
+          "examples": [
+            "AA0103",
+            "AA0205",
+            "AA0110",
+            "AA0113",
+            "AA0102"
+          ]
+        },
+        "call_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id number identifying the call",
+          "examples": [
+            "34536",
+            "34537",
+            "34538",
+            "34540",
+            "34541"
+          ]
+        },
+        "priority": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "priority of the complaint",
+          "examples": [
+            "0",
+            "2",
+            "1"
+          ]
+        },
+        "type": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "type of complaint",
+          "examples": [
+            "NW",
+            "PS",
+            "NE",
+            "TT",
+            "IN"
+          ]
+        },
+        "outcome": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the outcome of processing of complaints",
+          "examples": [
+            "AGENT",
+            "HANG",
+            "PHANTOM"
+          ]
+        },
+        "server": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "server",
+          "examples": [
+            "MICHAL",
+            "TOVA",
+            "YIFAT",
+            "AVNI",
+            "STEREN"
+          ]
+        },
+        "ser_start": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "server start time",
+          "examples": [
+            "13:34:11",
+            "10:58:22",
+            "13:00:54",
+            "16:18:21",
+            "14:48:22"
+          ]
+        },
+        "ser_exit": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "server exit time",
+          "examples": [
+            "13:40:23",
+            "11:16:10",
+            "13:13:31",
+            "16:19:40",
+            "14:55:19"
+          ]
+        },
+        "ser_time": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "server time",
+          "examples": [
+            "00:06:12",
+            "00:17:48",
+            "00:12:37",
+            "00:01:19",
+            "00:06:57"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.client": {
+      "fields": {
+        "client_id": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id client number",
+          "examples": [
+            "C00000001",
+            "C00000002",
+            "C00000003",
+            "C00000004",
+            "C00000005"
+          ]
+        },
+        "sex": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "sex of client",
+          "examples": [
+            "Female",
+            "Male"
+          ]
+        },
+        "day": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "day of the birthday",
+          "examples": [
+            "13",
+            "4",
+            "9",
+            "1",
+            "3"
+          ]
+        },
+        "month": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "month of the birthday",
+          "examples": [
+            "12",
+            "2",
+            "10",
+            "7",
+            "9"
+          ]
+        },
+        "year": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "year when is born",
+          "examples": [
+            "1990",
+            "1965",
+            "1960",
+            "1976",
+            "1980"
+          ]
+        },
+        "age": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "age",
+          "examples": [
+            "29",
+            "54",
+            "59",
+            "43",
+            "39"
+          ]
+        },
+        "social": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "social number",
+          "examples": [
+            "926-93-2157",
+            "806-94-5725",
+            "614-70-9100",
+            "580-20-3414",
+            "536-14-5809"
+          ]
+        },
+        "first": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "first name",
+          "examples": [
+            "Emma",
+            "Noah",
+            "Olivia",
+            "Liam",
+            "Sophia"
+          ]
+        },
+        "middle": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "middle name",
+          "examples": [
+            "Avaya",
+            "Everest",
+            "Brooklynne",
+            "Irvin",
+            "Danae"
+          ]
+        },
+        "last": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "last name",
+          "examples": [
+            "Smith",
+            "Thompson",
+            "Johnson",
+            "White",
+            "Williams"
+          ]
+        },
+        "phone": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "phone number",
+          "examples": [
+            "367-171-6840",
+            "212-423-7734",
+            "212-425-6932",
+            "951-567-8925",
+            "428-265-1568"
+          ]
+        },
+        "email": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "email",
+          "examples": []
+        },
+        "address_1": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "address 1",
+          "examples": [
+            "387 Wellington Ave.",
+            "75 W. Berkshire St.",
+            "36 Second St.",
+            "7607 Sunnyslope Street",
+            "755 Galvin Street"
+          ]
+        },
+        "address_2": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "address 2",
+          "examples": [
+            "Unit 1",
+            "Unit 6",
+            "Unit 80",
+            "Unit 1B"
+          ]
+        },
+        "city": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "city",
+          "examples": [
+            "Albuquerque",
+            "New York City",
+            "Indianapolis",
+            "Portland",
+            "Louisville"
+          ]
+        },
+        "state": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "state code",
+          "examples": [
+            "NM",
+            "NY",
+            "IN",
+            "OR",
+            "KY"
+          ]
+        },
+        "zipcode": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "zipcode",
+          "examples": [
+            "47246",
+            "10040",
+            "10162",
+            "49047",
+            "40852"
+          ]
+        },
+        "district_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "district id number",
+          "examples": [
+            "18",
+            "1",
+            "5",
+            "12",
+            "15"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.district": {
+      "fields": {
+        "district_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number representing district",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "city": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "city",
+          "examples": [
+            "New York City",
+            "Jacksonville",
+            "Columbus",
+            "Charlotte",
+            "Indianapolis"
+          ]
+        },
+        "state_abbrev": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "state abbreviated code",
+          "examples": [
+            "NY",
+            "FL",
+            "OH",
+            "NC",
+            "IN"
+          ]
+        },
+        "division": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "division",
+          "examples": [
+            "Middle Atlantic",
+            "South Atlantic",
+            "East North Central",
+            "Pacific",
+            "Mountain"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.events": {
+      "fields": {
+        "Date received": {
+          "type": "DATE",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Date received",
+          "examples": [
+            "2014-07-03"
+          ]
+        },
+        "Product": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "complaining about which product",
+          "examples": [
+            "Bank account or service",
+            "Credit card"
+          ]
+        },
+        "Sub-product": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "sub product if exists",
+          "examples": [
+            "Checking account",
+            "Savings account",
+            "Other bank product/service",
+            "(CD) Certificate of deposit"
+          ]
+        },
+        "Issue": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "problems leading to this complaints",
+          "examples": [
+            "Deposits and withdrawals",
+            "Account opening, closing, or management",
+            "Billing disputes",
+            "Problems caused by my funds being low",
+            "Other fee"
+          ]
+        },
+        "Sub-issue": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "sub problems leading to this complaints if exists",
+          "examples": []
+        },
+        "Consumer complaint narrative": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Consumer complaint narrative",
+          "examples": [
+            "Deposited a XXXX check into my account, BOFA is telling me i cant have my money for 2 weeks because XXXX will not verify. I spoke with XXXX and they are telling me they have submitted everything they can and that my bank is lying to me and that the funds have been drawn from my employers account already. I am going to lose my job due to the fact i can not purchase gas and I am XXXX miles from home in a new state",
+            "I called Eagle National Bank 's customer service line. Figuring I 'd be on hold for a while, I put my phone on speaker. I got an automatic message telling me to put in the last 4 digits of my card number. I did. An automatic message immediately stated the amount of money in my bank account! This is my private information. Eagle National Bank should not have done this. I did n't ask for this information.",
+            "I was a victim of fraud involving my Eagle National Bank debit card. I immediately reported this to the bank on XXXX/XXXX/2017. Someone used my debit card numbers to purchase {$85.00} at a XXXX. I filed a police report the same day as I advised the bank. The bank advised me to call again the next morning, which I did. I got a recording saying the department was closed. I then tried contacting the bank using different phone numbers. I spoke to two more people who refused to do anything about the claim-including filing it. Today I went in person to the bank and spoke to a XXXX. This guy was rude, unhelpful, argumentative and told me to \" sit and wait a week, then call the bank, then they 'll do something about it. '' This makes five attempts at filing this fraudulent charge and resolving the issue so that I can use my account. The transaction has been sitting now hung up as a \" processing '' transaction for five days. Not only can I still not use the account, there 's no record of the fraud claim, and I have no useable debit card. The bank 's negligence is affecting me personally as I live alone and have only XXXX useable checking account, it allows the criminals to do this to others over and over and over again. XXXX flat out said \" We will not look at video or question anyone, it 's just {$85.00}. ''",
+            "On Thursday XX/XX/2017 I initiated a wire transfer with Eagle National Bank to a XXXX bank. By the next day, I received a confirmation email saying transfer successful. By Monday XX/XX/2017, the funds had not reached the recipient. By Tuesday XX/XX/2017 I painstakingly initiated a recall on the lost funds. I was first told I would have to pay {$45.00} for EN to locate the money that they lost themselves. This was then waived. It has been 3 weeks since this recall was initiated, I have had no contact from Eagle National Bank. I am now being told that if they can not find the money, they will not refund the money to me, that I will simply have lost {$3000.00}. This feels like theft, except that there is no one to report this robbery to!"
+          ]
+        },
+        "Tags": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "tags of client",
+          "examples": [
+            "Older American",
+            "Older American, Servicemember",
+            "Servicemember"
+          ]
+        },
+        "Consumer consent provided?": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "whether the tags labeled under permission of the clients",
+          "examples": [
+            "N/A",
+            "Consent not provided",
+            "Consent provided",
+            "Other"
+          ]
+        },
+        "Submitted via": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Submitted via",
+          "examples": [
+            "Email",
+            "Fax",
+            "Postal mail",
+            "Referral",
+            "Web"
+          ]
+        },
+        "Date sent to company": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Date sent to company",
+          "examples": [
+            "2014-07-09",
+            "2012-04-13",
+            "2012-04-03",
+            "2012-03-14",
+            "2012-03-06"
+          ]
+        },
+        "Company response to consumer": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Company response to consumer",
+          "examples": [
+            "Closed with explanation",
+            "Closed with relief",
+            "Closed without relief",
+            "Closed with non-monetary relief",
+            "In progress"
+          ]
+        },
+        "Timely response?": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "whether the response of the company is timely",
+          "examples": [
+            "Yes",
+            "No"
+          ]
+        },
+        "Consumer disputed?": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "whether the consumer dispute about the response from the company",
+          "examples": [
+            "No",
+            "Yes"
+          ]
+        },
+        "Complaint ID": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id number indicating which complaint",
+          "examples": [
+            "CR0000072",
+            "CR0000084",
+            "CR0000140",
+            "CR0000175",
+            "CR0000193"
+          ]
+        },
+        "Client_ID": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id number indicating which client",
+          "examples": [
+            "C00003714",
+            "C00001366",
+            "C00002330",
+            "C00001231",
+            "C00013588"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.reviews": {
+      "fields": {
+        "Date": {
+          "type": "DATE",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "2013-02-04"
+          ]
+        },
+        "Stars": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "5",
+            "1",
+            "2"
+          ]
+        },
+        "Reviews": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Great job, Eagle National! Each person was professional and helped us move through our refinance process smoothly. Thank you!",
+            "Matthew Richardson is professional and helpful. He helped us find the correct product for our mortgage. Thank you very much for the excellent service, Matthew!",
+            "We had a past experience with Eagle National Mortgage and would without question use again and again if needed!! Eagle went beyond the extra mile to not only right a wrong encountered from the servicer we were dealing on our previous loan, but they pulled together and found a viable option for us that ultimately saved us money. We would highly recommend Brad Thomka and the Eagle National Mortgage team for your mortgage needs. Sincerest thanks Eagle!! Ed & Lind",
+            "We have been dealing with Brad Thomka from the beginning of what started out to be a very stressful time for us, but with the help from Brad and the entire Eagle Mortgage team it was turned into a happy ending!! Brad and Eagle went beyond the extra mile to not only right a wrong encountered from the servicer we were dealing on our previous loan, but they pulled�together and found a viable option for us that ultimately saved us money. We are indebted and would highly recommend Brad Thomka and the Eagle National Mortgage team for your mortgage needs. Sincerest thanks Eagle!! Ed & LindRead Less",
+            "I can't express how grateful I am for the support that Zach provided to me and my family during this home purchase! His customer service, responsiveness and professional demeanor is second to none. He was very thorough and took the time to educate me about the process along the way. I highly recommend working with Zach and Eagle National!"
+          ]
+        },
+        "Product": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Eagle National Mortgage",
+            "Eagle National Bank",
+            "Eagle Capital"
+          ]
+        },
+        "district_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "65",
+            "66",
+            "23",
+            "55",
+            "24"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.state": {
+      "fields": {
+        "StateCode": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "AL",
+            "AR",
+            "AZ",
+            "CA",
+            "CO"
+          ]
+        },
+        "State": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "Alabama",
+            "Arkansas",
+            "Arizona",
+            "California",
+            "Colorado"
+          ]
+        },
+        "Region": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "South",
+            "West",
+            "Northeast",
+            "Midwest"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.callcenterlogs",
+      "rand client",
+      "main",
+      "client",
+      "client_id"
+    ],
+    [
+      "main.client",
+      "district_id",
+      "main",
+      "district",
+      "district_id"
+    ],
+    [
+      "main.district",
+      "state_abbrev",
+      "main",
+      "state",
+      "StateCode"
+    ],
+    [
+      "main.events",
+      "Complaint ID",
+      "main",
+      "callcenterlogs",
+      "Complaint ID"
+    ],
+    [
+      "main.events",
+      "Client_ID",
+      "main",
+      "client",
+      "client_id"
+    ],
+    [
+      "main.reviews",
+      "district_id",
+      "main",
+      "district",
+      "district_id"
+    ]
+  ]
+}

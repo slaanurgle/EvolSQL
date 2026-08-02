@@ -1,0 +1,292 @@
+{
+  "db_id": "sales",
+  "schema": null,
+  "tables": {
+    "main.Customers": {
+      "fields": {
+        "CustomerID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id of the customer",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "FirstName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the customer's first name",
+          "examples": [
+            "Aaron",
+            "Abby",
+            "Abe",
+            "Abhijit",
+            "Abigail"
+          ]
+        },
+        "MiddleInitial": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the customer's middle initial",
+          "examples": [
+            "A",
+            "B",
+            "C",
+            "E"
+          ]
+        },
+        "LastName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the customer's last name",
+          "examples": [
+            "Alexander",
+            "Bryant",
+            "Butler",
+            "Chen",
+            "Coleman"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Employees": {
+      "fields": {
+        "EmployeeID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id of the employee",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "FirstName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the employee's first name",
+          "examples": [
+            "Abraham",
+            "Reginald",
+            "Cheryl",
+            "Michel",
+            "Innes"
+          ]
+        },
+        "MiddleInitial": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the employee's middle initial",
+          "examples": [
+            "e",
+            "l",
+            "a",
+            "u",
+            "r"
+          ]
+        },
+        "LastName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the employee's last name",
+          "examples": [
+            "Bennet",
+            "Blotchet-Halls",
+            "Carson",
+            "DeFrance",
+            "del Castillo"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Products": {
+      "fields": {
+        "ProductID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id of the product",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "Name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the product name",
+          "examples": [
+            "Adjustable Race",
+            "Bearing Ball",
+            "BB Ball Bearing",
+            "Headset Ball Bearings",
+            "Blade"
+          ]
+        },
+        "Price": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the price of the product",
+          "examples": [
+            "1.6",
+            "0.8",
+            "2.4",
+            "0.0",
+            "189.6"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Sales": {
+      "fields": {
+        "SalesID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id of the sales",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "SalesPersonID": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id of the sale person",
+          "examples": [
+            "17",
+            "5",
+            "8",
+            "1",
+            "14"
+          ]
+        },
+        "CustomerID": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id of the customer",
+          "examples": [
+            "10482",
+            "1964",
+            "12300",
+            "4182",
+            "15723"
+          ]
+        },
+        "ProductID": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id of the product",
+          "examples": [
+            "500",
+            "306",
+            "123",
+            "437",
+            "246"
+          ]
+        },
+        "Quantity": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "trading quantity",
+          "examples": [
+            "500",
+            "810",
+            "123",
+            "437",
+            "750"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.Sales",
+      "SalesPersonID",
+      "main",
+      "Employees",
+      "EmployeeID"
+    ],
+    [
+      "main.Sales",
+      "CustomerID",
+      "main",
+      "Customers",
+      "CustomerID"
+    ],
+    [
+      "main.Sales",
+      "ProductID",
+      "main",
+      "Products",
+      "ProductID"
+    ]
+  ]
+}

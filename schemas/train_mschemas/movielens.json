@@ -1,0 +1,439 @@
+{
+  "db_id": "movielens",
+  "schema": null,
+  "tables": {
+    "main.actors": {
+      "fields": {
+        "actorid": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique identificator number of actors",
+          "examples": [
+            "4",
+            "16",
+            "28",
+            "566",
+            "580"
+          ]
+        },
+        "a_gender": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "actor gender",
+          "examples": [
+            "M",
+            "F"
+          ]
+        },
+        "a_quality": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "actor quality",
+          "examples": [
+            "4",
+            "0",
+            "3",
+            "2",
+            "5"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.directors": {
+      "fields": {
+        "directorid": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique identification number of actors directors",
+          "examples": [
+            "7387",
+            "12945",
+            "15725",
+            "21574",
+            "34185"
+          ]
+        },
+        "d_quality": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "director quality",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "avg_revenue": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "average revenue",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.movies": {
+      "fields": {
+        "movieid": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": "0",
+          "autoincrement": false,
+          "comment": "unique identifier number of movies",
+          "examples": [
+            "1672052",
+            "1672111",
+            "1672580",
+            "1672716",
+            "1672946"
+          ]
+        },
+        "year": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "year",
+          "examples": [
+            "3",
+            "4",
+            "1",
+            "2"
+          ]
+        },
+        "isEnglish": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "is English",
+          "examples": [
+            "T",
+            "F"
+          ]
+        },
+        "country": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "country",
+          "examples": [
+            "other",
+            "USA",
+            "France",
+            "UK"
+          ]
+        },
+        "runningtime": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "2",
+            "3",
+            "0",
+            "1"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.movies2actors": {
+      "fields": {
+        "movieid": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "identifier number of movies",
+          "examples": [
+            "1672052",
+            "1672111",
+            "1672580",
+            "1672716",
+            "1672946"
+          ]
+        },
+        "actorid": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "88796",
+            "88848",
+            "121878",
+            "134348",
+            "198682"
+          ]
+        },
+        "cast_num": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.movies2directors": {
+      "fields": {
+        "movieid": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "identifier number of movies",
+          "examples": [
+            "1672052",
+            "1672111",
+            "1672580",
+            "1672716",
+            "1672946"
+          ]
+        },
+        "directorid": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "identifier number of directors",
+          "examples": [
+            "22397",
+            "54934",
+            "297253",
+            "188926",
+            "188940"
+          ]
+        },
+        "genre": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "genre of movies",
+          "examples": [
+            "Action",
+            "Adventure",
+            "Animation",
+            "Comedy",
+            "Crime"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.u2base": {
+      "fields": {
+        "userid": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": "0",
+          "autoincrement": false,
+          "comment": "identifier number of users",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "movieid": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "identifier number of movie",
+          "examples": [
+            "1684486",
+            "1685309",
+            "1685493",
+            "1711384",
+            "1713183"
+          ]
+        },
+        "rating": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ratings of movies",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.users": {
+      "fields": {
+        "userid": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": "0",
+          "autoincrement": false,
+          "comment": "unique identifier number of users",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "age": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "age",
+          "examples": [
+            "1",
+            "56",
+            "25",
+            "45",
+            "50"
+          ]
+        },
+        "u_gender": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "user gender",
+          "examples": [
+            "F",
+            "M"
+          ]
+        },
+        "occupation": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "occupation",
+          "examples": [
+            "2",
+            "3",
+            "4",
+            "1",
+            "5"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.movies2actors",
+      "actorid",
+      "main",
+      "actors",
+      "actorid"
+    ],
+    [
+      "main.movies2actors",
+      "movieid",
+      "main",
+      "movies",
+      "movieid"
+    ],
+    [
+      "main.movies2directors",
+      "directorid",
+      "main",
+      "directors",
+      "directorid"
+    ],
+    [
+      "main.movies2directors",
+      "movieid",
+      "main",
+      "movies",
+      "movieid"
+    ],
+    [
+      "main.u2base",
+      "movieid",
+      "main",
+      "movies",
+      "movieid"
+    ],
+    [
+      "main.u2base",
+      "userid",
+      "main",
+      "users",
+      "userid"
+    ]
+  ]
+}

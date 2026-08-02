@@ -1,0 +1,226 @@
+{
+  "db_id": "restaurant",
+  "schema": null,
+  "tables": {
+    "main.generalinfo": {
+      "fields": {
+        "id_restaurant": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for the restaurant",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "label": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the label of the restaurant",
+          "examples": [
+            "sparky's diner",
+            "kabul afghan cuisine",
+            "helmand restaurant",
+            "afghani house",
+            "kabul afghan cusine"
+          ]
+        },
+        "food_type": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the food type",
+          "examples": [
+            "24 hour diner",
+            "afghani",
+            "african",
+            "all ethnic",
+            "american"
+          ]
+        },
+        "city": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the city where the restaurant is located in",
+          "examples": [
+            "san francisco",
+            "san carlos",
+            "sunnyvale",
+            "san rafael",
+            "san jose"
+          ]
+        },
+        "review": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the review of the restaurant",
+          "examples": [
+            "2.3",
+            "3.8",
+            "4.0",
+            "3.6",
+            "3.7"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.geographic": {
+      "fields": {
+        "city": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the city",
+          "examples": [
+            "alameda",
+            "alamo",
+            "albany",
+            "alviso",
+            "american canyon"
+          ]
+        },
+        "county": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the country the city belongs to",
+          "examples": [
+            "alameda county",
+            "contra costa county",
+            "santa clara county",
+            "unknown",
+            "napa county"
+          ]
+        },
+        "region": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "corresponding regions",
+          "examples": [
+            "bay area",
+            "napa valley",
+            "unknown",
+            "monterey",
+            "los angeles area"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.location": {
+      "fields": {
+        "id_restaurant": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for the restaurant",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "street_num": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the street number of the restaurant",
+          "examples": [
+            "242",
+            "135",
+            "430",
+            "1103",
+            "833"
+          ]
+        },
+        "street_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the street name of the restaurant",
+          "examples": [
+            "church st",
+            "el camino real",
+            "broadway",
+            "e. el camino real",
+            "w. el camino real"
+          ]
+        },
+        "city": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the city where the restaurant is located in",
+          "examples": [
+            "san francisco",
+            "san carlos",
+            "sunnyvale",
+            "san jose"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.generalinfo",
+      "city",
+      "main",
+      "geographic",
+      "city"
+    ],
+    [
+      "main.location",
+      "city",
+      "main",
+      "geographic",
+      "city"
+    ],
+    [
+      "main.location",
+      "id_restaurant",
+      "main",
+      "generalinfo",
+      "id_restaurant"
+    ]
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "db_id": "computer_student",
+  "schema": null,
+  "tables": {
+    "main.advisedBy": {
+      "fields": {
+        "p_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "id number identifying each person",
+          "examples": [
+            "6",
+            "9",
+            "13",
+            "14",
+            "18"
+          ]
+        },
+        "p_id_dummy": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the id number identifying the advisor",
+          "examples": [
+            "5",
+            "7",
+            "29",
+            "57",
+            "72"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.course": {
+      "fields": {
+        "course_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "unique id number identifying courses",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "courseLevel": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "course level",
+          "examples": [
+            "Level_500",
+            "Level_300",
+            "Level_400"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.person": {
+      "fields": {
+        "p_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique number identifying each person",
+          "examples": [
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+          ]
+        },
+        "professor": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "whether the person is a professor",
+          "examples": [
+            "0",
+            "1"
+          ]
+        },
+        "student": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "whether the person is a student",
+          "examples": [
+            "1",
+            "0"
+          ]
+        },
+        "hasPosition": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "whether the person has a position in the faculty",
+          "examples": [
+            "0",
+            "Faculty",
+            "Faculty_adj",
+            "Faculty_eme",
+            "Faculty_aff"
+          ]
+        },
+        "inPhase": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the phase of qualification the person is undergoing",
+          "examples": [
+            "0",
+            "Post_Quals",
+            "Post_Generals",
+            "Pre_Quals"
+          ]
+        },
+        "yearsInProgram": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the year of the program the person is at",
+          "examples": [
+            "0",
+            "Year_2",
+            "Year_5",
+            "Year_7",
+            "Year_10"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.taughtBy": {
+      "fields": {
+        "course_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the identification number identifying each course",
+          "examples": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "p_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the identification number identifying each person",
+          "examples": [
+            "40",
+            "180",
+            "279",
+            "107",
+            "415"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.advisedBy",
+      "p_id",
+      "main",
+      "person",
+      "p_id"
+    ],
+    [
+      "main.advisedBy",
+      "p_id_dummy",
+      "main",
+      "person",
+      "p_id"
+    ],
+    [
+      "main.taughtBy",
+      "p_id",
+      "main",
+      "person",
+      "p_id"
+    ],
+    [
+      "main.taughtBy",
+      "course_id",
+      "main",
+      "course",
+      "course_id"
+    ]
+  ]
+}

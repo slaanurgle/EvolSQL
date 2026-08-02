@@ -1,0 +1,691 @@
+{
+  "db_id": "simpson_episodes",
+  "schema": null,
+  "tables": {
+    "main.Award": {
+      "fields": {
+        "award_id": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for the award",
+          "examples": [
+            "325",
+            "326",
+            "327",
+            "328",
+            "329"
+          ]
+        },
+        "organization": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the organization that holds the award",
+          "examples": [
+            "Primetime Emmy Awards",
+            "Annie Awards",
+            "Image Awards (NAACP)",
+            "Jupiter Award",
+            "Kids' Choice Awards, USA"
+          ]
+        },
+        "year": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "year of award",
+          "examples": [
+            "2009",
+            "2010",
+            "2017",
+            "2018"
+          ]
+        },
+        "award_category": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the category of the award",
+          "examples": [
+            "Primetime Emmy",
+            "Annie",
+            "Image Award",
+            "Jupiter Award",
+            "Blimp Award"
+          ]
+        },
+        "award": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name of the award",
+          "examples": [
+            "Outstanding Voice-Over Performance",
+            "Outstanding Animated Program (For Programming Less Than One Hour)",
+            "Outstanding Music Composition for a Series (Original Dramatic Score)",
+            "Writing in a Television Production",
+            "Best Animated Television Production"
+          ]
+        },
+        "person": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the person who gets the award",
+          "examples": [
+            "Dan Castellaneta",
+            "Hank Azaria",
+            "Harry Shearer",
+            "James L. Brooks",
+            "Matt Groening"
+          ]
+        },
+        "role": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the role of the honoree",
+          "examples": [
+            "executive producer",
+            "co-executive producer",
+            "co-executive producer, writer",
+            "animation producer"
+          ]
+        },
+        "episode_id": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "S stands for 'Season' and E stands for 'Episode'",
+          "examples": [
+            "S20-E18",
+            "S20-E16",
+            "S20-E8",
+            "S20-E13",
+            "S20-E20"
+          ]
+        },
+        "season": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the season of the awarded work",
+          "examples": []
+        },
+        "song": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the theme song of the awarded work",
+          "examples": []
+        },
+        "result": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the final award result",
+          "examples": [
+            "Winner",
+            "Nominee"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Character_Award": {
+      "fields": {
+        "award_id": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "A unique identifier for the award",
+          "examples": [
+            "325",
+            "326",
+            "327"
+          ]
+        },
+        "character": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name of the awarded character",
+          "examples": [
+            "Homer Simpson",
+            "Moe Szyslak",
+            "Kent Brockman",
+            "Lenny",
+            "Mr. Burns"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Credit": {
+      "fields": {
+        "episode_id": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "A unique identifier for episodes",
+          "examples": [
+            "S20-E10",
+            "S20-E13",
+            "S20-E14",
+            "S20-E4",
+            "S20-E19"
+          ]
+        },
+        "category": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the category of the credit",
+          "examples": [
+            "Casting Department",
+            "Animation Department",
+            "Sound Department",
+            "Editorial Department",
+            "Produced by"
+          ]
+        },
+        "person": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name of cast and crew members",
+          "examples": [
+            "Bonita Pietila",
+            "Adam Kuhlman",
+            "Carlton Batten",
+            "Jack Dyer",
+            "Jeremy Robinson"
+          ]
+        },
+        "role": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the role of the person",
+          "examples": [
+            "casting",
+            "additional timer",
+            "adr engineer",
+            "adr mixer",
+            "animatic editor"
+          ]
+        },
+        "credited": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "whether the person is credited",
+          "examples": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Episode": {
+      "fields": {
+        "episode_id": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "A unique identifier for episodes",
+          "examples": [
+            "S20-E1",
+            "S20-E10",
+            "S20-E11",
+            "S20-E12",
+            "S20-E13"
+          ]
+        },
+        "season": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the season of the episode",
+          "examples": [
+            "20"
+          ]
+        },
+        "episode": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the episode number of the episode",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "number_in_series": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the number in series",
+          "examples": [
+            "421",
+            "422",
+            "423",
+            "424",
+            "425"
+          ]
+        },
+        "title": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the title of the episode",
+          "examples": [
+            "Sex, Pies and Idiot Scrapes",
+            "Lost Verizon",
+            "Double, Double, Boy in Trouble",
+            "Treehouse of Horror XIX",
+            "Dangerous Curves"
+          ]
+        },
+        "summary": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the summary of the episode",
+          "examples": [
+            "Homer and Ned go into business together as bounty hunters, and Marge takes a job at an erotic bakery.",
+            "Bart gets in trouble with Marge after she finds out that he has Denis Leary's cell phone and is using it to make prank phone calls.",
+            "Bart trades lives with his multi-millionaire lookalike, but discovers that his lookalike's life isn't all he thought it would be.",
+            "The Simpsons' 19th Halloween Special, with parodies of \"Transformers,\" \"Mad Men,\" and \"It's the Great Pumpkin, Charlie Brown.\"",
+            "The Simpsons take a Fourth of July vacation to a cabin hotel, which cause Homer and Marge to reminisce about two episodes from their past where they stayed in the cabin."
+          ]
+        },
+        "air_date": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the air date of the episode",
+          "examples": [
+            "2008-09-28",
+            "2008-10-05",
+            "2008-10-19",
+            "2008-11-02",
+            "2008-11-09"
+          ]
+        },
+        "episode_image": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the image of episode",
+          "examples": []
+        },
+        "rating": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the rating of episode",
+          "examples": [
+            "7.2",
+            "7.0",
+            "7.1",
+            "6.5",
+            "6.6"
+          ]
+        },
+        "votes": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the votes of episode",
+          "examples": [
+            "1192",
+            "1055",
+            "1015",
+            "1190",
+            "951"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Keyword": {
+      "fields": {
+        "episode_id": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "A unique identifier for episodes",
+          "examples": [
+            "S20-E1",
+            "S20-E10",
+            "S20-E11",
+            "S20-E12",
+            "S20-E13"
+          ]
+        },
+        "keyword": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the keywords of episode",
+          "examples": [
+            "1930s to 2020s",
+            "erotic bakery",
+            "cake",
+            "bullet",
+            "st. patrick's day"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Person": {
+      "fields": {
+        "name": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the name of the crew",
+          "examples": [
+            "Adam Greeley",
+            "Adam Klein",
+            "Adam Kuhlman",
+            "Al Holter",
+            "Al Jean"
+          ]
+        },
+        "birthdate": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the birth date of the crew",
+          "examples": [
+            "1963-05-04",
+            "1975-03-30",
+            "1969-12-04",
+            "1969-10-02"
+          ]
+        },
+        "birth_name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the birth name of the crew",
+          "examples": [
+            "Marc Edward Wilmore",
+            "Valentina Lantigua",
+            "Joseph Stewart Burns",
+            "Stephanie Katina Gillis",
+            "Laurie D Templeton"
+          ]
+        },
+        "birth_place": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the birth place of the crew",
+          "examples": [
+            "USA",
+            "Brooklyn",
+            "Chicago",
+            "Portland"
+          ]
+        },
+        "birth_region": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the birth region of the crew",
+          "examples": [
+            "California",
+            "New York",
+            "Illinois",
+            "Oregon"
+          ]
+        },
+        "birth_country": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the birth country of the crew",
+          "examples": [
+            "USA",
+            "Canada",
+            "Ireland",
+            "Philippines"
+          ]
+        },
+        "height_meters": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the height of the crew",
+          "examples": [
+            "1.85",
+            "1.75",
+            "2.03",
+            "1.89"
+          ]
+        },
+        "nickname": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the nickname of the crew",
+          "examples": [
+            "Jim",
+            "Doofus",
+            "Hoops",
+            "Boop"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Vote": {
+      "fields": {
+        "episode_id": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "A unique identifier for episodes",
+          "examples": [
+            "S20-E1",
+            "S20-E10",
+            "S20-E11",
+            "S20-E12",
+            "S20-E13"
+          ]
+        },
+        "stars": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the star score of the episode",
+          "examples": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "1"
+          ]
+        },
+        "votes": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the number of votes of the star score",
+          "examples": [
+            "16",
+            "20",
+            "36",
+            "49",
+            "67"
+          ]
+        },
+        "percent": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the percent of the vote number of the star score",
+          "examples": [
+            "1.3",
+            "1.7",
+            "3.0",
+            "4.1",
+            "5.6"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.Award",
+      "person",
+      "main",
+      "Person",
+      "name"
+    ],
+    [
+      "main.Award",
+      "episode_id",
+      "main",
+      "Episode",
+      "episode_id"
+    ],
+    [
+      "main.Character_Award",
+      "award_id",
+      "main",
+      "Award",
+      "award_id"
+    ],
+    [
+      "main.Credit",
+      "episode_id",
+      "main",
+      "Episode",
+      "episode_id"
+    ],
+    [
+      "main.Credit",
+      "person",
+      "main",
+      "Person",
+      "name"
+    ],
+    [
+      "main.Keyword",
+      "episode_id",
+      "main",
+      "Episode",
+      "episode_id"
+    ],
+    [
+      "main.Vote",
+      "episode_id",
+      "main",
+      "Episode",
+      "episode_id"
+    ]
+  ]
+}

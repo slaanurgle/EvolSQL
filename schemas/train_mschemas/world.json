@@ -1,0 +1,395 @@
+{
+  "db_id": "world",
+  "schema": null,
+  "tables": {
+    "main.City": {
+      "fields": {
+        "ID": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the unique id for the city",
+          "examples": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "Name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the name of the city",
+          "examples": [
+            "Kabul",
+            "Qandahar",
+            "Herat",
+            "Mazar-e-Sharif",
+            "Amsterdam"
+          ]
+        },
+        "CountryCode": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the country code of the country that the city is belonged",
+          "examples": [
+            "AFG",
+            "NLD",
+            "ANT",
+            "ALB",
+            "DZA"
+          ]
+        },
+        "District": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the district where the city locates",
+          "examples": [
+            "Kabol",
+            "Qandahar",
+            "Herat",
+            "Balkh",
+            "Noord-Holland"
+          ]
+        },
+        "Population": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": "0",
+          "autoincrement": false,
+          "comment": "the number of the population in the area",
+          "examples": [
+            "1780000",
+            "237500",
+            "186800",
+            "127800",
+            "731200"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Country": {
+      "fields": {
+        "Code": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the unique country code of the country",
+          "examples": [
+            "ABW",
+            "AFG",
+            "AGO",
+            "AIA",
+            "ALB"
+          ]
+        },
+        "Name": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the country name",
+          "examples": [
+            "Aruba",
+            "Afghanistan",
+            "Angola",
+            "Anguilla",
+            "Albania"
+          ]
+        },
+        "Continent": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": "'Asia'",
+          "autoincrement": false,
+          "comment": "the continent that the country locates",
+          "examples": [
+            "North America",
+            "Asia",
+            "Africa",
+            "Europe",
+            "South America"
+          ]
+        },
+        "Region": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "the region that the country locates",
+          "examples": [
+            "Caribbean",
+            "Southern and Central Asia",
+            "Central Africa",
+            "Southern Europe",
+            "Middle East"
+          ]
+        },
+        "SurfaceArea": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": false,
+          "default": "0.00",
+          "autoincrement": false,
+          "comment": "the surface area of the country",
+          "examples": [
+            "193.0",
+            "652090.0",
+            "1246700.0",
+            "96.0",
+            "28748.0"
+          ]
+        },
+        "IndepYear": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the year that the country declared independence",
+          "examples": [
+            "1919",
+            "1975",
+            "1912",
+            "1278"
+          ]
+        },
+        "Population": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": false,
+          "default": "0",
+          "autoincrement": false,
+          "comment": "the number of the population in the area",
+          "examples": [
+            "103000",
+            "22720000",
+            "12878000",
+            "8000",
+            "3401200"
+          ]
+        },
+        "LifeExpectancy": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the life expectancy at birth of the country",
+          "examples": [
+            "78.4",
+            "45.9",
+            "38.3",
+            "76.1",
+            "71.6"
+          ]
+        },
+        "GNP": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "the GNP of the country",
+          "examples": [
+            "828.0",
+            "5976.0",
+            "6648.0",
+            "63.2",
+            "3205.0"
+          ]
+        },
+        "GNPOld": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "Gross national product - old value",
+          "examples": [
+            "793.0",
+            "7984.0",
+            "2500.0",
+            "36846.0"
+          ]
+        },
+        "LocalName": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "The country's local name",
+          "examples": [
+            "Aruba",
+            "Afganistan/Afqanestan",
+            "Angola",
+            "Anguilla",
+            "Shqipëria"
+          ]
+        },
+        "GovernmentForm": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "The country's goverment form",
+          "examples": [
+            "Nonmetropolitan Territory of The Netherlands",
+            "Islamic Emirate",
+            "Republic",
+            "Dependent Territory of the UK",
+            "Parliamentary Coprincipality"
+          ]
+        },
+        "HeadOfState": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "The head of state full name",
+          "examples": [
+            "Beatrix",
+            "Mohammad Omar",
+            "José Eduardo dos Santos",
+            "Elisabeth II",
+            "Rexhep Mejdani"
+          ]
+        },
+        "Capital": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": "NULL",
+          "autoincrement": false,
+          "comment": "The country's capital",
+          "examples": [
+            "129",
+            "1",
+            "56",
+            "62",
+            "34"
+          ]
+        },
+        "Code2": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "The second country code",
+          "examples": [
+            "AW",
+            "AF",
+            "AO",
+            "AI",
+            "AL"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.CountryLanguage": {
+      "fields": {
+        "CountryCode": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "The unique code for country",
+          "examples": [
+            "ABW",
+            "AFG",
+            "AGO",
+            "AIA",
+            "ALB"
+          ]
+        },
+        "Language": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": "''",
+          "autoincrement": false,
+          "comment": "Country language",
+          "examples": [
+            "Dutch",
+            "English",
+            "Papiamento",
+            "Spanish",
+            "Balochi"
+          ]
+        },
+        "IsOfficial": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": false,
+          "default": "'F'",
+          "autoincrement": false,
+          "comment": "Information on whether the language is official in a given country",
+          "examples": [
+            "T",
+            "F"
+          ]
+        },
+        "Percentage": {
+          "type": "REAL",
+          "primary_key": false,
+          "nullable": false,
+          "default": "0.0",
+          "autoincrement": false,
+          "comment": "Percentage of language use",
+          "examples": [
+            "5.3",
+            "9.5",
+            "76.7",
+            "7.4",
+            "0.9"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.City",
+      "CountryCode",
+      "main",
+      "Country",
+      "Code"
+    ],
+    [
+      "main.CountryLanguage",
+      "CountryCode",
+      "main",
+      "Country",
+      "Code"
+    ]
+  ]
+}

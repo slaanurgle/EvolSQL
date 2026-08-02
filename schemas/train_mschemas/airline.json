@@ -1,0 +1,517 @@
+{
+  "db_id": "airline",
+  "schema": null,
+  "tables": {
+    "main.Air Carriers": {
+      "fields": {
+        "Code": {
+          "type": "INTEGER",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the code of the air carriers",
+          "examples": [
+            "19031",
+            "19032",
+            "19033",
+            "19034",
+            "19035"
+          ]
+        },
+        "Description": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the description of air carriers",
+          "examples": [
+            "Mackey International Inc.: MAC",
+            "Munz Northern Airlines Inc.: XY",
+            "Cochise Airlines Inc.: COC",
+            "Golden Gate Airlines Inc.: GSA",
+            "Aeromech Inc.: RZZ"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Airlines": {
+      "fields": {
+        "FL_DATE": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "flight date",
+          "examples": [
+            "2018/8/1",
+            "2018/8/2",
+            "2018/8/3",
+            "2018/8/4",
+            "2018/8/5"
+          ]
+        },
+        "OP_CARRIER_AIRLINE_ID": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "operator carrier airline id",
+          "examples": [
+            "19805",
+            "20427",
+            "21167",
+            "20452",
+            "20363"
+          ]
+        },
+        "TAIL_NUM": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "plane's tail number",
+          "examples": [
+            "N956AN",
+            "N973AN",
+            "N9006",
+            "N870NN",
+            "N9023N"
+          ]
+        },
+        "OP_CARRIER_FL_NUM": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "operator carrier flight number",
+          "examples": [
+            "1587",
+            "1588",
+            "1590",
+            "1591",
+            "1593"
+          ]
+        },
+        "ORIGIN_AIRPORT_ID": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "origin airport id",
+          "examples": [
+            "12478",
+            "14107",
+            "11042",
+            "14843",
+            "10423"
+          ]
+        },
+        "ORIGIN_AIRPORT_SEQ_ID": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "origin airport sequence id",
+          "examples": [
+            "1247805",
+            "1410702",
+            "1104205",
+            "1484306",
+            "1042302"
+          ]
+        },
+        "ORIGIN_CITY_MARKET_ID": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "origin city market id",
+          "examples": [
+            "31703",
+            "30466",
+            "30647",
+            "34819",
+            "30423"
+          ]
+        },
+        "ORIGIN": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "airport of origin",
+          "examples": [
+            "JFK",
+            "PHX",
+            "CLE",
+            "SJU",
+            "AUS"
+          ]
+        },
+        "DEST_AIRPORT_ID": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "ID of the destination airport",
+          "examples": [
+            "14107",
+            "11618",
+            "11298",
+            "13303",
+            "13930"
+          ]
+        },
+        "DEST_AIRPORT_SEQ_ID": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "1410702",
+            "1161802",
+            "1129806",
+            "1330303",
+            "1393006"
+          ]
+        },
+        "DEST_CITY_MARKET_ID": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "30466",
+            "31703",
+            "30194",
+            "32467",
+            "30977"
+          ]
+        },
+        "DEST": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Destination airport",
+          "examples": [
+            "PHX",
+            "EWR",
+            "DFW",
+            "MIA",
+            "ORD"
+          ]
+        },
+        "CRS_DEP_TIME": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "1640",
+            "1512",
+            "744",
+            "900",
+            "600"
+          ]
+        },
+        "DEP_TIME": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Flight departure time",
+          "examples": [
+            "1649",
+            "1541",
+            "741",
+            "944",
+            "556"
+          ]
+        },
+        "DEP_DELAY": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Departure delay indicator",
+          "examples": [
+            "9",
+            "29",
+            "-3",
+            "44",
+            "-4"
+          ]
+        },
+        "DEP_DELAY_NEW": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "departure delay new",
+          "examples": [
+            "9",
+            "29",
+            "0",
+            "44",
+            "1"
+          ]
+        },
+        "ARR_TIME": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Flight arrival time",
+          "examples": [
+            "2006",
+            "2350",
+            "938",
+            "1347",
+            "951"
+          ]
+        },
+        "ARR_DELAY": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "arrival delay time",
+          "examples": [
+            "44",
+            "53",
+            "-2",
+            "43",
+            "-7"
+          ]
+        },
+        "ARR_DELAY_NEW": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "arrival delay new",
+          "examples": [
+            "44",
+            "53",
+            "0",
+            "43",
+            "5"
+          ]
+        },
+        "CANCELLED": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "Flight cancellation indicator",
+          "examples": [
+            "0",
+            "1"
+          ]
+        },
+        "CANCELLATION_CODE": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "cancellation code",
+          "examples": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "CRS_ELAPSED_TIME": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "scheduled elapsed time",
+          "examples": [
+            "342",
+            "285",
+            "176",
+            "304",
+            "173"
+          ]
+        },
+        "ACTUAL_ELAPSED_TIME": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "actual elapsed time",
+          "examples": [
+            "377",
+            "309",
+            "177",
+            "303",
+            "175"
+          ]
+        },
+        "CARRIER_DELAY": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "carrier delay",
+          "examples": [
+            "9",
+            "0",
+            "43",
+            "28"
+          ]
+        },
+        "WEATHER_DELAY": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "delay caused by the wheather problem",
+          "examples": [
+            "0",
+            "2",
+            "48",
+            "46"
+          ]
+        },
+        "NAS_DELAY": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "delay, in minutes, attributable to the National Aviation System",
+          "examples": [
+            "35",
+            "53",
+            "0",
+            "2"
+          ]
+        },
+        "SECURITY_DELAY": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "delay attribute to security",
+          "examples": [
+            "0",
+            "42",
+            "4",
+            "3"
+          ]
+        },
+        "LATE_AIRCRAFT_DELAY": {
+          "type": "INTEGER",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "delay attribute to late aircraft",
+          "examples": [
+            "0",
+            "6",
+            "73",
+            "33"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    },
+    "main.Airports": {
+      "fields": {
+        "Code": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "IATA code of the air airports",
+          "examples": [
+            "01A",
+            "03A",
+            "04A",
+            "05A",
+            "06A"
+          ]
+        },
+        "Description": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "the description of airports",
+          "examples": [
+            "Afognak Lake, AK: Afognak Lake Airport",
+            "Granite Mountain, AK: Bear Creek Mining Strip",
+            "Lik, AK: Lik Mining Camp",
+            "Little Squaw, AK: Little Squaw Airport",
+            "Kizhuyak, AK: Kizhuyak Bay"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": [
+    [
+      "main.Airlines",
+      "ORIGIN",
+      "main",
+      "Airports",
+      "Code"
+    ],
+    [
+      "main.Airlines",
+      "DEST",
+      "main",
+      "Airports",
+      "Code"
+    ],
+    [
+      "main.Airlines",
+      "OP_CARRIER_AIRLINE_ID",
+      "main",
+      "Air Carriers",
+      "Code"
+    ]
+  ]
+}
