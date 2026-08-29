@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://2026.emnlp.org/"><img src="https://img.shields.io/badge/EMNLP%20Findings-2026-4B8BBE.svg" alt="EMNLP 2026 Findings"></a>
-  <a href="https://arxiv.org/abs/2601.04875"><img src="https://img.shields.io/badge/arXiv-26xx.xxxxx-b31b1b.svg" alt="arXiv"></a>
+  <a href="https://arxiv.org/abs/2601.04875"><img src="https://img.shields.io/badge/arXiv-2601.04875-b31b1b.svg" alt="arXiv"></a>
 </p>
 
 
