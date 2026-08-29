@@ -1,5 +1,11 @@
 <h1 align="center">EvolSQL: Structure-Aware Evolution for Scalable Text-to-SQL Data Synthesis</h1>
 
+<p align="center">
+  <a href="https://2026.emnlp.org/"><img src="https://img.shields.io/badge/EMNLP%20Findings-2026-4B8BBE.svg" alt="EMNLP 2026 Findings"></a>
+  <a href="https://arxiv.org/abs/2601.04875"><img src="https://img.shields.io/badge/arXiv-26xx.xxxxx-b31b1b.svg" alt="arXiv"></a>
+</p>
+
+
 This repository contains the official implementation of **EvolSQL**, a structure-aware data synthesis framework that evolves SQL queries from seed data into richer and more semantically diverse forms for training Text-to-SQL models.
 
 ## Overview
